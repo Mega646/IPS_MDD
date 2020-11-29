@@ -7,11 +7,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{320C0AA7-D29E-4036-A013-3D46DC98B860}</ProjectGuid>
+    <ProjectGuid>{6038F540-D6D4-4768-A755-3D445E88CBC2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Company.JSRBBRProyectoIPS</RootNamespace>
-    <AssemblyName>Company.JSRBBRProyectoIPS.Dsl</AssemblyName>
+    <RootNamespace>UPM_IPS.JSRBBRProyectoIPS</RootNamespace>
+    <AssemblyName>UPM_IPS.JSRBBRProyectoIPS.Dsl</AssemblyName>
     <AssemblyOriginatorKeyFile>..\Key.snk</AssemblyOriginatorKeyFile>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
     <SignAssembly>true</SignAssembly>
@@ -81,6 +81,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
+    <Compile Include="DesignerCustomization\ClaseInheritsClaseHija.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +160,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\abstracta.bmp" />
+    <Content Include="Resources\atributo.bmp" />
+    <Content Include="Resources\herencia.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>
@@ -249,6 +253,7 @@
     <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml">
       <Link>CodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
+    <Content Include="Resources\clase.bmp" />
     <Content Include="Resources\ExampleConnectorToolBitmap.bmp" />
     <Content Include="Resources\ExampleShapeToolBitmap.bmp" />
     <EmbeddedResource Include="Resources\ConnectorSourceSearch.cur" />

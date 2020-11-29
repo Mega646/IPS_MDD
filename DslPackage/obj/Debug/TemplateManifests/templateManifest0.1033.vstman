@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\JSRBBRProyectoIPS</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{91ead517-1bf8-463a-b337-da1fbdf8be36}</TemplateID>
+        <Name Package="{f4711a2f-7d68-42cf-be73-4ae17ebbea56}" ID="103" />
+        <Description Package="{f4711a2f-7d68-42cf-be73-4ae17ebbea56}" ID="102" />
+        <Icon Package="{f4711a2f-7d68-42cf-be73-4ae17ebbea56}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>JSRBBRProyectoIPS.JSRBBR_DSLProyectoIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\JSRBBRProyectoIPS</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{cdf1feef-453b-4e5d-9f77-3cb6fa77947b}</TemplateID>
+        <Name Package="{f4711a2f-7d68-42cf-be73-4ae17ebbea56}" ID="103" />
+        <Description Package="{f4711a2f-7d68-42cf-be73-4ae17ebbea56}" ID="102" />
+        <Icon Package="{f4711a2f-7d68-42cf-be73-4ae17ebbea56}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>JSRBBRProyectoIPS.JSRBBR_DSLProyectoIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

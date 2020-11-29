@@ -8,4 +8,4 @@
 // Suppression File". You do not need to add suppressions to this
 // file manually.
 
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1703:ResourceStringsShouldBeSpelledCorrectly", MessageId = "JSRBBR", Scope = "resource", Target = "Company.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx.resources", Justification = "Designer file extension")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1703:ResourceStringsShouldBeSpelledCorrectly", MessageId = "JSRBBR", Scope = "resource", Target = "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx.resources", Justification = "Designer file extension")]

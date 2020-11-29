@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="69434169-3a00-4f59-bb69-ca52e7f3e31b" absoluteBounds="0, 0, 11, 8.5" name="Sample">
-  <exampleModelMoniker Id="a25d841d-7f74-4baf-92fb-a14d76b3ef6e" />
+<jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="cf1658ea-4189-47c4-8599-5932faaeb573" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+  <exampleModelMoniker Id="d4c67442-bea7-4fe9-9498-bc7051b1241f" />
   <nestedChildShapes>
-    <exampleShape Id="987f63fc-a4b3-46d9-b59a-bba416b0896d" absoluteBounds="0.5, 1.75, 2, 0.75">
-      <exampleElementMoniker name="/a25d841d-7f74-4baf-92fb-a14d76b3ef6e/ExampleElement1" />
+    <exampleShape Id="8068c784-d812-4bfb-8b73-ba3788b884c1" absoluteBounds="0.5, 1.75, 2, 0.75">
+      <exampleElementMoniker name="/d4c67442-bea7-4fe9-9498-bc7051b1241f/ExampleElement1" />
     </exampleShape>
-    <exampleShape Id="014b8b54-bf47-4c9d-ab36-ffddf2249ba2" absoluteBounds="3, 0.5, 2, 0.75">
-      <exampleElementMoniker name="/a25d841d-7f74-4baf-92fb-a14d76b3ef6e/ExampleElement2" />
+    <exampleShape Id="b2d638d2-e4d2-4ecc-bd07-3a65eac609f6" absoluteBounds="3, 0.5, 2, 0.75">
+      <exampleElementMoniker name="/d4c67442-bea7-4fe9-9498-bc7051b1241f/ExampleElement2" />
     </exampleShape>
-    <exampleConnector Id="3b960bb9-22d9-4ddc-a054-70ce64a64a1c" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d1c1680d-a2f9-4d4d-bbfb-67abb94192f2">
+    <exampleConnector Id="456ac413-5cd2-491b-8fb6-434eb677306b" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="9c3bfaa7-c932-41bb-893f-0669e7c013fb">
       <nodes>
-        <exampleShapeMoniker Id="987f63fc-a4b3-46d9-b59a-bba416b0896d" />
-        <exampleShapeMoniker Id="014b8b54-bf47-4c9d-ab36-ffddf2249ba2" />
+        <exampleShapeMoniker Id="8068c784-d812-4bfb-8b73-ba3788b884c1" />
+        <exampleShapeMoniker Id="b2d638d2-e4d2-4ecc-bd07-3a65eac609f6" />
       </nodes>
     </exampleConnector>
   </nestedChildShapes>
