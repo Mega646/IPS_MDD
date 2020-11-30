@@ -211,16 +211,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementMap.Add(typeof(OperacionEnriquecida), 10);
 				createElementMap.Add(typeof(JSRBBRProyectoIPSDiagram), 11);
 				createElementMap.Add(typeof(MetaforaRelacionHerencia), 12);
-				createElementMap.Add(typeof(MetaforaRelaciones), 13);
-				createElementMap.Add(typeof(MetaforaRelacionRelacional), 14);
-				createElementMap.Add(typeof(MetaforaRelacionInclusiva), 15);
-				createElementMap.Add(typeof(MetaforaRelacionReferencial), 16);
-				createElementMap.Add(typeof(MetaforaClase), 17);
-				createElementMap.Add(typeof(MetaforaClaseAbstracta), 18);
-				createElementMap.Add(typeof(MetaforaAtributo), 19);
-				createElementMap.Add(typeof(MetaforaOperacionNormal), 20);
-				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 21);
-				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 22);
+				createElementMap.Add(typeof(MetaforaRelacionRelacional), 13);
+				createElementMap.Add(typeof(MetaforaRelacionInclusiva), 14);
+				createElementMap.Add(typeof(MetaforaRelacionReferencial), 15);
+				createElementMap.Add(typeof(MetaforaClase), 16);
+				createElementMap.Add(typeof(MetaforaClaseAbstracta), 17);
+				createElementMap.Add(typeof(MetaforaAtributo), 18);
+				createElementMap.Add(typeof(MetaforaOperacionNormal), 19);
+				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 20);
+				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 21);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -247,16 +246,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 10: return new OperacionEnriquecida(partition, propertyAssignments);
 				case 11: return new JSRBBRProyectoIPSDiagram(partition, propertyAssignments);
 				case 12: return new MetaforaRelacionHerencia(partition, propertyAssignments);
-				case 13: return new MetaforaRelaciones(partition, propertyAssignments);
-				case 14: return new MetaforaRelacionRelacional(partition, propertyAssignments);
-				case 15: return new MetaforaRelacionInclusiva(partition, propertyAssignments);
-				case 16: return new MetaforaRelacionReferencial(partition, propertyAssignments);
-				case 17: return new MetaforaClase(partition, propertyAssignments);
-				case 18: return new MetaforaClaseAbstracta(partition, propertyAssignments);
-				case 19: return new MetaforaAtributo(partition, propertyAssignments);
-				case 20: return new MetaforaOperacionNormal(partition, propertyAssignments);
-				case 21: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
-				case 22: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
+				case 13: return new MetaforaRelacionRelacional(partition, propertyAssignments);
+				case 14: return new MetaforaRelacionInclusiva(partition, propertyAssignments);
+				case 15: return new MetaforaRelacionReferencial(partition, propertyAssignments);
+				case 16: return new MetaforaClase(partition, propertyAssignments);
+				case 17: return new MetaforaClaseAbstracta(partition, propertyAssignments);
+				case 18: return new MetaforaAtributo(partition, propertyAssignments);
+				case 19: return new MetaforaOperacionNormal(partition, propertyAssignments);
+				case 20: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
+				case 21: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -723,19 +721,19 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.publico
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr/publico.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		publico,
+		publico = 2,
 		/// <summary>
 		/// privado
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.privado
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr/privado.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		privado,
+		privado = 0,
 		/// <summary>
 		/// protegido
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.protegido
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr/protegido.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		protegido,
+		protegido = 1,
 	}
 }
 

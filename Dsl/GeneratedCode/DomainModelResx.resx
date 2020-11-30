@@ -961,10 +961,6 @@
     <value>Metafora Clase Abstracta</value>
     <comment>DisplayName for DomainClass &apos;MetaforaClaseAbstracta&apos;</comment>
   </data>
-  <data name="MetaforaClaseAbstractanombreClaseAbstractaDecDefaultText" xml:space="preserve">
-    <value>nombreClaseAbstractaDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo</value>
     <comment>Description for DomainClass &apos;MetaforaAtributo&apos;</comment>

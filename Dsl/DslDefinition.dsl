@@ -498,9 +498,9 @@
     </DomainEnumeration>
     <DomainEnumeration Name="modificadorAtr" Namespace="UPM_IPS.JSRBBRProyectoIPS" Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr">
       <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.publico" Name="publico" Value="" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.privado" Name="privado" Value="" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.protegido" Name="protegido" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.publico" Name="publico" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.privado" Name="privado" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.protegido" Name="protegido" Value="1" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -511,11 +511,11 @@
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="287e96b3-73c2-414b-8c41-e3709a75059b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta" Name="MetaforaClaseAbstracta" DisplayName="Metafora Clase Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Abstracta" FillColor="Wheat" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreClaseAbstractaDec" DisplayName="Nombre Clase Abstracta Dec" DefaultText="nombreClaseAbstractaDec" FontStyle="Bold" FontSize="10" />
-      </ShapeHasDecorators>
+      <BaseGeometryShape>
+        <GeometryShapeMoniker Name="MetaforaClase" />
+      </BaseGeometryShape>
     </GeometryShape>
-    <GeometryShape Id="7d566e5c-ac58-46bf-91b8-311057b9a561" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo" Name="MetaforaAtributo" DisplayName="Metafora Atributo" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Atributo" FillColor="Transparent" OutlineColor="Transparent" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <GeometryShape Id="7d566e5c-ac58-46bf-91b8-311057b9a561" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo" Name="MetaforaAtributo" DisplayName="Metafora Atributo" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Atributo" FillColor="Transparent" OutlineColor="Transparent" InitialHeight="0.1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
@@ -554,7 +554,7 @@
         <TextDecorator Name="totalParcialDec" DisplayName="Total Parcial Dec" DefaultText="totalParcialDec" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="2f617534-8135-41d0-9f1f-f37094721ae1" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelaciones" Name="MetaforaRelaciones" DisplayName="Metafora Relaciones" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relaciones">
+    <Connector Id="2f617534-8135-41d0-9f1f-f37094721ae1" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelaciones" Name="MetaforaRelaciones" DisplayName="Metafora Relaciones" InheritanceModifier="Abstract" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relaciones">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ConnectorHasDecorators>
@@ -570,12 +570,12 @@
         <ConnectorMoniker Name="MetaforaRelaciones" />
       </BaseConnector>
     </Connector>
-    <Connector Id="e7f95916-1358-4a0b-a062-7cc6053a526d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva" Name="MetaforaRelacionInclusiva" DisplayName="Metafora Relacion Inclusiva" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Inclusiva" SourceEndStyle="FilledDiamond">
+    <Connector Id="e7f95916-1358-4a0b-a062-7cc6053a526d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva" Name="MetaforaRelacionInclusiva" DisplayName="Metafora Relacion Inclusiva" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Inclusiva" TargetEndStyle="FilledDiamond">
       <BaseConnector>
         <ConnectorMoniker Name="MetaforaRelaciones" />
       </BaseConnector>
     </Connector>
-    <Connector Id="fa43010e-c16e-40d2-81ed-f29110c1b67f" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial" Name="MetaforaRelacionReferencial" DisplayName="Metafora Relacion Referencial" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Referencial" SourceEndStyle="EmptyDiamond">
+    <Connector Id="fa43010e-c16e-40d2-81ed-f29110c1b67f" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial" Name="MetaforaRelacionReferencial" DisplayName="Metafora Relacion Referencial" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Referencial" TargetEndStyle="EmptyDiamond">
       <BaseConnector>
         <ConnectorMoniker Name="MetaforaRelaciones" />
       </BaseConnector>
@@ -934,7 +934,7 @@
           <DomainPath>TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaClaseAbstracta/nombreClaseAbstractaDec" />
+          <TextDecoratorMoniker Name="MetaforaClase/nombreClaseDec" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="Clase/nombre" />
@@ -1053,34 +1053,6 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="ClaseInheritsClaseHija/totalParcialCalculada" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="MetaforaRelaciones" />
-        <DomainRelationshipMoniker Name="ClaseReferencesTargetClases" />
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad1Dec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad2Dec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaRelaciones/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/nombre" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>

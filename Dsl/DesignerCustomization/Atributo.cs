@@ -10,7 +10,20 @@ namespace UPM_IPS.JSRBBRProyectoIPS
     {
         public string GetnombreCalculadoValue()
         {
-            return string.Format("{1}" + "({0})", this.modificador, this.nombre);
+            char modifierSymbol = 'a';
+            if(this.modificador == modificadorAtr.privado)
+            {
+                modifierSymbol = '-';
+            }
+            else if(this.modificador == modificadorAtr.publico)
+            {
+                modifierSymbol = '+';
+            }
+            else if(this.modificador == modificadorAtr.protegido)
+            {
+                modifierSymbol = '#';
+            }
+            return string.Format(modifierSymbol + " {0}", this.nombre);
         }
 
         public void SetnombreCalculadoValue()

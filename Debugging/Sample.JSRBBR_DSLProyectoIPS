@@ -1,8 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<tapizClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1e115d-38a8-4182-afb9-ac630eab1576" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
+<tapizClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1e115d-38a8-4182-afb9-ac630eab1576" nombre="¿Qué dices, tío?" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
   <clase>
-    <tapizClasesHasClase Id="0e1cd97e-cf3c-4ae2-baf1-0338a3aaf186">
-      <clase Id="5bfa4ccb-5a5d-4854-8e86-523a264d11c8" nombre="motor" />
+    <tapizClasesHasClase Id="d4026b54-296c-40e1-8a23-4119a8d3a3eb">
+      <clase Id="5a400b9b-b638-4186-ad77-78389488adcf" nombre="Clase">
+        <atributo>
+          <claseHasAtributo Id="f6ed18aa-f69d-41b7-984e-7f41daea8494">
+            <atributo Id="474d66ed-5b85-4332-970b-2d587a2c181f" nombre="lol" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="e9ab4534-f90c-4175-bdb6-0aedda37ab89">
+            <atributo Id="b4d1d67c-b884-40ad-bb20-864664affdb2" nombre="nice" modificador="privado" />
+          </claseHasAtributo>
+        </atributo>
+      </clase>
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="baf43c50-4668-424f-997e-bf676fa5c86e">
+      <claseEnriquecida Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" nombre="Clase enriquecida" />
     </tapizClasesHasClase>
   </clase>
 </tapizClases>

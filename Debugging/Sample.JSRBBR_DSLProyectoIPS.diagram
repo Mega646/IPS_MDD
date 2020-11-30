@@ -2,8 +2,17 @@
 <jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="cf1658ea-4189-47c4-8599-5932faaeb573" absoluteBounds="0, 0, 11, 8.5" name="Sample">
   <tapizClasesMoniker Id="6d1e115d-38a8-4182-afb9-ac630eab1576" />
   <nestedChildShapes>
-    <metaforaClase Id="cd30b4b0-0557-4c2d-81ce-93b924dd06e7" absoluteBounds="9, 3.75, 1.5, 1">
-      <claseMoniker Id="5bfa4ccb-5a5d-4854-8e86-523a264d11c8" />
+    <metaforaClase Id="6c544fd4-534f-4a61-9db6-7ff90b60c869" absoluteBounds="6.25, 2.625, 1.5, 1">
+      <claseMoniker Id="5a400b9b-b638-4186-ad77-78389488adcf" />
     </metaforaClase>
+    <metaforaAtributo Id="8eb7f89f-a382-4926-a93f-0d453247e0e6" absoluteBounds="6.25, 2.875, 1.5, 0.25">
+      <atributoMoniker Id="474d66ed-5b85-4332-970b-2d587a2c181f" />
+    </metaforaAtributo>
+    <metaforaAtributo Id="35b2afda-2cdb-41bc-a231-09cb47f17a6c" absoluteBounds="6.25, 3.125, 1.5, 0.25">
+      <atributoMoniker Id="b4d1d67c-b884-40ad-bb20-864664affdb2" />
+    </metaforaAtributo>
+    <metaforaClaseEnriquecida Id="f97a3a11-e207-41f2-8c96-f55e61fb1bc3" absoluteBounds="9, 2.625, 1.5, 1">
+      <claseEnriquecidaMoniker Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" />
+    </metaforaClaseEnriquecida>
   </nestedChildShapes>
 </jSRBBRProyectoIPSDiagram>
