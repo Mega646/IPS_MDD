@@ -534,7 +534,7 @@
     <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/SourceClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Padre</value>
+    <value>Clase Hija</value>
     <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/TargetClase.Description" xml:space="preserve">
@@ -546,7 +546,7 @@
     <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/TargetClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Hija</value>
+    <value>Clase Padre</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaHasOperacionAbstracta.Description" xml:space="preserve">
@@ -630,7 +630,7 @@
     <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseIncludesTargetClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/SourceClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Compuesta</value>
+    <value>Clase Componente</value>
     <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseIncludesTargetClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/TargetClase.Description" xml:space="preserve">
@@ -642,7 +642,7 @@
     <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseIncludesTargetClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/TargetClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Componente</value>
+    <value>Clase Compuesta</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseIncludesTargetClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.Description" xml:space="preserve">
@@ -662,7 +662,7 @@
     <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseRelatesTargetClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/SourceClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Relacionada</value>
+    <value>Clase Relacion</value>
     <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseRelatesTargetClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/TargetClase.Description" xml:space="preserve">
@@ -674,7 +674,7 @@
     <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseRelatesTargetClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/TargetClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Relacion</value>
+    <value>Clase Relacionada</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseRelatesTargetClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Description" xml:space="preserve">
@@ -796,6 +796,38 @@
   <data name="UPM_IPS.JSRBBRProyectoIPS.OperacionHasParametros/Parametro.PropertyDisplayName" xml:space="preserve">
     <value>Operacion</value>
     <comment>PropertyDisplayName for DomainRole &apos;Parametro&apos; on DomainRelationship &apos;OperacionHasParametros&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta</value>
+    <comment>Description for DomainClass &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.DisplayName" xml:space="preserve">
+    <value>Clase Abstracta References Clase Hija De Abstracta</value>
+    <comment>DisplayName for DomainClass &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstracta</value>
+    <comment>Description for DomainRole &apos;ClaseAbstracta&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.DisplayName" xml:space="preserve">
+    <value>Clase Abstracta</value>
+    <comment>DisplayName for DomainRole &apos;ClaseAbstracta&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Hija De Abstracta</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClaseAbstracta&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.DisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Abstracta</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.entradaSalida/entrada.DisplayName" xml:space="preserve">
     <value>entrada</value>
@@ -1013,10 +1045,6 @@
     <value>Metafora Clase Enriquecida</value>
     <comment>DisplayName for DomainClass &apos;MetaforaClaseEnriquecida&apos;</comment>
   </data>
-  <data name="MetaforaClaseEnriquecidanombreDecDefaultText" xml:space="preserve">
-    <value>nombreDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia</value>
     <comment>Description for DomainClass &apos;MetaforaRelacionHerencia&apos;</comment>
@@ -1121,12 +1149,12 @@
     <value>Añadir atributo a una clase</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ClaseEnriquecidaToolboxItem" xml:space="preserve">
-    <value>Clase Enriquecida</value>
+  <data name="OperacionToolboxItem" xml:space="preserve">
+    <value>Operación</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ClaseEnriquecidaToolboxTooltip" xml:space="preserve">
-    <value>Clase Enriquecida</value>
+  <data name="OperacionToolboxTooltip" xml:space="preserve">
+    <value>Operacion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="RelacionesToolboxTab" xml:space="preserve">
@@ -1165,16 +1193,24 @@
     <value>Crea una relación referencial entre dos clases</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="OperacionesToolboxTab" xml:space="preserve">
-    <value>Operaciones</value>
+  <data name="Clase enriquecidaToolboxTab" xml:space="preserve">
+    <value>Clase enriquecida</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="OperacionToolboxItem" xml:space="preserve">
-    <value>Operación</value>
+  <data name="ClaseEnriquecidaToolboxItem" xml:space="preserve">
+    <value>Clase Enriquecida</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="OperacionToolboxTooltip" xml:space="preserve">
-    <value>Operacion</value>
+  <data name="ClaseEnriquecidaToolboxTooltip" xml:space="preserve">
+    <value>Clase Enriquecida</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoEnriquecidoToolboxItem" xml:space="preserve">
+    <value>Atributo Enriquecido</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoEnriquecidoToolboxTooltip" xml:space="preserve">
+    <value>Atributo Enriquecido</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="OperacionEnriquecidaToolboxItem" xml:space="preserve">
@@ -1322,8 +1358,8 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ClaseEnriquecidaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\enriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OperacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\operacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="HerenciaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
@@ -1342,8 +1378,12 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\referencial.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="OperacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\operacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ClaseEnriquecidaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\enriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoEnriquecidoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\atributoEnriquecido.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="OperacionEnriquecidaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">

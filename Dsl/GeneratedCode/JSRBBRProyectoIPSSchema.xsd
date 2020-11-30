@@ -98,7 +98,7 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: ClaseInheritsClaseHija -->
-          <xsd:element name="clasePadre" minOccurs="0" maxOccurs="1">
+          <xsd:element name="claseHija" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>Instances of ClaseInheritsClaseHija</xsd:documentation>
             </xsd:annotation>
@@ -128,7 +128,7 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: ClaseIncludesTargetClase -->
-          <xsd:element name="claseCompuesta" minOccurs="0" maxOccurs="1">
+          <xsd:element name="claseComponente" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>Instances of ClaseIncludesTargetClase</xsd:documentation>
             </xsd:annotation>
@@ -143,7 +143,7 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: ClaseRelatesTargetClase -->
-          <xsd:element name="claseRelacionada" minOccurs="0" maxOccurs="1">
+          <xsd:element name="claseRelacion" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>Instances of ClaseRelatesTargetClase</xsd:documentation>
             </xsd:annotation>
@@ -976,6 +976,33 @@
             <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseAbstractaReferencesClaseHijaDeAbstracta -->
+  <xsd:element name="claseAbstractaReferencesClaseHijaDeAbstracta" type="ClaseAbstractaReferencesClaseHijaDeAbstracta" substitutionGroup="claseInheritsClaseHija" />
+  <xsd:complexType name="ClaseAbstractaReferencesClaseHijaDeAbstracta">
+    <xsd:complexContent>
+      <xsd:extension base="ClaseInheritsClaseHija">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseAbstractaReferencesClaseHijaDeAbstracta Moniker -->
+  <xsd:element name="claseAbstractaReferencesClaseHijaDeAbstractaMoniker" type="ClaseAbstractaReferencesClaseHijaDeAbstractaMoniker" substitutionGroup="claseInheritsClaseHijaMoniker" />
+  <xsd:complexType name="ClaseAbstractaReferencesClaseHijaDeAbstractaMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClaseAbstractaReferencesClaseHijaDeAbstracta instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ClaseInheritsClaseHijaMoniker">
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

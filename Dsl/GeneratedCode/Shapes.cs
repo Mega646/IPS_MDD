@@ -1075,7 +1075,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("44803792-228b-4c07-a9ea-cb97109c99af")]
-	public partial class MetaforaClaseEnriquecida : DslDiagrams::NodeShape
+	public partial class MetaforaClaseEnriquecida : MetaforaClase
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1115,7 +1115,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Event fired when decorator initialization is complete for this shape type.
 		/// </summary>
-		public static event global::System.EventHandler DecoratorsInitialized;
+		public static new event global::System.EventHandler DecoratorsInitialized;
 		
 		/// <summary>
 		/// List containing decorators used by this type.
@@ -1148,37 +1148,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
 		}
 		
-		
-		/// <summary>
-		/// Shape instance initialization.
-		/// </summary>
-		public override void OnInitialize()
-		{
-			base.OnInitialize();
-			
-			// Create host shapes for outer decorators.
-			foreach(DslDiagrams::Decorator decorator in this.Decorators)
-			{
-				if(decorator.RequiresHost)
-				{
-					decorator.ConfigureHostShape(this);
-				}
-			}
-			
-		}
-		#endregion
-		#region Shape size
-		
-		/// <summary>
-		/// Default size for this shape.
-		/// </summary>
-		public override DslDiagrams::SizeD DefaultSize
-		{
-			get
-			{
-				return new DslDiagrams::SizeD(1.5, 1);
-			}
-		}
 		#endregion
 		#region Shape styles
 		/// <summary>
@@ -1215,59 +1184,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			get
 			{
 				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-			}
-		}
-		#endregion
-		#region Decorators
-		/// <summary>
-		/// Initialize the collection of shape fields associated with this shape type.
-		/// </summary>
-		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
-		{
-			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("nombreDec");
-			field1.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaClaseEnriquecidanombreDecDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			shapeFields.Add(field1);
-			
-		}
-		
-		/// <summary>
-		/// Initialize the collection of decorators associated with this shape type.  This method also
-		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
-		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
-		/// </summary>
-		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
-		{
-			base.InitializeDecorators(shapeFields, decorators);
-			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "nombreDec");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator1);
-				
-		}
-		
-		/// <summary>
-		/// Ensure outer decorators are placed appropriately.  This is called during view fixup,
-		/// after the shape has been associated with the model element.
-		/// </summary>
-		public override void OnBoundsFixup(DslDiagrams::BoundsFixupState fixupState, int iteration, bool createdDuringViewFixup)
-		{
-			base.OnBoundsFixup(fixupState, iteration, createdDuringViewFixup);
-			
-			if(iteration == 0)
-			{
-				foreach(DslDiagrams::Decorator decorator in this.Decorators)
-				{
-					if(decorator.RequiresHost)
-					{
-						decorator.RepositionHostShape(decorator.GetHostShape(this));
-					}
-				}
 			}
 		}
 		#endregion

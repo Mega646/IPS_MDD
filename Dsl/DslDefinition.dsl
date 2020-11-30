@@ -292,14 +292,14 @@
         </DomainProperty>
       </Properties>
       <Source>
-        <DomainRole Id="24febf6d-a793-4ec1-8909-2f3ca859c3b7" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClasePadre" PropertyDisplayName="Clase Padre">
+        <DomainRole Id="24febf6d-a793-4ec1-8909-2f3ca859c3b7" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClaseHija" PropertyDisplayName="Clase Hija">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="8e72f949-11f7-41d4-829d-8f842dd3f2ae" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClaseHija" PropertyDisplayName="Clase Hija">
+        <DomainRole Id="8e72f949-11f7-41d4-829d-8f842dd3f2ae" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClasePadre" PropertyDisplayName="Clase Padre">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -346,14 +346,14 @@
         <DomainRelationshipMoniker Name="ClaseReferencesTargetClases" />
       </BaseRelationship>
       <Source>
-        <DomainRole Id="35afab33-9265-4846-a0a9-0b17b5cf5a9b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClaseCompuesta" PropertyDisplayName="Clase Compuesta">
+        <DomainRole Id="35afab33-9265-4846-a0a9-0b17b5cf5a9b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClaseComponente" PropertyDisplayName="Clase Componente">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="62a07770-1b1f-4789-963a-b79bf1938164" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClaseComponente" PropertyDisplayName="Clase Componente">
+        <DomainRole Id="62a07770-1b1f-4789-963a-b79bf1938164" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClaseCompuesta" PropertyDisplayName="Clase Compuesta">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -365,14 +365,14 @@
         <DomainRelationshipMoniker Name="ClaseReferencesTargetClases" />
       </BaseRelationship>
       <Source>
-        <DomainRole Id="37b42568-374d-4b58-9bc6-21ee43d226b8" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClaseRelacionada" PropertyDisplayName="Clase Relacionada">
+        <DomainRole Id="37b42568-374d-4b58-9bc6-21ee43d226b8" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClaseRelacion" PropertyDisplayName="Clase Relacion">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="ff5722ee-f46e-4a8a-a444-12e7a540a32f" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClaseRelacion" PropertyDisplayName="Clase Relacion">
+        <DomainRole Id="ff5722ee-f46e-4a8a-a444-12e7a540a32f" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClaseRelacionada" PropertyDisplayName="Clase Relacionada">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -440,6 +440,25 @@
         <DomainRole Id="81f1a803-6e72-4717-8793-a3988fb46a2d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.OperacionHasParametros.Parametro" Name="Parametro" DisplayName="Parametro" PropertyName="Operacion" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Operacion">
           <RolePlayer>
             <DomainClassMoniker Name="Parametro" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="67257a1a-48be-4650-b00a-6173313f007d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta" Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" DisplayName="Clase Abstracta References Clase Hija De Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS">
+      <BaseRelationship>
+        <DomainRelationshipMoniker Name="ClaseInheritsClaseHija" />
+      </BaseRelationship>
+      <Source>
+        <DomainRole Id="8c2d3464-a063-474c-84e7-3cad00ac7ca5" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstracta" Name="ClaseAbstracta" DisplayName="Clase Abstracta" PropertyName="ClaseHijaDeAbstracta" Multiplicity="OneMany" PropertyDisplayName="Clase Hija De Abstracta">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClaseAbstracta" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="4d1ca834-ce06-4989-a784-9fa547e5ee3c" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Clase" Name="Clase" DisplayName="Clase" PropertyName="ClaseAbstracta" PropertyDisplayName="Clase Abstracta">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -540,9 +559,9 @@
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="44803792-228b-4c07-a9ea-cb97109c99af" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida" Name="MetaforaClaseEnriquecida" DisplayName="Metafora Clase Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Enriquecida" FillColor="IndianRed" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
-      </ShapeHasDecorators>
+      <BaseGeometryShape>
+        <GeometryShapeMoniker Name="MetaforaClase" />
+      </BaseGeometryShape>
     </GeometryShape>
   </Shapes>
   <Connectors>
@@ -606,16 +625,16 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="operacion">
             <DomainRelationshipMoniker Name="ClaseHasOperacion" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="clasePadre">
+          <XmlRelationshipData UseFullForm="true" RoleElementName="claseHija">
             <DomainRelationshipMoniker Name="ClaseInheritsClaseHija" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">
             <DomainRelationshipMoniker Name="ClaseReferencesTargetClase" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="claseCompuesta">
+          <XmlRelationshipData UseFullForm="true" RoleElementName="claseComponente">
             <DomainRelationshipMoniker Name="ClaseIncludesTargetClase" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="claseRelacionada">
+          <XmlRelationshipData UseFullForm="true" RoleElementName="claseRelacion">
             <DomainRelationshipMoniker Name="ClaseRelatesTargetClase" />
           </XmlRelationshipData>
           <XmlPropertyData XmlName="nombre">
@@ -694,6 +713,9 @@
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="operacionAbstracta">
             <DomainRelationshipMoniker Name="ClaseAbstractaHasOperacionAbstracta" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="claseHijaDeAbstracta">
+            <DomainRelationshipMoniker Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -827,6 +849,9 @@
       <XmlClassData TypeName="MetaforaClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaClaseEnriquecidaMoniker" ElementName="metaforaClaseEnriquecida" MonikerTypeName="MetaforaClaseEnriquecidaMoniker">
         <GeometryShapeMoniker Name="MetaforaClaseEnriquecida" />
       </XmlClassData>
+      <XmlClassData TypeName="ClaseAbstractaReferencesClaseHijaDeAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaReferencesClaseHijaDeAbstractaMoniker" ElementName="claseAbstractaReferencesClaseHijaDeAbstracta" MonikerTypeName="ClaseAbstractaReferencesClaseHijaDeAbstractaMoniker">
+        <DomainRelationshipMoniker Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="JSRBBRProyectoIPSExplorer" />
@@ -895,6 +920,25 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ClaseAbstractaReferencesClaseHijaDeAbstractaBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClaseAbstracta" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
@@ -1026,7 +1070,7 @@
           <DomainPath>TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaClaseEnriquecida/nombreDec" />
+          <TextDecoratorMoniker Name="MetaforaClase/nombreClaseDec" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="Clase/nombre" />
@@ -1160,8 +1204,8 @@
       <ElementTool Name="Atributo" ToolboxIcon="Resources\atributo.bmp" Caption="Atributo" Tooltip="Añadir atributo a una clase" HelpKeyword="Atributo">
         <DomainClassMoniker Name="Atributo" />
       </ElementTool>
-      <ElementTool Name="ClaseEnriquecida" ToolboxIcon="Resources\enriquecida.bmp" Caption="Clase Enriquecida" Tooltip="Clase Enriquecida" HelpKeyword="ClaseEnriquecida">
-        <DomainClassMoniker Name="ClaseEnriquecida" />
+      <ElementTool Name="Operacion" ToolboxIcon="Resources\operacion.bmp" Caption="Operación" Tooltip="Operacion" HelpKeyword="Operacion">
+        <DomainClassMoniker Name="OperacionNormal" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Relaciones">
@@ -1178,9 +1222,12 @@
         <ConnectionBuilderMoniker Name="JSRBBRProyectoIPS/ClaseRelatesTargetClaseBuilder" />
       </ConnectionTool>
     </ToolboxTab>
-    <ToolboxTab TabText="Operaciones">
-      <ElementTool Name="Operacion" ToolboxIcon="Resources\operacion.bmp" Caption="Operación" Tooltip="Operacion" HelpKeyword="Operacion">
-        <DomainClassMoniker Name="OperacionNormal" />
+    <ToolboxTab TabText="Clase enriquecida">
+      <ElementTool Name="ClaseEnriquecida" ToolboxIcon="Resources\enriquecida.bmp" Caption="Clase Enriquecida" Tooltip="Clase Enriquecida" HelpKeyword="ClaseEnriquecida">
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+      </ElementTool>
+      <ElementTool Name="AtributoEnriquecido" ToolboxIcon="Resources\atributoEnriquecido.bmp" Caption="Atributo Enriquecido" Tooltip="Atributo Enriquecido" HelpKeyword="AtributoEnriquecido">
+        <DomainClassMoniker Name="AtributoEnriquecido" />
       </ElementTool>
       <ElementTool Name="OperacionEnriquecida" ToolboxIcon="Resources\operacionEnriquecida.bmp" Caption="Operacion Enriquecida" Tooltip="Operacion Enriquecida" HelpKeyword="OperacionEnriquecida">
         <DomainClassMoniker Name="OperacionEnriquecida" />

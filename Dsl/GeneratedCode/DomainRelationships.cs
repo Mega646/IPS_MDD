@@ -814,7 +814,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/SourceClase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/SourceClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClasePadre", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseHija", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("24febf6d-a793-4ec1-8909-2f3ca859c3b7")]
 		public virtual Clase SourceClase
 		{
@@ -831,13 +831,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access ClaseHija of a Clase
+		#region Static methods to access ClasePadre of a Clase
 		/// <summary>
-		/// Gets a list of ClaseHija.
+		/// Gets a list of ClasePadre.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClaseHija(Clase element)
+		public static DslModeling::LinkedElementCollection<Clase> GetClasePadre(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, TargetClaseDomainRoleId);
 		}
@@ -855,7 +855,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/TargetClase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/TargetClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseHija", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClasePadre", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("8e72f949-11f7-41d4-829d-8f842dd3f2ae")]
 		public virtual Clase TargetClase
 		{
@@ -872,13 +872,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access ClasePadre of a Clase
+		#region Static methods to access ClaseHija of a Clase
 		/// <summary>
-		/// Gets a list of ClasePadre.
+		/// Gets a list of ClaseHija.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClasePadre(Clase element)
+		public static DslModeling::LinkedElementCollection<Clase> GetClaseHija(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
 		}
@@ -1198,7 +1198,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija> GetLinksToClasePadre ( global::UPM_IPS.JSRBBRProyectoIPS.Clase sourceClaseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija> GetLinksToClaseHija ( global::UPM_IPS.JSRBBRProyectoIPS.Clase sourceClaseInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija>(sourceClaseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClaseDomainRoleId);
 		}
@@ -1209,7 +1209,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija> GetLinksToClaseHija ( global::UPM_IPS.JSRBBRProyectoIPS.Clase targetClaseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija> GetLinksToClasePadre ( global::UPM_IPS.JSRBBRProyectoIPS.Clase targetClaseInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija>(targetClaseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClaseDomainRoleId);
 		}
@@ -1804,7 +1804,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/SourceClase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/SourceClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseCompuesta", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseComponente", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("35afab33-9265-4846-a0a9-0b17b5cf5a9b")]
 		public override Clase SourceClase
 		{
@@ -1821,13 +1821,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access ClaseComponente of a Clase
+		#region Static methods to access ClaseCompuesta of a Clase
 		/// <summary>
-		/// Gets a list of ClaseComponente.
+		/// Gets a list of ClaseCompuesta.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClaseComponente(Clase element)
+		public static DslModeling::LinkedElementCollection<Clase> GetClaseCompuesta(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, TargetClaseDomainRoleId);
 		}
@@ -1845,7 +1845,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/TargetClase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/TargetClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseComponente", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseCompuesta", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("62a07770-1b1f-4789-963a-b79bf1938164")]
 		public override Clase TargetClase
 		{
@@ -1862,13 +1862,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access ClaseCompuesta of a Clase
+		#region Static methods to access ClaseComponente of a Clase
 		/// <summary>
-		/// Gets a list of ClaseCompuesta.
+		/// Gets a list of ClaseComponente.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClaseCompuesta(Clase element)
+		public static DslModeling::LinkedElementCollection<Clase> GetClaseComponente(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
 		}
@@ -1879,7 +1879,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase> GetLinksToClaseCompuesta ( global::UPM_IPS.JSRBBRProyectoIPS.Clase sourceClaseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase> GetLinksToClaseComponente ( global::UPM_IPS.JSRBBRProyectoIPS.Clase sourceClaseInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase>(sourceClaseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.SourceClaseDomainRoleId);
 		}
@@ -1890,7 +1890,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase> GetLinksToClaseComponente ( global::UPM_IPS.JSRBBRProyectoIPS.Clase targetClaseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase> GetLinksToClaseCompuesta ( global::UPM_IPS.JSRBBRProyectoIPS.Clase targetClaseInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase>(targetClaseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.TargetClaseDomainRoleId);
 		}
@@ -2024,7 +2024,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/SourceClase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/SourceClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseRelacionada", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseRelacion", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("37b42568-374d-4b58-9bc6-21ee43d226b8")]
 		public override Clase SourceClase
 		{
@@ -2041,13 +2041,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access ClaseRelacion of a Clase
+		#region Static methods to access ClaseRelacionada of a Clase
 		/// <summary>
-		/// Gets a list of ClaseRelacion.
+		/// Gets a list of ClaseRelacionada.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClaseRelacion(Clase element)
+		public static DslModeling::LinkedElementCollection<Clase> GetClaseRelacionada(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, TargetClaseDomainRoleId);
 		}
@@ -2065,7 +2065,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/TargetClase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/TargetClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseRelacion", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseRelacionada", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("ff5722ee-f46e-4a8a-a444-12e7a540a32f")]
 		public override Clase TargetClase
 		{
@@ -2082,13 +2082,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access ClaseRelacionada of a Clase
+		#region Static methods to access ClaseRelacion of a Clase
 		/// <summary>
-		/// Gets a list of ClaseRelacionada.
+		/// Gets a list of ClaseRelacion.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetClaseRelacionada(Clase element)
+		public static DslModeling::LinkedElementCollection<Clase> GetClaseRelacion(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
 		}
@@ -2099,7 +2099,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase> GetLinksToClaseRelacionada ( global::UPM_IPS.JSRBBRProyectoIPS.Clase sourceClaseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase> GetLinksToClaseRelacion ( global::UPM_IPS.JSRBBRProyectoIPS.Clase sourceClaseInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase>(sourceClaseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.SourceClaseDomainRoleId);
 		}
@@ -2110,7 +2110,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase> GetLinksToClaseRelacion ( global::UPM_IPS.JSRBBRProyectoIPS.Clase targetClaseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase> GetLinksToClaseRelacionada ( global::UPM_IPS.JSRBBRProyectoIPS.Clase targetClaseInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase>(targetClaseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.TargetClaseDomainRoleId);
 		}
@@ -3053,6 +3053,271 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.OperacionHasParametros link in links )
 			{
 				if ( target.Equals(link.Parametro) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.JSRBBRProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship ClaseAbstractaReferencesClaseHijaDeAbstracta
+	/// Description for
+	/// UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("67257a1a-48be-4650-b00a-6173313f007d")]
+	public partial class ClaseAbstractaReferencesClaseHijaDeAbstracta : ClaseInheritsClaseHija
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseAbstractaReferencesClaseHijaDeAbstracta domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x67257a1a, 0x48be, 0x4650, 0xb0, 0x0a, 0x61, 0x73, 0x31, 0x3f, 0x00, 0x7d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseAbstractaReferencesClaseHijaDeAbstracta link in the same Partition as the given ClaseAbstracta
+		/// </summary>
+		/// <param name="source">ClaseAbstracta to use as the source of the relationship.</param>
+		/// <param name="target">Clase to use as the target of the relationship.</param>
+		public ClaseAbstractaReferencesClaseHijaDeAbstracta(ClaseAbstracta source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseAbstractaReferencesClaseHijaDeAbstracta(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseAbstractaReferencesClaseHijaDeAbstracta(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseAbstractaReferencesClaseHijaDeAbstracta(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseAbstractaReferencesClaseHijaDeAbstracta(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClaseAbstracta domain role code
+		
+		/// <summary>
+		/// ClaseAbstracta domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseAbstractaDomainRoleId = new global::System.Guid(0x8c2d3464, 0xa063, 0x474c, 0x84, 0xe7, 0x3c, 0xad, 0x00, 0xac, 0x7c, 0xa5);
+		
+		/// <summary>
+		/// DomainRole ClaseAbstracta
+		/// Description for
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstracta
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseHijaDeAbstracta", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainObjectId("8c2d3464-a063-474c-84e7-3cad00ac7ca5")]
+		public virtual ClaseAbstracta ClaseAbstracta
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClaseAbstracta)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseAbstractaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseAbstractaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseAbstracta of a Clase
+		/// <summary>
+		/// Gets a list of ClaseAbstracta.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ClaseAbstracta> GetClaseAbstracta(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ClaseAbstracta>, ClaseAbstracta>(element, ClaseDomainRoleId);
+		}
+		#endregion
+		#region SourceClase domain role override
+		
+		/// <summary>
+		/// Gets the element playing ClaseAbstracta domain role.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase
+		/// </summary>
+		public override Clase SourceClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return this.ClaseAbstracta;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				this.ClaseAbstracta = (ClaseAbstracta)value;
+			}
+		}
+		
+		#endregion
+		#region Clase domain role code
+		
+		/// <summary>
+		/// Clase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseDomainRoleId = new global::System.Guid(0x4d1ca834, 0xce06, 0x4989, 0xa7, 0x84, 0x9f, 0xa5, 0x47, 0xe5, 0xee, 0x3c);
+		
+		/// <summary>
+		/// DomainRole Clase
+		/// Description for
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Clase
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseAbstracta", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("4d1ca834-ce06-4989-a784-9fa547e5ee3c")]
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseHijaDeAbstracta of a ClaseAbstracta
+		/// <summary>
+		/// Gets a list of ClaseHijaDeAbstracta.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetClaseHijaDeAbstracta(ClaseAbstracta element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, ClaseAbstractaDomainRoleId);
+		}
+		#endregion
+		#region TargetClase domain role override
+		
+		/// <summary>
+		/// Gets the element playing Clase domain role.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase
+		/// </summary>
+		public override Clase TargetClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return this.Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				this.Clase = value;
+			}
+		}
+		
+		#endregion
+		#region ClaseAbstracta link accessor
+		/// <summary>
+		/// Get the list of ClaseAbstractaReferencesClaseHijaDeAbstracta links to a ClaseAbstracta.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta> GetLinksToClaseHijaDeAbstracta ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta claseAbstractaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta>(claseAbstractaInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId);
+		}
+		#endregion
+		#region Clase link accessor
+		/// <summary>
+		/// Get the list of ClaseAbstractaReferencesClaseHijaDeAbstracta links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta> GetLinksToClaseAbstracta ( global::UPM_IPS.JSRBBRProyectoIPS.Clase claseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta>(claseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseDomainRoleId);
+		}
+		#endregion
+		#region ClaseAbstractaReferencesClaseHijaDeAbstracta instance accessors
+		
+		/// <summary>
+		/// Get any ClaseAbstractaReferencesClaseHijaDeAbstracta links between a given ClaseAbstracta and a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta> GetLinks( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta source, global::UPM_IPS.JSRBBRProyectoIPS.Clase target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId);
+			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta link in links )
+			{
+				if ( target.Equals(link.Clase) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseAbstractaReferencesClaseHijaDeAbstracta link between a given ClaseAbstractaand a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta GetLink( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta source, global::UPM_IPS.JSRBBRProyectoIPS.Clase target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId);
+			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta link in links )
+			{
+				if ( target.Equals(link.Clase) )
 				{
 					return link;
 				}

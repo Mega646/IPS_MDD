@@ -276,10 +276,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			base.InitializeShapeFields(shapeFields);
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.DecoratorsInitialized += MetaforaClaseDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta.DecoratorsInitialized += MetaforaClaseAbstractaDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida.DecoratorsInitialized += MetaforaClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo.DecoratorsInitialized += MetaforaAtributoDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal.DecoratorsInitialized += MetaforaOperacionNormalDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida.DecoratorsInitialized += MetaforaOperacionEnriquecidaDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida.DecoratorsInitialized += MetaforaClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia.DecoratorsInitialized += MetaforaRelacionHerenciaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionRelacional.DecoratorsInitialized += MetaforaRelacionRelacionalDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva.DecoratorsInitialized += MetaforaRelacionInclusivaDecoratorMap.OnDecoratorsInitialized;
@@ -311,6 +311,26 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		{
 			/// <summary>
 			/// Event handler called when decorator initialization is complete for MetaforaClaseAbstracta.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				MetaforaClaseDecoratorMap.OnDecoratorsInitialized(sender, e);
+				
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Clase.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreClaseDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaClaseEnriquecida.
+		/// </summary>
+		internal static partial class MetaforaClaseEnriquecidaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaClaseEnriquecida.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
@@ -389,24 +409,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida.tipoLetraDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tipoLetraDec").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaClaseEnriquecida.
-		/// </summary>
-		internal static partial class MetaforaClaseEnriquecidaDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaClaseEnriquecida.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Clase.nombreDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		

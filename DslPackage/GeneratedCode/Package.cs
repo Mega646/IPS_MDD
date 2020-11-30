@@ -54,11 +54,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					0xff00ff,
 					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.ClaseToolboxTab",
-					"@ClaseEnriquecidaToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
-					"UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaToolboxItem", 
+					"@OperacionToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.OperacionToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ClaseEnriquecida", 
-					"@ClaseEnriquecidaToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"Operacion", 
+					"@OperacionToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 3)]
 	[VSShell::ProvideStaticToolboxGroup("@RelacionesToolboxTab;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", "UPM_IPS.JSRBBRProyectoIPS.RelacionesToolboxTab")]
@@ -94,23 +94,31 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					"@RelacionReferencialToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 7)]
-	[VSShell::ProvideStaticToolboxGroup("@OperacionesToolboxTab;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", "UPM_IPS.JSRBBRProyectoIPS.OperacionesToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.OperacionesToolboxTab",
-					"@OperacionToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
-					"UPM_IPS.JSRBBRProyectoIPS.OperacionToolboxItem", 
+	[VSShell::ProvideStaticToolboxGroup("@Clase enriquecidaToolboxTab;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", "UPM_IPS.JSRBBRProyectoIPS.Clase enriquecidaToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.Clase enriquecidaToolboxTab",
+					"@ClaseEnriquecidaToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"Operacion", 
-					"@OperacionToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"ClaseEnriquecida", 
+					"@ClaseEnriquecidaToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 8)]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.OperacionesToolboxTab",
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.Clase enriquecidaToolboxTab",
+					"@AtributoEnriquecidoToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecidoToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AtributoEnriquecido", 
+					"@AtributoEnriquecidoToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 9)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.Clase enriquecidaToolboxTab",
 					"@OperacionEnriquecidaToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
 					"UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecidaToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"OperacionEnriquecida", 
 					"@OperacionEnriquecidaToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 9)]
+					Index = 10)]
 	[VSShell::ProvideEditorFactory(typeof(JSRBBRProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JSRBBRProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JSRBBRProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

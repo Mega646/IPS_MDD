@@ -90,6 +90,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(ClaseReferencesTargetClases),
 				typeof(ClaseEnriquecidaHasOperacionEnriquecida),
 				typeof(OperacionHasParametros),
+				typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta),
 				typeof(JSRBBRProyectoIPSDiagram),
 				typeof(MetaforaRelacionHerencia),
 				typeof(MetaforaRelaciones),
@@ -176,6 +177,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasOperacionEnriquecida), "OperacionEnriquecida", ClaseEnriquecidaHasOperacionEnriquecida.OperacionEnriquecidaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(OperacionHasParametros), "Operacion", OperacionHasParametros.OperacionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(OperacionHasParametros), "Parametro", OperacionHasParametros.ParametroDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), "ClaseAbstracta", ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), "Clase", ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -277,7 +280,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(11);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
 				createElementLinkMap.Add(typeof(TapizClasesHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperacion), 2);
@@ -288,6 +291,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementLinkMap.Add(typeof(ClaseRelatesTargetClase), 7);
 				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasOperacionEnriquecida), 8);
 				createElementLinkMap.Add(typeof(OperacionHasParametros), 9);
+				createElementLinkMap.Add(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), 10);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -312,6 +316,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 7: return new ClaseRelatesTargetClase(partition, roleAssignments, propertyAssignments);
 				case 8: return new ClaseEnriquecidaHasOperacionEnriquecida(partition, roleAssignments, propertyAssignments);
 				case 9: return new OperacionHasParametros(partition, roleAssignments, propertyAssignments);
+				case 10: return new ClaseAbstractaReferencesClaseHijaDeAbstracta(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}

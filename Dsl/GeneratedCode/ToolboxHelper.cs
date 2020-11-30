@@ -207,18 +207,18 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaToolboxItem":
-					// Add ClaseEnriquecida shape tool.
+				case "UPM_IPS.JSRBBRProyectoIPS.OperacionToolboxItem":
+					// Add Operacion shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"UPM_IPS.JSRBBRProyectoIPS.OperacionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						4, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ClaseEnriquecidaToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ClaseEnriquecidaToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						resourceManager.GetString("OperacionToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("OperacionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"UPM_IPS.JSRBBRProyectoIPS.ClaseToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("ClaseToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"ClaseEnriquecida", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ClaseEnriquecidaToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						"Operacion", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("OperacionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JSRBBRProyectoIPS.OperacionNormal.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
@@ -295,18 +295,34 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(RelacionReferencialFilterString)
 						});
 					break;
-				case "UPM_IPS.JSRBBRProyectoIPS.OperacionToolboxItem":
-					// Add Operacion shape tool.
+				case "UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaToolboxItem":
+					// Add ClaseEnriquecida shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"UPM_IPS.JSRBBRProyectoIPS.OperacionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						1, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("OperacionToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("OperacionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"UPM_IPS.JSRBBRProyectoIPS.OperacionesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("OperacionesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"Operacion", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("OperacionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::UPM_IPS.JSRBBRProyectoIPS.OperacionNormal.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						resourceManager.GetString("ClaseEnriquecidaToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ClaseEnriquecidaToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JSRBBRProyectoIPS.Clase enriquecidaToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Clase enriquecidaToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ClaseEnriquecida", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ClaseEnriquecidaToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecidoToolboxItem":
+					// Add AtributoEnriquecido shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecidoToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						2, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("AtributoEnriquecidoToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AtributoEnriquecidoToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JSRBBRProyectoIPS.Clase enriquecidaToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Clase enriquecidaToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"AtributoEnriquecido", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AtributoEnriquecidoToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
@@ -315,11 +331,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					// Add OperacionEnriquecida shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecidaToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						2, // Position relative to other items in the same toolbox tab.
+						3, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("OperacionEnriquecidaToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("OperacionEnriquecidaToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"UPM_IPS.JSRBBRProyectoIPS.OperacionesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("OperacionesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.JSRBBRProyectoIPS.Clase enriquecidaToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("Clase enriquecidaToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"OperacionEnriquecida", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("OperacionEnriquecidaToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.

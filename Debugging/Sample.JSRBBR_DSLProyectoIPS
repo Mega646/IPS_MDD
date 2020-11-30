@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<tapizClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1e115d-38a8-4182-afb9-ac630eab1576" nombre="¿Qué dices, tío?" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
+<tapizClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1e115d-38a8-4182-afb9-ac630eab1576" nombre="Clase abstracta" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
   <clase>
     <tapizClasesHasClase Id="d4026b54-296c-40e1-8a23-4119a8d3a3eb">
       <clase Id="5a400b9b-b638-4186-ad77-78389488adcf" nombre="Clase">
@@ -15,6 +15,9 @@
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="baf43c50-4668-424f-997e-bf676fa5c86e">
       <claseEnriquecida Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" nombre="Clase enriquecida" />
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="9a44a5ac-1c94-4625-abce-1407d0659ed7">
+      <claseAbstracta Id="dd2f396e-857e-4639-866d-9808705b2993" />
     </tapizClasesHasClase>
   </clase>
 </tapizClases>

@@ -164,6 +164,7 @@
     <Content Include="Resources\abstracta.bmp" />
     <Content Include="Resources\asociativa.bmp" />
     <Content Include="Resources\atributo.bmp" />
+    <Content Include="Resources\atributoEnriquecido.bmp" />
     <Content Include="Resources\enriquecida.bmp" />
     <Content Include="Resources\herencia.bmp" />
     <Content Include="Resources\inclusiva.bmp" />

@@ -30,6 +30,14 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						"ClaseAbstracta", "", "OperacionAbstracta"),
 						"DSL0001", this);
 			}
+			if (this.ClaseHijaDeAbstracta.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ClaseAbstracta", "", "ClaseHijaDeAbstracta"),
+						"DSL0001", this);
+			}
 		} // ValidateClaseAbstractaMultiplicity
 	} // class ClaseAbstracta
 } // UPM_IPS.JSRBBRProyectoIPS

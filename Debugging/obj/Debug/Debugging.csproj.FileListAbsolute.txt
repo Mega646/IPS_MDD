@@ -1,0 +1,6 @@
+D:\IPS_MDD\Debugging\bin\Debug\Debugging.dll
+D:\IPS_MDD\Debugging\bin\Debug\Debugging.pdb
+D:\IPS_MDD\Debugging\obj\Debug\Debugging.csprojAssemblyReference.cache
+D:\IPS_MDD\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+D:\IPS_MDD\Debugging\obj\Debug\Debugging.dll
+D:\IPS_MDD\Debugging\obj\Debug\Debugging.pdb

@@ -424,13 +424,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
-		#region ClasePadre opposite domain role accessor
+		#region ClaseHija opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of ClasePadre.
+		/// Gets a list of ClaseHija.
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClasePadre
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseHija
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -439,13 +439,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
-		#region ClaseHija opposite domain role accessor
+		#region ClasePadre opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of ClaseHija.
+		/// Gets a list of ClasePadre.
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClaseHija
+		public virtual DslModeling::LinkedElementCollection<Clase> ClasePadre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -484,13 +484,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
-		#region ClaseCompuesta opposite domain role accessor
+		#region ClaseComponente opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of ClaseCompuesta.
+		/// Gets a list of ClaseComponente.
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.SourceClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClaseCompuesta
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseComponente
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -499,13 +499,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
-		#region ClaseComponente opposite domain role accessor
+		#region ClaseCompuesta opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of ClaseComponente.
+		/// Gets a list of ClaseCompuesta.
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.TargetClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClaseComponente
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseCompuesta
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -514,13 +514,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
-		#region ClaseRelacionada opposite domain role accessor
+		#region ClaseRelacion opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of ClaseRelacionada.
+		/// Gets a list of ClaseRelacion.
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.SourceClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClaseRelacionada
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseRelacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -529,13 +529,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
-		#region ClaseRelacion opposite domain role accessor
+		#region ClaseRelacionada opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of ClaseRelacion.
+		/// Gets a list of ClaseRelacionada.
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.TargetClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClaseRelacion
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseRelacionada
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -573,6 +573,22 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			get
 			{
 				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.TargetClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region ClaseAbstracta opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseAbstracta.
+		/// Description for
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Clase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ClaseAbstracta> ClaseAbstracta
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ClaseAbstracta>, ClaseAbstracta>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseDomainRoleId);
 			}
 		}
 		#endregion
@@ -1477,6 +1493,22 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<OperacionAbstracta>, OperacionAbstracta>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaHasOperacionAbstracta.ClaseAbstractaDomainRoleId);
+			}
+		}
+		#endregion
+		#region ClaseHijaDeAbstracta opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseHijaDeAbstracta.
+		/// Description for
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstracta
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseHijaDeAbstracta
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId);
 			}
 		}
 		#endregion

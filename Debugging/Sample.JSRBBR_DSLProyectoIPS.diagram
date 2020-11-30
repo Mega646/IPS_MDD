@@ -14,5 +14,8 @@
     <metaforaClaseEnriquecida Id="f97a3a11-e207-41f2-8c96-f55e61fb1bc3" absoluteBounds="9, 2.625, 1.5, 1">
       <claseEnriquecidaMoniker Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" />
     </metaforaClaseEnriquecida>
+    <metaforaClaseAbstracta Id="3f1d7566-0c26-432e-8e9e-5679e0108769" absoluteBounds="6.625, 5.125, 1.5, 1">
+      <claseAbstractaMoniker Id="dd2f396e-857e-4639-866d-9808705b2993" />
+    </metaforaClaseAbstracta>
   </nestedChildShapes>
 </jSRBBRProyectoIPSDiagram>
