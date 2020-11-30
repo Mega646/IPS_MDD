@@ -1,23 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 12
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging.csproj", "{c6e80456-393b-4915-bfa1-20ba71d1851c}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging.csproj", "{C6E80456-393B-4915-BFA1-20BA71D1851C}"
 EndProject
 Global
-	GlobalSection(TextTemplating) = postSolution
-		TextTemplating = 1
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{c6e80456-393b-4915-bfa1-20ba71d1851c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{c6e80456-393b-4915-bfa1-20ba71d1851c}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{c6e80456-393b-4915-bfa1-20ba71d1851c}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{c6e80456-393b-4915-bfa1-20ba71d1851c}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E80456-393B-4915-BFA1-20BA71D1851C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E80456-393B-4915-BFA1-20BA71D1851C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E80456-393B-4915-BFA1-20BA71D1851C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E80456-393B-4915-BFA1-20BA71D1851C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9281BBFF-CD26-4DD8-A5BF-C735E7DA586C}
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
 	EndGlobalSection
 EndGlobal

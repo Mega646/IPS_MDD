@@ -7,25 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Diagnostics;
-using System.Drawing.Design;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using VSShellInterop = global::Microsoft.VisualStudio.Shell.Interop;
 using VSShell = global::Microsoft.VisualStudio.Shell;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
-
+using System;
+using System.Diagnostics;
+using System.Drawing.Design;
+using System.Linq;
+using System.Windows.Forms;
+	
 namespace UPM_IPS.JSRBBRProyectoIPS
 {
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\15.0")]
+	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideToolWindow(typeof(JSRBBRProyectoIPSExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(JSRBBRProyectoIPSExplorerToolWindow), Constants.JSRBBRProyectoIPSEditorFactoryId)]
 	[VSShell::ProvideStaticToolboxGroup("@ClaseToolboxTab;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", "UPM_IPS.JSRBBRProyectoIPS.ClaseToolboxTab")]
@@ -53,6 +52,14 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					"@AtributoToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.ClaseToolboxTab",
+					"@ClaseEnriquecidaToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ClaseEnriquecida", 
+					"@ClaseEnriquecidaToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxGroup("@RelacionesToolboxTab;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", "UPM_IPS.JSRBBRProyectoIPS.RelacionesToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.RelacionesToolboxTab",
 					"@HerenciaToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
@@ -61,7 +68,48 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					"Herencia", 
 					"@HerenciaToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 3)]
+					Index = 4)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.RelacionesToolboxTab",
+					"@RelacionAsociativaToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.RelacionAsociativaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionAsociativa", 
+					"@RelacionAsociativaToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.RelacionesToolboxTab",
+					"@RelacionInclusivaToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.RelacionInclusivaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionInclusiva", 
+					"@RelacionInclusivaToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.RelacionesToolboxTab",
+					"@RelacionReferencialToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.RelacionReferencialToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionReferencial", 
+					"@RelacionReferencialToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
+	[VSShell::ProvideStaticToolboxGroup("@OperacionesToolboxTab;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", "UPM_IPS.JSRBBRProyectoIPS.OperacionesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.OperacionesToolboxTab",
+					"@OperacionToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.OperacionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Operacion", 
+					"@OperacionToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 8)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JSRBBRProyectoIPS.OperacionesToolboxTab",
+					"@OperacionEnriquecidaToolboxItem;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecidaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"OperacionEnriquecida", 
+					"@OperacionEnriquecidaToolboxBitmap;UPM_IPS.JSRBBRProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 9)]
 	[VSShell::ProvideEditorFactory(typeof(JSRBBRProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JSRBBRProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JSRBBRProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
@@ -76,16 +124,16 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	[DslShell::ProvideBindingPath]
 	[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"JSRBBRProyectoIPS", typeof(JSRBBRProyectoIPSEditorFactory))]
 
-	internal abstract partial class JSRBBRProyectoIPSPackageBase : DslShell::AsyncModelingPackage
+	internal abstract partial class JSRBBRProyectoIPSPackageBase : DslShell::ModelingPackage
 	{
 		protected global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSToolboxHelper toolboxHelper;	
 		
 		/// <summary>
 		/// Initialization method called by the package base class when this package is loaded.
 		/// </summary>
-		protected async override Task InitializeAsync(CancellationToken cancellationToken, IProgress<VSShell.ServiceProgressData> progress)
+		protected override void Initialize()
 		{
-			await base.InitializeAsync(cancellationToken, progress);
+			base.Initialize();
 
 			// Register the editor factory used to create the DSL editor.
 			this.RegisterEditorFactory(new JSRBBRProyectoIPSEditorFactory(this));
@@ -95,28 +143,21 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 
 			// Create the command set that handles menu commands provided by this package.
 			JSRBBRProyectoIPSCommandSet commandSet = new JSRBBRProyectoIPSCommandSet(this);
-			await commandSet.InitializeAsync(cancellationToken);
+			commandSet.Initialize();
 			
 			// Create the command set that handles cut/copy/paste commands provided by this package.
 			JSRBBRProyectoIPSClipboardCommandSet clipboardCommandSet = new JSRBBRProyectoIPSClipboardCommandSet(this);
-			await clipboardCommandSet.InitializeAsync(cancellationToken);
+			clipboardCommandSet.Initialize();
 			
 			// Register the model explorer tool window for this DSL.
 			this.AddToolWindow(typeof(JSRBBRProyectoIPSExplorerToolWindow));
-
-			if (cancellationToken.IsCancellationRequested)
-			{
-				return;
-			}
-
-			await JoinableTaskFactory.SwitchToMainThreadAsync();
 
 			// Initialize Extension Registars
 			// this is a partial method call
 			this.InitializeExtensions();
 
 			// Add dynamic toolbox items
-			await this.SetupDynamicToolboxAsync(cancellationToken);
+			this.SetupDynamicToolbox();
 		}
 
 		/// <summary>
@@ -135,7 +176,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				Debug.Assert(toolboxHelper != null, "Toolbox helper is not initialized");
 				return toolboxHelper.CreateToolboxItems();
 			}
-			catch (global::System.Exception e)
+			catch(global::System.Exception e)
 			{
 				global::System.Diagnostics.Debug.Fail("Exception thrown during toolbox item creation.  This may result in Package Load Failure:\r\n\r\n" + e);
 				throw;
@@ -156,17 +197,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			// Retrieve the specified ToolboxItem from the DSL
 			return toolboxHelper.GetToolboxItemData(itemId, format);
 		}
-
-		public override VSShellInterop::IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
-		{
-			if (toolWindowType == typeof(JSRBBRProyectoIPSExplorerToolWindow).GUID)
-			{
-				return this;
-			}
-
-			return base.GetAsyncToolWindowFactory(toolWindowType);
-		}
 	}
+
 }
 
 //

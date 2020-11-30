@@ -1,18 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="cf1658ea-4189-47c4-8599-5932faaeb573" absoluteBounds="0, 0, 11, 8.5" name="Sample">
-  <exampleModelMoniker Id="d4c67442-bea7-4fe9-9498-bc7051b1241f" />
+  <tapizClasesMoniker Id="6d1e115d-38a8-4182-afb9-ac630eab1576" />
   <nestedChildShapes>
-    <exampleShape Id="8068c784-d812-4bfb-8b73-ba3788b884c1" absoluteBounds="0.5, 1.75, 2, 0.75">
-      <exampleElementMoniker name="/d4c67442-bea7-4fe9-9498-bc7051b1241f/ExampleElement1" />
-    </exampleShape>
-    <exampleShape Id="b2d638d2-e4d2-4ecc-bd07-3a65eac609f6" absoluteBounds="3, 0.5, 2, 0.75">
-      <exampleElementMoniker name="/d4c67442-bea7-4fe9-9498-bc7051b1241f/ExampleElement2" />
-    </exampleShape>
-    <exampleConnector Id="456ac413-5cd2-491b-8fb6-434eb677306b" edgePoints="[(1.5 : 1.75); (1.5 : 0.875); (3 : 0.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="9c3bfaa7-c932-41bb-893f-0669e7c013fb">
-      <nodes>
-        <exampleShapeMoniker Id="8068c784-d812-4bfb-8b73-ba3788b884c1" />
-        <exampleShapeMoniker Id="b2d638d2-e4d2-4ecc-bd07-3a65eac609f6" />
-      </nodes>
-    </exampleConnector>
+    <metaforaClase Id="cd30b4b0-0557-4c2d-81ce-93b924dd06e7" absoluteBounds="9, 3.75, 1.5, 1">
+      <claseMoniker Id="5bfa4ccb-5a5d-4854-8e86-523a264d11c8" />
+    </metaforaClase>
   </nestedChildShapes>
 </jSRBBRProyectoIPSDiagram>

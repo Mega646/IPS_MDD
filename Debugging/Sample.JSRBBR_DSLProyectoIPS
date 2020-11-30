@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d4c67442-bea7-4fe9-9498-bc7051b1241f" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
-  <elements>
-    <exampleElement Id="ac3161e4-6d1e-45b7-a932-3ed6fd9c7411" name="ExampleElement1">
-      <targets>
-        <exampleElementMoniker name="/d4c67442-bea7-4fe9-9498-bc7051b1241f/ExampleElement2" />
-      </targets>
-    </exampleElement>
-    <exampleElement Id="884d7360-ccbf-4669-b2d3-dfb90c5ed17c" name="ExampleElement2" />
-  </elements>
-</exampleModel>
+<tapizClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1e115d-38a8-4182-afb9-ac630eab1576" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
+  <clase>
+    <tapizClasesHasClase Id="0e1cd97e-cf3c-4ae2-baf1-0338a3aaf186">
+      <clase Id="5bfa4ccb-5a5d-4854-8e86-523a264d11c8" nombre="motor" />
+    </tapizClasesHasClase>
+  </clase>
+</tapizClases>

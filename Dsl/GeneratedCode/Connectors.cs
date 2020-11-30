@@ -116,6 +116,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Initializes resources associated with this connector instance.
+		/// </summary>
+		protected override void InitializeInstanceResources()
+		{
+			base.InitializeInstanceResources();
+			this.SetDecorators(null, new DslDiagrams::SizeD(0.1,0.1), DslDiagrams::LinkDecorator.DecoratorEmptyArrow, new DslDiagrams::SizeD(0.1,0.1), false);
+		}
+		
 		#endregion
 		
 		#region Decorators
@@ -191,15 +200,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 namespace UPM_IPS.JSRBBRProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaRelacionReferencial
-	/// Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial
+	/// DomainClass MetaforaRelaciones
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelaciones
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelaciones.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelaciones.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("c827364c-607d-4be8-987b-4948d474551f")]
-	public partial class MetaforaRelacionReferencial : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("2f617534-8135-41d0-9f1f-f37094721ae1")]
+	public partial class MetaforaRelaciones : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -264,9 +273,9 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with MetaforaRelacionReferencial.
+		/// Finds a decorator associated with MetaforaRelaciones.
 		/// </summary>
-		public static DslDiagrams::Decorator FindMetaforaRelacionReferencialDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaRelacionesDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -314,33 +323,33 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("nombreDec");
-			field1.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionReferencialnombreDecDefaultText");
+			field1.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionesnombreDecDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.SourceBottom, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("cardinalidad1Dec");
-			field2.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionReferencialcardinalidad1DecDefaultText");
+			field2.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionescardinalidad1DecDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
 			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.SourceBottom, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator2);
 				
 			DslDiagrams::TextField field3 = new DslDiagrams::TextField("cardinalidad2Dec");
-			field3.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionReferencialcardinalidad2DecDefaultText");
+			field3.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionescardinalidad2DecDefaultText");
 			field3.DefaultFocusable = true;
 			field3.DefaultAutoSize = true;
 			field3.AnchoringBehavior.MinimumHeightInLines = 1;
 			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.TargetTop, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator3);
 				
 		}
@@ -350,15 +359,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// MetaforaRelacionReferencial domain class Id.
+		/// MetaforaRelaciones domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc827364c, 0x607d, 0x4be8, 0x98, 0x7b, 0x49, 0x48, 0xd4, 0x74, 0x55, 0x1f);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x2f617534, 0x8135, 0x41d0, 0x9f, 0x1f, 0xf3, 0x70, 0x94, 0x72, 0x1a, 0xe1);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaRelacionReferencial(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaRelaciones(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -368,7 +377,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public MetaforaRelacionReferencial(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaRelaciones(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -378,15 +387,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 namespace UPM_IPS.JSRBBRProyectoIPS
 {
 	/// <summary>
-	/// DomainClass MetaforaRelacionInclusiva
-	/// Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva
+	/// DomainClass MetaforaRelacionRelacional
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionRelacional
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionRelacional.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionRelacional.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("93c4de7e-439b-4094-9948-0d425beebd4e")]
-	public partial class MetaforaRelacionInclusiva : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("637aaac1-5094-4221-8620-c03f94c39946")]
+	public partial class MetaforaRelacionRelacional : MetaforaRelaciones
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -426,7 +435,124 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Event fired when decorator initialization is complete for this shape type.
 		/// </summary>
-		public static event global::System.EventHandler DecoratorsInitialized;
+		public static new event global::System.EventHandler DecoratorsInitialized;
+		
+		/// <summary>
+		/// List containing decorators used by this type.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::Decorator> Decorators
+		{
+			get 
+			{
+				if(decorators == null)
+				{
+					decorators = CreateDecorators();
+					
+					// fire this event to allow the diagram to initialize decorator mappings for this shape type.
+					if(DecoratorsInitialized != null)
+					{
+						DecoratorsInitialized(this, global::System.EventArgs.Empty);
+					}
+				}
+				
+				return decorators; 
+			}
+		}
+		
+		/// <summary>
+		/// Finds a decorator associated with MetaforaRelacionRelacional.
+		/// </summary>
+		public static DslDiagrams::Decorator FindMetaforaRelacionRelacionalDecorator(string decoratorName)
+		{	
+			if(decorators == null) return null;
+			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
+		}
+		
+		#endregion
+		
+		#region Connector styles
+		#endregion
+		
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// MetaforaRelacionRelacional domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x637aaac1, 0x5094, 0x4221, 0x86, 0x20, 0xc0, 0x3f, 0x94, 0xc3, 0x99, 0x46);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public MetaforaRelacionRelacional(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public MetaforaRelacionRelacional(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.JSRBBRProyectoIPS
+{
+	/// <summary>
+	/// DomainClass MetaforaRelacionInclusiva
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("e7f95916-1358-4a0b-a062-7cc6053a526d")]
+	public partial class MetaforaRelacionInclusiva : MetaforaRelaciones
+	{
+		#region DiagramElement boilerplate
+		private static DslDiagrams::StyleSet classStyleSet;
+		private static global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields;
+		private static global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators;
+		
+		/// <summary>
+		/// Per-class style set for this shape.
+		/// </summary>
+		protected override DslDiagrams::StyleSet ClassStyleSet
+		{
+			get
+			{
+				if (classStyleSet == null)
+				{
+					classStyleSet = CreateClassStyleSet();
+				}
+				return classStyleSet;
+			}
+		}
+		
+		/// <summary>
+		/// Per-class ShapeFields for this shape.
+		/// </summary>
+		public override global::System.Collections.Generic.IList<DslDiagrams::ShapeField> ShapeFields
+		{
+			get
+			{
+				if (shapeFields == null)
+				{
+					shapeFields = CreateShapeFields();
+				}
+				return shapeFields;
+			}
+		}
+		
+		/// <summary>
+		/// Event fired when decorator initialization is complete for this shape type.
+		/// </summary>
+		public static new event global::System.EventHandler DecoratorsInitialized;
 		
 		/// <summary>
 		/// List containing decorators used by this type.
@@ -459,77 +585,16 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
 		}
 		
-		
-		/// <summary>
-		/// Shape instance initialization.
-		/// </summary>
-		public override void OnInitialize()
-		{
-			base.OnInitialize();
-			
-			// Create host shapes for outer decorators.
-			foreach(DslDiagrams::Decorator decorator in this.Decorators)
-			{
-				if(decorator.RequiresHost)
-				{
-					decorator.ConfigureHostShape(this);
-				}
-			}
-			
-		}
 		#endregion
 		
 		#region Connector styles
-		#endregion
-		
-		#region Decorators
 		/// <summary>
-		/// Initialize the collection of shape fields associated with this shape type.
+		/// Initializes resources associated with this connector instance.
 		/// </summary>
-		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		protected override void InitializeInstanceResources()
 		{
-			base.InitializeShapeFields(shapeFields);
-		}
-		
-		/// <summary>
-		/// Initialize the collection of decorators associated with this shape type.  This method also
-		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
-		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
-		/// </summary>
-		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
-		{
-			base.InitializeDecorators(shapeFields, decorators);
-			
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("nombreDec");
-			field1.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionInclusivanombreDecDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.SourceBottom, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator1);
-				
-			DslDiagrams::TextField field2 = new DslDiagrams::TextField("cardinalidad1Dec");
-			field2.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionInclusivacardinalidad1DecDefaultText");
-			field2.DefaultFocusable = true;
-			field2.DefaultAutoSize = true;
-			field2.AnchoringBehavior.MinimumHeightInLines = 1;
-			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator2);
-				
-			DslDiagrams::TextField field3 = new DslDiagrams::TextField("cardinalidad2Dec");
-			field3.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaRelacionInclusivacardinalidad2DecDefaultText");
-			field3.DefaultFocusable = true;
-			field3.DefaultAutoSize = true;
-			field3.AnchoringBehavior.MinimumHeightInLines = 1;
-			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.TargetTop, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator3);
-				
+			base.InitializeInstanceResources();
+			this.SetDecorators(DslDiagrams::LinkDecorator.DecoratorFilledDiamond, new DslDiagrams::SizeD(0.1,0.1), null, new DslDiagrams::SizeD(0.1,0.1), false);
 		}
 		
 		#endregion
@@ -539,7 +604,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// MetaforaRelacionInclusiva domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x93c4de7e, 0x439b, 0x4094, 0x99, 0x48, 0x0d, 0x42, 0x5b, 0xee, 0xbd, 0x4e);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xe7f95916, 0x1358, 0x4a0b, 0xa0, 0x62, 0x7c, 0xc6, 0x05, 0x3a, 0x52, 0x6d);
 		/// <summary>
 		/// Constructor
 		/// </summary>
@@ -565,15 +630,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 namespace UPM_IPS.JSRBBRProyectoIPS
 {
 	/// <summary>
-	/// DomainClass Connector1
-	/// Description for UPM_IPS.JSRBBRProyectoIPS.Connector1
+	/// DomainClass MetaforaRelacionReferencial
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.Connector1.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Connector1.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("68ac0fb0-4cd2-42d3-a30b-c5897420108e")]
-	public partial class Connector1 : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("fa43010e-c16e-40d2-81ed-f29110c1b67f")]
+	public partial class MetaforaRelacionReferencial : MetaforaRelaciones
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -613,7 +678,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Event fired when decorator initialization is complete for this shape type.
 		/// </summary>
-		public static event global::System.EventHandler DecoratorsInitialized;
+		public static new event global::System.EventHandler DecoratorsInitialized;
 		
 		/// <summary>
 		/// List containing decorators used by this type.
@@ -638,85 +703,24 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with Connector1.
+		/// Finds a decorator associated with MetaforaRelacionReferencial.
 		/// </summary>
-		public static DslDiagrams::Decorator FindConnector1Decorator(string decoratorName)
+		public static DslDiagrams::Decorator FindMetaforaRelacionReferencialDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
 		}
 		
-		
-		/// <summary>
-		/// Shape instance initialization.
-		/// </summary>
-		public override void OnInitialize()
-		{
-			base.OnInitialize();
-			
-			// Create host shapes for outer decorators.
-			foreach(DslDiagrams::Decorator decorator in this.Decorators)
-			{
-				if(decorator.RequiresHost)
-				{
-					decorator.ConfigureHostShape(this);
-				}
-			}
-			
-		}
 		#endregion
 		
 		#region Connector styles
-		#endregion
-		
-		#region Decorators
 		/// <summary>
-		/// Initialize the collection of shape fields associated with this shape type.
+		/// Initializes resources associated with this connector instance.
 		/// </summary>
-		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		protected override void InitializeInstanceResources()
 		{
-			base.InitializeShapeFields(shapeFields);
-		}
-		
-		/// <summary>
-		/// Initialize the collection of decorators associated with this shape type.  This method also
-		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
-		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
-		/// </summary>
-		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
-		{
-			base.InitializeDecorators(shapeFields, decorators);
-			
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("nombreDec");
-			field1.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("Connector1nombreDecDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.SourceBottom, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator1);
-				
-			DslDiagrams::TextField field2 = new DslDiagrams::TextField("cardinalidad1Dec");
-			field2.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("Connector1cardinalidad1DecDefaultText");
-			field2.DefaultFocusable = true;
-			field2.DefaultAutoSize = true;
-			field2.AnchoringBehavior.MinimumHeightInLines = 1;
-			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator2);
-				
-			DslDiagrams::TextField field3 = new DslDiagrams::TextField("cardinalidad2Dec");
-			field3.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("Connector1cardinalidad2DecDefaultText");
-			field3.DefaultFocusable = true;
-			field3.DefaultAutoSize = true;
-			field3.AnchoringBehavior.MinimumHeightInLines = 1;
-			field3.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field3.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator3 = new DslDiagrams::ConnectorDecorator(field3, DslDiagrams::ConnectorDecoratorPosition.TargetTop, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator3);
-				
+			base.InitializeInstanceResources();
+			this.SetDecorators(DslDiagrams::LinkDecorator.DecoratorEmptyDiamond, new DslDiagrams::SizeD(0.1,0.1), null, new DslDiagrams::SizeD(0.1,0.1), false);
 		}
 		
 		#endregion
@@ -724,15 +728,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// Connector1 domain class Id.
+		/// MetaforaRelacionReferencial domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x68ac0fb0, 0x4cd2, 0x42d3, 0xa3, 0x0b, 0xc5, 0x89, 0x74, 0x20, 0x10, 0x8e);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xfa43010e, 0xc16e, 0x40d2, 0x81, 0xed, 0xf2, 0x91, 0x10, 0xc1, 0xb6, 0x7f);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Connector1(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaRelacionReferencial(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -742,7 +746,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Connector1(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public MetaforaRelacionReferencial(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
