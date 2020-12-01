@@ -79,6 +79,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(AtributoEnriquecido),
 				typeof(OperacionEnriquecida),
 				typeof(Operacion),
+				typeof(AtributoPadre),
 				typeof(TapizClasesHasClase),
 				typeof(ClaseHasAtributo),
 				typeof(ClaseHasOperacion),
@@ -91,6 +92,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(ClaseEnriquecidaHasOperacionEnriquecida),
 				typeof(OperacionHasParametros),
 				typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta),
+				typeof(ClaseEnriquecidaHasAtributoEnriquecido),
 				typeof(JSRBBRProyectoIPSDiagram),
 				typeof(MetaforaRelacionHerencia),
 				typeof(MetaforaRelaciones),
@@ -119,9 +121,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			{
 				new DomainMemberInfo(typeof(TapizClases), "nombre", TapizClases.nombreDomainPropertyId, typeof(TapizClases.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Clase), "nombre", Clase.nombreDomainPropertyId, typeof(Clase.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(Atributo), "nombre", Atributo.nombreDomainPropertyId, typeof(Atributo.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(Atributo), "modificador", Atributo.modificadorDomainPropertyId, typeof(Atributo.modificadorPropertyHandler)),
-				new DomainMemberInfo(typeof(Atributo), "nombreCalculado", Atributo.nombreCalculadoDomainPropertyId, typeof(Atributo.nombreCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "nombre", Parametro.nombreDomainPropertyId, typeof(Parametro.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "tipoDatos", Parametro.tipoDatosDomainPropertyId, typeof(Parametro.tipoDatosPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "entradaSalida", Parametro.entradaSalidaDomainPropertyId, typeof(Parametro.entradaSalidaPropertyHandler)),
@@ -129,8 +128,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "colorLetraNombre", ClaseEnriquecida.colorLetraNombreDomainPropertyId, typeof(ClaseEnriquecida.colorLetraNombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "tipoLetraNombre", ClaseEnriquecida.tipoLetraNombreDomainPropertyId, typeof(ClaseEnriquecida.tipoLetraNombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnriquecida), "alineacion", ClaseEnriquecida.alineacionDomainPropertyId, typeof(ClaseEnriquecida.alineacionPropertyHandler)),
-				new DomainMemberInfo(typeof(AtributoEnriquecido), "nombre", AtributoEnriquecido.nombreDomainPropertyId, typeof(AtributoEnriquecido.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(AtributoEnriquecido), "modificador", AtributoEnriquecido.modificadorDomainPropertyId, typeof(AtributoEnriquecido.modificadorPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "tipoLetra", AtributoEnriquecido.tipoLetraDomainPropertyId, typeof(AtributoEnriquecido.tipoLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "colorLetra", AtributoEnriquecido.colorLetraDomainPropertyId, typeof(AtributoEnriquecido.colorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoEnriquecido), "booleano", AtributoEnriquecido.booleanoDomainPropertyId, typeof(AtributoEnriquecido.booleanoPropertyHandler)),
@@ -138,6 +135,9 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainMemberInfo(typeof(OperacionEnriquecida), "colorLetra", OperacionEnriquecida.colorLetraDomainPropertyId, typeof(OperacionEnriquecida.colorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(Operacion), "nombre", Operacion.nombreDomainPropertyId, typeof(Operacion.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Operacion), "valorRetorno", Operacion.valorRetornoDomainPropertyId, typeof(Operacion.valorRetornoPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoPadre), "nombre", AtributoPadre.nombreDomainPropertyId, typeof(AtributoPadre.nombrePropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoPadre), "modificador", AtributoPadre.modificadorDomainPropertyId, typeof(AtributoPadre.modificadorPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoPadre), "nombreCalculado", AtributoPadre.nombreCalculadoDomainPropertyId, typeof(AtributoPadre.nombreCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "disjuntaSolapada", ClaseInheritsClaseHija.disjuntaSolapadaDomainPropertyId, typeof(ClaseInheritsClaseHija.disjuntaSolapadaPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "totalParcial", ClaseInheritsClaseHija.totalParcialDomainPropertyId, typeof(ClaseInheritsClaseHija.totalParcialPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "disjuntaSolapadaCalculada", ClaseInheritsClaseHija.disjuntaSolapadaCalculadaDomainPropertyId, typeof(ClaseInheritsClaseHija.disjuntaSolapadaCalculadaPropertyHandler)),
@@ -179,6 +179,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainRolePlayerInfo(typeof(OperacionHasParametros), "Parametro", OperacionHasParametros.ParametroDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), "ClaseAbstracta", ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), "Clase", ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasAtributoEnriquecido), "ClaseEnriquecida", ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecidaDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasAtributoEnriquecido), "AtributoEnriquecido", ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecidoDomainRoleId),
 			};
 		}
 		#endregion
@@ -200,7 +202,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(24);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(25);
 				createElementMap.Add(typeof(TapizClases), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -280,7 +282,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
 				createElementLinkMap.Add(typeof(TapizClasesHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperacion), 2);
@@ -292,6 +294,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasOperacionEnriquecida), 8);
 				createElementLinkMap.Add(typeof(OperacionHasParametros), 9);
 				createElementLinkMap.Add(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), 10);
+				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasAtributoEnriquecido), 11);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -317,6 +320,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 8: return new ClaseEnriquecidaHasOperacionEnriquecida(partition, roleAssignments, propertyAssignments);
 				case 9: return new OperacionHasParametros(partition, roleAssignments, propertyAssignments);
 				case 10: return new ClaseAbstractaReferencesClaseHijaDeAbstracta(partition, roleAssignments, propertyAssignments);
+				case 11: return new ClaseEnriquecidaHasAtributoEnriquecido(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -493,6 +497,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			DomainRoles.Add(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaHasOperacionAbstracta.OperacionAbstractaDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasOperacionEnriquecida.OperacionEnriquecidaDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JSRBBRProyectoIPS.OperacionHasParametros.ParametroDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecidoDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
@@ -738,6 +743,35 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.protegido
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr/protegido.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		protegido = 1,
+	}
+}
+namespace UPM_IPS.JSRBBRProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: modificadorAtr1
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum modificadorAtr1
+	{
+		/// <summary>
+		/// publico
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.publico
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/publico.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		publico = 2,
+		/// <summary>
+		/// privado
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.privado
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/privado.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		privado = 0,
+		/// <summary>
+		/// protegido
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.protegido
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/protegido.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		protegido = 1,
 	}
 }

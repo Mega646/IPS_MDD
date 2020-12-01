@@ -3328,3 +3328,244 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		#endregion
 	}
 }
+namespace UPM_IPS.JSRBBRProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship ClaseEnriquecidaHasAtributoEnriquecido
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("18138d05-38e4-4818-b344-5f00ee6d77ff")]
+	public partial class ClaseEnriquecidaHasAtributoEnriquecido : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseEnriquecidaHasAtributoEnriquecido domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x18138d05, 0x38e4, 0x4818, 0xb3, 0x44, 0x5f, 0x00, 0xee, 0x6d, 0x77, 0xff);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseEnriquecidaHasAtributoEnriquecido link in the same Partition as the given ClaseEnriquecida
+		/// </summary>
+		/// <param name="source">ClaseEnriquecida to use as the source of the relationship.</param>
+		/// <param name="target">AtributoEnriquecido to use as the target of the relationship.</param>
+		public ClaseEnriquecidaHasAtributoEnriquecido(ClaseEnriquecida source, AtributoEnriquecido target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecidaDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecidoDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnriquecidaHasAtributoEnriquecido(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnriquecidaHasAtributoEnriquecido(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnriquecidaHasAtributoEnriquecido(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnriquecidaHasAtributoEnriquecido(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClaseEnriquecida domain role code
+		
+		/// <summary>
+		/// ClaseEnriquecida domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseEnriquecidaDomainRoleId = new global::System.Guid(0x253a772c, 0xc323, 0x423c, 0x91, 0xdd, 0x2b, 0x12, 0x2d, 0x55, 0x61, 0x80);
+		
+		/// <summary>
+		/// DomainRole ClaseEnriquecida
+		/// Description for
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecida
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/ClaseEnriquecida.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/ClaseEnriquecida.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtributoEnriquecido", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("253a772c-c323-423c-91dd-2b122d556180")]
+		public virtual ClaseEnriquecida ClaseEnriquecida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClaseEnriquecida)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseEnriquecidaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseEnriquecidaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseEnriquecida of a AtributoEnriquecido
+		/// <summary>
+		/// Gets ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClaseEnriquecida GetClaseEnriquecida(AtributoEnriquecido element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoEnriquecidoDomainRoleId) as ClaseEnriquecida;
+		}
+		
+		/// <summary>
+		/// Sets ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClaseEnriquecida(AtributoEnriquecido element, ClaseEnriquecida newClaseEnriquecida)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoEnriquecidoDomainRoleId, newClaseEnriquecida);
+		}
+		#endregion
+		#region AtributoEnriquecido domain role code
+		
+		/// <summary>
+		/// AtributoEnriquecido domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributoEnriquecidoDomainRoleId = new global::System.Guid(0x99f900a0, 0x3c50, 0x4cdc, 0xaf, 0x18, 0x66, 0xeb, 0x61, 0x38, 0xfb, 0xc6);
+		
+		/// <summary>
+		/// DomainRole AtributoEnriquecido
+		/// Description for
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecido
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/AtributoEnriquecido.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/AtributoEnriquecido.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnriquecida", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/AtributoEnriquecido.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("99f900a0-3c50-4cdc-af18-66eb6138fbc6")]
+		public virtual AtributoEnriquecido AtributoEnriquecido
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AtributoEnriquecido)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoEnriquecidoDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoEnriquecidoDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AtributoEnriquecido of a ClaseEnriquecida
+		/// <summary>
+		/// Gets a list of AtributoEnriquecido.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<AtributoEnriquecido> GetAtributoEnriquecido(ClaseEnriquecida element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoEnriquecido>, AtributoEnriquecido>(element, ClaseEnriquecidaDomainRoleId);
+		}
+		#endregion
+		#region ClaseEnriquecida link accessor
+		/// <summary>
+		/// Get the list of ClaseEnriquecidaHasAtributoEnriquecido links to a ClaseEnriquecida.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido> GetLinksToAtributoEnriquecido ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida claseEnriquecidaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido>(claseEnriquecidaInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecidaDomainRoleId);
+		}
+		#endregion
+		#region AtributoEnriquecido link accessor
+		/// <summary>
+		/// Get the ClaseEnriquecidaHasAtributoEnriquecido link to a AtributoEnriquecido.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido GetLinkToClaseEnriquecida (global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido atributoEnriquecidoInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido>(atributoEnriquecidoInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecidoDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AtributoEnriquecido not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseEnriquecidaHasAtributoEnriquecido instance accessors
+		
+		/// <summary>
+		/// Get any ClaseEnriquecidaHasAtributoEnriquecido links between a given ClaseEnriquecida and a AtributoEnriquecido.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido> GetLinks( global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida source, global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido link in links )
+			{
+				if ( target.Equals(link.AtributoEnriquecido) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseEnriquecidaHasAtributoEnriquecido link between a given ClaseEnriquecidaand a AtributoEnriquecido.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido GetLink( global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida source, global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecidaDomainRoleId);
+			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido link in links )
+			{
+				if ( target.Equals(link.AtributoEnriquecido) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

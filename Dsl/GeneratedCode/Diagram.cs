@@ -213,6 +213,12 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JSRBBRProyectoIPS.Atributo)
+			{
+				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::UPM_IPS.JSRBBRProyectoIPS.OperacionNormal)
 			{
 				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal(this.Partition);
@@ -249,12 +255,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			if(element is global::UPM_IPS.JSRBBRProyectoIPS.Clase)
 			{
 				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
-			if(element is global::UPM_IPS.JSRBBRProyectoIPS.Atributo)
-			{
-				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -357,7 +357,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Atributo.nombreCalculadoDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.nombreCalculadoDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -721,6 +721,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.OperacionNormal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
@@ -728,7 +729,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
@@ -749,6 +749,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				{
 					parentElement = GetParentForClaseAbstracta((global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta)childElement);
 				} else
+				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.Atributo)
+				{
+					parentElement = GetParentForAtributo((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)childElement);
+				} else
 				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.OperacionNormal)
 				{
 					parentElement = GetParentForOperacionNormal((global::UPM_IPS.JSRBBRProyectoIPS.OperacionNormal)childElement);
@@ -764,10 +768,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.Clase)
 				{
 					parentElement = GetParentForClase((global::UPM_IPS.JSRBBRProyectoIPS.Clase)childElement);
-				} else
-				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.Atributo)
-				{
-					parentElement = GetParentForAtributo((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)childElement);
 				} else
 				{
 					parentElement = null;

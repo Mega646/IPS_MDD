@@ -48,23 +48,9 @@
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="d7e96a6a-0262-4199-99e2-2cd5acd1691d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.JSRBBRProyectoIPS">
-      <Properties>
-        <DomainProperty Id="770856ae-5aa1-4724-90bc-3130c7fee989" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Atributo.Nombre" Name="nombre" DisplayName="Nombre">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="9003887c-b969-4835-9223-c294622edf4e" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Atributo.Modificador" Name="modificador" DisplayName="Modificador">
-          <Type>
-            <DomainEnumerationMoniker Name="modificadorAtr" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="26fa15c4-d725-4087-bcb6-34e77b450de7" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Atributo.Nombre Calculado" Name="nombreCalculado" DisplayName="Nombre Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
+      <BaseClass>
+        <DomainClassMoniker Name="AtributoPadre" />
+      </BaseClass>
     </DomainClass>
     <DomainClass Id="e02cdf96-8f47-4872-9281-07eca0637627" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoID" Name="AtributoID" DisplayName="Atributo ID" Namespace="UPM_IPS.JSRBBRProyectoIPS">
       <BaseClass>
@@ -146,20 +132,21 @@
             <DomainPath>ClaseEnriquecidaHasOperacionEnriquecida.OperacionEnriquecida</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="AtributoEnriquecido" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecido</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="7484f232-20fe-458e-9063-a7c657d9c20d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido" Name="AtributoEnriquecido" DisplayName="Atributo Enriquecido" Namespace="UPM_IPS.JSRBBRProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="AtributoPadre" />
+      </BaseClass>
       <Properties>
-        <DomainProperty Id="f2339d50-1700-42a0-bd30-6bc591123c69" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Nombre" Name="nombre" DisplayName="Nombre">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="73627169-64eb-41ee-ac4c-bb53f610c244" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Modificador" Name="modificador" DisplayName="Modificador">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
         <DomainProperty Id="423a8adf-fec0-4dc5-98f5-86b8380e2c92" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
@@ -217,6 +204,25 @@
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="21488355-9e07-4212-9ffd-bc521baaac41" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre" Name="AtributoPadre" DisplayName="Atributo Padre" InheritanceModifier="Abstract" Namespace="UPM_IPS.JSRBBRProyectoIPS">
+      <Properties>
+        <DomainProperty Id="f88e473f-d57d-4ac4-860e-78890c8c2947" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Nombre" Name="nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="7433a330-b8c6-46b4-aaf5-45486125698e" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Modificador" Name="modificador" DisplayName="Modificador">
+          <Type>
+            <DomainEnumerationMoniker Name="modificadorAtr" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="50493442-9d57-438a-beca-0ffb8984af7c" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Nombre Calculado" Name="nombreCalculado" DisplayName="Nombre Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -463,6 +469,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="18138d05-38e4-4818-b344-5f00ee6d77ff" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido" Name="ClaseEnriquecidaHasAtributoEnriquecido" DisplayName="Clase Enriquecida Has Atributo Enriquecido" Namespace="UPM_IPS.JSRBBRProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="253a772c-c323-423c-91dd-2b122d556180" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="AtributoEnriquecido" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Enriquecido">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClaseEnriquecida" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="99f900a0-3c50-4cdc-af18-66eb6138fbc6" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecido" Name="AtributoEnriquecido" DisplayName="Atributo Enriquecido" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
+          <RolePlayer>
+            <DomainClassMoniker Name="AtributoEnriquecido" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -520,6 +542,13 @@
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.publico" Name="publico" Value="2" />
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.privado" Name="privado" Value="0" />
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.protegido" Name="protegido" Value="1" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="modificadorAtr1" Namespace="UPM_IPS.JSRBBRProyectoIPS" Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.publico" Name="publico" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.privado" Name="privado" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.protegido" Name="protegido" Value="1" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -653,17 +682,6 @@
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
-        <ElementData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="Atributo/nombre" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="modificador">
-            <DomainPropertyMoniker Name="Atributo/modificador" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="nombreCalculado" Representation="Ignore">
-            <DomainPropertyMoniker Name="Atributo/nombreCalculado" />
-          </XmlPropertyData>
-        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="AtributoID" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoIDMoniker" ElementName="atributoID" MonikerTypeName="AtributoIDMoniker">
         <DomainClassMoniker Name="AtributoID" />
@@ -787,17 +805,14 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="operacionEnriquecida">
             <DomainRelationshipMoniker Name="ClaseEnriquecidaHasOperacionEnriquecida" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoEnriquecido">
+            <DomainRelationshipMoniker Name="ClaseEnriquecidaHasAtributoEnriquecido" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="AtributoEnriquecido" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoEnriquecidoMoniker" ElementName="atributoEnriquecido" MonikerTypeName="AtributoEnriquecidoMoniker">
         <DomainClassMoniker Name="AtributoEnriquecido" />
         <ElementData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="AtributoEnriquecido/nombre" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="modificador">
-            <DomainPropertyMoniker Name="AtributoEnriquecido/modificador" />
-          </XmlPropertyData>
           <XmlPropertyData XmlName="tipoLetra">
             <DomainPropertyMoniker Name="AtributoEnriquecido/tipoLetra" />
           </XmlPropertyData>
@@ -851,6 +866,23 @@
       </XmlClassData>
       <XmlClassData TypeName="ClaseAbstractaReferencesClaseHijaDeAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaReferencesClaseHijaDeAbstractaMoniker" ElementName="claseAbstractaReferencesClaseHijaDeAbstracta" MonikerTypeName="ClaseAbstractaReferencesClaseHijaDeAbstractaMoniker">
         <DomainRelationshipMoniker Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" />
+      </XmlClassData>
+      <XmlClassData TypeName="AtributoPadre" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoPadreMoniker" ElementName="atributoPadre" MonikerTypeName="AtributoPadreMoniker">
+        <DomainClassMoniker Name="AtributoPadre" />
+        <ElementData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="AtributoPadre/nombre" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="modificador">
+            <DomainPropertyMoniker Name="AtributoPadre/modificador" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="AtributoPadre/nombreCalculado" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseEnriquecidaHasAtributoEnriquecido" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasAtributoEnriquecidoMoniker" ElementName="claseEnriquecidaHasAtributoEnriquecido" MonikerTypeName="ClaseEnriquecidaHasAtributoEnriquecidoMoniker">
+        <DomainRelationshipMoniker Name="ClaseEnriquecidaHasAtributoEnriquecido" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -996,7 +1028,7 @@
           <TextDecoratorMoniker Name="MetaforaAtributo/nombreDec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Atributo/nombreCalculado" />
+              <DomainPropertyMoniker Name="AtributoPadre/nombreCalculado" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>

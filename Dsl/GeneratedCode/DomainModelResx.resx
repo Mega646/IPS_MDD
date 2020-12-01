@@ -165,30 +165,6 @@
     <value>Atributo</value>
     <comment>DisplayName for DomainClass &apos;Atributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.Atributo/nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Atributo.Nombre</value>
-    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.Atributo/nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.Atributo/modificador.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Atributo.Modificador</value>
-    <comment>Description for DomainProperty &apos;modificador&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.Atributo/modificador.DisplayName" xml:space="preserve">
-    <value>Modificador</value>
-    <comment>DisplayName for DomainProperty &apos;modificador&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.Atributo/nombreCalculado.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Atributo.Nombre Calculado</value>
-    <comment>Description for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.Atributo/nombreCalculado.DisplayName" xml:space="preserve">
-    <value>Nombre Calculado</value>
-    <comment>DisplayName for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;Atributo&apos;</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoID.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoID</value>
     <comment>Description for DomainClass &apos;AtributoID&apos;</comment>
@@ -301,22 +277,6 @@
     <value>Atributo Enriquecido</value>
     <comment>DisplayName for DomainClass &apos;AtributoEnriquecido&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Nombre</value>
-    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/modificador.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Modificador</value>
-    <comment>Description for DomainProperty &apos;modificador&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/modificador.DisplayName" xml:space="preserve">
-    <value>Modificador</value>
-    <comment>DisplayName for DomainProperty &apos;modificador&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/tipoLetra.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Tipo Letra</value>
     <comment>Description for DomainProperty &apos;tipoLetra&apos; on DomainClass &apos;AtributoEnriquecido&apos;</comment>
@@ -388,6 +348,38 @@
   <data name="UPM_IPS.JSRBBRProyectoIPS.Operacion/valorRetorno.DisplayName" xml:space="preserve">
     <value>Valor Retorno</value>
     <comment>DisplayName for DomainProperty &apos;valorRetorno&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre</value>
+    <comment>Description for DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.DisplayName" xml:space="preserve">
+    <value>Atributo Padre</value>
+    <comment>DisplayName for DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/modificador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Modificador</value>
+    <comment>Description for DomainProperty &apos;modificador&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/modificador.DisplayName" xml:space="preserve">
+    <value>Modificador</value>
+    <comment>DisplayName for DomainProperty &apos;modificador&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/nombreCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Nombre Calculado</value>
+    <comment>Description for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/nombreCalculado.DisplayName" xml:space="preserve">
+    <value>Nombre Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.TapizClasesHasClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.TapizClasesHasClase</value>
@@ -829,6 +821,38 @@
     <value>Clase Abstracta</value>
     <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido</value>
+    <comment>Description for DomainClass &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.DisplayName" xml:space="preserve">
+    <value>Clase Enriquecida Has Atributo Enriquecido</value>
+    <comment>DisplayName for DomainClass &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/ClaseEnriquecida.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecida</value>
+    <comment>Description for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/ClaseEnriquecida.DisplayName" xml:space="preserve">
+    <value>Clase Enriquecida</value>
+    <comment>DisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/ClaseEnriquecida.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Enriquecido</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnriquecida&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/AtributoEnriquecido.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecido</value>
+    <comment>Description for DomainRole &apos;AtributoEnriquecido&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/AtributoEnriquecido.DisplayName" xml:space="preserve">
+    <value>Atributo Enriquecido</value>
+    <comment>DisplayName for DomainRole &apos;AtributoEnriquecido&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido/AtributoEnriquecido.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Enriquecida</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoEnriquecido&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.entradaSalida/entrada.DisplayName" xml:space="preserve">
     <value>entrada</value>
     <comment>Display name for EnumerationLiteral &apos;entrada&apos; on DomainEnumeration &apos;entradaSalida&apos;</comment>
@@ -972,6 +996,30 @@
   <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr/protegido.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.protegido</value>
     <comment>Description for EnumerationLiteral &apos;protegido&apos; on DomainEnumeration &apos;modificadorAtr&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/publico.DisplayName" xml:space="preserve">
+    <value>publico</value>
+    <comment>Display name for EnumerationLiteral &apos;publico&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/publico.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.publico</value>
+    <comment>Description for EnumerationLiteral &apos;publico&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/privado.DisplayName" xml:space="preserve">
+    <value>privado</value>
+    <comment>Display name for EnumerationLiteral &apos;privado&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/privado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.privado</value>
+    <comment>Description for EnumerationLiteral &apos;privado&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/protegido.DisplayName" xml:space="preserve">
+    <value>protegido</value>
+    <comment>Display name for EnumerationLiteral &apos;protegido&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/protegido.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.protegido</value>
+    <comment>Description for EnumerationLiteral &apos;protegido&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase</value>
