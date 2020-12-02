@@ -468,25 +468,6 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="67257a1a-48be-4650-b00a-6173313f007d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta" Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" DisplayName="Clase Abstracta References Clase Hija De Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS">
-      <BaseRelationship>
-        <DomainRelationshipMoniker Name="ClaseInheritsClaseHija" />
-      </BaseRelationship>
-      <Source>
-        <DomainRole Id="8c2d3464-a063-474c-84e7-3cad00ac7ca5" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstracta" Name="ClaseAbstracta" DisplayName="Clase Abstracta" PropertyName="ClaseHijaDeAbstracta" Multiplicity="OneMany" PropertyDisplayName="Clase Hija De Abstracta">
-          <RolePlayer>
-            <DomainClassMoniker Name="ClaseAbstracta" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="4d1ca834-ce06-4989-a784-9fa547e5ee3c" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Clase" Name="Clase" DisplayName="Clase" PropertyName="ClaseAbstracta" PropertyDisplayName="Clase Abstracta">
-          <RolePlayer>
-            <DomainClassMoniker Name="Clase" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="18138d05-38e4-4818-b344-5f00ee6d77ff" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido" Name="ClaseEnriquecidaHasAtributoEnriquecido" DisplayName="Clase Enriquecida Has Atributo Enriquecido" Namespace="UPM_IPS.JSRBBRProyectoIPS" IsEmbedding="true">
       <Source>
         <DomainRole Id="253a772c-c323-423c-91dd-2b122d556180" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="AtributoEnriquecido" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Enriquecido">
@@ -766,9 +747,6 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="operacionAbstracta">
             <DomainRelationshipMoniker Name="ClaseAbstractaHasOperacionAbstracta" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="claseHijaDeAbstracta">
-            <DomainRelationshipMoniker Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" />
-          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="OperacionAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionAbstractaMoniker" ElementName="operacionAbstracta" MonikerTypeName="OperacionAbstractaMoniker">
@@ -904,9 +882,6 @@
       <XmlClassData TypeName="MetaforaClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaClaseEnriquecidaMoniker" ElementName="metaforaClaseEnriquecida" MonikerTypeName="MetaforaClaseEnriquecidaMoniker">
         <GeometryShapeMoniker Name="MetaforaClaseEnriquecida" />
       </XmlClassData>
-      <XmlClassData TypeName="ClaseAbstractaReferencesClaseHijaDeAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseAbstractaReferencesClaseHijaDeAbstractaMoniker" ElementName="claseAbstractaReferencesClaseHijaDeAbstracta" MonikerTypeName="ClaseAbstractaReferencesClaseHijaDeAbstractaMoniker">
-        <DomainRelationshipMoniker Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" />
-      </XmlClassData>
       <XmlClassData TypeName="AtributoPadre" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoPadreMoniker" ElementName="atributoPadre" MonikerTypeName="AtributoPadreMoniker">
         <DomainClassMoniker Name="AtributoPadre" />
         <ElementData>
@@ -995,25 +970,6 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Clase" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Clase" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="ClaseAbstractaReferencesClaseHijaDeAbstractaBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ClaseAbstractaReferencesClaseHijaDeAbstracta" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="ClaseAbstracta" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
