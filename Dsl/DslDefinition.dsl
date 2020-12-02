@@ -193,6 +193,16 @@
             <DomainEnumerationMoniker Name="tipoDatos" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="1aa1aa8f-f607-4cd0-a31e-7e50d77bc4de" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Operacion.Operacion Calculada" Name="operacionCalculada" DisplayName="Operacion Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="847999d6-c174-440f-8d9a-992fd02ddc09" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Operacion.Modificador" Name="modificador" DisplayName="Modificador">
+          <Type>
+            <DomainEnumerationMoniker Name="modificadorAtr" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
@@ -572,9 +582,6 @@
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="valorRetorno" DisplayName="Valor Retorno" DefaultText="valorRetorno" />
-      </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="f19c87ab-8e03-4030-bb4f-92916f5151ce" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida" Name="MetaforaOperacionEnriquecida" DisplayName="Metafora Operacion Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Enriquecida" FillColor="Transparent" OutlineColor="Transparent" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <BaseGeometryShape>
@@ -847,6 +854,12 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="parametros">
             <DomainRelationshipMoniker Name="OperacionHasParametros" />
           </XmlRelationshipData>
+          <XmlPropertyData XmlName="operacionCalculada" Representation="Ignore">
+            <DomainPropertyMoniker Name="Operacion/operacionCalculada" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="modificador">
+            <DomainPropertyMoniker Name="Operacion/modificador" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseEnriquecidaHasOperacionEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasOperacionEnriquecidaMoniker" ElementName="claseEnriquecidaHasOperacionEnriquecida" MonikerTypeName="ClaseEnriquecidaHasOperacionEnriquecidaMoniker">
@@ -1032,6 +1045,14 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaOperacionNormal/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoPadre/nombreCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaAtributo" />
       </ShapeMap>
       <ShapeMap>
@@ -1043,15 +1064,7 @@
           <TextDecoratorMoniker Name="MetaforaOperacionNormal/nombreDec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Operacion/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaOperacionNormal/valorRetorno" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Operacion/valorRetorno" />
+              <DomainPropertyMoniker Name="Operacion/operacionCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1083,14 +1096,6 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="OperacionEnriquecida/tipoLetra" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaOperacionNormal/valorRetorno" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Operacion/valorRetorno" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>

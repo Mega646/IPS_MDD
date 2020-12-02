@@ -349,6 +349,22 @@
     <value>Valor Retorno</value>
     <comment>DisplayName for DomainProperty &apos;valorRetorno&apos; on DomainClass &apos;Operacion&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Operacion/operacionCalculada.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Operacion.Operacion Calculada</value>
+    <comment>Description for DomainProperty &apos;operacionCalculada&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Operacion/operacionCalculada.DisplayName" xml:space="preserve">
+    <value>Operacion Calculada</value>
+    <comment>DisplayName for DomainProperty &apos;operacionCalculada&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Operacion/modificador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Operacion.Modificador</value>
+    <comment>Description for DomainProperty &apos;modificador&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Operacion/modificador.DisplayName" xml:space="preserve">
+    <value>Modificador</value>
+    <comment>DisplayName for DomainProperty &apos;modificador&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre</value>
     <comment>Description for DomainClass &apos;AtributoPadre&apos;</comment>
@@ -1063,10 +1079,6 @@
   </data>
   <data name="MetaforaOperacionNormalnombreDecDefaultText" xml:space="preserve">
     <value>nombreDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="MetaforaOperacionNormalvalorRetornoDefaultText" xml:space="preserve">
-    <value>valorRetorno</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida.Description" xml:space="preserve">

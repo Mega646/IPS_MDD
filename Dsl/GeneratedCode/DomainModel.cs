@@ -135,6 +135,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainMemberInfo(typeof(OperacionEnriquecida), "colorLetra", OperacionEnriquecida.colorLetraDomainPropertyId, typeof(OperacionEnriquecida.colorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(Operacion), "nombre", Operacion.nombreDomainPropertyId, typeof(Operacion.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Operacion), "valorRetorno", Operacion.valorRetornoDomainPropertyId, typeof(Operacion.valorRetornoPropertyHandler)),
+				new DomainMemberInfo(typeof(Operacion), "operacionCalculada", Operacion.operacionCalculadaDomainPropertyId, typeof(Operacion.operacionCalculadaPropertyHandler)),
+				new DomainMemberInfo(typeof(Operacion), "modificador", Operacion.modificadorDomainPropertyId, typeof(Operacion.modificadorPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoPadre), "nombre", AtributoPadre.nombreDomainPropertyId, typeof(AtributoPadre.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoPadre), "modificador", AtributoPadre.modificadorDomainPropertyId, typeof(AtributoPadre.modificadorPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoPadre), "nombreCalculado", AtributoPadre.nombreCalculadoDomainPropertyId, typeof(AtributoPadre.nombreCalculadoPropertyHandler)),

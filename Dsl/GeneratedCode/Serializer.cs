@@ -8154,6 +8154,23 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					}
 				}
 			}
+			// modificador
+			if (!serializationContext.Result.Failed)
+			{
+				string attribmodificador = JSRBBRProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "modificador");
+				if (attribmodificador != null)
+				{
+					modificadorAtr valueOfmodificador;
+					if (DslModeling::SerializationUtilities.TryGetValue<modificadorAtr>(serializationContext, attribmodificador, out valueOfmodificador))
+					{
+						instanceOfOperacion.modificador = valueOfmodificador;
+					}
+					else
+					{	// Invalid property value, ignored.
+						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "modificador", typeof(modificadorAtr), attribmodificador);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -8582,6 +8599,16 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				if (!serializationContext.Result.Failed)
 				{
 					JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "valorRetorno", serializedPropValue);
+				}
+			}
+			// modificador
+			if (!serializationContext.Result.Failed)
+			{
+				modificadorAtr propValue = instanceOfOperacion.modificador;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<modificadorAtr>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "modificador", serializedPropValue);
 				}
 			}
 		}

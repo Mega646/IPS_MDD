@@ -359,6 +359,9 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.nombreCalculadoDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.nombreCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -375,11 +378,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Operacion.nombreDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Operacion.operacionCalculadaDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Operacion.valorRetornoDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "valorRetorno").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -400,9 +400,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Operacion.nombreDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Operacion.valorRetornoDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "valorRetorno").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida.colorLetraDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "colorLetraDec").AssociateValueWith(shape.Store, propertyInfo);

@@ -83,6 +83,7 @@
     </None>
     <Compile Include="DesignerCustomization\AtributoPadre.cs" />
     <Compile Include="DesignerCustomization\ClaseInheritsClaseHija.cs" />
+    <Compile Include="DesignerCustomization\Operacion.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

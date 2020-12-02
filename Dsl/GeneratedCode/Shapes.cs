@@ -795,15 +795,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
 			shapeFields.Add(field1);
 			
-			DslDiagrams::TextField field2 = new DslDiagrams::TextField("valorRetorno");
-			field2.DefaultText = global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaOperacionNormalvalorRetornoDefaultText");
-			field2.DefaultFocusable = true;
-			field2.DefaultAutoSize = true;
-			field2.AnchoringBehavior.MinimumHeightInLines = 1;
-			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			shapeFields.Add(field2);
-			
 		}
 		
 		/// <summary>
@@ -818,10 +809,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "nombreDec");
 			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
-				
-			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "valorRetorno");
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator2);
 				
 		}
 		

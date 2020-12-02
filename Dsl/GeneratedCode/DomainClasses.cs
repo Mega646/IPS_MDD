@@ -2738,6 +2738,159 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 		
 		#endregion
+		#region operacionCalculada domain property code
+		
+		/// <summary>
+		/// operacionCalculada domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid operacionCalculadaDomainPropertyId = new global::System.Guid(0x1aa1aa8f, 0xf607, 0x4cd0, 0xa3, 0x1e, 0x7e, 0x50, 0xd7, 0x7b, 0xc4, 0xde);
+		
+		/// <summary>
+		/// Gets or sets the value of operacionCalculada domain property.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Operacion.Operacion Calculada
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.Operacion/operacionCalculada.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Operacion/operacionCalculada.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("1aa1aa8f-f607-4cd0-a31e-7e50d77bc4de")]
+		public global::System.String operacionCalculada
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return operacionCalculadaPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Operacion.operacionCalculada domain property.
+		/// </summary>
+		internal sealed partial class operacionCalculadaPropertyHandler : DslModeling::CalculatedPropertyValueHandler<Operacion, global::System.String>
+		{
+			private operacionCalculadaPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Operacion.operacionCalculada domain property value handler.
+			/// </summary>
+			public static readonly operacionCalculadaPropertyHandler Instance = new operacionCalculadaPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Operacion.operacionCalculada domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return operacionCalculadaDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Operacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for operacionCalculada because its Kind is
+				// set to Calculated. Please provide the GetoperacionCalculadaValue()
+				// method on the domain class.
+				return element.GetoperacionCalculadaValue();
+			}
+		
+		}
+		
+		#endregion
+		#region modificador domain property code
+		
+		/// <summary>
+		/// modificador domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid modificadorDomainPropertyId = new global::System.Guid(0x847999d6, 0xc174, 0x440f, 0x8d, 0x9a, 0x99, 0x2f, 0xd0, 0x2d, 0xdc, 0x09);
+		
+		/// <summary>
+		/// Storage for modificador
+		/// </summary>
+		private modificadorAtr modificadorPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of modificador domain property.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Operacion.Modificador
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.Operacion/modificador.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Operacion/modificador.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("847999d6-c174-440f-8d9a-992fd02ddc09")]
+		public modificadorAtr modificador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return modificadorPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				modificadorPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Operacion.modificador domain property.
+		/// </summary>
+		internal sealed partial class modificadorPropertyHandler : DslModeling::DomainPropertyValueHandler<Operacion, modificadorAtr>
+		{
+			private modificadorPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Operacion.modificador domain property value handler.
+			/// </summary>
+			public static readonly modificadorPropertyHandler Instance = new modificadorPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Operacion.modificador domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return modificadorDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed modificadorAtr GetValue(Operacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.modificadorPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Operacion element, modificadorAtr newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				modificadorAtr oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.modificadorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region Parametros opposite domain role accessor
 		
 		/// <summary>
