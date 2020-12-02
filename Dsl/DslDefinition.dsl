@@ -45,6 +45,14 @@
             <DomainPath>ClaseHasOperacion.Operacion</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="AtributoID" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ClaseHasAtributoID.AtributoID</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="d7e96a6a-0262-4199-99e2-2cd5acd1691d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.JSRBBRProyectoIPS">
@@ -54,7 +62,7 @@
     </DomainClass>
     <DomainClass Id="e02cdf96-8f47-4872-9281-07eca0637627" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoID" Name="AtributoID" DisplayName="Atributo ID" Namespace="UPM_IPS.JSRBBRProyectoIPS">
       <BaseClass>
-        <DomainClassMoniker Name="Atributo" />
+        <DomainClassMoniker Name="AtributoPadre" />
       </BaseClass>
     </DomainClass>
     <DomainClass Id="340fb2c8-6c6c-4617-940f-70c75d035f31" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Parametro" Name="Parametro" DisplayName="Parametro" Namespace="UPM_IPS.JSRBBRProyectoIPS">
@@ -495,6 +503,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="c9387518-f2ac-427c-a0d3-5cb1a35a5a5d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID" Name="ClaseHasAtributoID" DisplayName="Clase Has Atributo ID" Namespace="UPM_IPS.JSRBBRProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="f862a56a-4aff-41b8-9483-235107c349f9" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.Clase" Name="Clase" DisplayName="Clase" PropertyName="AtributoID" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo ID">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="ed105d8f-f231-43ab-8777-8e5f89dd4e94" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoID" Name="AtributoID" DisplayName="Atributo ID" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="AtributoID" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -678,6 +702,9 @@
           </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="targetClases">
             <DomainRelationshipMoniker Name="ClaseReferencesTargetClases" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoID">
+            <DomainRelationshipMoniker Name="ClaseHasAtributoID" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -896,6 +923,9 @@
       </XmlClassData>
       <XmlClassData TypeName="ClaseEnriquecidaHasAtributoEnriquecido" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaHasAtributoEnriquecidoMoniker" ElementName="claseEnriquecidaHasAtributoEnriquecido" MonikerTypeName="ClaseEnriquecidaHasAtributoEnriquecidoMoniker">
         <DomainRelationshipMoniker Name="ClaseEnriquecidaHasAtributoEnriquecido" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseHasAtributoID" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoIDMoniker" ElementName="claseHasAtributoID" MonikerTypeName="ClaseHasAtributoIDMoniker">
+        <DomainRelationshipMoniker Name="ClaseHasAtributoID" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
