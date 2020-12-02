@@ -3569,3 +3569,261 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		#endregion
 	}
 }
+namespace UPM_IPS.JSRBBRProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship ClaseHasAtributoID
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("c9387518-f2ac-427c-a0d3-5cb1a35a5a5d")]
+	public partial class ClaseHasAtributoID : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseHasAtributoID domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc9387518, 0xf2ac, 0x427c, 0xa0, 0xd3, 0x5c, 0xb1, 0xa3, 0x5a, 0x5a, 0x5d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseHasAtributoID link in the same Partition as the given Clase
+		/// </summary>
+		/// <param name="source">Clase to use as the source of the relationship.</param>
+		/// <param name="target">AtributoID to use as the target of the relationship.</param>
+		public ClaseHasAtributoID(Clase source, AtributoID target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasAtributoID.ClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasAtributoID.AtributoIDDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseHasAtributoID(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseHasAtributoID(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseHasAtributoID(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseHasAtributoID(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Clase domain role code
+		
+		/// <summary>
+		/// Clase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseDomainRoleId = new global::System.Guid(0xf862a56a, 0x4aff, 0x41b8, 0x94, 0x83, 0x23, 0x51, 0x07, 0xc3, 0x49, 0xf9);
+		
+		/// <summary>
+		/// DomainRole Clase
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.Clase
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/Clase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/Clase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AtributoID", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/Clase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("f862a56a-4aff-41b8-9483-235107c349f9")]
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Clase of a AtributoID
+		/// <summary>
+		/// Gets Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Clase GetClase(AtributoID element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoIDDomainRoleId) as Clase;
+		}
+		
+		/// <summary>
+		/// Sets Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClase(AtributoID element, Clase newClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoIDDomainRoleId, newClase);
+		}
+		#endregion
+		#region AtributoID domain role code
+		
+		/// <summary>
+		/// AtributoID domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributoIDDomainRoleId = new global::System.Guid(0xed105d8f, 0xf231, 0x43ab, 0x87, 0x77, 0x8e, 0x5f, 0x89, 0xdd, 0x4e, 0x94);
+		
+		/// <summary>
+		/// DomainRole AtributoID
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoID
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/AtributoID.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/AtributoID.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Clase", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/AtributoID.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("ed105d8f-f231-43ab-8777-8e5f89dd4e94")]
+		public virtual AtributoID AtributoID
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (AtributoID)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoIDDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoIDDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access AtributoID of a Clase
+		/// <summary>
+		/// Gets AtributoID.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static AtributoID GetAtributoID(Clase element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseDomainRoleId) as AtributoID;
+		}
+		
+		/// <summary>
+		/// Sets AtributoID.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetAtributoID(Clase element, AtributoID newAtributoID)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseDomainRoleId, newAtributoID);
+		}
+		#endregion
+		#region Clase link accessor
+		/// <summary>
+		/// Get the ClaseHasAtributoID link to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID GetLinkToAtributoID (global::UPM_IPS.JSRBBRProyectoIPS.Clase claseInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID>(claseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.ClaseDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Clase not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region AtributoID link accessor
+		/// <summary>
+		/// Get the ClaseHasAtributoID link to a AtributoID.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID GetLinkToClase (global::UPM_IPS.JSRBBRProyectoIPS.AtributoID atributoIDInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID>(atributoIDInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoIDDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AtributoID not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseHasAtributoID instance accessors
+		
+		/// <summary>
+		/// Get any ClaseHasAtributoID links between a given Clase and a AtributoID.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID> GetLinks( global::UPM_IPS.JSRBBRProyectoIPS.Clase source, global::UPM_IPS.JSRBBRProyectoIPS.AtributoID target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.ClaseDomainRoleId);
+			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID link in links )
+			{
+				if ( target.Equals(link.AtributoID) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseHasAtributoID link between a given Claseand a AtributoID.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID GetLink( global::UPM_IPS.JSRBBRProyectoIPS.Clase source, global::UPM_IPS.JSRBBRProyectoIPS.AtributoID target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.ClaseDomainRoleId);
+			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID link in links )
+			{
+				if ( target.Equals(link.AtributoID) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

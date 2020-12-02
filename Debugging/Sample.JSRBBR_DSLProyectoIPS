@@ -10,6 +10,9 @@
           <claseHasAtributo Id="e9ab4534-f90c-4175-bdb6-0aedda37ab89">
             <atributo Id="b4d1d67c-b884-40ad-bb20-864664affdb2" nombre="nice" modificador="privado" />
           </claseHasAtributo>
+          <claseHasAtributo Id="d7b46801-9ac4-4d30-9785-d8db8c22edfa">
+            <atributo Id="d07cec10-73df-47b7-a336-ae605997ea46" nombre="atributo" modificador="publico" />
+          </claseHasAtributo>
         </atributo>
       </clase>
     </tapizClasesHasClase>

@@ -869,6 +869,38 @@
     <value>Clase Enriquecida</value>
     <comment>PropertyDisplayName for DomainRole &apos;AtributoEnriquecido&apos; on DomainRelationship &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID</value>
+    <comment>Description for DomainClass &apos;ClaseHasAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.DisplayName" xml:space="preserve">
+    <value>Clase Has Atributo ID</value>
+    <comment>DisplayName for DomainClass &apos;ClaseHasAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/Clase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.Clase</value>
+    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/Clase.DisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/Clase.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo ID</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseHasAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/AtributoID.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoID</value>
+    <comment>Description for DomainRole &apos;AtributoID&apos; on DomainRelationship &apos;ClaseHasAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/AtributoID.DisplayName" xml:space="preserve">
+    <value>Atributo ID</value>
+    <comment>DisplayName for DomainRole &apos;AtributoID&apos; on DomainRelationship &apos;ClaseHasAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID/AtributoID.PropertyDisplayName" xml:space="preserve">
+    <value>Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoID&apos; on DomainRelationship &apos;ClaseHasAtributoID&apos;</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.entradaSalida/entrada.DisplayName" xml:space="preserve">
     <value>entrada</value>
     <comment>Display name for EnumerationLiteral &apos;entrada&apos; on DomainEnumeration &apos;entradaSalida&apos;</comment>

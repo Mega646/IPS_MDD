@@ -592,6 +592,25 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
+		#region AtributoID opposite domain role accessor
+		/// <summary>
+		/// Gets or sets AtributoID.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.Clase
+		/// </summary>
+		public virtual AtributoID AtributoID
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.ClaseDomainRoleId) as AtributoID;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.ClaseDomainRoleId, value);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -619,6 +638,16 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JSRBBRProyectoIPS.OperacionNormal.DomainClassId)) 
 				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JSRBBRProyectoIPS.AtributoID.DomainClassId)) 
+				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseHasAtributoID.AtributoID
+					if (this.AtributoID != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -660,6 +689,15 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			{
 				// Create link for path ClaseHasOperacion.Operacion
 				this.Operacion.Add(sourceOperacionNormal2);
+
+				return;
+			}
+				
+			global::UPM_IPS.JSRBBRProyectoIPS.AtributoID sourceAtributoID3 = sourceElement as global::UPM_IPS.JSRBBRProyectoIPS.AtributoID;
+			if (sourceAtributoID3 != null)
+			{
+				// Create link for path ClaseHasAtributoID.AtributoID
+				this.AtributoID = sourceAtributoID3;
 
 				return;
 			}
@@ -709,6 +747,20 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasOperacion.ClaseDomainRoleId, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasOperacion.OperacionNormalDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::UPM_IPS.JSRBBRProyectoIPS.AtributoID sourceAtributoID3 = sourceElement as global::UPM_IPS.JSRBBRProyectoIPS.AtributoID;
+			if (sourceAtributoID3 != null)
+			{
+				// Delete link for path ClaseHasAtributoID.AtributoID
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.GetLinks((global::UPM_IPS.JSRBBRProyectoIPS.Clase)this, sourceAtributoID3))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.ClaseDomainRoleId, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoIDDomainRoleId);
 				}
 
 				return;
@@ -790,7 +842,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("e02cdf96-8f47-4872-9281-07eca0637627")]
-	public partial class AtributoID : Atributo
+	public partial class AtributoID : AtributoPadre
 	{
 		#region Constructors, domain class Id
 	
@@ -816,6 +868,25 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		public AtributoID(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
+		}
+		#endregion
+		#region Clase opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Clase.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoID
+		/// </summary>
+		public virtual Clase Clase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoIDDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoIDDomainRoleId, value);
+			}
 		}
 		#endregion
 	}

@@ -93,6 +93,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(OperacionHasParametros),
 				typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta),
 				typeof(ClaseEnriquecidaHasAtributoEnriquecido),
+				typeof(ClaseHasAtributoID),
 				typeof(JSRBBRProyectoIPSDiagram),
 				typeof(MetaforaRelacionHerencia),
 				typeof(MetaforaRelaciones),
@@ -183,6 +184,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainRolePlayerInfo(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), "Clase", ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasAtributoEnriquecido), "ClaseEnriquecida", ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecidaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasAtributoEnriquecido), "AtributoEnriquecido", ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecidoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseHasAtributoID), "Clase", ClaseHasAtributoID.ClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClaseHasAtributoID), "AtributoID", ClaseHasAtributoID.AtributoIDDomainRoleId),
 			};
 		}
 		#endregion
@@ -284,7 +287,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(14);
 				createElementLinkMap.Add(typeof(TapizClasesHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperacion), 2);
@@ -297,6 +300,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementLinkMap.Add(typeof(OperacionHasParametros), 9);
 				createElementLinkMap.Add(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), 10);
 				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasAtributoEnriquecido), 11);
+				createElementLinkMap.Add(typeof(ClaseHasAtributoID), 12);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -323,6 +327,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 9: return new OperacionHasParametros(partition, roleAssignments, propertyAssignments);
 				case 10: return new ClaseAbstractaReferencesClaseHijaDeAbstracta(partition, roleAssignments, propertyAssignments);
 				case 11: return new ClaseEnriquecidaHasAtributoEnriquecido(partition, roleAssignments, propertyAssignments);
+				case 12: return new ClaseHasAtributoID(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -500,6 +505,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			DomainRoles.Add(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasOperacionEnriquecida.OperacionEnriquecidaDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JSRBBRProyectoIPS.OperacionHasParametros.ParametroDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecidoDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID.AtributoIDDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
