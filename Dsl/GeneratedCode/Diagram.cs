@@ -1341,17 +1341,17 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidos((global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "AtributosEnriquecidos", repaintOnly);
 				}
-				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Parametro && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreDomainPropertyId)
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Parametro && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreCalculadoDomainPropertyId)
 				{
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetOperacionNormalForMetaforaOperacionNormalParametros((global::UPM_IPS.JSRBBRProyectoIPS.Parametro)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal), "Parametros", repaintOnly);
 				}
-				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Parametro && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreDomainPropertyId)
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Parametro && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreCalculadoDomainPropertyId)
 				{
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetOperacionAbstractaForMetaforaOperacionAbstractaParametros((global::UPM_IPS.JSRBBRProyectoIPS.Parametro)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionAbstracta), "Parametros", repaintOnly);
 				}
-				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Parametro && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreDomainPropertyId)
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Parametro && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreCalculadoDomainPropertyId)
 				{
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetOperacionEnriquecidaForMetaforaOperacionEnriquecidaParametros((global::UPM_IPS.JSRBBRProyectoIPS.Parametro)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida), "Parametros", repaintOnly);

@@ -82,6 +82,11 @@
             <DomainEnumerationMoniker Name="entradaSalida" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="66c05d32-7d8e-4283-aef7-bff88bb5d31a" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Parametro.Nombre Calculado" Name="nombreCalculado" DisplayName="Nombre Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="3d20a0cd-7c5d-4f55-bb84-82676c9bd5d5" Description="Description for UPM_IPS.JSRBBRProyectoIPS.OperacionNormal" Name="OperacionNormal" DisplayName="Operacion Normal" Namespace="UPM_IPS.JSRBBRProyectoIPS">
@@ -734,6 +739,9 @@
           <XmlPropertyData XmlName="entradaSalida">
             <DomainPropertyMoniker Name="Parametro/entradaSalida" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="Parametro/nombreCalculado" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClaseHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasAtributoMoniker" ElementName="claseHasAtributo" MonikerTypeName="ClaseHasAtributoMoniker">
@@ -1143,7 +1151,7 @@
           </ElementsDisplayed>
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Parametro/nombre" />
+              <DomainPropertyMoniker Name="Parametro/nombreCalculado" />
             </PropertyPath>
           </PropertyDisplayed>
         </CompartmentMap>
@@ -1169,7 +1177,7 @@
           </ElementsDisplayed>
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Parametro/nombre" />
+              <DomainPropertyMoniker Name="Parametro/nombreCalculado" />
             </PropertyPath>
           </PropertyDisplayed>
         </CompartmentMap>
@@ -1195,7 +1203,7 @@
           </ElementsDisplayed>
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="Parametro/nombre" />
+              <DomainPropertyMoniker Name="Parametro/nombreCalculado" />
             </PropertyPath>
           </PropertyDisplayed>
         </CompartmentMap>

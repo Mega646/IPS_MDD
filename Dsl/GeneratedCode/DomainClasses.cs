@@ -1175,6 +1175,72 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 		
 		#endregion
+		#region nombreCalculado domain property code
+		
+		/// <summary>
+		/// nombreCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreCalculadoDomainPropertyId = new global::System.Guid(0x66c05d32, 0x7d8e, 0x4283, 0xae, 0xf7, 0xbf, 0xf8, 0x8b, 0xb5, 0xd3, 0x1a);
+		
+		/// <summary>
+		/// Gets or sets the value of nombreCalculado domain property.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Parametro.Nombre Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.Parametro/nombreCalculado.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Parametro/nombreCalculado.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("66c05d32-7d8e-4283-aef7-bff88bb5d31a")]
+		public global::System.String nombreCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Parametro.nombreCalculado domain property.
+		/// </summary>
+		internal sealed partial class nombreCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<Parametro, global::System.String>
+		{
+			private nombreCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Parametro.nombreCalculado domain property value handler.
+			/// </summary>
+			public static readonly nombreCalculadoPropertyHandler Instance = new nombreCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Parametro.nombreCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Parametro element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for nombreCalculado because its Kind is
+				// set to Calculated. Please provide the GetnombreCalculadoValue()
+				// method on the domain class.
+				return element.GetnombreCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
 		#region Operacion opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Operacion.

@@ -1425,7 +1425,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					}
 					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Parametros", 
-																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreDomainPropertyId, 
+																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreCalculadoDomainPropertyId, 
 																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.DomainClassId, 
 																				GetElementsFromOperacionNormalForParametros,
 																				null,
@@ -1775,7 +1775,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					}
 					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Parametros", 
-																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreDomainPropertyId, 
+																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreCalculadoDomainPropertyId, 
 																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.DomainClassId, 
 																				GetElementsFromOperacionAbstractaForParametros,
 																				null,
@@ -2125,7 +2125,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					}
 					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Parametros", 
-																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreDomainPropertyId, 
+																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.nombreCalculadoDomainPropertyId, 
 																				global::UPM_IPS.JSRBBRProyectoIPS.Parametro.DomainClassId, 
 																				GetElementsFromOperacionEnriquecidaForParametros,
 																				null,

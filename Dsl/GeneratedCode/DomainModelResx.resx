@@ -205,6 +205,14 @@
     <value>Entrada Salida</value>
     <comment>DisplayName for DomainProperty &apos;entradaSalida&apos; on DomainClass &apos;Parametro&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Parametro/nombreCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Parametro.Nombre Calculado</value>
+    <comment>Description for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;Parametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Parametro/nombreCalculado.DisplayName" xml:space="preserve">
+    <value>Nombre Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;Parametro&apos;</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.OperacionNormal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.OperacionNormal</value>
     <comment>Description for DomainClass &apos;OperacionNormal&apos;</comment>
