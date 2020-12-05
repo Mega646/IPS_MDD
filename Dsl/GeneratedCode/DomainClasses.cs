@@ -576,22 +576,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
-		#region ClaseAbstracta opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of ClaseAbstracta.
-		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Clase
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ClaseAbstracta> ClaseAbstracta
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ClaseAbstracta>, ClaseAbstracta>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseDomainRoleId);
-			}
-		}
-		#endregion
 		#region AtributoID opposite domain role accessor
 		/// <summary>
 		/// Gets or sets AtributoID.
@@ -1324,22 +1308,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<OperacionAbstracta>, OperacionAbstracta>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaHasOperacionAbstracta.ClaseAbstractaDomainRoleId);
-			}
-		}
-		#endregion
-		#region ClaseHijaDeAbstracta opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of ClaseHijaDeAbstracta.
-		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstracta
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClaseHijaDeAbstracta
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId);
 			}
 		}
 		#endregion

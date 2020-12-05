@@ -2,25 +2,24 @@
 <tapizClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1e115d-38a8-4182-afb9-ac630eab1576" nombre="Clase abstracta" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
   <clase>
     <tapizClasesHasClase Id="d4026b54-296c-40e1-8a23-4119a8d3a3eb">
-      <clase Id="5a400b9b-b638-4186-ad77-78389488adcf" nombre="Clase">
-        <atributo>
-          <claseHasAtributo Id="f6ed18aa-f69d-41b7-984e-7f41daea8494">
-            <atributo Id="474d66ed-5b85-4332-970b-2d587a2c181f" nombre="lol" modificador="privado" />
-          </claseHasAtributo>
-          <claseHasAtributo Id="e9ab4534-f90c-4175-bdb6-0aedda37ab89">
-            <atributo Id="b4d1d67c-b884-40ad-bb20-864664affdb2" nombre="nice" modificador="privado" />
-          </claseHasAtributo>
-          <claseHasAtributo Id="d7b46801-9ac4-4d30-9785-d8db8c22edfa">
-            <atributo Id="d07cec10-73df-47b7-a336-ae605997ea46" nombre="atributo" modificador="publico" />
-          </claseHasAtributo>
-        </atributo>
-      </clase>
+      <clase Id="5a400b9b-b638-4186-ad77-78389488adcf" nombre="Clase" />
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="baf43c50-4668-424f-997e-bf676fa5c86e">
-      <claseEnriquecida Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" nombre="Clase enriquecida" />
+      <claseEnriquecida Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" nombre="Clase enriquecida">
+        <atributo>
+          <claseHasAtributo Id="63fbeff2-c64c-4287-94dd-0354ecc68ea8">
+            <atributo Id="af80d694-f6fc-4314-a6a0-8c2815e1427c" nombre="atributo" modificador="privado" />
+          </claseHasAtributo>
+        </atributo>
+        <atributoEnriquecido>
+          <claseEnriquecidaHasAtributoEnriquecido Id="8244deec-4b05-4b3a-b6ad-2ccaf12dbaf0">
+            <atributoEnriquecido Id="f2da8b1d-13a2-4212-9a17-8bbabb3248aa" nombre="atributoEnriquecido" modificador="publico" />
+          </claseEnriquecidaHasAtributoEnriquecido>
+        </atributoEnriquecido>
+      </claseEnriquecida>
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="9a44a5ac-1c94-4625-abce-1407d0659ed7">
-      <claseAbstracta Id="dd2f396e-857e-4639-866d-9808705b2993" />
+      <claseAbstracta Id="dd2f396e-857e-4639-866d-9808705b2993" nombre="Clase abstracta" />
     </tapizClasesHasClase>
   </clase>
 </tapizClases>

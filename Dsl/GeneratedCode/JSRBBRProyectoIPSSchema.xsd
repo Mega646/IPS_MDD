@@ -1030,33 +1030,6 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClaseAbstractaReferencesClaseHijaDeAbstracta -->
-  <xsd:element name="claseAbstractaReferencesClaseHijaDeAbstracta" type="ClaseAbstractaReferencesClaseHijaDeAbstracta" substitutionGroup="claseInheritsClaseHija" />
-  <xsd:complexType name="ClaseAbstractaReferencesClaseHijaDeAbstracta">
-    <xsd:complexContent>
-      <xsd:extension base="ClaseInheritsClaseHija">
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- ClaseAbstractaReferencesClaseHijaDeAbstracta Moniker -->
-  <xsd:element name="claseAbstractaReferencesClaseHijaDeAbstractaMoniker" type="ClaseAbstractaReferencesClaseHijaDeAbstractaMoniker" substitutionGroup="claseInheritsClaseHijaMoniker" />
-  <xsd:complexType name="ClaseAbstractaReferencesClaseHijaDeAbstractaMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for ClaseAbstractaReferencesClaseHijaDeAbstracta instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="ClaseInheritsClaseHijaMoniker">
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
   <!-- ClaseEnriquecidaHasAtributoEnriquecido -->
   <xsd:element name="claseEnriquecidaHasAtributoEnriquecido" type="ClaseEnriquecidaHasAtributoEnriquecido" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ClaseEnriquecidaHasAtributoEnriquecido">

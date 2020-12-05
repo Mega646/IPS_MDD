@@ -91,7 +91,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(ClaseReferencesTargetClases),
 				typeof(ClaseEnriquecidaHasOperacionEnriquecida),
 				typeof(OperacionHasParametros),
-				typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta),
 				typeof(ClaseEnriquecidaHasAtributoEnriquecido),
 				typeof(ClaseHasAtributoID),
 				typeof(JSRBBRProyectoIPSDiagram),
@@ -100,15 +99,20 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(MetaforaRelacionRelacional),
 				typeof(MetaforaRelacionInclusiva),
 				typeof(MetaforaRelacionReferencial),
-				typeof(MetaforaClase),
-				typeof(MetaforaClaseAbstracta),
 				typeof(MetaforaAtributo),
 				typeof(MetaforaOperacionNormal),
 				typeof(MetaforaOperacionEnriquecida),
+				typeof(MetaforaClase),
+				typeof(MetaforaClaseAbstracta),
 				typeof(MetaforaClaseEnriquecida),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.FixUpDiagram),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.ConnectorRolePlayerChanged),
+				typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemAddRule),
+				typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemDeleteRule),
+				typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemRolePlayerChangeRule),
+				typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemRolePlayerPositionChangeRule),
+				typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemChangeRule),
 			};
 		}
 		/// <summary>
@@ -180,8 +184,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasOperacionEnriquecida), "OperacionEnriquecida", ClaseEnriquecidaHasOperacionEnriquecida.OperacionEnriquecidaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(OperacionHasParametros), "Operacion", OperacionHasParametros.OperacionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(OperacionHasParametros), "Parametro", OperacionHasParametros.ParametroDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), "ClaseAbstracta", ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstractaDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), "Clase", ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasAtributoEnriquecido), "ClaseEnriquecida", ClaseEnriquecidaHasAtributoEnriquecido.ClaseEnriquecidaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasAtributoEnriquecido), "AtributoEnriquecido", ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecidoDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributoID), "Clase", ClaseHasAtributoID.ClaseDomainRoleId),
@@ -224,11 +226,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementMap.Add(typeof(MetaforaRelacionRelacional), 13);
 				createElementMap.Add(typeof(MetaforaRelacionInclusiva), 14);
 				createElementMap.Add(typeof(MetaforaRelacionReferencial), 15);
-				createElementMap.Add(typeof(MetaforaClase), 16);
-				createElementMap.Add(typeof(MetaforaClaseAbstracta), 17);
-				createElementMap.Add(typeof(MetaforaAtributo), 18);
-				createElementMap.Add(typeof(MetaforaOperacionNormal), 19);
-				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 20);
+				createElementMap.Add(typeof(MetaforaAtributo), 16);
+				createElementMap.Add(typeof(MetaforaOperacionNormal), 17);
+				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 18);
+				createElementMap.Add(typeof(MetaforaClase), 19);
+				createElementMap.Add(typeof(MetaforaClaseAbstracta), 20);
 				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 21);
 			}
 			int index;
@@ -259,11 +261,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 13: return new MetaforaRelacionRelacional(partition, propertyAssignments);
 				case 14: return new MetaforaRelacionInclusiva(partition, propertyAssignments);
 				case 15: return new MetaforaRelacionReferencial(partition, propertyAssignments);
-				case 16: return new MetaforaClase(partition, propertyAssignments);
-				case 17: return new MetaforaClaseAbstracta(partition, propertyAssignments);
-				case 18: return new MetaforaAtributo(partition, propertyAssignments);
-				case 19: return new MetaforaOperacionNormal(partition, propertyAssignments);
-				case 20: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
+				case 16: return new MetaforaAtributo(partition, propertyAssignments);
+				case 17: return new MetaforaOperacionNormal(partition, propertyAssignments);
+				case 18: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
+				case 19: return new MetaforaClase(partition, propertyAssignments);
+				case 20: return new MetaforaClaseAbstracta(partition, propertyAssignments);
 				case 21: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
 				default: return null;
 			}
@@ -287,7 +289,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(14);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
 				createElementLinkMap.Add(typeof(TapizClasesHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperacion), 2);
@@ -298,9 +300,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementLinkMap.Add(typeof(ClaseRelatesTargetClase), 7);
 				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasOperacionEnriquecida), 8);
 				createElementLinkMap.Add(typeof(OperacionHasParametros), 9);
-				createElementLinkMap.Add(typeof(ClaseAbstractaReferencesClaseHijaDeAbstracta), 10);
-				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasAtributoEnriquecido), 11);
-				createElementLinkMap.Add(typeof(ClaseHasAtributoID), 12);
+				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasAtributoEnriquecido), 10);
+				createElementLinkMap.Add(typeof(ClaseHasAtributoID), 11);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -325,9 +326,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 7: return new ClaseRelatesTargetClase(partition, roleAssignments, propertyAssignments);
 				case 8: return new ClaseEnriquecidaHasOperacionEnriquecida(partition, roleAssignments, propertyAssignments);
 				case 9: return new OperacionHasParametros(partition, roleAssignments, propertyAssignments);
-				case 10: return new ClaseAbstractaReferencesClaseHijaDeAbstracta(partition, roleAssignments, propertyAssignments);
-				case 11: return new ClaseEnriquecidaHasAtributoEnriquecido(partition, roleAssignments, propertyAssignments);
-				case 12: return new ClaseHasAtributoID(partition, roleAssignments, propertyAssignments);
+				case 10: return new ClaseEnriquecidaHasAtributoEnriquecido(partition, roleAssignments, propertyAssignments);
+				case 11: return new ClaseHasAtributoID(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -450,6 +450,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			ruleManager.EnableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.FixUpDiagram));
 			ruleManager.EnableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.DecoratorPropertyChanged));
 			ruleManager.EnableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ConnectorRolePlayerChanged));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemAddRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemDeleteRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemRolePlayerChangeRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemRolePlayerPositionChangeRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemChangeRule));
 		}
 		
 		/// <summary>
@@ -463,6 +468,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			ruleManager.DisableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.FixUpDiagram));
 			ruleManager.DisableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.DecoratorPropertyChanged));
 			ruleManager.DisableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ConnectorRolePlayerChanged));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemAddRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemDeleteRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemRolePlayerChangeRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemRolePlayerPositionChangeRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JSRBBRProyectoIPS.CompartmentItemChangeRule));
 		}
 		#endregion
 	}

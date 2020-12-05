@@ -2,23 +2,27 @@
 <jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="cf1658ea-4189-47c4-8599-5932faaeb573" absoluteBounds="0, 0, 11, 8.5" name="Sample">
   <tapizClasesMoniker Id="6d1e115d-38a8-4182-afb9-ac630eab1576" />
   <nestedChildShapes>
-    <metaforaClase Id="6c544fd4-534f-4a61-9db6-7ff90b60c869" absoluteBounds="3.75, 1.5, 1.5, 1.625">
+    <metaforaClase Id="6c544fd4-534f-4a61-9db6-7ff90b60c869" absoluteBounds="3.75, 1.5, 1.5, 1.3593896484374999">
       <claseMoniker Id="5a400b9b-b638-4186-ad77-78389488adcf" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99e54f4e-426a-42d6-850d-63720d903d84" absoluteBounds="3.765, 2.51, 1.4700000000000002, 0.2493896484375" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
     </metaforaClase>
-    <metaforaAtributo Id="8eb7f89f-a382-4926-a93f-0d453247e0e6" absoluteBounds="3.75, 1.75, 1.5, 0.25">
-      <atributoMoniker Id="474d66ed-5b85-4332-970b-2d587a2c181f" />
-    </metaforaAtributo>
-    <metaforaAtributo Id="35b2afda-2cdb-41bc-a231-09cb47f17a6c" absoluteBounds="3.75, 2, 1.5, 0.25">
-      <atributoMoniker Id="b4d1d67c-b884-40ad-bb20-864664affdb2" />
-    </metaforaAtributo>
-    <metaforaClaseEnriquecida Id="f97a3a11-e207-41f2-8c96-f55e61fb1bc3" absoluteBounds="9, 2.625, 1.5, 1">
+    <metaforaClaseEnriquecida Id="f97a3a11-e207-41f2-8c96-f55e61fb1bc3" absoluteBounds="9, 2.625, 1.5, 2.0033821614583331">
       <claseEnriquecidaMoniker Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c05cda73-3068-4078-b0f0-a290b1f22ce4" absoluteBounds="9.015, 3.635, 1.4700000000000002, 0.44169108072916663" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3b8f9678-f8d8-4f9e-bed3-390d7f82b45b" absoluteBounds="9.015, 4.0866910807291665, 1.4700000000000002, 0.44169108072916663" name="AtributosEnriquecidos" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
     </metaforaClaseEnriquecida>
-    <metaforaClaseAbstracta Id="3f1d7566-0c26-432e-8e9e-5679e0108769" absoluteBounds="6.625, 5.125, 1.5, 1">
+    <metaforaClaseAbstracta Id="3f1d7566-0c26-432e-8e9e-5679e0108769" absoluteBounds="6.625, 5.125, 1.5, 1.3593896484374994">
       <claseAbstractaMoniker Id="dd2f396e-857e-4639-866d-9808705b2993" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca154b61-0503-4bab-ad43-4ce87b8e2d12" absoluteBounds="6.64, 6.135, 1.4700000000000002, 0.2493896484375" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
     </metaforaClaseAbstracta>
-    <metaforaAtributo Id="5406d140-78f3-44e6-9e4b-30e445b3e98f" absoluteBounds="3.75, 2.25, 1.5, 0.25">
-      <atributoMoniker Id="d07cec10-73df-47b7-a336-ae605997ea46" />
+    <metaforaAtributo Id="834a5556-0990-4d53-b471-1e0d429ded42" absoluteBounds="0.5, 1.125, 1.5, 0.125">
+      <atributoMoniker Id="af80d694-f6fc-4314-a6a0-8c2815e1427c" />
     </metaforaAtributo>
   </nestedChildShapes>
 </jSRBBRProyectoIPSDiagram>

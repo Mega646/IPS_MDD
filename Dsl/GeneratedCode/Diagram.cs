@@ -86,6 +86,88 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
+		#region Compartment support
+		/// <summary>
+		/// Whether compartment items change events are subscribed to.
+		/// </summary>
+		private bool subscribedCompartmentItemsEvents;
+		
+		/// <summary>
+		/// Subscribe to events fired when compartment items changes.
+		/// </summary>
+		public void SubscribeCompartmentItemsEvents()
+		{
+			if (!subscribedCompartmentItemsEvents && this.Store != null)
+			{
+				subscribedCompartmentItemsEvents = true;
+				this.Store.EventManagerDirectory.ElementAdded.Add(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
+				this.Store.EventManagerDirectory.ElementDeleted.Add(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
+				this.Store.EventManagerDirectory.ElementPropertyChanged.Add(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
+				this.Store.EventManagerDirectory.RolePlayerChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
+				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
+			}
+		}
+		
+		/// <summary>
+		/// Unsubscribe to events fired when compartment items changes.
+		/// </summary>
+		public void UnsubscribeCompartmentItemsEvents()
+		{
+			if (subscribedCompartmentItemsEvents)
+			{
+				this.Store.EventManagerDirectory.ElementAdded.Remove(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
+				this.Store.EventManagerDirectory.ElementDeleted.Remove(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
+				this.Store.EventManagerDirectory.ElementPropertyChanged.Remove(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
+				this.Store.EventManagerDirectory.RolePlayerChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
+				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
+				subscribedCompartmentItemsEvents = false;
+			}
+		}
+		
+		#region Event handlers
+		/// <summary>
+		/// Event for element added.
+		/// </summary>
+		private void CompartmentItemAdded(object sender, DslModeling::ElementAddedEventArgs e)
+		{
+			// If in Undo, Redo or Rollback the compartment item rules are not run so we must refresh the compartment list at this point if required
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemAddRule.ElementAdded(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for element deleted.
+		/// </summary>
+		private void CompartmentItemDeleted(object sender, DslModeling::ElementDeletedEventArgs e)
+		{
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemDeleteRule.ElementDeleted(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for element property changed.
+		/// </summary>
+		private void CompartmentItemPropertyChanged(object sender, DslModeling::ElementPropertyChangedEventArgs e)
+		{
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemChangeRule.ElementPropertyChanged(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for role-player changed.
+		/// </summary>
+		private void CompartmentItemRolePlayerChanged(object sender, DslModeling::RolePlayerChangedEventArgs e)
+		{
+			bool repaintOnly = !e.ElementLink.Store.InUndoRedoOrRollback;
+			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for role-player order changed.
+		/// </summary>
+		private void CompartmentItemRolePlayerOrderChanged(object sender, DslModeling::RolePlayerOrderChangedEventArgs e)
+		{
+			bool repaintOnly = !e.Link.Store.InUndoRedoOrRollback;
+			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, repaintOnly);
+		}
+		#endregion
+		#endregion
 		#region Shape mapping
 		/// <summary>
 		/// Called during view fixup to ask the parent whether a shape should be created for the given child element.
@@ -207,12 +289,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta)
-			{
-				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::UPM_IPS.JSRBBRProyectoIPS.Atributo)
 			{
 				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo(this.Partition);
@@ -228,6 +304,12 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			if(element is global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida)
 			{
 				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta)
+			{
+				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -274,74 +356,16 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.DecoratorsInitialized += MetaforaClaseDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta.DecoratorsInitialized += MetaforaClaseAbstractaDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida.DecoratorsInitialized += MetaforaClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo.DecoratorsInitialized += MetaforaAtributoDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal.DecoratorsInitialized += MetaforaOperacionNormalDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida.DecoratorsInitialized += MetaforaOperacionEnriquecidaDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.DecoratorsInitialized += MetaforaClaseDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta.DecoratorsInitialized += MetaforaClaseAbstractaDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida.DecoratorsInitialized += MetaforaClaseEnriquecidaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia.DecoratorsInitialized += MetaforaRelacionHerenciaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionRelacional.DecoratorsInitialized += MetaforaRelacionRelacionalDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionInclusiva.DecoratorsInitialized += MetaforaRelacionInclusivaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionReferencial.DecoratorsInitialized += MetaforaRelacionReferencialDecoratorMap.OnDecoratorsInitialized;
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaClase.
-		/// </summary>
-		internal static partial class MetaforaClaseDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaClase.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Clase.nombreDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreClaseDec").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaClaseAbstracta.
-		/// </summary>
-		internal static partial class MetaforaClaseAbstractaDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaClaseAbstracta.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				MetaforaClaseDecoratorMap.OnDecoratorsInitialized(sender, e);
-				
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Clase.nombreDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreClaseDec").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaClaseEnriquecida.
-		/// </summary>
-		internal static partial class MetaforaClaseEnriquecidaDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaClaseEnriquecida.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				MetaforaClaseDecoratorMap.OnDecoratorsInitialized(sender, e);
-				
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Clase.nombreDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreClaseDec").AssociateValueWith(shape.Store, propertyInfo);
-			}
 		}
 		
 		/// <summary>
@@ -406,6 +430,60 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida.tipoLetraDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tipoLetraDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaClase.
+		/// </summary>
+		internal static partial class MetaforaClaseDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaClase.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Clase.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaClaseAbstracta.
+		/// </summary>
+		internal static partial class MetaforaClaseAbstractaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaClaseAbstracta.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Clase.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaClaseEnriquecida.
+		/// </summary>
+		internal static partial class MetaforaClaseEnriquecidaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaClaseEnriquecida.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.Clase.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -664,6 +742,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						this.relacionReferencialConnectAction.Dispose();
 						this.relacionReferencialConnectAction = null;
 					}
+					this.UnsubscribeCompartmentItemsEvents();
 				}
 			}
 			finally
@@ -717,10 +796,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.OperacionNormal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -742,10 +821,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta)
-				{
-					parentElement = GetParentForClaseAbstracta((global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta)childElement);
-				} else
 				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.Atributo)
 				{
 					parentElement = GetParentForAtributo((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)childElement);
@@ -757,6 +832,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida)
 				{
 					parentElement = GetParentForOperacionEnriquecida((global::UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta)
+				{
+					parentElement = GetParentForClaseAbstracta((global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstracta)childElement);
 				} else
 				if(childElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida)
 				{
@@ -774,20 +853,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				{
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
-			}
-			public static global::UPM_IPS.JSRBBRProyectoIPS.TapizClases GetParentForClase( global::UPM_IPS.JSRBBRProyectoIPS.Clase root )
-			{
-				// Segments 0 and 1
-				global::UPM_IPS.JSRBBRProyectoIPS.TapizClases result = root.TapizClases;
-				if ( result == null ) return null;
-				return result;
-			}
-			public static global::UPM_IPS.JSRBBRProyectoIPS.TapizClases GetParentForClaseAbstracta( global::UPM_IPS.JSRBBRProyectoIPS.Clase root )
-			{
-				// Segments 0 and 1
-				global::UPM_IPS.JSRBBRProyectoIPS.TapizClases result = root.TapizClases;
-				if ( result == null ) return null;
-				return result;
 			}
 			public static global::UPM_IPS.JSRBBRProyectoIPS.TapizClases GetParentForAtributo( global::UPM_IPS.JSRBBRProyectoIPS.Atributo root )
 			{
@@ -816,6 +881,20 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
 				global::UPM_IPS.JSRBBRProyectoIPS.TapizClases result = root2.TapizClases;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JSRBBRProyectoIPS.TapizClases GetParentForClase( global::UPM_IPS.JSRBBRProyectoIPS.Clase root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JSRBBRProyectoIPS.TapizClases result = root.TapizClases;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JSRBBRProyectoIPS.TapizClases GetParentForClaseAbstracta( global::UPM_IPS.JSRBBRProyectoIPS.Clase root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JSRBBRProyectoIPS.TapizClases result = root.TapizClases;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -911,6 +990,415 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		
+		/// <summary>
+		/// Rule to update compartments when an item is added to the list
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
+		{
+			/// <summary>
+			/// Called when an element is added. 
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
+			{
+				ElementAdded(e, false);
+			}
+	
+			internal static void ElementAdded(DslModeling::ElementAddedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if (e.ModelElement.IsDeleted)
+					return;
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseForMetaforaClaseAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseAbstractaForMetaforaClaseAbstractaAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "AtributosEnriquecidos", repaintOnly);
+				}
+			}
+			
+			#region static DomainPath traversal methods to get the list of compartments to update
+			internal static global::System.Collections.ICollection GetClaseForMetaforaClaseAtributosFromLastLink(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo root)
+			{
+				// Segment 0
+				global::UPM_IPS.JSRBBRProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseForMetaforaClaseAtributos(global::UPM_IPS.JSRBBRProyectoIPS.Atributo root)
+			{
+				// Segments 1 and 0
+				global::UPM_IPS.JSRBBRProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseAbstractaForMetaforaClaseAbstractaAtributosFromLastLink(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo root)
+			{
+				// Segment 0
+				global::UPM_IPS.JSRBBRProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseAbstractaForMetaforaClaseAbstractaAtributos(global::UPM_IPS.JSRBBRProyectoIPS.Atributo root)
+			{
+				// Segments 1 and 0
+				global::UPM_IPS.JSRBBRProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosFromLastLink(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo root)
+			{
+				// Segment 0
+				global::UPM_IPS.JSRBBRProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributos(global::UPM_IPS.JSRBBRProyectoIPS.Atributo root)
+			{
+				// Segments 1 and 0
+				global::UPM_IPS.JSRBBRProyectoIPS.Clase result = root.Clase;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidosFromLastLink(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido root)
+			{
+				// Segment 0
+				global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida result = root.ClaseEnriquecida;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidos(global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido root)
+			{
+				// Segments 1 and 0
+				global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida result = root.ClaseEnriquecida;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			#endregion
+	
+			#region helper method to update compartments 
+			/// <summary>
+			/// Updates the compartments for the shapes associated to the given list of model elements
+			/// </summary>
+			/// <param name="elements">List of model elements</param>
+			/// <param name="shapeType">The type of shape that needs updating</param>
+			/// <param name="compartmentName">The name of the compartment to update</param>
+			/// <param name="repaintOnly">If true, the method will only invalidate the shape for a repaint, without re-initializing the shape.</param>
+			internal static void UpdateCompartments(global::System.Collections.IEnumerable elements, global::System.Type shapeType, string compartmentName, bool repaintOnly)
+			{
+				foreach (DslModeling::ModelElement element in elements)
+				{
+					DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+					foreach (DslDiagrams::PresentationElement pel in pels)
+					{
+						DslDiagrams::CompartmentShape compartmentShape = pel as DslDiagrams::CompartmentShape;
+						if (compartmentShape != null && shapeType.IsAssignableFrom(compartmentShape.GetType()))
+						{
+							if (repaintOnly)
+							{
+								compartmentShape.Invalidate();
+							}
+							else
+							{
+								foreach(DslDiagrams::CompartmentMapping mapping in compartmentShape.GetCompartmentMappings())
+								{
+									if(mapping.CompartmentId==compartmentName)
+									{
+										mapping.InitializeCompartmentShape(compartmentShape);
+										break;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			#endregion
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when an items is removed from the list
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
+		{
+			/// <summary>
+			/// Called when an element is deleted
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementDeleted(DslModeling::ElementDeletedEventArgs e)
+			{
+				ElementDeleted(e, false);
+			}
+			
+			internal static void ElementDeleted(DslModeling::ElementDeletedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseForMetaforaClaseAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseAbstractaForMetaforaClaseAbstractaAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "AtributosEnriquecidos", repaintOnly);
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when the property on an item being displayed changes.
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
+		{
+			/// <summary>
+			/// Called when an element is changed
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
+			{
+				ElementPropertyChanged(e, false);
+			}
+			
+			internal static void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Atributo && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Atributo.nombreCalculadoDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForMetaforaClaseAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Atributo && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Atributo.nombreCalculadoDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForMetaforaClaseAbstractaAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.Atributo && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.Atributo.nombreCalculadoDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "Atributos", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido && e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.nombreCalculadoDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidos((global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "AtributosEnriquecidos", repaintOnly);
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when a roleplayer change happens
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
+		{
+			/// <summary>
+			/// Called when the roleplayer on a link changes.
+			/// </summary>
+			/// <param name="e"></param>
+			public override void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e)
+			{
+				RolePlayerChanged(e, false);
+			}
+			
+			internal static void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseForMetaforaClaseAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase compartmentShape = pel as global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForMetaforaClaseAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase), "Atributos", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForMetaforaClaseAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase), "Atributos", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseAbstractaForMetaforaClaseAbstractaAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta compartmentShape = pel as global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForMetaforaClaseAbstractaAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta), "Atributos", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForMetaforaClaseAbstractaAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta), "Atributos", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida compartmentShape = pel as global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "Atributos", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "Atributos", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida compartmentShape = pel as global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidosFromLastLink((global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "AtributosEnriquecidos", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidos((global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "AtributosEnriquecidos", repaintOnly);
+					}
+				}
+			}
+		}
+	
+		/// <summary>
+		/// Rule to update compartments when the order of items in the list changes.
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
+		{
+			/// <summary>
+			/// Called when the order of a roleplayer in a relationship changes
+			/// </summary>
+			/// <param name="e"></param>
+			public override void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e)
+			{
+				RolePlayerPositionChanged(e, false);
+			}
+			
+			internal static void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseForMetaforaClaseAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClase), "Atributos", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseAbstractaForMetaforaClaseAbstractaAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta), "Atributos", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributos((global::UPM_IPS.JSRBBRProyectoIPS.Atributo)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "Atributos", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForMetaforaClaseEnriquecidaAtributosEnriquecidos((global::UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida), "AtributosEnriquecidos", repaintOnly);
+					}
+				}
+			}
+		}
 	
 		/// <summary>
 		/// A rule which fires when data mapped to outer text decorators has changed,

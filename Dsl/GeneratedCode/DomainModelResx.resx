@@ -805,38 +805,6 @@
     <value>Operacion</value>
     <comment>PropertyDisplayName for DomainRole &apos;Parametro&apos; on DomainRelationship &apos;OperacionHasParametros&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta</value>
-    <comment>Description for DomainClass &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.DisplayName" xml:space="preserve">
-    <value>Clase Abstracta References Clase Hija De Abstracta</value>
-    <comment>DisplayName for DomainClass &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.ClaseAbstracta</value>
-    <comment>Description for DomainRole &apos;ClaseAbstracta&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.DisplayName" xml:space="preserve">
-    <value>Clase Abstracta</value>
-    <comment>DisplayName for DomainRole &apos;ClaseAbstracta&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/ClaseAbstracta.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Hija De Abstracta</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ClaseAbstracta&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta.Clase</value>
-    <comment>Description for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.DisplayName" xml:space="preserve">
-    <value>Clase</value>
-    <comment>DisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaReferencesClaseHijaDeAbstracta/Clase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Abstracta</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Clase&apos; on DomainRelationship &apos;ClaseAbstractaReferencesClaseHijaDeAbstracta&apos;</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasAtributoEnriquecido</value>
     <comment>Description for DomainClass &apos;ClaseEnriquecidaHasAtributoEnriquecido&apos;</comment>
@@ -1069,26 +1037,6 @@
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.protegido</value>
     <comment>Description for EnumerationLiteral &apos;protegido&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase</value>
-    <comment>Description for DomainClass &apos;MetaforaClase&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.DisplayName" xml:space="preserve">
-    <value>Metafora Clase</value>
-    <comment>DisplayName for DomainClass &apos;MetaforaClase&apos;</comment>
-  </data>
-  <data name="MetaforaClasenombreClaseDecDefaultText" xml:space="preserve">
-    <value>nombreClaseDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta</value>
-    <comment>Description for DomainClass &apos;MetaforaClaseAbstracta&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta.DisplayName" xml:space="preserve">
-    <value>Metafora Clase Abstracta</value>
-    <comment>DisplayName for DomainClass &apos;MetaforaClaseAbstracta&apos;</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo</value>
     <comment>Description for DomainClass &apos;MetaforaAtributo&apos;</comment>
@@ -1129,6 +1077,38 @@
     <value>colorLetraDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase</value>
+    <comment>Description for DomainClass &apos;MetaforaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.DisplayName" xml:space="preserve">
+    <value>Metafora Clase</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaClase&apos;</comment>
+  </data>
+  <data name="MetaforaClaseAtributosTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MetaforaClasenombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta</value>
+    <comment>Description for DomainClass &apos;MetaforaClaseAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta.DisplayName" xml:space="preserve">
+    <value>Metafora Clase Abstracta</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaClaseAbstracta&apos;</comment>
+  </data>
+  <data name="MetaforaClaseAbstractaAtributosTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MetaforaClaseAbstractanombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida</value>
     <comment>Description for DomainClass &apos;MetaforaClaseEnriquecida&apos;</comment>
@@ -1136,6 +1116,18 @@
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida.DisplayName" xml:space="preserve">
     <value>Metafora Clase Enriquecida</value>
     <comment>DisplayName for DomainClass &apos;MetaforaClaseEnriquecida&apos;</comment>
+  </data>
+  <data name="MetaforaClaseEnriquecidaAtributosTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MetaforaClaseEnriquecidaAtributosEnriquecidosTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MetaforaClaseEnriquecidanombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia</value>
