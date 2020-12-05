@@ -104,7 +104,11 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="0301a401-8fbb-4108-afe9-189102ddab9d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.OperacionAbstracta" Name="OperacionAbstracta" DisplayName="Operacion Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" />
+    <DomainClass Id="0301a401-8fbb-4108-afe9-189102ddab9d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.OperacionAbstracta" Name="OperacionAbstracta" DisplayName="Operacion Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="Operacion" />
+      </BaseClass>
+    </DomainClass>
     <DomainClass Id="db825b8b-2972-49e7-a35f-e8f61dbf66f2" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS">
       <BaseClass>
         <DomainClassMoniker Name="Clase" />
@@ -568,27 +572,6 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <GeometryShape Id="7d566e5c-ac58-46bf-91b8-311057b9a561" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo" Name="MetaforaAtributo" DisplayName="Metafora Atributo" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Atributo" FillColor="Transparent" OutlineColor="Transparent" InitialHeight="0.1" FillGradientMode="None" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
-      </ShapeHasDecorators>
-    </GeometryShape>
-    <GeometryShape Id="dbc6e46e-f86c-4d10-a7c5-ce5d049dddef" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal" Name="MetaforaOperacionNormal" DisplayName="Metafora Operacion Normal" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Normal" FillColor="Transparent" OutlineColor="Transparent" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
-      </ShapeHasDecorators>
-    </GeometryShape>
-    <GeometryShape Id="f19c87ab-8e03-4030-bb4f-92916f5151ce" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida" Name="MetaforaOperacionEnriquecida" DisplayName="Metafora Operacion Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Enriquecida" FillColor="Transparent" OutlineColor="Transparent" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
-      <BaseGeometryShape>
-        <GeometryShapeMoniker Name="MetaforaOperacionNormal" />
-      </BaseGeometryShape>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="tipoLetraDec" DisplayName="Tipo Letra Dec" DefaultText="tipoLetraDec" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="colorLetraDec" DisplayName="Color Letra Dec" DefaultText="colorLetraDec" />
-      </ShapeHasDecorators>
-    </GeometryShape>
     <CompartmentShape Id="e19a37e7-a3d6-4b72-8827-5bbbf88b11c7" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase" Name="MetaforaClase" DisplayName="Metafora Clase" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase" FillColor="Khaki" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="10" />
@@ -607,6 +590,24 @@
       </ShapeHasDecorators>
       <Compartment Name="Atributos" />
       <Compartment Name="AtributosEnriquecidos" />
+    </CompartmentShape>
+    <CompartmentShape Id="abce91ca-f492-4d50-b93c-8a384cd11e18" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal" Name="MetaforaOperacionNormal" DisplayName="Metafora Operacion Normal" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Normal" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <Compartment Name="Parametros" />
+    </CompartmentShape>
+    <CompartmentShape Id="a7d02a54-ba32-43fb-8cc4-06fd0c7d17ab" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionAbstracta" Name="MetaforaOperacionAbstracta" DisplayName="Metafora Operacion Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Abstracta" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <Compartment Name="Parametros" />
+    </CompartmentShape>
+    <CompartmentShape Id="30a59c64-d13a-4400-ae5c-fa85f45b438d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida" Name="MetaforaOperacionEnriquecida" DisplayName="Metafora Operacion Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Enriquecida" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <Compartment Name="Parametros" />
     </CompartmentShape>
   </Shapes>
   <Connectors>
@@ -768,9 +769,6 @@
       <XmlClassData TypeName="MetaforaRelacionHerencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaRelacionHerenciaMoniker" ElementName="metaforaRelacionHerencia" MonikerTypeName="MetaforaRelacionHerenciaMoniker">
         <ConnectorMoniker Name="MetaforaRelacionHerencia" />
       </XmlClassData>
-      <XmlClassData TypeName="MetaforaAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaAtributoMoniker" ElementName="metaforaAtributo" MonikerTypeName="MetaforaAtributoMoniker">
-        <GeometryShapeMoniker Name="MetaforaAtributo" />
-      </XmlClassData>
       <XmlClassData TypeName="ClaseReferencesTargetClases" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseReferencesTargetClasesMoniker" ElementName="claseReferencesTargetClases" MonikerTypeName="ClaseReferencesTargetClasesMoniker">
         <DomainRelationshipMoniker Name="ClaseReferencesTargetClases" />
         <ElementData>
@@ -871,12 +869,6 @@
       <XmlClassData TypeName="OperacionHasParametros" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionHasParametrosMoniker" ElementName="operacionHasParametros" MonikerTypeName="OperacionHasParametrosMoniker">
         <DomainRelationshipMoniker Name="OperacionHasParametros" />
       </XmlClassData>
-      <XmlClassData TypeName="MetaforaOperacionNormal" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaOperacionNormalMoniker" ElementName="metaforaOperacionNormal" MonikerTypeName="MetaforaOperacionNormalMoniker">
-        <GeometryShapeMoniker Name="MetaforaOperacionNormal" />
-      </XmlClassData>
-      <XmlClassData TypeName="MetaforaOperacionEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaOperacionEnriquecidaMoniker" ElementName="metaforaOperacionEnriquecida" MonikerTypeName="MetaforaOperacionEnriquecidaMoniker">
-        <GeometryShapeMoniker Name="MetaforaOperacionEnriquecida" />
-      </XmlClassData>
       <XmlClassData TypeName="AtributoPadre" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoPadreMoniker" ElementName="atributoPadre" MonikerTypeName="AtributoPadreMoniker">
         <DomainClassMoniker Name="AtributoPadre" />
         <ElementData>
@@ -905,6 +897,15 @@
       </XmlClassData>
       <XmlClassData TypeName="MetaforaClaseEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaClaseEnriquecidaMoniker" ElementName="metaforaClaseEnriquecida" MonikerTypeName="MetaforaClaseEnriquecidaMoniker">
         <CompartmentShapeMoniker Name="MetaforaClaseEnriquecida" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaOperacionNormal" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaOperacionNormalMoniker" ElementName="metaforaOperacionNormal" MonikerTypeName="MetaforaOperacionNormalMoniker">
+        <CompartmentShapeMoniker Name="MetaforaOperacionNormal" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaOperacionAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaOperacionAbstractaMoniker" ElementName="metaforaOperacionAbstracta" MonikerTypeName="MetaforaOperacionAbstractaMoniker">
+        <CompartmentShapeMoniker Name="MetaforaOperacionAbstracta" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaOperacionEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaOperacionEnriquecidaMoniker" ElementName="metaforaOperacionEnriquecida" MonikerTypeName="MetaforaOperacionEnriquecidaMoniker">
+        <CompartmentShapeMoniker Name="MetaforaOperacionEnriquecida" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -992,75 +993,6 @@
       <DomainClassMoniker Name="TapizClases" />
     </Class>
     <ShapeMaps>
-      <ShapeMap>
-        <DomainClassMoniker Name="Atributo" />
-        <ParentElementPath>
-          <DomainPath>ClaseHasAtributo.Clase/!Clase/TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaAtributo/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="AtributoPadre/nombreCalculado" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaOperacionNormal/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="AtributoPadre/nombreCalculado" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaAtributo" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="OperacionNormal" />
-        <ParentElementPath>
-          <DomainPath>ClaseHasOperacion.Clase/!Clase/TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaOperacionNormal/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Operacion/operacionCalculada" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaOperacionNormal" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="OperacionEnriquecida" />
-        <ParentElementPath>
-          <DomainPath>ClaseEnriquecidaHasOperacionEnriquecida.ClaseEnriquecida/!ClaseEnriquecida/TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaOperacionNormal/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Operacion/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaOperacionEnriquecida/colorLetraDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="OperacionEnriquecida/colorLetra" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaOperacionEnriquecida/tipoLetraDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="OperacionEnriquecida/tipoLetra" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaOperacionEnriquecida" />
-      </ShapeMap>
       <CompartmentShapeMap>
         <DomainClassMoniker Name="Clase" />
         <ParentElementPath>
@@ -1146,6 +1078,84 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="AtributoPadre/nombreCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+      </CompartmentShapeMap>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="OperacionNormal" />
+        <ParentElementPath>
+          <DomainPath>ClaseHasOperacion.Clase/!Clase/TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaOperacionNormal/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Operacion/operacionCalculada" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="MetaforaOperacionNormal" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="MetaforaOperacionNormal/Parametros" />
+          <ElementsDisplayed>
+            <DomainPath>OperacionHasParametros.Parametros/!Parametro</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Parametro/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+      </CompartmentShapeMap>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="OperacionAbstracta" />
+        <ParentElementPath>
+          <DomainPath>ClaseAbstractaHasOperacionAbstracta.ClaseAbstracta/!ClaseAbstracta/TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaOperacionAbstracta/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Operacion/operacionCalculada" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="MetaforaOperacionAbstracta" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="MetaforaOperacionAbstracta/Parametros" />
+          <ElementsDisplayed>
+            <DomainPath>OperacionHasParametros.Parametros/!Parametro</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Parametro/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+      </CompartmentShapeMap>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="OperacionEnriquecida" />
+        <ParentElementPath>
+          <DomainPath>ClaseEnriquecidaHasOperacionEnriquecida.ClaseEnriquecida/!ClaseEnriquecida/TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaOperacionEnriquecida/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Operacion/operacionCalculada" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="MetaforaOperacionEnriquecida" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="MetaforaOperacionEnriquecida/Parametros" />
+          <ElementsDisplayed>
+            <DomainPath>OperacionHasParametros.Parametros/!Parametro</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Parametro/nombre" />
             </PropertyPath>
           </PropertyDisplayed>
         </CompartmentMap>

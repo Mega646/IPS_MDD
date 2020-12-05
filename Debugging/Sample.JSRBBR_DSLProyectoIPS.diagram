@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="cf1658ea-4189-47c4-8599-5932faaeb573" absoluteBounds="0, 0, 11, 8.5" name="Sample">
+<jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="cf1658ea-4189-47c4-8599-5932faaeb573" absoluteBounds="0, 0, 13.5, 8.5" name="Sample">
   <tapizClasesMoniker Id="6d1e115d-38a8-4182-afb9-ac630eab1576" />
   <nestedChildShapes>
     <metaforaClase Id="6c544fd4-534f-4a61-9db6-7ff90b60c869" absoluteBounds="3.75, 1.5, 1.5, 1.3593896484374999">
@@ -21,8 +21,17 @@
         <elementListCompartment Id="ca154b61-0503-4bab-ad43-4ce87b8e2d12" absoluteBounds="6.64, 6.135, 1.4700000000000002, 0.2493896484375" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaClaseAbstracta>
-    <metaforaAtributo Id="834a5556-0990-4d53-b471-1e0d429ded42" absoluteBounds="0.5, 1.125, 1.5, 0.125">
-      <atributoMoniker Id="af80d694-f6fc-4314-a6a0-8c2815e1427c" />
-    </metaforaAtributo>
+    <metaforaOperacionNormal Id="c67a46a2-d0c0-4756-a68b-9c4ebcf44d1b" absoluteBounds="3.375, 3.375, 1.5, 1.5516910807291664">
+      <operacionNormalMoniker Id="6c4bcbba-9004-4eb2-bd72-906276eb3920" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31312d57-1de3-4197-8cee-c4565bccc057" absoluteBounds="3.3899999999999997, 4.385, 1.4700000000000002, 0.44169108072916663" name="Parametros" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </metaforaOperacionNormal>
+    <metaforaOperacionEnriquecida Id="99029452-334d-4bc9-b2fa-2849ae2fa888" absoluteBounds="11.75, 2.75, 1.5, 1.3593896484374994">
+      <operacionEnriquecidaMoniker Id="cb1f3cf1-a28a-4f9f-b814-cbb211394fd5" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93d64fe9-74c3-480f-afc3-a87fbb8d0ccb" absoluteBounds="11.765, 3.76, 1.4700000000000002, 0.2493896484375" name="Parametros" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </metaforaOperacionEnriquecida>
   </nestedChildShapes>
 </jSRBBRProyectoIPSDiagram>

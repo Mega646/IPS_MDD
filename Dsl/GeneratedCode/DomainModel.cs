@@ -99,12 +99,12 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(MetaforaRelacionRelacional),
 				typeof(MetaforaRelacionInclusiva),
 				typeof(MetaforaRelacionReferencial),
-				typeof(MetaforaAtributo),
-				typeof(MetaforaOperacionNormal),
-				typeof(MetaforaOperacionEnriquecida),
 				typeof(MetaforaClase),
 				typeof(MetaforaClaseAbstracta),
 				typeof(MetaforaClaseEnriquecida),
+				typeof(MetaforaOperacionNormal),
+				typeof(MetaforaOperacionAbstracta),
+				typeof(MetaforaOperacionEnriquecida),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.FixUpDiagram),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.ConnectorRolePlayerChanged),
@@ -226,12 +226,12 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementMap.Add(typeof(MetaforaRelacionRelacional), 13);
 				createElementMap.Add(typeof(MetaforaRelacionInclusiva), 14);
 				createElementMap.Add(typeof(MetaforaRelacionReferencial), 15);
-				createElementMap.Add(typeof(MetaforaAtributo), 16);
-				createElementMap.Add(typeof(MetaforaOperacionNormal), 17);
-				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 18);
-				createElementMap.Add(typeof(MetaforaClase), 19);
-				createElementMap.Add(typeof(MetaforaClaseAbstracta), 20);
-				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 21);
+				createElementMap.Add(typeof(MetaforaClase), 16);
+				createElementMap.Add(typeof(MetaforaClaseAbstracta), 17);
+				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 18);
+				createElementMap.Add(typeof(MetaforaOperacionNormal), 19);
+				createElementMap.Add(typeof(MetaforaOperacionAbstracta), 20);
+				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 21);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -261,12 +261,12 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 13: return new MetaforaRelacionRelacional(partition, propertyAssignments);
 				case 14: return new MetaforaRelacionInclusiva(partition, propertyAssignments);
 				case 15: return new MetaforaRelacionReferencial(partition, propertyAssignments);
-				case 16: return new MetaforaAtributo(partition, propertyAssignments);
-				case 17: return new MetaforaOperacionNormal(partition, propertyAssignments);
-				case 18: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
-				case 19: return new MetaforaClase(partition, propertyAssignments);
-				case 20: return new MetaforaClaseAbstracta(partition, propertyAssignments);
-				case 21: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
+				case 16: return new MetaforaClase(partition, propertyAssignments);
+				case 17: return new MetaforaClaseAbstracta(partition, propertyAssignments);
+				case 18: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
+				case 19: return new MetaforaOperacionNormal(partition, propertyAssignments);
+				case 20: return new MetaforaOperacionAbstracta(partition, propertyAssignments);
+				case 21: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
 				default: return null;
 			}
 		}

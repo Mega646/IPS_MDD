@@ -1421,7 +1421,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("0301a401-8fbb-4108-afe9-189102ddab9d")]
-	public partial class OperacionAbstracta : DslModeling::ModelElement
+	public partial class OperacionAbstracta : Operacion
 	{
 		#region Constructors, domain class Id
 	

@@ -2,7 +2,19 @@
 <tapizClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1e115d-38a8-4182-afb9-ac630eab1576" nombre="Clase abstracta" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
   <clase>
     <tapizClasesHasClase Id="d4026b54-296c-40e1-8a23-4119a8d3a3eb">
-      <clase Id="5a400b9b-b638-4186-ad77-78389488adcf" nombre="Clase" />
+      <clase Id="5a400b9b-b638-4186-ad77-78389488adcf" nombre="Clase">
+        <operacion>
+          <claseHasOperacion Id="943c3f17-4784-4a69-b53f-e972c73c2352">
+            <operacionNormal Id="6c4bcbba-9004-4eb2-bd72-906276eb3920" nombre="Operacion" valorRetorno="Int" modificador="privado">
+              <parametros>
+                <operacionHasParametros Id="10286ff6-6381-46bb-955e-2505afe88e04">
+                  <parametro Id="83021513-0c8c-43b1-a00f-f53e25fb797a" nombre="parametro1" tipoDatos="Int" entradaSalida="entrada" />
+                </operacionHasParametros>
+              </parametros>
+            </operacionNormal>
+          </claseHasOperacion>
+        </operacion>
+      </clase>
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="baf43c50-4668-424f-997e-bf676fa5c86e">
       <claseEnriquecida Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" nombre="Clase enriquecida">
@@ -11,6 +23,11 @@
             <atributo Id="af80d694-f6fc-4314-a6a0-8c2815e1427c" nombre="atributo" modificador="privado" />
           </claseHasAtributo>
         </atributo>
+        <operacionEnriquecida>
+          <claseEnriquecidaHasOperacionEnriquecida Id="3692c40f-6211-4b50-90ed-3855e2409567">
+            <operacionEnriquecida Id="cb1f3cf1-a28a-4f9f-b814-cbb211394fd5" nombre="operacionEnriquecida" valorRetorno="Int" modificador="privado" />
+          </claseEnriquecidaHasOperacionEnriquecida>
+        </operacionEnriquecida>
         <atributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="8244deec-4b05-4b3a-b6ad-2ccaf12dbaf0">
             <atributoEnriquecido Id="f2da8b1d-13a2-4212-9a17-8bbabb3248aa" nombre="atributoEnriquecido" modificador="publico" />

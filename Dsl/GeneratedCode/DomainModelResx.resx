@@ -1037,46 +1037,6 @@
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.protegido</value>
     <comment>Description for EnumerationLiteral &apos;protegido&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo</value>
-    <comment>Description for DomainClass &apos;MetaforaAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributo.DisplayName" xml:space="preserve">
-    <value>Metafora Atributo</value>
-    <comment>DisplayName for DomainClass &apos;MetaforaAtributo&apos;</comment>
-  </data>
-  <data name="MetaforaAtributonombreDecDefaultText" xml:space="preserve">
-    <value>nombreDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal</value>
-    <comment>Description for DomainClass &apos;MetaforaOperacionNormal&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal.DisplayName" xml:space="preserve">
-    <value>Metafora Operacion Normal</value>
-    <comment>DisplayName for DomainClass &apos;MetaforaOperacionNormal&apos;</comment>
-  </data>
-  <data name="MetaforaOperacionNormalnombreDecDefaultText" xml:space="preserve">
-    <value>nombreDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida</value>
-    <comment>Description for DomainClass &apos;MetaforaOperacionEnriquecida&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida.DisplayName" xml:space="preserve">
-    <value>Metafora Operacion Enriquecida</value>
-    <comment>DisplayName for DomainClass &apos;MetaforaOperacionEnriquecida&apos;</comment>
-  </data>
-  <data name="MetaforaOperacionEnriquecidatipoLetraDecDefaultText" xml:space="preserve">
-    <value>tipoLetraDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="MetaforaOperacionEnriquecidacolorLetraDecDefaultText" xml:space="preserve">
-    <value>colorLetraDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase</value>
     <comment>Description for DomainClass &apos;MetaforaClase&apos;</comment>
@@ -1126,6 +1086,54 @@
     <comment>Compartment title</comment>
   </data>
   <data name="MetaforaClaseEnriquecidanombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal</value>
+    <comment>Description for DomainClass &apos;MetaforaOperacionNormal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal.DisplayName" xml:space="preserve">
+    <value>Metafora Operacion Normal</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaOperacionNormal&apos;</comment>
+  </data>
+  <data name="MetaforaOperacionNormalParametrosTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MetaforaOperacionNormalnombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionAbstracta.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionAbstracta</value>
+    <comment>Description for DomainClass &apos;MetaforaOperacionAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionAbstracta.DisplayName" xml:space="preserve">
+    <value>Metafora Operacion Abstracta</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaOperacionAbstracta&apos;</comment>
+  </data>
+  <data name="MetaforaOperacionAbstractaParametrosTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MetaforaOperacionAbstractanombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida</value>
+    <comment>Description for DomainClass &apos;MetaforaOperacionEnriquecida&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida.DisplayName" xml:space="preserve">
+    <value>Metafora Operacion Enriquecida</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaOperacionEnriquecida&apos;</comment>
+  </data>
+  <data name="MetaforaOperacionEnriquecidaParametrosTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MetaforaOperacionEnriquecidanombreDecDefaultText" xml:space="preserve">
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
