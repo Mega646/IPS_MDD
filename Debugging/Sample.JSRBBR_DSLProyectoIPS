@@ -1,79 +1,210 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <tapizClases xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6d1e115d-38a8-4182-afb9-ac630eab1576" nombre="Clase abstracta" xmlns="http://schemas.microsoft.com/dsltools/JSRBBRProyectoIPS">
   <clase>
-    <tapizClasesHasClase Id="d4026b54-296c-40e1-8a23-4119a8d3a3eb">
-      <clase Id="5a400b9b-b638-4186-ad77-78389488adcf" nombre="Clase">
+    <tapizClasesHasClase Id="4c72a4f2-542c-45ea-9a0d-8d4c2165d39c">
+      <claseAbstracta Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" nombre="Crucero">
+        <atributo>
+          <claseHasAtributo Id="969223a3-6e2d-446a-8822-ca4e3329ed25">
+            <atributo Id="23f00b5d-329e-480d-b14f-cd7ace17bbe2" nombre="capacidadCombustible" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="2ce40068-a69a-49a8-a683-277711f5f2bd">
+            <atributo Id="6d17d5ce-ea64-41bd-90d5-d105adb7b475" nombre="origen" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="c2bba12a-2c13-43c3-b35e-0ccf90bd6893">
+            <atributo Id="39e0e626-5947-4aa3-92a2-d13fa4de6aa3" nombre="destino" modificador="privado" />
+          </claseHasAtributo>
+        </atributo>
+        <atributoID>
+          <claseHasAtributoID Id="695b0268-4e9e-439b-9e79-041c5ff1b7a7">
+            <atributoID Id="51277364-f7b6-46b6-a228-888b4bd28d6d" nombre="id" modificador="privado" />
+          </claseHasAtributoID>
+        </atributoID>
+      </claseAbstracta>
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="549de347-3f41-4291-95a2-a7f2b8892a5d">
+      <clase Id="4f8f4f0d-9002-4c82-9cef-3b71c6512896" nombre="CruceroPasajeros">
+        <atributo>
+          <claseHasAtributo Id="b4506a7d-f2a8-44f0-8835-cfa21617f696">
+            <atributo Id="5c3984f1-b0f9-4b7c-9ea0-106577bd3b0d" nombre="camarotesLibres" modificador="privado" />
+          </claseHasAtributo>
+        </atributo>
+        <claseHija>
+          <claseInheritsClaseHija Id="1f49f3a0-4511-4bf8-960e-a276e650d2c4" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
+          </claseInheritsClaseHija>
+        </claseHija>
+        <atributoID>
+          <claseHasAtributoID Id="a3f70049-0f72-49bf-8da6-4c29963bb606">
+            <atributoID Id="323b53ab-ae3f-4c76-b1f7-7d76bff9b056" nombre="id" modificador="privado" />
+          </claseHasAtributoID>
+        </atributoID>
+      </clase>
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="50b60823-b90b-492c-880c-5f88452ece2e">
+      <clase Id="b2a9e346-3ca8-492e-a4d6-ee158f45a88e" nombre="CruceroMercancías">
+        <atributo>
+          <claseHasAtributo Id="8dae71c2-ef4b-432b-8c90-493cc2295981">
+            <atributo Id="3141fb65-9f1f-4ef2-882e-465f1287885b" nombre="capacidadMaxima" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="c3a3bdcb-a87d-4c31-9ac4-b13350e6eef3">
+            <atributo Id="a4c1c81a-3753-46fd-ac00-b96b9f8ab9a7" nombre="capacidadActual" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="781e2e1c-0fba-4b25-b5c3-2412adca9acd">
+            <atributo Id="730adb12-df2b-4368-bb35-3e92556bb31d" nombre="capacidadRestante" modificador="privado" />
+          </claseHasAtributo>
+        </atributo>
+        <claseHija>
+          <claseInheritsClaseHija Id="7542d713-0fd9-4d44-b1fb-69189a931809" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
+          </claseInheritsClaseHija>
+        </claseHija>
+        <atributoID>
+          <claseHasAtributoID Id="ea5be540-99ad-422e-a58b-b4da7db15f27">
+            <atributoID Id="9427e30a-cf8e-4545-837d-0052c2f8587e" nombre="id" modificador="privado" />
+          </claseHasAtributoID>
+        </atributoID>
+      </clase>
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="79fd1236-7816-40f6-b6a2-b884de6d36cc">
+      <clase Id="a01a905c-6647-47a6-9db6-1fa4903f3c1d" nombre="Tripulante">
+        <atributo>
+          <claseHasAtributo Id="6603e751-b55b-4506-bedd-2e0c84169a5c">
+            <atributo Id="cf229e68-b788-4091-9b26-950881da757d" nombre="nombre" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="4ec23863-e66f-45e4-ada3-a2586dacb415">
+            <atributo Id="e163c0c7-4944-435d-a87e-edf5128be21c" nombre="apellido" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="1bab7db1-69d6-4bcd-ac6a-e628fd051603">
+            <atributo Id="7caf7827-deff-4640-bf26-d05eb62962c0" nombre="puesto" modificador="privado" />
+          </claseHasAtributo>
+        </atributo>
+        <claseRelacion>
+          <claseRelatesTargetClase Id="bf2b50ea-f6e5-44ff-bc20-97051bbd7d8b" nombre="navega_en" cardinalidad1="c0N" cardinalidad2="c1">
+            <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
+          </claseRelatesTargetClase>
+        </claseRelacion>
+        <atributoID>
+          <claseHasAtributoID Id="40b14304-d685-435f-80c1-610128cb4c80">
+            <atributoID Id="9f313f30-6ae8-442e-96d2-44bdee1904cd" nombre="id" modificador="privado" />
+          </claseHasAtributoID>
+        </atributoID>
+      </clase>
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="444d3bce-3a60-4851-981f-4a4d866dd50f">
+      <claseEnriquecida Id="15f961e9-c2ae-4ece-9ce4-d46c76d420e3" nombre="Capitán">
+        <claseHija>
+          <claseInheritsClaseHija Id="9016ed3b-ea03-4bbc-b6a0-8687322e6c29" disjuntaSolapada="disjunta" totalParcial="parcial">
+            <claseMoniker Id="a01a905c-6647-47a6-9db6-1fa4903f3c1d" />
+          </claseInheritsClaseHija>
+        </claseHija>
+        <claseComponente>
+          <claseIncludesTargetClase Id="60e3eb8a-009d-4453-a509-31a9c2f9830d" nombre="dirige" cardinalidad1="c1" cardinalidad2="c1">
+            <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
+          </claseIncludesTargetClase>
+        </claseComponente>
+        <atributoEnriquecido>
+          <claseEnriquecidaHasAtributoEnriquecido Id="5995d2ae-f6b9-453c-8982-b6a93c082309">
+            <atributoEnriquecido Id="47cf68ed-eefc-441c-b636-0490f721e821" nombre="medallas" modificador="privado" />
+          </claseEnriquecidaHasAtributoEnriquecido>
+          <claseEnriquecidaHasAtributoEnriquecido Id="e5d48929-78fa-4e50-9280-4ef9afd0a933">
+            <atributoEnriquecido Id="e462f5e0-9583-41a7-aa4d-4da4dc124c59" nombre="rango" modificador="privado" />
+          </claseEnriquecidaHasAtributoEnriquecido>
+        </atributoEnriquecido>
+      </claseEnriquecida>
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="7004bbe1-056b-4bd9-82d8-31035985ee8c">
+      <clase Id="ab50a2a6-00d7-4d05-a354-b40dcccdc80d" nombre="Pasajero">
+        <atributo>
+          <claseHasAtributo Id="70e2af1f-fc2e-44b2-b3a5-000b1272b0db">
+            <atributo Id="d8045253-eb40-4dd8-8950-feebc050aa5b" nombre="nombre" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="fe1f4a98-c78a-4a30-a0ce-9bd4d5dc4511">
+            <atributo Id="474dc91b-c6db-4fb6-a0bc-b1bf7f2d2f91" nombre="apellido" modificador="privado" />
+          </claseHasAtributo>
+        </atributo>
         <operacion>
-          <claseHasOperacion Id="943c3f17-4784-4a69-b53f-e972c73c2352">
-            <operacionNormal Id="6c4bcbba-9004-4eb2-bd72-906276eb3920" nombre="Operacion" valorRetorno="Int" modificador="privado">
+          <claseHasOperacion Id="3e2e9eec-eff2-4cd5-ac10-cfdb0b39fff8">
+            <operacionNormal Id="ae4e4aa5-c791-40d0-a34d-0549ece3aaea" nombre="ReservarCamarote" valorRetorno="String" modificador="publico">
               <parametros>
-                <operacionHasParametros Id="10286ff6-6381-46bb-955e-2505afe88e04">
-                  <parametro Id="83021513-0c8c-43b1-a00f-f53e25fb797a" nombre="parametro1" tipoDatos="Int" entradaSalida="entrada" />
+                <operacionHasParametros Id="01551c56-5cbd-426f-9bc8-6b47c610cfcd">
+                  <parametro Id="c532e66f-c1aa-4792-8e35-09e5ba47c648" nombre="camarote" tipoDatos="Int" entradaSalida="entrada" />
+                </operacionHasParametros>
+                <operacionHasParametros Id="1308b850-5026-497a-963d-2ada5213dac2">
+                  <parametro Id="3488dc58-8ec2-469f-bb2c-36cb5a4971d8" nombre="exito" tipoDatos="Int" entradaSalida="salida" />
                 </operacionHasParametros>
               </parametros>
             </operacionNormal>
           </claseHasOperacion>
         </operacion>
-        <claseHija>
-          <claseInheritsClaseHija Id="34d11181-5f37-4eb4-84e2-19a0e484f1af" disjuntaSolapada="disjunta" totalParcial="total">
-            <claseAbstractaMoniker Id="dd2f396e-857e-4639-866d-9808705b2993" />
-          </claseInheritsClaseHija>
-        </claseHija>
         <targetClase>
-          <claseReferencesTargetClase Id="8229bf7d-81da-4fba-a286-3c35b955095e" nombre="relacion" cardinalidad1="c1N" cardinalidad2="c0">
-            <claseEnriquecidaMoniker Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" />
+          <claseReferencesTargetClase Id="08392ee2-3f04-43fa-a9f8-f441d1863302" nombre="reserva" cardinalidad1="c0N" cardinalidad2="c0N">
+            <claseMoniker Id="4f8f4f0d-9002-4c82-9cef-3b71c6512896" />
           </claseReferencesTargetClase>
         </targetClase>
-        <claseComponente>
-          <claseIncludesTargetClase Id="d828ea47-f1c2-4dc8-8c16-4bee40ec4e30" cardinalidad1="c0N" cardinalidad2="c1">
-            <claseMoniker Id="612a25f9-f882-4a36-98c3-dd9de82d37b0" />
-          </claseIncludesTargetClase>
-        </claseComponente>
-        <claseRelacion>
-          <claseRelatesTargetClase Id="7c610247-d60d-44ec-aff1-5e6e9bf45c0b" cardinalidad1="c01" cardinalidad2="c0">
-            <claseMoniker Id="14f05f38-e45a-4d1a-ad5f-13def5135b1d" />
-          </claseRelatesTargetClase>
-        </claseRelacion>
         <atributoID>
-          <claseHasAtributoID Id="967e2655-96d3-43c4-91cd-72d2e7425960">
-            <atributoID Id="60d0088b-2e92-49ed-8471-cae093a564c1" nombre="id" modificador="privado" />
+          <claseHasAtributoID Id="4b367108-9c3c-4e7f-baea-59af62f95f0c">
+            <atributoID Id="230a00ba-96f6-49e2-92c4-dd06e047113f" nombre="id" modificador="privado" />
           </claseHasAtributoID>
         </atributoID>
       </clase>
     </tapizClasesHasClase>
-    <tapizClasesHasClase Id="baf43c50-4668-424f-997e-bf676fa5c86e">
-      <claseEnriquecida Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" nombre="Clase enriquecida">
+    <tapizClasesHasClase Id="4987dcac-46c4-4017-a7c3-c5e5b20a6449">
+      <claseEnriquecida Id="ff250e5d-e424-48cd-b298-b530c8806f44" nombre="PasajeroVIP">
         <atributo>
-          <claseHasAtributo Id="63fbeff2-c64c-4287-94dd-0354ecc68ea8">
-            <atributo Id="af80d694-f6fc-4314-a6a0-8c2815e1427c" nombre="atributo" modificador="privado" />
+          <claseHasAtributo Id="92b3a3cc-5245-4790-855c-3bcfae14929d">
+            <atributo Id="caa179ce-e765-44c9-a3d7-0401852c6248" nombre="planVIP" modificador="privado" />
           </claseHasAtributo>
         </atributo>
+        <claseHija>
+          <claseInheritsClaseHija Id="06bc9b9d-f099-400b-9db4-85a8afd9adfc" disjuntaSolapada="disjunta" totalParcial="parcial">
+            <claseMoniker Id="ab50a2a6-00d7-4d05-a354-b40dcccdc80d" />
+          </claseInheritsClaseHija>
+        </claseHija>
         <operacionEnriquecida>
-          <claseEnriquecidaHasOperacionEnriquecida Id="3692c40f-6211-4b50-90ed-3855e2409567">
-            <operacionEnriquecida Id="cb1f3cf1-a28a-4f9f-b814-cbb211394fd5" nombre="operacionEnriquecida" valorRetorno="Int" modificador="privado" />
+          <claseEnriquecidaHasOperacionEnriquecida Id="110404d2-cae8-48e0-bb19-9abb6458efc4">
+            <operacionEnriquecida Id="15e27bb3-38d9-4225-b730-f31a284a0744" nombre="ReservarCamaroteVIP" valorRetorno="String" modificador="publico">
+              <parametros>
+                <operacionHasParametros Id="409778fd-4c29-45c1-9dca-030029d50888">
+                  <parametro Id="cc65871b-670c-4b71-aaa1-c9e3c0ad20f3" nombre="camarote" tipoDatos="Int" entradaSalida="entrada" />
+                </operacionHasParametros>
+                <operacionHasParametros Id="15353ef9-5555-4d93-8e1e-61485ca31e2d">
+                  <parametro Id="931722c1-46eb-4f76-831c-804f73ac863f" nombre="exito" tipoDatos="Int" entradaSalida="salida" />
+                </operacionHasParametros>
+              </parametros>
+            </operacionEnriquecida>
           </claseEnriquecidaHasOperacionEnriquecida>
         </operacionEnriquecida>
         <atributoEnriquecido>
-          <claseEnriquecidaHasAtributoEnriquecido Id="8244deec-4b05-4b3a-b6ad-2ccaf12dbaf0">
-            <atributoEnriquecido Id="f2da8b1d-13a2-4212-9a17-8bbabb3248aa" nombre="atributoEnriquecido" modificador="publico" />
+          <claseEnriquecidaHasAtributoEnriquecido Id="d2da7714-8a86-4123-ac90-3ac3c4797c49">
+            <atributoEnriquecido Id="ffd153a3-8732-487d-bbd6-c61260438450" nombre="menu" modificador="privado" />
+          </claseEnriquecidaHasAtributoEnriquecido>
+          <claseEnriquecidaHasAtributoEnriquecido Id="85c4cae5-b060-4aea-b7b8-61e966bf022d">
+            <atributoEnriquecido Id="f7d312a7-0ef0-4aa6-83e1-2ed99a9e72d7" nombre="servicioDeHabitaciones" modificador="privado" booleano="asd" />
           </claseEnriquecidaHasAtributoEnriquecido>
         </atributoEnriquecido>
       </claseEnriquecida>
     </tapizClasesHasClase>
-    <tapizClasesHasClase Id="9a44a5ac-1c94-4625-abce-1407d0659ed7">
-      <claseAbstracta Id="dd2f396e-857e-4639-866d-9808705b2993" nombre="Clase abstracta" />
-    </tapizClasesHasClase>
-    <tapizClasesHasClase Id="4b32733d-1837-435e-bd20-a260510033d0">
-      <clase Id="612a25f9-f882-4a36-98c3-dd9de82d37b0" nombre="Clase 2">
+    <tapizClasesHasClase Id="89b98721-4350-4e38-913a-5cd48ec97ec3">
+      <clase Id="7ddb3eb6-a346-4fdf-8de9-ba2d99480faa" nombre="Mercancía">
+        <atributo>
+          <claseHasAtributo Id="a898ea66-e652-437c-a142-53458297d4db">
+            <atributo Id="2e31a1db-5145-40d3-8a18-ac2836d03989" nombre="peso" modificador="privado" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="6aa911c9-435a-4b4d-bed4-b513f4418a6b">
+            <atributo Id="9225f7b6-7078-4478-b0e5-6c77fa2d93c5" nombre="tipo" modificador="privado" />
+          </claseHasAtributo>
+        </atributo>
+        <claseComponente>
+          <claseIncludesTargetClase Id="e2fa9041-95b2-4f55-bb06-1442ff064f7f" nombre="es_transportada_por" cardinalidad1="c0N" cardinalidad2="c1">
+            <claseMoniker Id="b2a9e346-3ca8-492e-a4d6-ee158f45a88e" />
+          </claseIncludesTargetClase>
+        </claseComponente>
         <atributoID>
-          <claseHasAtributoID Id="861a8261-9d03-4ce4-a8fe-fd3eb8d951ba">
-            <atributoID Id="82fc52ea-7628-4327-996c-c8cec78b40b1" nombre="id" modificador="privado" />
+          <claseHasAtributoID Id="fca507c0-a1e6-4a7d-a173-77518f714474">
+            <atributoID Id="c666ff25-0839-4e47-83b0-6c90b60ad35a" nombre="id" modificador="privado" />
           </claseHasAtributoID>
         </atributoID>
       </clase>
-    </tapizClasesHasClase>
-    <tapizClasesHasClase Id="ead3b2cb-47f2-4aab-aa42-a399203c7b7c">
-      <clase Id="14f05f38-e45a-4d1a-ad5f-13def5135b1d" nombre="Clase 3" />
     </tapizClasesHasClase>
   </clase>
 </tapizClases>

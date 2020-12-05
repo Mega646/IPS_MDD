@@ -405,14 +405,6 @@
     <value>Nombre Calculado</value>
     <comment>DisplayName for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacion</value>
-    <comment>Description for DomainClass &apos;ClaseAsociacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacion.DisplayName" xml:space="preserve">
-    <value>Clase Asociacion</value>
-    <comment>DisplayName for DomainClass &apos;ClaseAsociacion&apos;</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.TapizClasesHasClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.TapizClasesHasClase</value>
     <comment>Description for DomainClass &apos;TapizClasesHasClase&apos;</comment>
@@ -901,38 +893,6 @@
     <value>Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;AtributoID&apos; on DomainRelationship &apos;ClaseHasAtributoID&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase</value>
-    <comment>Description for DomainClass &apos;ClaseAsociacionReferencesClaseReferencesTargetClase&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.DisplayName" xml:space="preserve">
-    <value>Clase Asociacion References Clase References Target Clase</value>
-    <comment>DisplayName for DomainClass &apos;ClaseAsociacionReferencesClaseReferencesTargetClase&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseAsociacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseAsociacion</value>
-    <comment>Description for DomainRole &apos;ClaseAsociacion&apos; on DomainRelationship &apos;ClaseAsociacionReferencesClaseReferencesTargetClase&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseAsociacion.DisplayName" xml:space="preserve">
-    <value>Clase Asociacion</value>
-    <comment>DisplayName for DomainRole &apos;ClaseAsociacion&apos; on DomainRelationship &apos;ClaseAsociacionReferencesClaseReferencesTargetClase&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseAsociacion.PropertyDisplayName" xml:space="preserve">
-    <value>Clase References Target Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ClaseAsociacion&apos; on DomainRelationship &apos;ClaseAsociacionReferencesClaseReferencesTargetClase&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseReferencesTargetClase.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseReferencesTargetClase</value>
-    <comment>Description for DomainRole &apos;ClaseReferencesTargetClase&apos; on DomainRelationship &apos;ClaseAsociacionReferencesClaseReferencesTargetClase&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseReferencesTargetClase.DisplayName" xml:space="preserve">
-    <value>Clase References Target Clase</value>
-    <comment>DisplayName for DomainRole &apos;ClaseReferencesTargetClase&apos; on DomainRelationship &apos;ClaseAsociacionReferencesClaseReferencesTargetClase&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseReferencesTargetClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Asociacion</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ClaseReferencesTargetClase&apos; on DomainRelationship &apos;ClaseAsociacionReferencesClaseReferencesTargetClase&apos;</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.entradaSalida/entrada.DisplayName" xml:space="preserve">
     <value>entrada</value>
     <comment>Display name for EnumerationLiteral &apos;entrada&apos; on DomainEnumeration &apos;entradaSalida&apos;</comment>
@@ -1213,22 +1173,6 @@
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAsociacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAsociacion</value>
-    <comment>Description for DomainClass &apos;MetaforaClaseAsociacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAsociacion.DisplayName" xml:space="preserve">
-    <value>Metafora Clase Asociacion</value>
-    <comment>DisplayName for DomainClass &apos;MetaforaClaseAsociacion&apos;</comment>
-  </data>
-  <data name="MetaforaClaseAsociacionAtributosTitle" xml:space="preserve">
-    <value></value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="MetaforaClaseAsociacionnombreDecDefaultText" xml:space="preserve">
-    <value>nombreDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia</value>
     <comment>Description for DomainClass &apos;MetaforaRelacionHerencia&apos;</comment>
@@ -1379,14 +1323,6 @@
   </data>
   <data name="AtributoIDToolboxTooltip" xml:space="preserve">
     <value>Atributo ID</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="ClaseAsociacionToolboxItem" xml:space="preserve">
-    <value>ClaseAsociacion</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="ClaseAsociacionToolboxTooltip" xml:space="preserve">
-    <value>Clase Asociacion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="RelacionesToolboxTab" xml:space="preserve">
@@ -1588,10 +1524,6 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="AtributoIDToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\atributoId.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="ClaseAsociacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\claseAsociacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="HerenciaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">

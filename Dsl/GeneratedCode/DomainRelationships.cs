@@ -1506,7 +1506,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainRelationship(AllowsDuplicates = true)]
 	[DslModeling::DomainObjectId("84c9f1c9-eb68-4a6b-9580-5aedda2efaa4")]
 	public partial class ClaseReferencesTargetClase : ClaseReferencesTargetClases
 	{
@@ -1653,24 +1653,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
 		}
 		#endregion
-		#region Accessors for roles that this REL plays in other RELs
-		#region ClaseAsociacion opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of ClaseAsociacion.
-		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseReferencesTargetClase
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<ClaseAsociacion> ClaseAsociacion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ClaseAsociacion>, ClaseAsociacion>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseReferencesTargetClaseDomainRoleId);
-			}
-		}
-		#endregion
-		#endregion
 		#region SourceClase link accessor
 		/// <summary>
 		/// Get the list of ClaseReferencesTargetClase links to a Clase.
@@ -1713,24 +1695,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 			return outLinks.AsReadOnly();
 		}
-		/// <summary>
-		/// Get the one ClaseReferencesTargetClase link between a given Claseand a Clase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static new global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase GetLink( global::UPM_IPS.JSRBBRProyectoIPS.Clase source, global::UPM_IPS.JSRBBRProyectoIPS.Clase target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase.SourceClaseDomainRoleId);
-			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase link in links )
-			{
-				if ( target.Equals(link.TargetClase) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
 		#endregion
 	}
 }
@@ -1938,7 +1902,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static new global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase GetLink( global::UPM_IPS.JSRBBRProyectoIPS.Clase source, global::UPM_IPS.JSRBBRProyectoIPS.Clase target )
+		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase GetLink( global::UPM_IPS.JSRBBRProyectoIPS.Clase source, global::UPM_IPS.JSRBBRProyectoIPS.Clase target )
 		{
 			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase.SourceClaseDomainRoleId);
 			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase link in links )
@@ -2158,7 +2122,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static new global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase GetLink( global::UPM_IPS.JSRBBRProyectoIPS.Clase source, global::UPM_IPS.JSRBBRProyectoIPS.Clase target )
+		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase GetLink( global::UPM_IPS.JSRBBRProyectoIPS.Clase source, global::UPM_IPS.JSRBBRProyectoIPS.Clase target )
 		{
 			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.SourceClaseDomainRoleId);
 			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase link in links )
@@ -2184,7 +2148,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainRelationship(AllowsDuplicates = true)]
 	[DslModeling::DomainObjectId("44de9d57-be92-4249-879b-388e2bfe2352")]
 	public abstract partial class ClaseReferencesTargetClases : DslModeling::ElementLink
 	{
@@ -2713,24 +2677,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 			return outLinks.AsReadOnly();
 		}
-		/// <summary>
-		/// Get the one ClaseReferencesTargetClases link between a given Claseand a Clase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases GetLink( global::UPM_IPS.JSRBBRProyectoIPS.Clase source, global::UPM_IPS.JSRBBRProyectoIPS.Clase target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.SourceClaseDomainRoleId);
-			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases link in links )
-			{
-				if ( target.Equals(link.TargetClase) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
 		#endregion
 	}
 }
@@ -3704,229 +3650,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID link in links )
 			{
 				if ( target.Equals(link.AtributoID) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.JSRBBRProyectoIPS
-{
-	/// <summary>
-	/// DomainRelationship ClaseAsociacionReferencesClaseReferencesTargetClase
-	/// Description for
-	/// UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship()]
-	[DslModeling::DomainObjectId("9fb93839-d6c0-460a-8e03-f1c5510b92a8")]
-	public partial class ClaseAsociacionReferencesClaseReferencesTargetClase : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ClaseAsociacionReferencesClaseReferencesTargetClase domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9fb93839, 0xd6c0, 0x460a, 0x8e, 0x03, 0xf1, 0xc5, 0x51, 0x0b, 0x92, 0xa8);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ClaseAsociacionReferencesClaseReferencesTargetClase link in the same Partition as the given ClaseAsociacion
-		/// </summary>
-		/// <param name="source">ClaseAsociacion to use as the source of the relationship.</param>
-		/// <param name="target">ClaseReferencesTargetClase to use as the target of the relationship.</param>
-		public ClaseAsociacionReferencesClaseReferencesTargetClase(ClaseAsociacion source, ClaseReferencesTargetClase target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseAsociacionDomainRoleId, source), new DslModeling::RoleAssignment(ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseReferencesTargetClaseDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseAsociacionReferencesClaseReferencesTargetClase(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseAsociacionReferencesClaseReferencesTargetClase(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseAsociacionReferencesClaseReferencesTargetClase(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseAsociacionReferencesClaseReferencesTargetClase(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region ClaseAsociacion domain role code
-		
-		/// <summary>
-		/// ClaseAsociacion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ClaseAsociacionDomainRoleId = new global::System.Guid(0x5ed266cd, 0x1783, 0x478a, 0x99, 0x12, 0xb4, 0x87, 0x72, 0xe3, 0x4a, 0x14);
-		
-		/// <summary>
-		/// DomainRole ClaseAsociacion
-		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseAsociacion
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseAsociacion.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseAsociacion.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseReferencesTargetClase", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseAsociacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("5ed266cd-1783-478a-9912-b48772e34a14")]
-		public virtual ClaseAsociacion ClaseAsociacion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (ClaseAsociacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseAsociacionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseAsociacionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access ClaseAsociacion of a ClaseReferencesTargetClase
-		/// <summary>
-		/// Gets a list of ClaseAsociacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ClaseAsociacion> GetClaseAsociacion(ClaseReferencesTargetClase element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<ClaseAsociacion>, ClaseAsociacion>(element, ClaseReferencesTargetClaseDomainRoleId);
-		}
-		#endregion
-		#region ClaseReferencesTargetClase domain role code
-		
-		/// <summary>
-		/// ClaseReferencesTargetClase domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid ClaseReferencesTargetClaseDomainRoleId = new global::System.Guid(0x993d39ad, 0x2134, 0x4a2f, 0xa0, 0x88, 0x31, 0x62, 0xc4, 0x5c, 0xf0, 0x58);
-		
-		/// <summary>
-		/// DomainRole ClaseReferencesTargetClase
-		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseReferencesTargetClase
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseReferencesTargetClase.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseReferencesTargetClase.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseAsociacion", PropertyDisplayNameKey="UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase/ClaseReferencesTargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("993d39ad-2134-4a2f-a088-3162c45cf058")]
-		public virtual ClaseReferencesTargetClase ClaseReferencesTargetClase
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (ClaseReferencesTargetClase)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseReferencesTargetClaseDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseReferencesTargetClaseDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access ClaseReferencesTargetClase of a ClaseAsociacion
-		/// <summary>
-		/// Gets a list of ClaseReferencesTargetClase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ClaseReferencesTargetClase> GetClaseReferencesTargetClase(ClaseAsociacion element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<ClaseReferencesTargetClase>, ClaseReferencesTargetClase>(element, ClaseAsociacionDomainRoleId);
-		}
-		#endregion
-		#region ClaseAsociacion link accessor
-		/// <summary>
-		/// Get the list of ClaseAsociacionReferencesClaseReferencesTargetClase links to a ClaseAsociacion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase> GetLinksToClaseReferencesTargetClase ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacion claseAsociacionInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase>(claseAsociacionInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseAsociacionDomainRoleId);
-		}
-		#endregion
-		#region ClaseReferencesTargetClase link accessor
-		/// <summary>
-		/// Get the list of ClaseAsociacionReferencesClaseReferencesTargetClase links to a ClaseReferencesTargetClase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase> GetLinksToClaseAsociacion ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase claseReferencesTargetClaseInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase>(claseReferencesTargetClaseInstance, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseReferencesTargetClaseDomainRoleId);
-		}
-		#endregion
-		#region ClaseAsociacionReferencesClaseReferencesTargetClase instance accessors
-		
-		/// <summary>
-		/// Get any ClaseAsociacionReferencesClaseReferencesTargetClase links between a given ClaseAsociacion and a ClaseReferencesTargetClase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase> GetLinks( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacion source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseAsociacionDomainRoleId);
-			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase link in links )
-			{
-				if ( target.Equals(link.ClaseReferencesTargetClase) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ClaseAsociacionReferencesClaseReferencesTargetClase link between a given ClaseAsociacionand a ClaseReferencesTargetClase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase GetLink( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacion source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase>(source, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseAsociacionDomainRoleId);
-			foreach ( global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionReferencesClaseReferencesTargetClase link in links )
-			{
-				if ( target.Equals(link.ClaseReferencesTargetClase) )
 				{
 					return link;
 				}

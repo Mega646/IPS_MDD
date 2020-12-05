@@ -355,7 +355,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="84c9f1c9-eb68-4a6b-9580-5aedda2efaa4" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase" Name="ClaseReferencesTargetClase" DisplayName="Clase References Target Clase" Namespace="UPM_IPS.JSRBBRProyectoIPS">
+    <DomainRelationship Id="84c9f1c9-eb68-4a6b-9580-5aedda2efaa4" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase" Name="ClaseReferencesTargetClase" DisplayName="Clase References Target Clase" Namespace="UPM_IPS.JSRBBRProyectoIPS" AllowsDuplicates="true">
       <BaseRelationship>
         <DomainRelationshipMoniker Name="ClaseReferencesTargetClases" />
       </BaseRelationship>
@@ -412,7 +412,7 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="44de9d57-be92-4249-879b-388e2bfe2352" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases" Name="ClaseReferencesTargetClases" DisplayName="Clase References Target Clases" InheritanceModifier="Abstract" Namespace="UPM_IPS.JSRBBRProyectoIPS">
+    <DomainRelationship Id="44de9d57-be92-4249-879b-388e2bfe2352" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases" Name="ClaseReferencesTargetClases" DisplayName="Clase References Target Clases" InheritanceModifier="Abstract" Namespace="UPM_IPS.JSRBBRProyectoIPS" AllowsDuplicates="true">
       <Properties>
         <DomainProperty Id="fc412daa-fd04-4ce1-94ea-2457ffe485be" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Nombre" Name="nombre" DisplayName="Nombre">
           <Type>
@@ -587,19 +587,19 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <CompartmentShape Id="e19a37e7-a3d6-4b72-8827-5bbbf88b11c7" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase" Name="MetaforaClase" DisplayName="Metafora Clase" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase" FillColor="Khaki" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <CompartmentShape Id="e19a37e7-a3d6-4b72-8827-5bbbf88b11c7" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase" Name="MetaforaClase" DisplayName="Metafora Clase" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase" FillColor="Khaki" InitialHeight="0.5" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="10" />
       </ShapeHasDecorators>
       <Compartment Name="Atributos" />
     </CompartmentShape>
-    <CompartmentShape Id="2420f6a4-3316-4caa-9739-3fb6567851c3" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta" Name="MetaforaClaseAbstracta" DisplayName="Metafora Clase Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Abstracta" FillColor="DarkGray" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <CompartmentShape Id="2420f6a4-3316-4caa-9739-3fb6567851c3" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta" Name="MetaforaClaseAbstracta" DisplayName="Metafora Clase Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Abstracta" FillColor="DarkGray" InitialHeight="0.5" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="10" />
       </ShapeHasDecorators>
       <Compartment Name="Atributos" />
     </CompartmentShape>
-    <CompartmentShape Id="a6cb73d0-58a4-4c4c-b107-18f467b0926b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida" Name="MetaforaClaseEnriquecida" DisplayName="Metafora Clase Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Enriquecida" FillColor="Yellow" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <CompartmentShape Id="a6cb73d0-58a4-4c4c-b107-18f467b0926b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida" Name="MetaforaClaseEnriquecida" DisplayName="Metafora Clase Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Enriquecida" FillColor="Yellow" InitialHeight="0.5" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="10" />
       </ShapeHasDecorators>

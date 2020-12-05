@@ -110,7 +110,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		{
 			get
 			{
-				return 6;
+				return 5;
 			}
 		}
 		
@@ -235,22 +235,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						"AtributoID", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("AtributoIDToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JSRBBRProyectoIPS.AtributoID.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
-				case "UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionToolboxItem":
-					// Add ClaseAsociacion shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						6, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("ClaseAsociacionToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ClaseAsociacionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"UPM_IPS.JSRBBRProyectoIPS.ClaseToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("ClaseToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"ClaseAsociacion", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("ClaseAsociacionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::UPM_IPS.JSRBBRProyectoIPS.ClaseAsociacion.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

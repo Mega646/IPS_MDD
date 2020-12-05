@@ -80,7 +80,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(OperacionEnriquecida),
 				typeof(Operacion),
 				typeof(AtributoPadre),
-				typeof(ClaseAsociacion),
 				typeof(TapizClasesHasClase),
 				typeof(ClaseHasAtributo),
 				typeof(ClaseHasOperacion),
@@ -94,7 +93,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(OperacionHasParametros),
 				typeof(ClaseEnriquecidaHasAtributoEnriquecido),
 				typeof(ClaseHasAtributoID),
-				typeof(ClaseAsociacionReferencesClaseReferencesTargetClase),
 				typeof(JSRBBRProyectoIPSDiagram),
 				typeof(MetaforaRelacionHerencia),
 				typeof(MetaforaRelaciones),
@@ -112,7 +110,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(MetaforaOperacionNormal),
 				typeof(MetaforaOperacionAbstracta),
 				typeof(MetaforaOperacionEnriquecida),
-				typeof(MetaforaClaseAsociacion),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.FixUpDiagram),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.JSRBBRProyectoIPS.ConnectorRolePlayerChanged),
@@ -199,8 +196,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasAtributoEnriquecido), "AtributoEnriquecido", ClaseEnriquecidaHasAtributoEnriquecido.AtributoEnriquecidoDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributoID), "Clase", ClaseHasAtributoID.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseHasAtributoID), "AtributoID", ClaseHasAtributoID.AtributoIDDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseAsociacionReferencesClaseReferencesTargetClase), "ClaseAsociacion", ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseAsociacionDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseAsociacionReferencesClaseReferencesTargetClase), "ClaseReferencesTargetClase", ClaseAsociacionReferencesClaseReferencesTargetClase.ClaseReferencesTargetClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -222,7 +217,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(32);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(30);
 				createElementMap.Add(typeof(TapizClases), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -234,24 +229,22 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementMap.Add(typeof(ClaseEnriquecida), 8);
 				createElementMap.Add(typeof(AtributoEnriquecido), 9);
 				createElementMap.Add(typeof(OperacionEnriquecida), 10);
-				createElementMap.Add(typeof(ClaseAsociacion), 11);
-				createElementMap.Add(typeof(JSRBBRProyectoIPSDiagram), 12);
-				createElementMap.Add(typeof(MetaforaRelacionHerencia), 13);
-				createElementMap.Add(typeof(MetaforaRelacionRelacional), 14);
-				createElementMap.Add(typeof(MetaforaRelacionInclusiva), 15);
-				createElementMap.Add(typeof(MetaforaRelacionReferencial), 16);
-				createElementMap.Add(typeof(MetaforaConectorAtributoID), 17);
-				createElementMap.Add(typeof(MetaforaConectorOperacionNormal), 18);
-				createElementMap.Add(typeof(MetaforaConectorOperacionAbstracta), 19);
-				createElementMap.Add(typeof(MetaforaConectorOperacionEnriquecida), 20);
-				createElementMap.Add(typeof(MetaforaAtributoID), 21);
-				createElementMap.Add(typeof(MetaforaClase), 22);
-				createElementMap.Add(typeof(MetaforaClaseAbstracta), 23);
-				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 24);
-				createElementMap.Add(typeof(MetaforaOperacionNormal), 25);
-				createElementMap.Add(typeof(MetaforaOperacionAbstracta), 26);
-				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 27);
-				createElementMap.Add(typeof(MetaforaClaseAsociacion), 28);
+				createElementMap.Add(typeof(JSRBBRProyectoIPSDiagram), 11);
+				createElementMap.Add(typeof(MetaforaRelacionHerencia), 12);
+				createElementMap.Add(typeof(MetaforaRelacionRelacional), 13);
+				createElementMap.Add(typeof(MetaforaRelacionInclusiva), 14);
+				createElementMap.Add(typeof(MetaforaRelacionReferencial), 15);
+				createElementMap.Add(typeof(MetaforaConectorAtributoID), 16);
+				createElementMap.Add(typeof(MetaforaConectorOperacionNormal), 17);
+				createElementMap.Add(typeof(MetaforaConectorOperacionAbstracta), 18);
+				createElementMap.Add(typeof(MetaforaConectorOperacionEnriquecida), 19);
+				createElementMap.Add(typeof(MetaforaAtributoID), 20);
+				createElementMap.Add(typeof(MetaforaClase), 21);
+				createElementMap.Add(typeof(MetaforaClaseAbstracta), 22);
+				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 23);
+				createElementMap.Add(typeof(MetaforaOperacionNormal), 24);
+				createElementMap.Add(typeof(MetaforaOperacionAbstracta), 25);
+				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 26);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -276,24 +269,22 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 8: return new ClaseEnriquecida(partition, propertyAssignments);
 				case 9: return new AtributoEnriquecido(partition, propertyAssignments);
 				case 10: return new OperacionEnriquecida(partition, propertyAssignments);
-				case 11: return new ClaseAsociacion(partition, propertyAssignments);
-				case 12: return new JSRBBRProyectoIPSDiagram(partition, propertyAssignments);
-				case 13: return new MetaforaRelacionHerencia(partition, propertyAssignments);
-				case 14: return new MetaforaRelacionRelacional(partition, propertyAssignments);
-				case 15: return new MetaforaRelacionInclusiva(partition, propertyAssignments);
-				case 16: return new MetaforaRelacionReferencial(partition, propertyAssignments);
-				case 17: return new MetaforaConectorAtributoID(partition, propertyAssignments);
-				case 18: return new MetaforaConectorOperacionNormal(partition, propertyAssignments);
-				case 19: return new MetaforaConectorOperacionAbstracta(partition, propertyAssignments);
-				case 20: return new MetaforaConectorOperacionEnriquecida(partition, propertyAssignments);
-				case 21: return new MetaforaAtributoID(partition, propertyAssignments);
-				case 22: return new MetaforaClase(partition, propertyAssignments);
-				case 23: return new MetaforaClaseAbstracta(partition, propertyAssignments);
-				case 24: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
-				case 25: return new MetaforaOperacionNormal(partition, propertyAssignments);
-				case 26: return new MetaforaOperacionAbstracta(partition, propertyAssignments);
-				case 27: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
-				case 28: return new MetaforaClaseAsociacion(partition, propertyAssignments);
+				case 11: return new JSRBBRProyectoIPSDiagram(partition, propertyAssignments);
+				case 12: return new MetaforaRelacionHerencia(partition, propertyAssignments);
+				case 13: return new MetaforaRelacionRelacional(partition, propertyAssignments);
+				case 14: return new MetaforaRelacionInclusiva(partition, propertyAssignments);
+				case 15: return new MetaforaRelacionReferencial(partition, propertyAssignments);
+				case 16: return new MetaforaConectorAtributoID(partition, propertyAssignments);
+				case 17: return new MetaforaConectorOperacionNormal(partition, propertyAssignments);
+				case 18: return new MetaforaConectorOperacionAbstracta(partition, propertyAssignments);
+				case 19: return new MetaforaConectorOperacionEnriquecida(partition, propertyAssignments);
+				case 20: return new MetaforaAtributoID(partition, propertyAssignments);
+				case 21: return new MetaforaClase(partition, propertyAssignments);
+				case 22: return new MetaforaClaseAbstracta(partition, propertyAssignments);
+				case 23: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
+				case 24: return new MetaforaOperacionNormal(partition, propertyAssignments);
+				case 25: return new MetaforaOperacionAbstracta(partition, propertyAssignments);
+				case 26: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -316,7 +307,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(14);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
 				createElementLinkMap.Add(typeof(TapizClasesHasClase), 0);
 				createElementLinkMap.Add(typeof(ClaseHasAtributo), 1);
 				createElementLinkMap.Add(typeof(ClaseHasOperacion), 2);
@@ -329,7 +320,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementLinkMap.Add(typeof(OperacionHasParametros), 9);
 				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasAtributoEnriquecido), 10);
 				createElementLinkMap.Add(typeof(ClaseHasAtributoID), 11);
-				createElementLinkMap.Add(typeof(ClaseAsociacionReferencesClaseReferencesTargetClase), 12);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -356,7 +346,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 9: return new OperacionHasParametros(partition, roleAssignments, propertyAssignments);
 				case 10: return new ClaseEnriquecidaHasAtributoEnriquecido(partition, roleAssignments, propertyAssignments);
 				case 11: return new ClaseHasAtributoID(partition, roleAssignments, propertyAssignments);
-				case 12: return new ClaseAsociacionReferencesClaseReferencesTargetClase(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
