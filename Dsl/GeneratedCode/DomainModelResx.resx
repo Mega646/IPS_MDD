@@ -1225,6 +1225,38 @@
     <value>Metafora Relacion Referencial</value>
     <comment>DisplayName for DomainClass &apos;MetaforaRelacionReferencial&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorAtributoID.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorAtributoID</value>
+    <comment>Description for DomainClass &apos;MetaforaConectorAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorAtributoID.DisplayName" xml:space="preserve">
+    <value>Metafora Conector Atributo ID</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaConectorAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionNormal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionNormal</value>
+    <comment>Description for DomainClass &apos;MetaforaConectorOperacionNormal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionNormal.DisplayName" xml:space="preserve">
+    <value>Metafora Conector Operacion Normal</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaConectorOperacionNormal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionAbstracta.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionAbstracta</value>
+    <comment>Description for DomainClass &apos;MetaforaConectorOperacionAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionAbstracta.DisplayName" xml:space="preserve">
+    <value>Metafora Conector Operacion Abstracta</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaConectorOperacionAbstracta&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionEnriquecida.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionEnriquecida</value>
+    <comment>Description for DomainClass &apos;MetaforaConectorOperacionEnriquecida&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionEnriquecida.DisplayName" xml:space="preserve">
+    <value>Metafora Conector Operacion Enriquecida</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaConectorOperacionEnriquecida&apos;</comment>
+  </data>
   <data name="FormatList" xml:space="preserve">
     <value>JSRBBRProyectoIPS (*.JSRBBR_DSLProyectoIPS)|*.JSRBBR_DSLProyectoIPS</value>
     <comment>A list of file format specifiers for the Save dialog box</comment>

@@ -660,6 +660,10 @@
         <ConnectorMoniker Name="MetaforaRelaciones" />
       </BaseConnector>
     </Connector>
+    <Connector Id="ff5dcd05-c82c-44db-a93e-66a75fd106a3" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorAtributoID" Name="MetaforaConectorAtributoID" DisplayName="Metafora Conector Atributo ID" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Conector Atributo ID" />
+    <Connector Id="9fea9c62-8e3b-4914-9c11-6e1ca73558fa" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionNormal" Name="MetaforaConectorOperacionNormal" DisplayName="Metafora Conector Operacion Normal" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Conector Operacion Normal" />
+    <Connector Id="7efc12c9-a4f5-4bf1-b170-114ef004f394" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionAbstracta" Name="MetaforaConectorOperacionAbstracta" DisplayName="Metafora Conector Operacion Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Conector Operacion Abstracta" />
+    <Connector Id="a9b386d9-cd45-4971-941a-97c801c16dd0" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionEnriquecida" Name="MetaforaConectorOperacionEnriquecida" DisplayName="Metafora Conector Operacion Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Conector Operacion Enriquecida" />
   </Connectors>
   <XmlSerializationBehavior Name="JSRBBRProyectoIPSSerializationBehavior" Namespace="UPM_IPS.JSRBBRProyectoIPS">
     <ClassData>
@@ -930,6 +934,18 @@
       </XmlClassData>
       <XmlClassData TypeName="MetaforaAtributoID" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaAtributoIDMoniker" ElementName="metaforaAtributoID" MonikerTypeName="MetaforaAtributoIDMoniker">
         <GeometryShapeMoniker Name="MetaforaAtributoID" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaConectorAtributoID" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaConectorAtributoIDMoniker" ElementName="metaforaConectorAtributoID" MonikerTypeName="MetaforaConectorAtributoIDMoniker">
+        <ConnectorMoniker Name="MetaforaConectorAtributoID" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaConectorOperacionNormal" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaConectorOperacionNormalMoniker" ElementName="metaforaConectorOperacionNormal" MonikerTypeName="MetaforaConectorOperacionNormalMoniker">
+        <ConnectorMoniker Name="MetaforaConectorOperacionNormal" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaConectorOperacionAbstracta" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaConectorOperacionAbstractaMoniker" ElementName="metaforaConectorOperacionAbstracta" MonikerTypeName="MetaforaConectorOperacionAbstractaMoniker">
+        <ConnectorMoniker Name="MetaforaConectorOperacionAbstracta" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaConectorOperacionEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaConectorOperacionEnriquecidaMoniker" ElementName="metaforaConectorOperacionEnriquecida" MonikerTypeName="MetaforaConectorOperacionEnriquecidaMoniker">
+        <ConnectorMoniker Name="MetaforaConectorOperacionEnriquecida" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -1304,6 +1320,22 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="MetaforaConectorAtributoID" />
+        <DomainRelationshipMoniker Name="ClaseHasAtributoID" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="MetaforaConectorOperacionNormal" />
+        <DomainRelationshipMoniker Name="ClaseHasOperacion" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="MetaforaConectorOperacionAbstracta" />
+        <DomainRelationshipMoniker Name="ClaseAbstractaHasOperacionAbstracta" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="MetaforaConectorOperacionEnriquecida" />
+        <DomainRelationshipMoniker Name="ClaseEnriquecidaHasOperacionEnriquecida" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>

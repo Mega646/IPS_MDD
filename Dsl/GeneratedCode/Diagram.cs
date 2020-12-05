@@ -351,6 +351,26 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia(this.Partition);
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID)
+			{
+				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorAtributoID newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorAtributoID(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasOperacion)
+			{
+				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionNormal newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionNormal(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaHasOperacionAbstracta)
+			{
+				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionAbstracta newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionAbstracta(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasOperacionEnriquecida)
+			{
+				global::UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionEnriquecida newShape = new global::UPM_IPS.JSRBBRProyectoIPS.MetaforaConectorOperacionEnriquecida(this.Partition);
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -821,6 +841,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasOperacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaHasOperacionAbstracta), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasOperacionEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -1719,6 +1743,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseIncludesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasAtributoID), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseHasOperacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaHasOperacionAbstracta), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecidaHasOperacionEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

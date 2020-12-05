@@ -20,10 +20,20 @@
           </claseInheritsClaseHija>
         </claseHija>
         <targetClase>
-          <claseReferencesTargetClase Id="8229bf7d-81da-4fba-a286-3c35b955095e" nombre="relacion" cardinalidad1="MN" cardinalidad2="c0">
+          <claseReferencesTargetClase Id="8229bf7d-81da-4fba-a286-3c35b955095e" nombre="relacion" cardinalidad1="c1N" cardinalidad2="c0">
             <claseEnriquecidaMoniker Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" />
           </claseReferencesTargetClase>
         </targetClase>
+        <claseComponente>
+          <claseIncludesTargetClase Id="d828ea47-f1c2-4dc8-8c16-4bee40ec4e30" cardinalidad1="c0N" cardinalidad2="c1">
+            <claseMoniker Id="612a25f9-f882-4a36-98c3-dd9de82d37b0" />
+          </claseIncludesTargetClase>
+        </claseComponente>
+        <claseRelacion>
+          <claseRelatesTargetClase Id="7c610247-d60d-44ec-aff1-5e6e9bf45c0b" cardinalidad1="c01" cardinalidad2="c0">
+            <claseMoniker Id="14f05f38-e45a-4d1a-ad5f-13def5135b1d" />
+          </claseRelatesTargetClase>
+        </claseRelacion>
         <atributoID>
           <claseHasAtributoID Id="967e2655-96d3-43c4-91cd-72d2e7425960">
             <atributoID Id="60d0088b-2e92-49ed-8471-cae093a564c1" nombre="id" modificador="privado" />
@@ -52,6 +62,18 @@
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="9a44a5ac-1c94-4625-abce-1407d0659ed7">
       <claseAbstracta Id="dd2f396e-857e-4639-866d-9808705b2993" nombre="Clase abstracta" />
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="4b32733d-1837-435e-bd20-a260510033d0">
+      <clase Id="612a25f9-f882-4a36-98c3-dd9de82d37b0" nombre="Clase 2">
+        <atributoID>
+          <claseHasAtributoID Id="861a8261-9d03-4ce4-a8fe-fd3eb8d951ba">
+            <atributoID Id="82fc52ea-7628-4327-996c-c8cec78b40b1" nombre="id" modificador="privado" />
+          </claseHasAtributoID>
+        </atributoID>
+      </clase>
+    </tapizClasesHasClase>
+    <tapizClasesHasClase Id="ead3b2cb-47f2-4aab-aa42-a399203c7b7c">
+      <clase Id="14f05f38-e45a-4d1a-ad5f-13def5135b1d" nombre="Clase 3" />
     </tapizClasesHasClase>
   </clase>
 </tapizClases>
