@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="cf1658ea-4189-47c4-8599-5932faaeb573" absoluteBounds="0, 0, 13.5, 8.5" name="Sample">
+<jSRBBRProyectoIPSDiagram dslVersion="1.0.0.0" Id="cf1658ea-4189-47c4-8599-5932faaeb573" absoluteBounds="0, 0, 12.5, 8.5" name="Sample">
   <tapizClasesMoniker Id="6d1e115d-38a8-4182-afb9-ac630eab1576" />
   <nestedChildShapes>
-    <metaforaClase Id="6c544fd4-534f-4a61-9db6-7ff90b60c869" absoluteBounds="3.75, 1.5, 1.5, 1.3593896484374999">
+    <metaforaClase Id="6c544fd4-534f-4a61-9db6-7ff90b60c869" absoluteBounds="3.75, 3.125, 1.5, 1.3593896484374999">
       <claseMoniker Id="5a400b9b-b638-4186-ad77-78389488adcf" />
       <nestedChildShapes>
-        <elementListCompartment Id="99e54f4e-426a-42d6-850d-63720d903d84" absoluteBounds="3.765, 2.51, 1.4700000000000002, 0.2493896484375" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="99e54f4e-426a-42d6-850d-63720d903d84" absoluteBounds="3.765, 4.135, 1.4700000000000002, 0.2493896484375" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaClase>
     <metaforaClaseEnriquecida Id="f97a3a11-e207-41f2-8c96-f55e61fb1bc3" absoluteBounds="9, 2.625, 1.5, 2.0033821614583331">
@@ -15,23 +15,42 @@
         <elementListCompartment Id="3b8f9678-f8d8-4f9e-bed3-390d7f82b45b" absoluteBounds="9.015, 4.0866910807291665, 1.4700000000000002, 0.44169108072916663" name="AtributosEnriquecidos" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaClaseEnriquecida>
-    <metaforaClaseAbstracta Id="3f1d7566-0c26-432e-8e9e-5679e0108769" absoluteBounds="6.625, 5.125, 1.5, 1.3593896484374994">
+    <metaforaClaseAbstracta Id="3f1d7566-0c26-432e-8e9e-5679e0108769" absoluteBounds="3.75, 6.75, 1.5, 1.3593896484374994">
       <claseAbstractaMoniker Id="dd2f396e-857e-4639-866d-9808705b2993" />
       <nestedChildShapes>
-        <elementListCompartment Id="ca154b61-0503-4bab-ad43-4ce87b8e2d12" absoluteBounds="6.64, 6.135, 1.4700000000000002, 0.2493896484375" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ca154b61-0503-4bab-ad43-4ce87b8e2d12" absoluteBounds="3.7649999999999997, 7.76, 1.4700000000000002, 0.2493896484375" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaClaseAbstracta>
-    <metaforaOperacionNormal Id="c67a46a2-d0c0-4756-a68b-9c4ebcf44d1b" absoluteBounds="3.375, 3.375, 1.5, 1.5516910807291664">
+    <metaforaOperacionNormal Id="c67a46a2-d0c0-4756-a68b-9c4ebcf44d1b" absoluteBounds="1.75, 1.625, 1.5, 0.75169108072916657">
       <operacionNormalMoniker Id="6c4bcbba-9004-4eb2-bd72-906276eb3920" />
       <nestedChildShapes>
-        <elementListCompartment Id="31312d57-1de3-4197-8cee-c4565bccc057" absoluteBounds="3.3899999999999997, 4.385, 1.4700000000000002, 0.44169108072916663" name="Parametros" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="31312d57-1de3-4197-8cee-c4565bccc057" absoluteBounds="1.7650000000000001, 1.835, 1.4700000000000002, 0.44169108072916669" name="Parametros" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaOperacionNormal>
-    <metaforaOperacionEnriquecida Id="99029452-334d-4bc9-b2fa-2849ae2fa888" absoluteBounds="11.75, 2.75, 1.5, 1.3593896484374994">
+    <metaforaOperacionEnriquecida Id="99029452-334d-4bc9-b2fa-2849ae2fa888" absoluteBounds="10.75, 3, 1.5, 0.5593896484375">
       <operacionEnriquecidaMoniker Id="cb1f3cf1-a28a-4f9f-b814-cbb211394fd5" />
       <nestedChildShapes>
-        <elementListCompartment Id="93d64fe9-74c3-480f-afc3-a87fbb8d0ccb" absoluteBounds="11.765, 3.76, 1.4700000000000002, 0.2493896484375" name="Parametros" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="93d64fe9-74c3-480f-afc3-a87fbb8d0ccb" absoluteBounds="10.765, 3.21, 1.4700000000000002, 0.2493896484375" name="Parametros" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaOperacionEnriquecida>
+    <metaforaAtributoID Id="918b9c42-0b56-4cdb-9267-a02a2cec4a0b" absoluteBounds="4.25, 0.75, 0.5, 0.5">
+      <atributoIDMoniker Id="60d0088b-2e92-49ed-8471-cae093a564c1" />
+    </metaforaAtributoID>
+    <metaforaRelacionHerencia Id="183c62f2-3736-4710-adc5-cbf80ae97e1f" edgePoints="[(4.5 : 4.4843896484375); (4.5 : 6.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <claseInheritsClaseHijaMoniker Id="34d11181-5f37-4eb4-84e2-19a0e484f1af" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaClaseMoniker Id="6c544fd4-534f-4a61-9db6-7ff90b60c869" />
+        <metaforaClaseAbstractaMoniker Id="3f1d7566-0c26-432e-8e9e-5679e0108769" />
+      </nodes>
+    </metaforaRelacionHerencia>
+    <metaforaRelacionRelacional Id="352fe61e-bd01-4688-8228-646c6bd3a5fd" edgePoints="[(5.25 : 3.80469482421875); (9 : 3.80469482421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <claseReferencesTargetClaseMoniker Id="8229bf7d-81da-4fba-a286-3c35b955095e" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaClaseMoniker Id="6c544fd4-534f-4a61-9db6-7ff90b60c869" />
+        <metaforaClaseEnriquecidaMoniker Id="f97a3a11-e207-41f2-8c96-f55e61fb1bc3" />
+      </nodes>
+    </metaforaRelacionRelacional>
   </nestedChildShapes>
 </jSRBBRProyectoIPSDiagram>

@@ -2519,6 +2519,140 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 		
 		#endregion
+		#region cardinalidad1Calculada domain property code
+		
+		/// <summary>
+		/// cardinalidad1Calculada domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid cardinalidad1CalculadaDomainPropertyId = new global::System.Guid(0xc786b7c3, 0x91fe, 0x441b, 0xab, 0x93, 0xe5, 0xf6, 0x9c, 0x76, 0x1b, 0x32);
+		
+		/// <summary>
+		/// Gets or sets the value of cardinalidad1Calculada domain property.
+		/// Description for
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1 Calculada
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1Calculada.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1Calculada.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("c786b7c3-91fe-441b-ab93-e5f69c761b32")]
+		public global::System.String cardinalidad1Calculada
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalidad1CalculadaPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseReferencesTargetClases.cardinalidad1Calculada domain property.
+		/// </summary>
+		internal sealed partial class cardinalidad1CalculadaPropertyHandler : DslModeling::CalculatedPropertyValueHandler<ClaseReferencesTargetClases, global::System.String>
+		{
+			private cardinalidad1CalculadaPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidad1Calculada domain property value handler.
+			/// </summary>
+			public static readonly cardinalidad1CalculadaPropertyHandler Instance = new cardinalidad1CalculadaPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidad1Calculada domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return cardinalidad1CalculadaDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClaseReferencesTargetClases element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for cardinalidad1Calculada because its Kind is
+				// set to Calculated. Please provide the Getcardinalidad1CalculadaValue()
+				// method on the domain class.
+				return element.Getcardinalidad1CalculadaValue();
+			}
+		
+		}
+		
+		#endregion
+		#region cardinalidad2Calculada domain property code
+		
+		/// <summary>
+		/// cardinalidad2Calculada domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid cardinalidad2CalculadaDomainPropertyId = new global::System.Guid(0xd918b99d, 0x8867, 0x4bc0, 0x93, 0x5a, 0x30, 0xf4, 0x49, 0xfc, 0xcc, 0x77);
+		
+		/// <summary>
+		/// Gets or sets the value of cardinalidad2Calculada domain property.
+		/// Description for
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2 Calculada
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2Calculada.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2Calculada.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("d918b99d-8867-4bc0-935a-30f449fccc77")]
+		public global::System.String cardinalidad2Calculada
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalidad2CalculadaPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseReferencesTargetClases.cardinalidad2Calculada domain property.
+		/// </summary>
+		internal sealed partial class cardinalidad2CalculadaPropertyHandler : DslModeling::CalculatedPropertyValueHandler<ClaseReferencesTargetClases, global::System.String>
+		{
+			private cardinalidad2CalculadaPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidad2Calculada domain property value handler.
+			/// </summary>
+			public static readonly cardinalidad2CalculadaPropertyHandler Instance = new cardinalidad2CalculadaPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidad2Calculada domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return cardinalidad2CalculadaDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClaseReferencesTargetClases element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for cardinalidad2Calculada because its Kind is
+				// set to Calculated. Please provide the Getcardinalidad2CalculadaValue()
+				// method on the domain class.
+				return element.Getcardinalidad2CalculadaValue();
+			}
+		
+		}
+		
+		#endregion
 		#region SourceClase link accessor
 		/// <summary>
 		/// Get the list of ClaseReferencesTargetClases links to a Clase.

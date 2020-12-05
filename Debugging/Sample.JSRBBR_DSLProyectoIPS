@@ -14,6 +14,21 @@
             </operacionNormal>
           </claseHasOperacion>
         </operacion>
+        <claseHija>
+          <claseInheritsClaseHija Id="34d11181-5f37-4eb4-84e2-19a0e484f1af" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseAbstractaMoniker Id="dd2f396e-857e-4639-866d-9808705b2993" />
+          </claseInheritsClaseHija>
+        </claseHija>
+        <targetClase>
+          <claseReferencesTargetClase Id="8229bf7d-81da-4fba-a286-3c35b955095e" nombre="relacion" cardinalidad1="MN" cardinalidad2="c0">
+            <claseEnriquecidaMoniker Id="4802c9bb-d5a0-4e07-8774-8e0d8afbb1c3" />
+          </claseReferencesTargetClase>
+        </targetClase>
+        <atributoID>
+          <claseHasAtributoID Id="967e2655-96d3-43c4-91cd-72d2e7425960">
+            <atributoID Id="60d0088b-2e92-49ed-8471-cae093a564c1" nombre="id" modificador="privado" />
+          </claseHasAtributoID>
+        </atributoID>
       </clase>
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="baf43c50-4668-424f-997e-bf676fa5c86e">

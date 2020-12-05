@@ -83,6 +83,7 @@
     </None>
     <Compile Include="DesignerCustomization\AtributoPadre.cs" />
     <Compile Include="DesignerCustomization\ClaseInheritsClaseHija.cs" />
+    <Compile Include="DesignerCustomization\ClaseReferencesTargetClases.cs" />
     <Compile Include="DesignerCustomization\Operacion.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
@@ -166,10 +167,12 @@
     <Content Include="Resources\asociativa.bmp" />
     <Content Include="Resources\atributo.bmp" />
     <Content Include="Resources\atributoEnriquecido.bmp" />
+    <Content Include="Resources\atributoId.bmp" />
     <Content Include="Resources\enriquecida.bmp" />
     <Content Include="Resources\herencia.bmp" />
     <Content Include="Resources\inclusiva.bmp" />
     <Content Include="Resources\operacion.bmp" />
+    <Content Include="Resources\operacionAbstracta.bmp" />
     <Content Include="Resources\operacionEnriquecida.bmp" />
     <Content Include="Resources\referencial.bmp" />
     <None Include="DslDefinition.dsl.diagram">

@@ -424,6 +424,16 @@
             <DomainEnumerationMoniker Name="cardinalidades" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="c786b7c3-91fe-441b-ab93-e5f69c761b32" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1 Calculada" Name="cardinalidad1Calculada" DisplayName="Cardinalidad1 Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d918b99d-8867-4bc0-935a-30f449fccc77" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2 Calculada" Name="cardinalidad2Calculada" DisplayName="Cardinalidad2 Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <Source>
         <DomainRole Id="9263fe80-beb5-4140-9cfd-445a3098c316" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="TargetClases" PropertyDisplayName="Target Clases">
@@ -578,37 +588,42 @@
       </ShapeHasDecorators>
       <Compartment Name="Atributos" />
     </CompartmentShape>
-    <CompartmentShape Id="2420f6a4-3316-4caa-9739-3fb6567851c3" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta" Name="MetaforaClaseAbstracta" DisplayName="Metafora Clase Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Abstracta" FillColor="DarkGray" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <CompartmentShape Id="2420f6a4-3316-4caa-9739-3fb6567851c3" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseAbstracta" Name="MetaforaClaseAbstracta" DisplayName="Metafora Clase Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Abstracta" FillColor="DarkGray" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="10" />
       </ShapeHasDecorators>
       <Compartment Name="Atributos" />
     </CompartmentShape>
-    <CompartmentShape Id="a6cb73d0-58a4-4c4c-b107-18f467b0926b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida" Name="MetaforaClaseEnriquecida" DisplayName="Metafora Clase Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Enriquecida" FillColor="Yellow" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
+    <CompartmentShape Id="a6cb73d0-58a4-4c4c-b107-18f467b0926b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClaseEnriquecida" Name="MetaforaClaseEnriquecida" DisplayName="Metafora Clase Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Clase Enriquecida" FillColor="Yellow" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="10" />
       </ShapeHasDecorators>
       <Compartment Name="Atributos" />
       <Compartment Name="AtributosEnriquecidos" />
     </CompartmentShape>
-    <CompartmentShape Id="abce91ca-f492-4d50-b93c-8a384cd11e18" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal" Name="MetaforaOperacionNormal" DisplayName="Metafora Operacion Normal" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Normal" InitialHeight="1" Geometry="Rectangle">
+    <CompartmentShape Id="abce91ca-f492-4d50-b93c-8a384cd11e18" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionNormal" Name="MetaforaOperacionNormal" DisplayName="Metafora Operacion Normal" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Normal" InitialHeight="0.2" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
       <Compartment Name="Parametros" />
     </CompartmentShape>
-    <CompartmentShape Id="a7d02a54-ba32-43fb-8cc4-06fd0c7d17ab" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionAbstracta" Name="MetaforaOperacionAbstracta" DisplayName="Metafora Operacion Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Abstracta" InitialHeight="1" Geometry="Rectangle">
+    <CompartmentShape Id="a7d02a54-ba32-43fb-8cc4-06fd0c7d17ab" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionAbstracta" Name="MetaforaOperacionAbstracta" DisplayName="Metafora Operacion Abstracta" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Abstracta" InitialHeight="0.2" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
       <Compartment Name="Parametros" />
     </CompartmentShape>
-    <CompartmentShape Id="30a59c64-d13a-4400-ae5c-fa85f45b438d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida" Name="MetaforaOperacionEnriquecida" DisplayName="Metafora Operacion Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Enriquecida" InitialHeight="1" Geometry="Rectangle">
+    <CompartmentShape Id="30a59c64-d13a-4400-ae5c-fa85f45b438d" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaOperacionEnriquecida" Name="MetaforaOperacionEnriquecida" DisplayName="Metafora Operacion Enriquecida" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Operacion Enriquecida" InitialHeight="0.2" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
       <Compartment Name="Parametros" />
     </CompartmentShape>
+    <GeometryShape Id="ab05264a-a45c-4a2f-91c6-8694b60fb3ff" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributoID" Name="MetaforaAtributoID" DisplayName="Metafora Atributo ID" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Atributo ID" InitialWidth="0.5" InitialHeight="0.5" Geometry="Ellipse">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold, Underline" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="524900f2-8fcc-44ec-a20b-541ad889bc73" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia" Name="MetaforaRelacionHerencia" DisplayName="Metafora Relacion Herencia" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Herencia" TargetEndStyle="EmptyArrow">
@@ -781,6 +796,12 @@
           <XmlPropertyData XmlName="cardinalidad2">
             <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidad1Calculada" Representation="Ignore">
+            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1Calculada" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidad2Calculada" Representation="Ignore">
+            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2Calculada" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="MetaforaRelaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaRelacionesMoniker" ElementName="metaforaRelaciones" MonikerTypeName="MetaforaRelacionesMoniker">
@@ -906,6 +927,9 @@
       </XmlClassData>
       <XmlClassData TypeName="MetaforaOperacionEnriquecida" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaOperacionEnriquecidaMoniker" ElementName="metaforaOperacionEnriquecida" MonikerTypeName="MetaforaOperacionEnriquecidaMoniker">
         <CompartmentShapeMoniker Name="MetaforaOperacionEnriquecida" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaAtributoID" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaAtributoIDMoniker" ElementName="metaforaAtributoID" MonikerTypeName="MetaforaAtributoIDMoniker">
+        <GeometryShapeMoniker Name="MetaforaAtributoID" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -1160,6 +1184,21 @@
           </PropertyDisplayed>
         </CompartmentMap>
       </CompartmentShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AtributoID" />
+        <ParentElementPath>
+          <DomainPath>ClaseHasAtributoID.Clase/!Clase/TapizClasesHasClase.TapizClases/!TapizClases</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaAtributoID/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoPadre/nombreCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaAtributoID" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -1189,7 +1228,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad1Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1Calculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1197,7 +1236,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad2Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2Calculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1217,7 +1256,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad1Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1Calculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1225,7 +1264,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad2Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2Calculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1245,7 +1284,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad1Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1Calculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1253,7 +1292,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad2Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2Calculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1279,14 +1318,17 @@
       <ElementTool Name="Clase" ToolboxIcon="Resources\clase.bmp" Caption="Clase" Tooltip="Crea una clase" HelpKeyword="Clase">
         <DomainClassMoniker Name="Clase" />
       </ElementTool>
-      <ElementTool Name="ClaseAbstracta" ToolboxIcon="Resources\abstracta.bmp" Caption="ClaseAbstracta" Tooltip="Crea una clase abstracta" HelpKeyword="ClaseAbstracta">
+      <ElementTool Name="ClaseAbstracta" ToolboxIcon="Resources\abstracta.bmp" Caption="Clase Abstracta" Tooltip="Crea una clase abstracta" HelpKeyword="ClaseAbstracta">
         <DomainClassMoniker Name="ClaseAbstracta" />
-      </ElementTool>
-      <ElementTool Name="Atributo" ToolboxIcon="Resources\atributo.bmp" Caption="Atributo" Tooltip="Añadir atributo a una clase" HelpKeyword="Atributo">
-        <DomainClassMoniker Name="Atributo" />
       </ElementTool>
       <ElementTool Name="Operacion" ToolboxIcon="Resources\operacion.bmp" Caption="Operación" Tooltip="Operacion" HelpKeyword="Operacion">
         <DomainClassMoniker Name="OperacionNormal" />
+      </ElementTool>
+      <ElementTool Name="OperacionAbstracta" ToolboxIcon="Resources\operacionAbstracta.bmp" Caption="Operacion Abstracta" Tooltip="Operacion Abstracta" HelpKeyword="OperacionAbstracta">
+        <DomainClassMoniker Name="OperacionAbstracta" />
+      </ElementTool>
+      <ElementTool Name="AtributoID" ToolboxIcon="Resources\atributoId.bmp" Caption="Atributo ID" Tooltip="Atributo ID" HelpKeyword="AtributoID">
+        <DomainClassMoniker Name="AtributoID" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Relaciones">
@@ -1306,9 +1348,6 @@
     <ToolboxTab TabText="Clase enriquecida">
       <ElementTool Name="ClaseEnriquecida" ToolboxIcon="Resources\enriquecida.bmp" Caption="Clase Enriquecida" Tooltip="Clase Enriquecida" HelpKeyword="ClaseEnriquecida">
         <DomainClassMoniker Name="ClaseEnriquecida" />
-      </ElementTool>
-      <ElementTool Name="AtributoEnriquecido" ToolboxIcon="Resources\atributoEnriquecido.bmp" Caption="Atributo Enriquecido" Tooltip="Atributo Enriquecido" HelpKeyword="AtributoEnriquecido">
-        <DomainClassMoniker Name="AtributoEnriquecido" />
       </ElementTool>
       <ElementTool Name="OperacionEnriquecida" ToolboxIcon="Resources\operacionEnriquecida.bmp" Caption="Operacion Enriquecida" Tooltip="Operacion Enriquecida" HelpKeyword="OperacionEnriquecida">
         <DomainClassMoniker Name="OperacionEnriquecida" />

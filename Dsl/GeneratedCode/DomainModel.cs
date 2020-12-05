@@ -99,6 +99,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				typeof(MetaforaRelacionRelacional),
 				typeof(MetaforaRelacionInclusiva),
 				typeof(MetaforaRelacionReferencial),
+				typeof(MetaforaAtributoID),
 				typeof(MetaforaClase),
 				typeof(MetaforaClaseAbstracta),
 				typeof(MetaforaClaseEnriquecida),
@@ -152,6 +153,8 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "nombre", ClaseReferencesTargetClases.nombreDomainPropertyId, typeof(ClaseReferencesTargetClases.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad1", ClaseReferencesTargetClases.cardinalidad1DomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad1PropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad2", ClaseReferencesTargetClases.cardinalidad2DomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad2PropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad1Calculada", ClaseReferencesTargetClases.cardinalidad1CalculadaDomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad1CalculadaPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad2Calculada", ClaseReferencesTargetClases.cardinalidad2CalculadaDomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad2CalculadaPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -209,7 +212,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(25);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(26);
 				createElementMap.Add(typeof(TapizClases), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(Atributo), 2);
@@ -226,12 +229,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				createElementMap.Add(typeof(MetaforaRelacionRelacional), 13);
 				createElementMap.Add(typeof(MetaforaRelacionInclusiva), 14);
 				createElementMap.Add(typeof(MetaforaRelacionReferencial), 15);
-				createElementMap.Add(typeof(MetaforaClase), 16);
-				createElementMap.Add(typeof(MetaforaClaseAbstracta), 17);
-				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 18);
-				createElementMap.Add(typeof(MetaforaOperacionNormal), 19);
-				createElementMap.Add(typeof(MetaforaOperacionAbstracta), 20);
-				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 21);
+				createElementMap.Add(typeof(MetaforaAtributoID), 16);
+				createElementMap.Add(typeof(MetaforaClase), 17);
+				createElementMap.Add(typeof(MetaforaClaseAbstracta), 18);
+				createElementMap.Add(typeof(MetaforaClaseEnriquecida), 19);
+				createElementMap.Add(typeof(MetaforaOperacionNormal), 20);
+				createElementMap.Add(typeof(MetaforaOperacionAbstracta), 21);
+				createElementMap.Add(typeof(MetaforaOperacionEnriquecida), 22);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -261,12 +265,13 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				case 13: return new MetaforaRelacionRelacional(partition, propertyAssignments);
 				case 14: return new MetaforaRelacionInclusiva(partition, propertyAssignments);
 				case 15: return new MetaforaRelacionReferencial(partition, propertyAssignments);
-				case 16: return new MetaforaClase(partition, propertyAssignments);
-				case 17: return new MetaforaClaseAbstracta(partition, propertyAssignments);
-				case 18: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
-				case 19: return new MetaforaOperacionNormal(partition, propertyAssignments);
-				case 20: return new MetaforaOperacionAbstracta(partition, propertyAssignments);
-				case 21: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
+				case 16: return new MetaforaAtributoID(partition, propertyAssignments);
+				case 17: return new MetaforaClase(partition, propertyAssignments);
+				case 18: return new MetaforaClaseAbstracta(partition, propertyAssignments);
+				case 19: return new MetaforaClaseEnriquecida(partition, propertyAssignments);
+				case 20: return new MetaforaOperacionNormal(partition, propertyAssignments);
+				case 21: return new MetaforaOperacionAbstracta(partition, propertyAssignments);
+				case 22: return new MetaforaOperacionEnriquecida(partition, propertyAssignments);
 				default: return null;
 			}
 		}

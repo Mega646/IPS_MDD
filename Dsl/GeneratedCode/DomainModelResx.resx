@@ -717,6 +717,22 @@
     <value>Cardinalidad2</value>
     <comment>DisplayName for DomainProperty &apos;cardinalidad2&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1Calculada.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1 Calculada</value>
+    <comment>Description for DomainProperty &apos;cardinalidad1Calculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1Calculada.DisplayName" xml:space="preserve">
+    <value>Cardinalidad1 Calculada</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidad1Calculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2Calculada.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2 Calculada</value>
+    <comment>Description for DomainProperty &apos;cardinalidad2Calculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2Calculada.DisplayName" xml:space="preserve">
+    <value>Cardinalidad2 Calculada</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidad2Calculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/SourceClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.SourceClase</value>
     <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesTargetClases&apos;</comment>
@@ -1137,6 +1153,18 @@
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributoID.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributoID</value>
+    <comment>Description for DomainClass &apos;MetaforaAtributoID&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaAtributoID.DisplayName" xml:space="preserve">
+    <value>Metafora Atributo ID</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaAtributoID&apos;</comment>
+  </data>
+  <data name="MetaforaAtributoIDnombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia</value>
     <comment>Description for DomainClass &apos;MetaforaRelacionHerencia&apos;</comment>
@@ -1226,19 +1254,11 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ClaseAbstractaToolboxItem" xml:space="preserve">
-    <value>ClaseAbstracta</value>
+    <value>Clase Abstracta</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ClaseAbstractaToolboxTooltip" xml:space="preserve">
     <value>Crea una clase abstracta</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="AtributoToolboxItem" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="AtributoToolboxTooltip" xml:space="preserve">
-    <value>Añadir atributo a una clase</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="OperacionToolboxItem" xml:space="preserve">
@@ -1247,6 +1267,22 @@
   </data>
   <data name="OperacionToolboxTooltip" xml:space="preserve">
     <value>Operacion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="OperacionAbstractaToolboxItem" xml:space="preserve">
+    <value>Operacion Abstracta</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="OperacionAbstractaToolboxTooltip" xml:space="preserve">
+    <value>Operacion Abstracta</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoIDToolboxItem" xml:space="preserve">
+    <value>Atributo ID</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoIDToolboxTooltip" xml:space="preserve">
+    <value>Atributo ID</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="RelacionesToolboxTab" xml:space="preserve">
@@ -1295,14 +1331,6 @@
   </data>
   <data name="ClaseEnriquecidaToolboxTooltip" xml:space="preserve">
     <value>Clase Enriquecida</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="AtributoEnriquecidoToolboxItem" xml:space="preserve">
-    <value>Atributo Enriquecido</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="AtributoEnriquecidoToolboxTooltip" xml:space="preserve">
-    <value>Atributo Enriquecido</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="OperacionEnriquecidaToolboxItem" xml:space="preserve">
@@ -1446,12 +1474,16 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\abstracta.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
   <data name="OperacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\operacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="OperacionAbstractaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\operacionAbstracta.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoIDToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\atributoId.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="HerenciaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
@@ -1472,10 +1504,6 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="ClaseEnriquecidaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\enriquecida.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="AtributoEnriquecidoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\atributoEnriquecido.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="OperacionEnriquecidaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
