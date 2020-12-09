@@ -153,8 +153,6 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainMemberInfo(typeof(AtributoPadre), "nombreCalculado", AtributoPadre.nombreCalculadoDomainPropertyId, typeof(AtributoPadre.nombreCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "disjuntaSolapada", ClaseInheritsClaseHija.disjuntaSolapadaDomainPropertyId, typeof(ClaseInheritsClaseHija.disjuntaSolapadaPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "totalParcial", ClaseInheritsClaseHija.totalParcialDomainPropertyId, typeof(ClaseInheritsClaseHija.totalParcialPropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "disjuntaSolapadaCalculada", ClaseInheritsClaseHija.disjuntaSolapadaCalculadaDomainPropertyId, typeof(ClaseInheritsClaseHija.disjuntaSolapadaCalculadaPropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "totalParcialCalculada", ClaseInheritsClaseHija.totalParcialCalculadaDomainPropertyId, typeof(ClaseInheritsClaseHija.totalParcialCalculadaPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "nombre", ClaseReferencesTargetClases.nombreDomainPropertyId, typeof(ClaseReferencesTargetClases.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad1", ClaseReferencesTargetClases.cardinalidad1DomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad1PropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad2", ClaseReferencesTargetClases.cardinalidad2DomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad2PropertyHandler)),
@@ -785,30 +783,30 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 namespace UPM_IPS.JSRBBRProyectoIPS
 {
 	/// <summary>
-	/// DomainEnumeration: modificadorAtr1
-	/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1
+	/// DomainEnumeration: atributoBool
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool
 	/// </summary>
 	[global::System.CLSCompliant(true)]
-	public enum modificadorAtr1
+	public enum atributoBool
 	{
 		/// <summary>
-		/// publico
-		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.publico
+		/// text
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.text
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/publico.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		publico = 2,
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.atributoBool/text.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		text,
 		/// <summary>
-		/// privado
-		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.privado
+		/// radioButton
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.radioButton
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/privado.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		privado = 0,
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.atributoBool/radioButton.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		radioButton,
 		/// <summary>
-		/// protegido
-		/// Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.protegido
+		/// checkbox
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.checkbox
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/protegido.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		protegido = 1,
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.atributoBool/checkbox.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		checkbox,
 	}
 }
 

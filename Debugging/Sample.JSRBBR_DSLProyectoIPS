@@ -104,10 +104,10 @@
         </claseComponente>
         <atributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="5995d2ae-f6b9-453c-8982-b6a93c082309">
-            <atributoEnriquecido Id="47cf68ed-eefc-441c-b636-0490f721e821" nombre="medallas" modificador="privado" />
+            <atributoEnriquecido Id="47cf68ed-eefc-441c-b636-0490f721e821" nombre="medallas" modificador="privado" booleano="true" />
           </claseEnriquecidaHasAtributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="e5d48929-78fa-4e50-9280-4ef9afd0a933">
-            <atributoEnriquecido Id="e462f5e0-9583-41a7-aa4d-4da4dc124c59" nombre="rango" modificador="privado" />
+            <atributoEnriquecido Id="e462f5e0-9583-41a7-aa4d-4da4dc124c59" nombre="rango" modificador="privado" booleano="false" />
           </claseEnriquecidaHasAtributoEnriquecido>
         </atributoEnriquecido>
       </claseEnriquecida>
@@ -176,10 +176,10 @@
         </operacionEnriquecida>
         <atributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="d2da7714-8a86-4123-ac90-3ac3c4797c49">
-            <atributoEnriquecido Id="ffd153a3-8732-487d-bbd6-c61260438450" nombre="menu" modificador="privado" />
+            <atributoEnriquecido Id="ffd153a3-8732-487d-bbd6-c61260438450" nombre="menu" modificador="privado" booleano="false" />
           </claseEnriquecidaHasAtributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="85c4cae5-b060-4aea-b7b8-61e966bf022d">
-            <atributoEnriquecido Id="f7d312a7-0ef0-4aa6-83e1-2ed99a9e72d7" nombre="servicioDeHabitaciones" modificador="privado" booleano="asd" />
+            <atributoEnriquecido Id="f7d312a7-0ef0-4aa6-83e1-2ed99a9e72d7" nombre="servicioDeHabitaciones" modificador="privado" booleano="false" />
           </claseEnriquecidaHasAtributoEnriquecido>
         </atributoEnriquecido>
       </claseEnriquecida>

@@ -534,10 +534,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.disjuntaSolapadaCalculadaDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.disjuntaSolapadaDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "disjuntaSolapadaDec").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.totalParcialCalculadaDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.totalParcialDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "totalParcialDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -1663,7 +1663,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			{
 				if(e == null) throw new global::System.ArgumentNullException("e");
 				
-				if (e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.disjuntaSolapadaCalculadaDomainPropertyId)
+				if (e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.disjuntaSolapadaDomainPropertyId)
 				{
 					DslDiagrams::Decorator decorator = global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia.FindMetaforaRelacionHerenciaDecorator("disjuntaSolapadaDec");
 					if(decorator != null)
@@ -1671,7 +1671,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.totalParcialCalculadaDomainPropertyId)
+				else if (e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.totalParcialDomainPropertyId)
 				{
 					DslDiagrams::Decorator decorator = global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia.FindMetaforaRelacionHerenciaDecorator("totalParcialDec");
 					if(decorator != null)

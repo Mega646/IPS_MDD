@@ -525,22 +525,6 @@
     <value>Total Parcial</value>
     <comment>DisplayName for DomainProperty &apos;totalParcial&apos; on DomainClass &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/disjuntaSolapadaCalculada.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.Disjunta Solapada Calculada</value>
-    <comment>Description for DomainProperty &apos;disjuntaSolapadaCalculada&apos; on DomainClass &apos;ClaseInheritsClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/disjuntaSolapadaCalculada.DisplayName" xml:space="preserve">
-    <value>Disjunta Solapada Calculada</value>
-    <comment>DisplayName for DomainProperty &apos;disjuntaSolapadaCalculada&apos; on DomainClass &apos;ClaseInheritsClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/totalParcialCalculada.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.Total Parcial Calculada</value>
-    <comment>Description for DomainProperty &apos;totalParcialCalculada&apos; on DomainClass &apos;ClaseInheritsClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/totalParcialCalculada.DisplayName" xml:space="preserve">
-    <value>Total Parcial Calculada</value>
-    <comment>DisplayName for DomainProperty &apos;totalParcialCalculada&apos; on DomainClass &apos;ClaseInheritsClaseHija&apos;</comment>
-  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/SourceClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase</value>
     <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
@@ -1037,29 +1021,29 @@
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.protegido</value>
     <comment>Description for EnumerationLiteral &apos;protegido&apos; on DomainEnumeration &apos;modificadorAtr&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/publico.DisplayName" xml:space="preserve">
-    <value>publico</value>
-    <comment>Display name for EnumerationLiteral &apos;publico&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.atributoBool/text.DisplayName" xml:space="preserve">
+    <value>text</value>
+    <comment>Display name for EnumerationLiteral &apos;text&apos; on DomainEnumeration &apos;atributoBool&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/publico.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.publico</value>
-    <comment>Description for EnumerationLiteral &apos;publico&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.atributoBool/text.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.text</value>
+    <comment>Description for EnumerationLiteral &apos;text&apos; on DomainEnumeration &apos;atributoBool&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/privado.DisplayName" xml:space="preserve">
-    <value>privado</value>
-    <comment>Display name for EnumerationLiteral &apos;privado&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.atributoBool/radioButton.DisplayName" xml:space="preserve">
+    <value>radioButton</value>
+    <comment>Display name for EnumerationLiteral &apos;radioButton&apos; on DomainEnumeration &apos;atributoBool&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/privado.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.privado</value>
-    <comment>Description for EnumerationLiteral &apos;privado&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.atributoBool/radioButton.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.radioButton</value>
+    <comment>Description for EnumerationLiteral &apos;radioButton&apos; on DomainEnumeration &apos;atributoBool&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/protegido.DisplayName" xml:space="preserve">
-    <value>protegido</value>
-    <comment>Display name for EnumerationLiteral &apos;protegido&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.atributoBool/checkbox.DisplayName" xml:space="preserve">
+    <value>checkbox</value>
+    <comment>Display name for EnumerationLiteral &apos;checkbox&apos; on DomainEnumeration &apos;atributoBool&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1/protegido.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.protegido</value>
-    <comment>Description for EnumerationLiteral &apos;protegido&apos; on DomainEnumeration &apos;modificadorAtr1&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.atributoBool/checkbox.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.checkbox</value>
+    <comment>Description for EnumerationLiteral &apos;checkbox&apos; on DomainEnumeration &apos;atributoBool&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase</value>

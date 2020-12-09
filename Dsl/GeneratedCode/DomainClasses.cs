@@ -2306,7 +2306,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for booleano
 		/// </summary>
-		private global::System.String booleanoPropertyStorage = string.Empty;
+		private atributoBool booleanoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of booleano domain property.
@@ -2315,7 +2315,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/booleano.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/booleano.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("ab7f1273-ff6e-4c03-a0d2-785eae9eee95")]
-		public global::System.String booleano
+		public atributoBool booleano
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2331,7 +2331,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the AtributoEnriquecido.booleano domain property.
 		/// </summary>
-		internal sealed partial class booleanoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, global::System.String>
+		internal sealed partial class booleanoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, atributoBool>
 		{
 			private booleanoPropertyHandler() { }
 		
@@ -2357,7 +2357,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(AtributoEnriquecido element)
+			public override sealed atributoBool GetValue(AtributoEnriquecido element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.booleanoPropertyStorage;
@@ -2368,11 +2368,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(AtributoEnriquecido element, global::System.String newValue)
+			public override sealed void SetValue(AtributoEnriquecido element, atributoBool newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				atributoBool oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

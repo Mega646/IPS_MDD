@@ -176,7 +176,7 @@
         </DomainProperty>
         <DomainProperty Id="ab7f1273-ff6e-4c03-a0d2-785eae9eee95" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Booleano" Name="booleano" DisplayName="Booleano">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="atributoBool" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -311,16 +311,6 @@
         <DomainProperty Id="deed7302-79b0-423f-a397-dc4775b5fd55" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.Total Parcial" Name="totalParcial" DisplayName="Total Parcial">
           <Type>
             <DomainEnumerationMoniker Name="totalParcial" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="2f622482-21f7-4fa7-9286-0b0309b70630" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.Disjunta Solapada Calculada" Name="disjuntaSolapadaCalculada" DisplayName="Disjunta Solapada Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="de0298ab-17e6-463a-a30e-562585b15811" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.Total Parcial Calculada" Name="totalParcialCalculada" DisplayName="Total Parcial Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -578,11 +568,11 @@
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr.protegido" Name="protegido" Value="1" />
       </Literals>
     </DomainEnumeration>
-    <DomainEnumeration Name="modificadorAtr1" Namespace="UPM_IPS.JSRBBRProyectoIPS" Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1">
+    <DomainEnumeration Name="atributoBool" Namespace="UPM_IPS.JSRBBRProyectoIPS" Description="Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool">
       <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.publico" Name="publico" Value="2" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.privado" Name="privado" Value="0" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.modificadorAtr1.protegido" Name="protegido" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.text" Name="text" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.radioButton" Name="radioButton" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.checkbox" Name="checkbox" Value="" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -761,12 +751,6 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="totalParcial">
             <DomainPropertyMoniker Name="ClaseInheritsClaseHija/totalParcial" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="disjuntaSolapadaCalculada" Representation="Ignore">
-            <DomainPropertyMoniker Name="ClaseInheritsClaseHija/disjuntaSolapadaCalculada" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="totalParcialCalculada" Representation="Ignore">
-            <DomainPropertyMoniker Name="ClaseInheritsClaseHija/totalParcialCalculada" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -1232,7 +1216,7 @@
           <TextDecoratorMoniker Name="MetaforaRelacionHerencia/disjuntaSolapadaDec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseInheritsClaseHija/disjuntaSolapadaCalculada" />
+              <DomainPropertyMoniker Name="ClaseInheritsClaseHija/disjuntaSolapada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1240,7 +1224,7 @@
           <TextDecoratorMoniker Name="MetaforaRelacionHerencia/totalParcialDec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseInheritsClaseHija/totalParcialCalculada" />
+              <DomainPropertyMoniker Name="ClaseInheritsClaseHija/totalParcial" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>

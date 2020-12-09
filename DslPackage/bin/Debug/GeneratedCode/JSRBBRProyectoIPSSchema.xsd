@@ -475,7 +475,7 @@
         <!-- Property: colorLetra -->
         <xsd:attribute name="colorLetra" type="xsd:string" />
         <!-- Property: booleano -->
-        <xsd:attribute name="booleano" type="xsd:string" />
+        <xsd:attribute name="booleano" type="atributoBool" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1159,12 +1159,12 @@
     </xsd:restriction>
   </xsd:simpleType>
   
-  <!-- Enum modificadorAtr1 -->
-  <xsd:simpleType name="modificadorAtr1">
+  <!-- Enum atributoBool -->
+  <xsd:simpleType name="atributoBool">
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="publico"/>
-      <xsd:enumeration value="privado"/>
-      <xsd:enumeration value="protegido"/>
+      <xsd:enumeration value="text"/>
+      <xsd:enumeration value="radioButton"/>
+      <xsd:enumeration value="checkbox"/>
     </xsd:restriction>
   </xsd:simpleType>
   

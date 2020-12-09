@@ -6868,14 +6868,14 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				string attribbooleano = JSRBBRProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "booleano");
 				if (attribbooleano != null)
 				{
-					global::System.String valueOfbooleano;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribbooleano, out valueOfbooleano))
+					atributoBool valueOfbooleano;
+					if (DslModeling::SerializationUtilities.TryGetValue<atributoBool>(serializationContext, attribbooleano, out valueOfbooleano))
 					{
 						instanceOfAtributoEnriquecido.booleano = valueOfbooleano;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "booleano", typeof(global::System.String), attribbooleano);
+						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "booleano", typeof(atributoBool), attribbooleano);
 					}
 				}
 			}
@@ -7306,12 +7306,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			// booleano
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfAtributoEnriquecido.booleano;
+				atributoBool propValue = instanceOfAtributoEnriquecido.booleano;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<atributoBool>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "booleano", propValue);
-	
+					JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "booleano", serializedPropValue);
 				}
 			}
 		}
