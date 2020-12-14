@@ -436,13 +436,13 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: colorFondo -->
-        <xsd:attribute name="colorFondo" type="xsd:string" />
+        <xsd:attribute name="colorFondo" type="Color" />
         <!-- Property: colorLetraNombre -->
-        <xsd:attribute name="colorLetraNombre" type="xsd:string" />
+        <xsd:attribute name="colorLetraNombre" type="Color" />
         <!-- Property: tipoLetraNombre -->
-        <xsd:attribute name="tipoLetraNombre" type="xsd:string" />
+        <xsd:attribute name="tipoLetraNombre" type="Fuente" />
         <!-- Property: alineacion -->
-        <xsd:attribute name="alineacion" type="xsd:string" />
+        <xsd:attribute name="alineacion" type="Alineacion" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -471,9 +471,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: tipoLetra -->
-        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <xsd:attribute name="tipoLetra" type="Fuente" />
         <!-- Property: colorLetra -->
-        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <xsd:attribute name="colorLetra" type="Color" />
         <!-- Property: booleano -->
         <xsd:attribute name="booleano" type="atributoBool" />
       </xsd:extension>
@@ -504,9 +504,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: tipoLetra -->
-        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <xsd:attribute name="tipoLetra" type="Fuente" />
         <!-- Property: colorLetra -->
-        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <xsd:attribute name="colorLetra" type="Color" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1165,6 +1165,33 @@
       <xsd:enumeration value="text"/>
       <xsd:enumeration value="radioButton"/>
       <xsd:enumeration value="checkbox"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum Color -->
+  <xsd:simpleType name="Color">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Amarillo"/>
+      <xsd:enumeration value="Verde"/>
+      <xsd:enumeration value="Azul"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum Alineacion -->
+  <xsd:simpleType name="Alineacion">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Izquierda"/>
+      <xsd:enumeration value="Centro"/>
+      <xsd:enumeration value="Derecha"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum Fuente -->
+  <xsd:simpleType name="Fuente">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Arial"/>
+      <xsd:enumeration value="Helvetica"/>
+      <xsd:enumeration value="ComicSans"/>
     </xsd:restriction>
   </xsd:simpleType>
   

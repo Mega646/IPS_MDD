@@ -809,4 +809,91 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		checkbox,
 	}
 }
+namespace UPM_IPS.JSRBBRProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: Color
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.Color
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Color
+	{
+		/// <summary>
+		/// Amarillo
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Color.Amarillo
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Color/Amarillo.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Amarillo,
+		/// <summary>
+		/// Verde
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Color.Verde
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Color/Verde.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Verde,
+		/// <summary>
+		/// Azul
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Color.Azul
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Color/Azul.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Azul,
+	}
+}
+namespace UPM_IPS.JSRBBRProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: Alineacion
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Alineacion
+	{
+		/// <summary>
+		/// Izquierda
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Izquierda
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Alineacion/Izquierda.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Izquierda,
+		/// <summary>
+		/// Centro
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Centro
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Alineacion/Centro.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Centro,
+		/// <summary>
+		/// Derecha
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Derecha
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Alineacion/Derecha.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Derecha,
+	}
+}
+namespace UPM_IPS.JSRBBRProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: Fuente
+	/// Description for UPM_IPS.JSRBBRProyectoIPS.Fuente
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum Fuente
+	{
+		/// <summary>
+		/// Arial
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.Arial
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Fuente/Arial.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Arial,
+		/// <summary>
+		/// Helvetica
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.Helvetica
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Fuente/Helvetica.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Helvetica,
+		/// <summary>
+		/// ComicSans
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.ComicSans
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.Fuente/ComicSans.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		ComicSans,
+	}
+}
 

@@ -1586,7 +1586,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for colorFondo
 		/// </summary>
-		private global::System.String colorFondoPropertyStorage = string.Empty;
+		private Color colorFondoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorFondo domain property.
@@ -1595,7 +1595,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida/colorFondo.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida/colorFondo.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("e5ed2436-1d2e-406c-9d56-131dde53a57b")]
-		public global::System.String colorFondo
+		public Color colorFondo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1611,7 +1611,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the ClaseEnriquecida.colorFondo domain property.
 		/// </summary>
-		internal sealed partial class colorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.String>
+		internal sealed partial class colorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, Color>
 		{
 			private colorFondoPropertyHandler() { }
 		
@@ -1637,7 +1637,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClaseEnriquecida element)
+			public override sealed Color GetValue(ClaseEnriquecida element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorFondoPropertyStorage;
@@ -1648,11 +1648,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClaseEnriquecida element, global::System.String newValue)
+			public override sealed void SetValue(ClaseEnriquecida element, Color newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Color oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1673,7 +1673,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for colorLetraNombre
 		/// </summary>
-		private global::System.String colorLetraNombrePropertyStorage = string.Empty;
+		private Color colorLetraNombrePropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorLetraNombre domain property.
@@ -1682,7 +1682,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida/colorLetraNombre.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida/colorLetraNombre.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("a5690b70-8925-42e3-833d-604db8ecb647")]
-		public global::System.String colorLetraNombre
+		public Color colorLetraNombre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1698,7 +1698,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the ClaseEnriquecida.colorLetraNombre domain property.
 		/// </summary>
-		internal sealed partial class colorLetraNombrePropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.String>
+		internal sealed partial class colorLetraNombrePropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, Color>
 		{
 			private colorLetraNombrePropertyHandler() { }
 		
@@ -1724,7 +1724,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClaseEnriquecida element)
+			public override sealed Color GetValue(ClaseEnriquecida element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraNombrePropertyStorage;
@@ -1735,11 +1735,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClaseEnriquecida element, global::System.String newValue)
+			public override sealed void SetValue(ClaseEnriquecida element, Color newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Color oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1760,7 +1760,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for tipoLetraNombre
 		/// </summary>
-		private global::System.String tipoLetraNombrePropertyStorage = string.Empty;
+		private Fuente tipoLetraNombrePropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of tipoLetraNombre domain property.
@@ -1769,7 +1769,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida/tipoLetraNombre.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida/tipoLetraNombre.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("f532a521-edcf-47c4-a3ae-31ad152f423e")]
-		public global::System.String tipoLetraNombre
+		public Fuente tipoLetraNombre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1785,7 +1785,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the ClaseEnriquecida.tipoLetraNombre domain property.
 		/// </summary>
-		internal sealed partial class tipoLetraNombrePropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.String>
+		internal sealed partial class tipoLetraNombrePropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, Fuente>
 		{
 			private tipoLetraNombrePropertyHandler() { }
 		
@@ -1811,7 +1811,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClaseEnriquecida element)
+			public override sealed Fuente GetValue(ClaseEnriquecida element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoLetraNombrePropertyStorage;
@@ -1822,11 +1822,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClaseEnriquecida element, global::System.String newValue)
+			public override sealed void SetValue(ClaseEnriquecida element, Fuente newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Fuente oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1847,7 +1847,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for alineacion
 		/// </summary>
-		private global::System.String alineacionPropertyStorage = string.Empty;
+		private Alineacion alineacionPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of alineacion domain property.
@@ -1856,7 +1856,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida/alineacion.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida/alineacion.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("bb85ab73-8e1a-4080-b34e-279b9cd7e235")]
-		public global::System.String alineacion
+		public Alineacion alineacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1872,7 +1872,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the ClaseEnriquecida.alineacion domain property.
 		/// </summary>
-		internal sealed partial class alineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, global::System.String>
+		internal sealed partial class alineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnriquecida, Alineacion>
 		{
 			private alineacionPropertyHandler() { }
 		
@@ -1898,7 +1898,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClaseEnriquecida element)
+			public override sealed Alineacion GetValue(ClaseEnriquecida element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.alineacionPropertyStorage;
@@ -1909,11 +1909,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClaseEnriquecida element, global::System.String newValue)
+			public override sealed void SetValue(ClaseEnriquecida element, Alineacion newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Alineacion oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2132,7 +2132,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for tipoLetra
 		/// </summary>
-		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		private Fuente tipoLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of tipoLetra domain property.
@@ -2141,7 +2141,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/tipoLetra.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/tipoLetra.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("423a8adf-fec0-4dc5-98f5-86b8380e2c92")]
-		public global::System.String tipoLetra
+		public Fuente tipoLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2157,7 +2157,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the AtributoEnriquecido.tipoLetra domain property.
 		/// </summary>
-		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, global::System.String>
+		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, Fuente>
 		{
 			private tipoLetraPropertyHandler() { }
 		
@@ -2183,7 +2183,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(AtributoEnriquecido element)
+			public override sealed Fuente GetValue(AtributoEnriquecido element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoLetraPropertyStorage;
@@ -2194,11 +2194,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(AtributoEnriquecido element, global::System.String newValue)
+			public override sealed void SetValue(AtributoEnriquecido element, Fuente newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Fuente oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2219,7 +2219,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for colorLetra
 		/// </summary>
-		private global::System.String colorLetraPropertyStorage = string.Empty;
+		private Color colorLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorLetra domain property.
@@ -2228,7 +2228,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/colorLetra.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido/colorLetra.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("4f6e1cbe-b4aa-4d47-8e39-035f1c484ec3")]
-		public global::System.String colorLetra
+		public Color colorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2244,7 +2244,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the AtributoEnriquecido.colorLetra domain property.
 		/// </summary>
-		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, global::System.String>
+		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoEnriquecido, Color>
 		{
 			private colorLetraPropertyHandler() { }
 		
@@ -2270,7 +2270,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(AtributoEnriquecido element)
+			public override sealed Color GetValue(AtributoEnriquecido element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraPropertyStorage;
@@ -2281,11 +2281,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(AtributoEnriquecido element, global::System.String newValue)
+			public override sealed void SetValue(AtributoEnriquecido element, Color newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Color oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2454,7 +2454,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for tipoLetra
 		/// </summary>
-		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		private Fuente tipoLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of tipoLetra domain property.
@@ -2463,7 +2463,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida/tipoLetra.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida/tipoLetra.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("4dc0479d-284c-4170-addd-e66d57fe1b1b")]
-		public global::System.String tipoLetra
+		public Fuente tipoLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2479,7 +2479,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the OperacionEnriquecida.tipoLetra domain property.
 		/// </summary>
-		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<OperacionEnriquecida, global::System.String>
+		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<OperacionEnriquecida, Fuente>
 		{
 			private tipoLetraPropertyHandler() { }
 		
@@ -2505,7 +2505,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(OperacionEnriquecida element)
+			public override sealed Fuente GetValue(OperacionEnriquecida element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoLetraPropertyStorage;
@@ -2516,11 +2516,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(OperacionEnriquecida element, global::System.String newValue)
+			public override sealed void SetValue(OperacionEnriquecida element, Fuente newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Fuente oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2541,7 +2541,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Storage for colorLetra
 		/// </summary>
-		private global::System.String colorLetraPropertyStorage = string.Empty;
+		private Color colorLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorLetra domain property.
@@ -2550,7 +2550,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida/colorLetra.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida/colorLetra.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("95835fd9-42e7-41d0-81d7-50aa1b3a4f09")]
-		public global::System.String colorLetra
+		public Color colorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2566,7 +2566,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// <summary>
 		/// Value handler for the OperacionEnriquecida.colorLetra domain property.
 		/// </summary>
-		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<OperacionEnriquecida, global::System.String>
+		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<OperacionEnriquecida, Color>
 		{
 			private colorLetraPropertyHandler() { }
 		
@@ -2592,7 +2592,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(OperacionEnriquecida element)
+			public override sealed Color GetValue(OperacionEnriquecida element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraPropertyStorage;
@@ -2603,11 +2603,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(OperacionEnriquecida element, global::System.String newValue)
+			public override sealed void SetValue(OperacionEnriquecida element, Color newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Color oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

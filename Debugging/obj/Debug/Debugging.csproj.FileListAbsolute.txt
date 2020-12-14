@@ -4,3 +4,7 @@ D:\IPS_MDD\Debugging\obj\Debug\Debugging.csprojAssemblyReference.cache
 D:\IPS_MDD\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
 D:\IPS_MDD\Debugging\obj\Debug\Debugging.dll
 D:\IPS_MDD\Debugging\obj\Debug\Debugging.pdb
+C:\Users\bm0312\Documents\IPS_MDD\Debugging\obj\Debug\Debugging.csprojAssemblyReference.cache
+C:\Users\bm0312\Documents\IPS_MDD\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\bm0312\Documents\IPS_MDD\Debugging\obj\Debug\Debugging.dll
+C:\Users\bm0312\Documents\IPS_MDD\Debugging\obj\Debug\Debugging.pdb

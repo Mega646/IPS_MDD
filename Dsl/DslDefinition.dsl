@@ -121,22 +121,22 @@
       <Properties>
         <DomainProperty Id="e5ed2436-1d2e-406c-9d56-131dde53a57b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida.Color Fondo" Name="colorFondo" DisplayName="Color Fondo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Color" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="a5690b70-8925-42e3-833d-604db8ecb647" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida.Color Letra Nombre" Name="colorLetraNombre" DisplayName="Color Letra Nombre">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Color" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="f532a521-edcf-47c4-a3ae-31ad152f423e" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida.Tipo Letra Nombre" Name="tipoLetraNombre" DisplayName="Tipo Letra Nombre">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Fuente" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="bb85ab73-8e1a-4080-b34e-279b9cd7e235" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseEnriquecida.Alineacion" Name="alineacion" DisplayName="Alineacion">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Alineacion" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -166,12 +166,12 @@
       <Properties>
         <DomainProperty Id="423a8adf-fec0-4dc5-98f5-86b8380e2c92" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Fuente" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="4f6e1cbe-b4aa-4d47-8e39-035f1c484ec3" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Color Letra" Name="colorLetra" DisplayName="Color Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Color" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="ab7f1273-ff6e-4c03-a0d2-785eae9eee95" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoEnriquecido.Booleano" Name="booleano" DisplayName="Booleano">
@@ -188,12 +188,12 @@
       <Properties>
         <DomainProperty Id="4dc0479d-284c-4170-addd-e66d57fe1b1b" Description="Description for UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Fuente" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="95835fd9-42e7-41d0-81d7-50aa1b3a4f09" Description="Description for UPM_IPS.JSRBBRProyectoIPS.OperacionEnriquecida.Color Letra" Name="colorLetra" DisplayName="Color Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Color" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -573,6 +573,27 @@
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.text" Name="text" Value="" />
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.radioButton" Name="radioButton" Value="" />
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.checkbox" Name="checkbox" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Color" Namespace="UPM_IPS.JSRBBRProyectoIPS" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Color">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Color.Amarillo" Name="Amarillo" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Color.Verde" Name="Verde" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Color.Azul" Name="Azul" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Alineacion" Namespace="UPM_IPS.JSRBBRProyectoIPS" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Izquierda" Name="Izquierda" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Centro" Name="Centro" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Derecha" Name="Derecha" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Fuente" Namespace="UPM_IPS.JSRBBRProyectoIPS" Description="Description for UPM_IPS.JSRBBRProyectoIPS.Fuente">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.Arial" Name="Arial" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.Helvetica" Name="Helvetica" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.ComicSans" Name="ComicSans" Value="" />
       </Literals>
     </DomainEnumeration>
   </Types>

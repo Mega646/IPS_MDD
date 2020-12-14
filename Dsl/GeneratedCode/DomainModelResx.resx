@@ -1045,6 +1045,78 @@
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.atributoBool.checkbox</value>
     <comment>Description for EnumerationLiteral &apos;checkbox&apos; on DomainEnumeration &apos;atributoBool&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Color/Amarillo.DisplayName" xml:space="preserve">
+    <value>Amarillo</value>
+    <comment>Display name for EnumerationLiteral &apos;Amarillo&apos; on DomainEnumeration &apos;Color&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Color/Amarillo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Color.Amarillo</value>
+    <comment>Description for EnumerationLiteral &apos;Amarillo&apos; on DomainEnumeration &apos;Color&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Color/Verde.DisplayName" xml:space="preserve">
+    <value>Verde</value>
+    <comment>Display name for EnumerationLiteral &apos;Verde&apos; on DomainEnumeration &apos;Color&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Color/Verde.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Color.Verde</value>
+    <comment>Description for EnumerationLiteral &apos;Verde&apos; on DomainEnumeration &apos;Color&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Color/Azul.DisplayName" xml:space="preserve">
+    <value>Azul</value>
+    <comment>Display name for EnumerationLiteral &apos;Azul&apos; on DomainEnumeration &apos;Color&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Color/Azul.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Color.Azul</value>
+    <comment>Description for EnumerationLiteral &apos;Azul&apos; on DomainEnumeration &apos;Color&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Alineacion/Izquierda.DisplayName" xml:space="preserve">
+    <value>Izquierda</value>
+    <comment>Display name for EnumerationLiteral &apos;Izquierda&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Alineacion/Izquierda.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Izquierda</value>
+    <comment>Description for EnumerationLiteral &apos;Izquierda&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Alineacion/Centro.DisplayName" xml:space="preserve">
+    <value>Centro</value>
+    <comment>Display name for EnumerationLiteral &apos;Centro&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Alineacion/Centro.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Centro</value>
+    <comment>Description for EnumerationLiteral &apos;Centro&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Alineacion/Derecha.DisplayName" xml:space="preserve">
+    <value>Derecha</value>
+    <comment>Display name for EnumerationLiteral &apos;Derecha&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Alineacion/Derecha.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Alineacion.Derecha</value>
+    <comment>Description for EnumerationLiteral &apos;Derecha&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Fuente/Arial.DisplayName" xml:space="preserve">
+    <value>Arial</value>
+    <comment>Display name for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;Fuente&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Fuente/Arial.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.Arial</value>
+    <comment>Description for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;Fuente&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Fuente/Helvetica.DisplayName" xml:space="preserve">
+    <value>Helvetica</value>
+    <comment>Display name for EnumerationLiteral &apos;Helvetica&apos; on DomainEnumeration &apos;Fuente&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Fuente/Helvetica.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.Helvetica</value>
+    <comment>Description for EnumerationLiteral &apos;Helvetica&apos; on DomainEnumeration &apos;Fuente&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Fuente/ComicSans.DisplayName" xml:space="preserve">
+    <value>ComicSans</value>
+    <comment>Display name for EnumerationLiteral &apos;ComicSans&apos; on DomainEnumeration &apos;Fuente&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.Fuente/ComicSans.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.Fuente.ComicSans</value>
+    <comment>Description for EnumerationLiteral &apos;ComicSans&apos; on DomainEnumeration &apos;Fuente&apos;</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.MetaforaClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaClase</value>
     <comment>Description for DomainClass &apos;MetaforaClase&apos;</comment>

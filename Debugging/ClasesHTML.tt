@@ -1,0 +1,123 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"
+language="C#" hostspecific="True" #>
+<#@ output extension=".html" #>
+<#@ JSRBBRProyectoIPS processor="JSRBBRProyectoIPSDirectiveProcessor" requires="fileName='Sample.JSRBBR_DSLProyectoIPS'" #>
+
+// incluimos una clase de C# que permite gestionar la creación de ficheros
+<#@ include file="EF.utility.CS.ttinclude" #>
+<#
+ // definimos una variable para la creación de los ficheros
+ var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+ foreach (Clase clase in this.TapizClases.Clase){
+// la siguiente sentencia crea un fichero concreto. Una vez creado, toda la
+ // salida va a este fichero hasta que se cree otro nuevo fichero
+fileManager.StartNewFile(clase.nombre + "html");
+#>
+<!‐‐Comenzamos con la estructura HTML abriendo la etiqueta html‐‐>
+
+<html>
+
+	<head>
+		<title><#=clase.nombre#></title>
+	</head>
+  <!‐‐Comenzamos con el cuerpo de la página con la etiqueta body‐‐>
+	<body>
+ <!‐‐Definimos la sección donde se ubica la página con unos márgenes y bordes
+determinados con la etiqueta div ‐‐>
+		<div style='border:1px solid black; margin:20px'>
+   <!‐‐ Definimos el título de la página que se extrae del nombre de la clase, en este
+caso Alumno, y se especifican el color de fondo, el color de la letra, el tipo de letra y
+la alineación del título. Si la clase es:
+‐ Normal: Se pondrán unos valores por defecto con los que se generarán todas las
+páginas.
+‐ Enriquecida: Se generará el código inyectando el valor que contengan las
+propiedades Color de fondo, Color de la letra del nombre de la clase, Tipo de letra
+del nombre de la clase y Alineación de la clase enriquecida
+Tal y como sigue a continuación:‐‐>
+		
+		<#	string nombreClase = clase.GetType().Name;
+			if(clase.GetType().Name == "ClaseEnriquecida") {
+				if(clase.colorFondo == "Amarillo"){
+					string codigoColor = "#FFFF00";
+					}
+		#>
+			<p style='background-color:<#=codigoColor#>;color:#ffffff;font-weight:bold; font-family:
+		Arial; text-align:center'><#=clase.nombre#> <br />
+				<#}
+				else if(clase.GetType().Name == "Clase") {#>
+					<p style='background-color: #00aabb;color:#ffffff;font-weight:bold; font-family:
+					Arial; text-align:center'><#=clase.nombre#> <br />
+				<#}
+				#>
+		
+ <!‐‐Definimos un formulario en el que se van a mostrar los campos a rellenar de la clase
+y los métodos a ejecutar. El nombre del formulario será el de la clase, y se crea
+inyectando el nombre de la clase, seguidamente se indica el color de fondo, el color de la
+letra, el tipo de letra y la alineación del texto del formulario. Para ello si la clase
+es:
+‐ Normal: Se pondrán unos valores por defecto con los que se generarán todos los
+formularios.
+‐ Enriquecida: Se generará el código inyectando el valor que contengan las
+propiedades Color de fondo, Color de la letra del nombre de la clase, Tipo de letra
+del nombre de la clase y Alineación de la clase enriquecida.
+Tal y como sigue a continuación:‐‐>
+ <form name='Alumno' style='background-color:#00aabb;color:#ffffff;fontfamily:Arial;text-align:center;'>
+<!‐‐Definimos una tabla en la que incluir todos los atributos de la clase con la etiqueta
+table‐‐>
+<table>
+<!‐‐Para cada atributo de la clase, en este caso numMat, nombre, apellido1 y apellido2, se
+genera una etiqueta con el nombre del atributo y un campo de texto para introducir su
+valor. Tanto la etiqueta como el campo de texto coincidirán en estilo. En este caso se ha
+especificado el color y el tipo de la fuente, si la clase es:  
+‐ Normal: Se pondrán unos valores por defecto con los que se generarán todos los
+atributos.
+‐ Enriquecida: Se generará el código inyectando el valor que contengan las
+propiedades Tipo de letra y Color de letra del estilo de atributo definido en la
+clase enriquecida. Si el atributo es de tipo boolean y el formato de atributo
+booleano (indicado en estilo) es checkbox o radioButton, en vez del campo de texto
+que acompaña a la etiqueta se generará un campo checkbox o radio button, según
+corresponda.  
+‐‐>
+<tr><td style='color:#000000;font-family:Arial;'>NumMat:</td><td><input type='text'
+name='numMat' style='color:#000000;font-family:Arial;' /></td></tr>
+<tr><td style='color:#000000;font-family:Arial;'>Nombre:</td><td><input type='text'
+name='nombre' style='color:#000000;font-family:Arial;' /></td></tr>
+<tr><td style='color:#000000;font-family:Arial;'>Apellido1:</td><td><input type='text'
+name='apellido1' style='color:#000000;font-family:Arial;' /></td></tr>
+<tr><td style='color:#000000;font-family:Arial;'>Apellido2:</td><td><input type='text'
+name='apellido2' style='color:#000000;font-family:Arial;' /></td></tr>
+<!‐‐Cerramos la etiqueta table‐‐>
+</table>
+<!‐‐Se genera un botón con el nombre del método. Se considerarán los siguientes casos:
+‐ Para cada clase los métodos constructor y destructor
+‐ Para cada atributo los métodos get y set, en este caso getNumMat, setNumMat,
+getNombre, setNombre, getApellido1, setApellido1 y getApellido2, setApellido2,  
+‐ Para cada uno de los métodos adicionales que defina el usuario en la clase
+Dicho botón contendrá el nombre del método con el color de letra y el tipo de la letra
+del método, si la clase es:  
+‐ Normal: Se pondrán unos valores por defecto con los que se generarán todos los
+métodos.
+‐ Enriquecida: Se generará el código inyectando el valor que contengan las
+propiedades color de letra y el tipo de la letra del estilo de método definido en
+la clase enriquecida.
+‐‐>
+<input type='submit' name='constructor' value='constructor' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<input type='submit' name='destructor' value='destructor' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<input type='submit' name='getNumMat' value='getNumMat' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<input type='submit' name='setNumMat' value='setNumMat' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<input type='submit' name='getNombre' value='getNombre' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<input type='submit' name='setNombre' value='setNombre' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<input type='submit' name='getApellido1' value='getApellido1' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<input type='submit' name='setApellido1' value='setApellido1' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp; 
+<input type='submit' name='getApellido2' value='getApellido2' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<input type='submit' name='setApellido2' value='setApellido2' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
+<!‐‐Cerramos las etiquetas del formulario, div y html ‐‐>
+</form>
+</div>
+<html> 
+<# } 
+#>
+ // cierra el proceso de creación de ficheros del documento. Debe hacerse
+ // antes de empezar a declarar funciones de la plantilla
+fileManager.Process(); 
+
