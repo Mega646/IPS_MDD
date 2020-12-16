@@ -3,65 +3,85 @@ language="C#" hostspecific="True" #>
 <#@ output extension=".html" #>
 <#@ JSRBBRProyectoIPS processor="JSRBBRProyectoIPSDirectiveProcessor" requires="fileName='Sample.JSRBBR_DSLProyectoIPS'" #>
 
-// incluimos una clase de C# que permite gestionar la creación de ficheros
 <#@ include file="EF.utility.CS.ttinclude" #>
 <#
- // definimos una variable para la creación de los ficheros
- var fileManager=EntityFrameworkTemplateFileManager.Create(this);
- foreach (Clase clase in this.TapizClases.Clase){
-// la siguiente sentencia crea un fichero concreto. Una vez creado, toda la
- // salida va a este fichero hasta que se cree otro nuevo fichero
-fileManager.StartNewFile(clase.nombre + "html");
-#>
-<!‐‐Comenzamos con la estructura HTML abriendo la etiqueta html‐‐>
+var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+
+foreach (Clase clase in this.TapizClases.Clase)
+{
+	fileManager.StartNewFile(clase.nombre + "html");
+	string nombreClase = clase.GetType().Name;
+	#>
 
 <html>
-
 	<head>
 		<title><#=clase.nombre#></title>
 	</head>
-  <!‐‐Comenzamos con el cuerpo de la página con la etiqueta body‐‐>
 	<body>
- <!‐‐Definimos la sección donde se ubica la página con unos márgenes y bordes
-determinados con la etiqueta div ‐‐>
 		<div style='border:1px solid black; margin:20px'>
-   <!‐‐ Definimos el título de la página que se extrae del nombre de la clase, en este
-caso Alumno, y se especifican el color de fondo, el color de la letra, el tipo de letra y
-la alineación del título. Si la clase es:
-‐ Normal: Se pondrán unos valores por defecto con los que se generarán todas las
-páginas.
-‐ Enriquecida: Se generará el código inyectando el valor que contengan las
-propiedades Color de fondo, Color de la letra del nombre de la clase, Tipo de letra
-del nombre de la clase y Alineación de la clase enriquecida
-Tal y como sigue a continuación:‐‐>
 		
-		<#	string nombreClase = clase.GetType().Name;
-			if(clase.GetType().Name == "ClaseEnriquecida") {
-				if(clase.colorFondo == "Amarillo"){
-					string codigoColor = "#FFFF00";
-					}
-		#>
-			<p style='background-color:<#=codigoColor#>;color:#ffffff;font-weight:bold; font-family:
-		Arial; text-align:center'><#=clase.nombre#> <br />
-				<#}
-				else if(clase.GetType().Name == "Clase") {#>
-					<p style='background-color: #00aabb;color:#ffffff;font-weight:bold; font-family:
-					Arial; text-align:center'><#=clase.nombre#> <br />
-				<#}
-				#>
-		
- <!‐‐Definimos un formulario en el que se van a mostrar los campos a rellenar de la clase
-y los métodos a ejecutar. El nombre del formulario será el de la clase, y se crea
-inyectando el nombre de la clase, seguidamente se indica el color de fondo, el color de la
-letra, el tipo de letra y la alineación del texto del formulario. Para ello si la clase
-es:
-‐ Normal: Se pondrán unos valores por defecto con los que se generarán todos los
-formularios.
-‐ Enriquecida: Se generará el código inyectando el valor que contengan las
-propiedades Color de fondo, Color de la letra del nombre de la clase, Tipo de letra
-del nombre de la clase y Alineación de la clase enriquecida.
-Tal y como sigue a continuación:‐‐>
- <form name='Alumno' style='background-color:#00aabb;color:#ffffff;fontfamily:Arial;text-align:center;'>
+	<#
+	string codigoColorFondo = "#FFFFFF";
+	string codigoColorNombre = "#FFFFFF";
+	string fuente = "Arial";
+	string alineacion = "center";
+	if(clase is ClaseEnriquecida)
+	{
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+		switch(claseEnriq.colorFondo)
+		{
+			case Color.Amarillo:	
+				codigoColorFondo = "#FFFF00";
+				break;
+			case Color.Verde:
+				codigoColorFondo = "#9CCC9C";
+				break;
+			case Color.Azul:
+				codigoColorFondo = "#2A9DF4";
+				break;
+		}
+		switch(claseEnriq.colorLetraNombre)
+		{
+			case Color.Amarillo:	
+				codigoColorNombre = "#FFFF00";
+				break;
+			case Color.Verde:
+				codigoColorNombre = "#9CCC9C";
+				break;
+			case Color.Azul:
+				codigoColorNombre = "#2A9DF4";
+				break;
+		}
+		switch(claseEnriq.tipoLetraNombre)
+		{
+			case Fuente.Arial:
+				fuente = "Arial";
+				break;
+			case Fuente.ComicSans:
+				fuente = "Comic Sans";
+				break;
+			case Fuente.Helvetica:
+				fuente = "Helvetica";
+				break;
+		}
+		switch(claseEnriq.alineacion)
+		{
+			case Alineacion.Izquierda:
+				alineacion = "left";
+				break;
+			case Alineacion.Centro:
+				alineacion = "center";
+				break;
+			case Alineacion.Derecha:
+				alineacion = "right";
+				break;
+		}
+	}
+	#>
+			<p style='background-color:<#=codigoColorFondo#>;color:<#=codigoColorNombre#>;font-weight:bold; font-family:
+			<#=fuente#>; text-align:<#=alineacion#>'><#=clase.nombre#> <br />
+			<form name=<#=clase.nombre style='background-color:<#=codigoColorFondo#>;color:<#=codigoColorNombre#>;fontfamily:<#=fuente#>;text-align:<#=alineacion#>;'>
+ 
 <!‐‐Definimos una tabla en la que incluir todos los atributos de la clase con la etiqueta
 table‐‐>
 <table>
@@ -78,14 +98,56 @@ booleano (indicado en estilo) es checkbox o radioButton, en vez del campo de tex
 que acompaña a la etiqueta se generará un campo checkbox o radio button, según
 corresponda.  
 ‐‐>
-<tr><td style='color:#000000;font-family:Arial;'>NumMat:</td><td><input type='text'
+	<#
+	string tipoLetra = "Arial";
+	string colorLetra = "#000000";
+	string booleano = "text";
+	if(clase is ClaseEnriquecida)
+	{
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+		foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
+		{
+			switch(atrEnriq.tipoLetra)
+			{
+				case Fuente.Arial:
+					tipoLetra = "Arial";
+					break;
+				case Fuente.ComicSans:
+					tipoLetra = "Comic Sans";
+					break;
+				case Fuente.Helvetica:
+					tipoLetra = "Helvetica";
+					break;
+			}
+			switch(atrEnriq.colorLetra)
+			{
+				case Color.Amarillo:
+					colorLetra = "#FFFF00";
+					break;
+				case Color.Azul:
+					colorLetra = "#2A9DF4";
+					break;
+				case Color.Verde:
+					colorLetra = "#9CCC9C";
+					break;
+			}
+			switch(atrEnriq.atrBool)
+			{
+				case atributoBool.checkbox:
+					booleano = "checkbox";
+					break;
+				case atributoBool.radioButton:
+					booleano = "radiobutton";
+					break;
+				case atributoBool.text:
+					booleano = "text";
+					break;
+			}
+		}
+	}
+	#>
+	<tr><td style='color<#=colorLetra#>;font-family:<#=tipoLetra#>;'>NumMat:</td><td><input type='<#=booleano#>'
 name='numMat' style='color:#000000;font-family:Arial;' /></td></tr>
-<tr><td style='color:#000000;font-family:Arial;'>Nombre:</td><td><input type='text'
-name='nombre' style='color:#000000;font-family:Arial;' /></td></tr>
-<tr><td style='color:#000000;font-family:Arial;'>Apellido1:</td><td><input type='text'
-name='apellido1' style='color:#000000;font-family:Arial;' /></td></tr>
-<tr><td style='color:#000000;font-family:Arial;'>Apellido2:</td><td><input type='text'
-name='apellido2' style='color:#000000;font-family:Arial;' /></td></tr>
 <!‐‐Cerramos la etiqueta table‐‐>
 </table>
 <!‐‐Se genera un botón con el nombre del método. Se considerarán los siguientes casos:

@@ -36,6 +36,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClasesHTML.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,14 +70,9 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClasesHTML.html">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClasesHTML.tt</DependentUpon>
-    </Content>
     <Content Include="ClasesHTML.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ClasesHTML.html</LastGenOutput>
+      <LastGenOutput>ClasesHTML.cs</LastGenOutput>
     </Content>
     <Content Include="JSRBBRProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>
