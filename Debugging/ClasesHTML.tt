@@ -78,13 +78,14 @@ foreach (Clase clase in this.TapizClases.Clase)
 		}
 	}
 	#>
+
 			<p style='background-color:<#=codigoColorFondo#>;color:<#=codigoColorNombre#>;font-weight:bold; font-family:
 			<#=fuente#>; text-align:<#=alineacion#>'><#=clase.nombre#> <br />
-			<form name=<#=clase.nombre style='background-color:<#=codigoColorFondo#>;color:<#=codigoColorNombre#>;fontfamily:<#=fuente#>;text-align:<#=alineacion#>;'>
+			<form name=<#=clase.nombre#> style='background-color:<#=codigoColorFondo#>;color:<#=codigoColorNombre#>;fontfamily:<#=fuente#>;text-align:<#=alineacion#>;'>
  
 <!‐‐Definimos una tabla en la que incluir todos los atributos de la clase con la etiqueta
 table‐‐>
-<table>
+				<table>
 <!‐‐Para cada atributo de la clase, en este caso numMat, nombre, apellido1 y apellido2, se
 genera una etiqueta con el nombre del atributo y un campo de texto para introducir su
 valor. Tanto la etiqueta como el campo de texto coincidirán en estilo. En este caso se ha
@@ -98,6 +99,7 @@ booleano (indicado en estilo) es checkbox o radioButton, en vez del campo de tex
 que acompaña a la etiqueta se generará un campo checkbox o radio button, según
 corresponda.  
 ‐‐>
+
 	<#
 	string tipoLetra = "Arial";
 	string colorLetra = "#000000";
@@ -131,7 +133,7 @@ corresponda.
 					colorLetra = "#9CCC9C";
 					break;
 			}
-			switch(atrEnriq.atrBool)
+			switch(atrEnriq.booleano)
 			{
 				case atributoBool.checkbox:
 					booleano = "checkbox";
@@ -143,11 +145,20 @@ corresponda.
 					booleano = "text";
 					break;
 			}
+			#>
+
+			<tr>
+				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=clase.Atributo.nombre#>:</td>
+				<td>
+					<input type='<#=booleano#>' name='numMat' style='color:#000000;font-family:Arial;' />
+				</td>
+			</tr>
+
+			<#
 		}
 	}
 	#>
-	<tr><td style='color<#=colorLetra#>;font-family:<#=tipoLetra#>;'>NumMat:</td><td><input type='<#=booleano#>'
-name='numMat' style='color:#000000;font-family:Arial;' /></td></tr>
+
 <!‐‐Cerramos la etiqueta table‐‐>
 </table>
 <!‐‐Se genera un botón con el nombre del método. Se considerarán los siguientes casos:
@@ -174,10 +185,11 @@ la clase enriquecida.
 <input type='submit' name='getApellido2' value='getApellido2' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
 <input type='submit' name='setApellido2' value='setApellido2' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp;
 <!‐‐Cerramos las etiquetas del formulario, div y html ‐‐>
-</form>
-</div>
-<html> 
-<# } 
+			</form>
+		</div>
+	</html> 
+<#
+} 
 #>
  // cierra el proceso de creación de ficheros del documento. Debe hacerse
  // antes de empezar a declarar funciones de la plantilla
