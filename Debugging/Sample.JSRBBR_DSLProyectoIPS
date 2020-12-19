@@ -14,6 +14,14 @@
             <atributo Id="39e0e626-5947-4aa3-92a2-d13fa4de6aa3" nombre="destino" modificador="privado" />
           </claseHasAtributo>
         </atributo>
+        <claseHija>
+          <claseInheritsClaseHija Id="30bf082a-36fb-4e11-8ad2-4e32c3cd5a7d" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseMoniker Id="4f8f4f0d-9002-4c82-9cef-3b71c6512896" />
+          </claseInheritsClaseHija>
+          <claseInheritsClaseHija Id="1eed14eb-ca46-4cf1-bd09-45fe1e27227b" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseMoniker Id="b2a9e346-3ca8-492e-a4d6-ee158f45a88e" />
+          </claseInheritsClaseHija>
+        </claseHija>
         <atributoID>
           <claseHasAtributoID Id="695b0268-4e9e-439b-9e79-041c5ff1b7a7">
             <atributoID Id="51277364-f7b6-46b6-a228-888b4bd28d6d" nombre="id" modificador="privado" />
@@ -28,11 +36,6 @@
             <atributo Id="5c3984f1-b0f9-4b7c-9ea0-106577bd3b0d" nombre="camarotesLibres" modificador="privado" />
           </claseHasAtributo>
         </atributo>
-        <claseHija>
-          <claseInheritsClaseHija Id="1f49f3a0-4511-4bf8-960e-a276e650d2c4" disjuntaSolapada="disjunta" totalParcial="total">
-            <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
-          </claseInheritsClaseHija>
-        </claseHija>
         <atributoID>
           <claseHasAtributoID Id="a3f70049-0f72-49bf-8da6-4c29963bb606">
             <atributoID Id="323b53ab-ae3f-4c76-b1f7-7d76bff9b056" nombre="id" modificador="privado" />
@@ -53,11 +56,6 @@
             <atributo Id="730adb12-df2b-4368-bb35-3e92556bb31d" nombre="capacidadRestante" modificador="privado" />
           </claseHasAtributo>
         </atributo>
-        <claseHija>
-          <claseInheritsClaseHija Id="7542d713-0fd9-4d44-b1fb-69189a931809" disjuntaSolapada="disjunta" totalParcial="total">
-            <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
-          </claseInheritsClaseHija>
-        </claseHija>
         <atributoID>
           <claseHasAtributoID Id="ea5be540-99ad-422e-a58b-b4da7db15f27">
             <atributoID Id="9427e30a-cf8e-4545-837d-0052c2f8587e" nombre="id" modificador="privado" />
@@ -78,6 +76,11 @@
             <atributo Id="7caf7827-deff-4640-bf26-d05eb62962c0" nombre="puesto" modificador="privado" />
           </claseHasAtributo>
         </atributo>
+        <claseHija>
+          <claseInheritsClaseHija Id="86a6ff3c-e429-411d-b851-e324991024f1" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseEnriquecidaMoniker Id="15f961e9-c2ae-4ece-9ce4-d46c76d420e3" />
+          </claseInheritsClaseHija>
+        </claseHija>
         <claseRelacion>
           <claseRelatesTargetClase Id="bf2b50ea-f6e5-44ff-bc20-97051bbd7d8b" nombre="navega_en" cardinalidad1="c0N" cardinalidad2="c1">
             <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
@@ -91,12 +94,7 @@
       </clase>
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="444d3bce-3a60-4851-981f-4a4d866dd50f">
-      <claseEnriquecida Id="15f961e9-c2ae-4ece-9ce4-d46c76d420e3" nombre="Capitán">
-        <claseHija>
-          <claseInheritsClaseHija Id="9016ed3b-ea03-4bbc-b6a0-8687322e6c29" disjuntaSolapada="disjunta" totalParcial="parcial">
-            <claseMoniker Id="a01a905c-6647-47a6-9db6-1fa4903f3c1d" />
-          </claseInheritsClaseHija>
-        </claseHija>
+      <claseEnriquecida Id="15f961e9-c2ae-4ece-9ce4-d46c76d420e3" nombre="Capitán" colorFondo="Amarillo" colorLetraNombre="Amarillo" tipoLetraNombre="Arial" alineacion="Izquierda">
         <claseComponente>
           <claseIncludesTargetClase Id="60e3eb8a-009d-4453-a509-31a9c2f9830d" nombre="dirige" cardinalidad1="c1" cardinalidad2="c1">
             <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
@@ -104,10 +102,10 @@
         </claseComponente>
         <atributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="5995d2ae-f6b9-453c-8982-b6a93c082309">
-            <atributoEnriquecido Id="47cf68ed-eefc-441c-b636-0490f721e821" nombre="medallas" modificador="privado" booleano="true" />
+            <atributoEnriquecido Id="47cf68ed-eefc-441c-b636-0490f721e821" nombre="medallas" modificador="privado" tipoLetra="Arial" colorLetra="Amarillo" booleano="text" />
           </claseEnriquecidaHasAtributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="e5d48929-78fa-4e50-9280-4ef9afd0a933">
-            <atributoEnriquecido Id="e462f5e0-9583-41a7-aa4d-4da4dc124c59" nombre="rango" modificador="privado" booleano="false" />
+            <atributoEnriquecido Id="e462f5e0-9583-41a7-aa4d-4da4dc124c59" nombre="rango" modificador="privado" tipoLetra="Arial" colorLetra="Amarillo" booleano="text" />
           </claseEnriquecidaHasAtributoEnriquecido>
         </atributoEnriquecido>
       </claseEnriquecida>
@@ -136,6 +134,11 @@
             </operacionNormal>
           </claseHasOperacion>
         </operacion>
+        <claseHija>
+          <claseInheritsClaseHija Id="e92c957a-957f-4827-9f58-28eb6b07891d" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseEnriquecidaMoniker Id="ff250e5d-e424-48cd-b298-b530c8806f44" />
+          </claseInheritsClaseHija>
+        </claseHija>
         <targetClase>
           <claseReferencesTargetClase Id="08392ee2-3f04-43fa-a9f8-f441d1863302" nombre="reserva" cardinalidad1="c0N" cardinalidad2="c0N">
             <claseMoniker Id="4f8f4f0d-9002-4c82-9cef-3b71c6512896" />
@@ -149,20 +152,15 @@
       </clase>
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="4987dcac-46c4-4017-a7c3-c5e5b20a6449">
-      <claseEnriquecida Id="ff250e5d-e424-48cd-b298-b530c8806f44" nombre="PasajeroVIP">
+      <claseEnriquecida Id="ff250e5d-e424-48cd-b298-b530c8806f44" nombre="PasajeroVIP" colorFondo="Amarillo" colorLetraNombre="Amarillo" tipoLetraNombre="Arial" alineacion="Izquierda">
         <atributo>
           <claseHasAtributo Id="92b3a3cc-5245-4790-855c-3bcfae14929d">
             <atributo Id="caa179ce-e765-44c9-a3d7-0401852c6248" nombre="planVIP" modificador="privado" />
           </claseHasAtributo>
         </atributo>
-        <claseHija>
-          <claseInheritsClaseHija Id="06bc9b9d-f099-400b-9db4-85a8afd9adfc" disjuntaSolapada="disjunta" totalParcial="parcial">
-            <claseMoniker Id="ab50a2a6-00d7-4d05-a354-b40dcccdc80d" />
-          </claseInheritsClaseHija>
-        </claseHija>
         <operacionEnriquecida>
           <claseEnriquecidaHasOperacionEnriquecida Id="110404d2-cae8-48e0-bb19-9abb6458efc4">
-            <operacionEnriquecida Id="15e27bb3-38d9-4225-b730-f31a284a0744" nombre="ReservarCamaroteVIP" valorRetorno="String" modificador="publico">
+            <operacionEnriquecida Id="15e27bb3-38d9-4225-b730-f31a284a0744" nombre="ReservarCamaroteVIP" valorRetorno="String" modificador="publico" tipoLetra="Arial" colorLetra="Amarillo">
               <parametros>
                 <operacionHasParametros Id="409778fd-4c29-45c1-9dca-030029d50888">
                   <parametro Id="cc65871b-670c-4b71-aaa1-c9e3c0ad20f3" nombre="camarote" tipoDatos="Int" entradaSalida="entrada" />
@@ -176,10 +174,10 @@
         </operacionEnriquecida>
         <atributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="d2da7714-8a86-4123-ac90-3ac3c4797c49">
-            <atributoEnriquecido Id="ffd153a3-8732-487d-bbd6-c61260438450" nombre="menu" modificador="privado" booleano="false" />
+            <atributoEnriquecido Id="ffd153a3-8732-487d-bbd6-c61260438450" nombre="menu" modificador="privado" tipoLetra="Arial" colorLetra="Amarillo" booleano="text" />
           </claseEnriquecidaHasAtributoEnriquecido>
           <claseEnriquecidaHasAtributoEnriquecido Id="85c4cae5-b060-4aea-b7b8-61e966bf022d">
-            <atributoEnriquecido Id="f7d312a7-0ef0-4aa6-83e1-2ed99a9e72d7" nombre="servicioDeHabitaciones" modificador="privado" booleano="false" />
+            <atributoEnriquecido Id="f7d312a7-0ef0-4aa6-83e1-2ed99a9e72d7" nombre="servicioDeHabitaciones" modificador="privado" tipoLetra="Arial" colorLetra="Amarillo" booleano="text" />
           </claseEnriquecidaHasAtributoEnriquecido>
         </atributoEnriquecido>
       </claseEnriquecida>

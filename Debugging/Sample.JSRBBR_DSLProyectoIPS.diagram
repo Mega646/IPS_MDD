@@ -30,22 +30,6 @@
         <elementListCompartment Id="8a009fee-ab3d-4b46-901c-bef36db765d5" absoluteBounds="6.6400000000000006, 5.76, 1.4700000000000002, 0.8262939453125" name="Atributos" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaClase>
-    <metaforaRelacionHerencia Id="3e26ee5c-56eb-448f-9ded-aca734fd845b" edgePoints="[(4.75 : 6.77584554036458); (5.45919709444821 : 6.77584554036458); (5.45919709444821 : 3.8112939453125)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <claseInheritsClaseHijaMoniker Id="1f49f3a0-4511-4bf8-960e-a276e650d2c4" />
-      <relativeChildShapes />
-      <nodes>
-        <metaforaClaseMoniker Id="aa29d360-6b47-45ae-8154-82f3b9497963" />
-        <metaforaClaseAbstractaMoniker Id="98a1bcb6-31c9-45ae-92d5-50dd52409740" />
-      </nodes>
-    </metaforaRelacionHerencia>
-    <metaforaRelacionHerencia Id="42dbb9fb-09cc-4b7d-8f4e-fcdf4447063a" edgePoints="[(6.625 : 5.96814697265625); (5.47652345120817 : 5.96814697265625); (5.47652345120817 : 3.8112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <claseInheritsClaseHijaMoniker Id="7542d713-0fd9-4d44-b1fb-69189a931809" />
-      <relativeChildShapes />
-      <nodes>
-        <metaforaClaseMoniker Id="bc23e764-8512-4147-a588-356a91984695" />
-        <metaforaClaseAbstractaMoniker Id="98a1bcb6-31c9-45ae-92d5-50dd52409740" />
-      </nodes>
-    </metaforaRelacionHerencia>
     <metaforaClase Id="4507bcf5-5853-4fe2-8bcf-8db1733faab9" absoluteBounds="8.5, 2.75, 1.5, 1.4362939453124999">
       <claseMoniker Id="a01a905c-6647-47a6-9db6-1fa4903f3c1d" />
       <nestedChildShapes>
@@ -59,14 +43,6 @@
         <elementListCompartment Id="793d0513-2de5-412f-bd34-7c35fd35748e" absoluteBounds="8.515, 1.2693896484375, 1.4700000000000002, 0.63399251302083326" name="AtributosEnriquecidos" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaClaseEnriquecida>
-    <metaforaRelacionHerencia Id="e1ee2b50-5dd1-4df3-8ea2-bb8eeae10ef7" edgePoints="[(9.25 : 2.00338216145833); (9.25 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <claseInheritsClaseHijaMoniker Id="9016ed3b-ea03-4bbc-b6a0-8687322e6c29" />
-      <relativeChildShapes />
-      <nodes>
-        <metaforaClaseEnriquecidaMoniker Id="e725ed12-b9a8-451a-8488-0dc0e21aa4c5" />
-        <metaforaClaseMoniker Id="4507bcf5-5853-4fe2-8bcf-8db1733faab9" />
-      </nodes>
-    </metaforaRelacionHerencia>
     <metaforaAtributoID Id="345eae14-42dd-40f1-932d-479594214499" absoluteBounds="8.875, 5.75, 0.5, 0.5">
       <atributoIDMoniker Id="9427e30a-cf8e-4545-837d-0052c2f8587e" />
     </metaforaAtributoID>
@@ -134,14 +110,6 @@
         <elementListCompartment Id="e7ff2df2-9e5f-4dfd-ae4c-8a8a8c3ffb30" absoluteBounds="3.265, 11.711691080729167, 1.7200000000000002, 0.63399251302083337" name="AtributosEnriquecidos" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </metaforaClaseEnriquecida>
-    <metaforaRelacionHerencia Id="0defed79-8aa7-4e19-8867-1e28c95ec59a" edgePoints="[(4 : 10.75); (4 : 9.61899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <claseInheritsClaseHijaMoniker Id="06bc9b9d-f099-400b-9db4-85a8afd9adfc" />
-      <relativeChildShapes />
-      <nodes>
-        <metaforaClaseEnriquecidaMoniker Id="2a7484ce-a7ed-470b-8177-8d7a370fbec5" />
-        <metaforaClaseMoniker Id="16458b5b-ae05-414d-9300-9750ebb0ee98" />
-      </nodes>
-    </metaforaRelacionHerencia>
     <metaforaOperacionNormal Id="3e551efa-7fba-411e-949b-77626ee7eb82" absoluteBounds="0.5, 8.75, 1.5, 0.94399251302083442">
       <operacionNormalMoniker Id="ae4e4aa5-c791-40d0-a34d-0549ece3aaea" />
       <nestedChildShapes>
@@ -202,5 +170,37 @@
         <metaforaAtributoIDMoniker Id="fbc00cc9-fcf5-40db-a569-206a1bf0dd46" />
       </nodes>
     </metaforaConectorAtributoID>
+    <metaforaRelacionHerencia Id="f2b494ba-621a-436b-85e0-4ea33b763b51" edgePoints="[(5.53125 : 3.8112939453125); (5.53125 : 6.77584554036458); (4.75 : 6.77584554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <claseInheritsClaseHijaMoniker Id="30bf082a-36fb-4e11-8ad2-4e32c3cd5a7d" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaClaseAbstractaMoniker Id="98a1bcb6-31c9-45ae-92d5-50dd52409740" />
+        <metaforaClaseMoniker Id="aa29d360-6b47-45ae-8154-82f3b9497963" />
+      </nodes>
+    </metaforaRelacionHerencia>
+    <metaforaRelacionHerencia Id="2e796411-0d2d-404c-9756-6fac11646ed6" edgePoints="[(5.56263781281709 : 3.8112939453125); (5.56263781281709 : 5.96814697265625); (6.625 : 5.96814697265625)]" fixedFrom="Caller" fixedTo="Algorithm">
+      <claseInheritsClaseHijaMoniker Id="1eed14eb-ca46-4cf1-bd09-45fe1e27227b" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaClaseAbstractaMoniker Id="98a1bcb6-31c9-45ae-92d5-50dd52409740" />
+        <metaforaClaseMoniker Id="bc23e764-8512-4147-a588-356a91984695" />
+      </nodes>
+    </metaforaRelacionHerencia>
+    <metaforaRelacionHerencia Id="f41cd463-7589-4372-abac-a97835e06f6b" edgePoints="[(4 : 9.61899251302083); (4 : 10.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <claseInheritsClaseHijaMoniker Id="e92c957a-957f-4827-9f58-28eb6b07891d" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaClaseMoniker Id="16458b5b-ae05-414d-9300-9750ebb0ee98" />
+        <metaforaClaseEnriquecidaMoniker Id="2a7484ce-a7ed-470b-8177-8d7a370fbec5" />
+      </nodes>
+    </metaforaRelacionHerencia>
+    <metaforaRelacionHerencia Id="e578ef29-e628-44f8-9202-a1146070298a" edgePoints="[(9.25 : 2.75); (9.25 : 2.00338216145833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <claseInheritsClaseHijaMoniker Id="86a6ff3c-e429-411d-b851-e324991024f1" />
+      <relativeChildShapes />
+      <nodes>
+        <metaforaClaseMoniker Id="4507bcf5-5853-4fe2-8bcf-8db1733faab9" />
+        <metaforaClaseEnriquecidaMoniker Id="e725ed12-b9a8-451a-8488-0dc0e21aa4c5" />
+      </nodes>
+    </metaforaRelacionHerencia>
   </nestedChildShapes>
 </jSRBBRProyectoIPSDiagram>

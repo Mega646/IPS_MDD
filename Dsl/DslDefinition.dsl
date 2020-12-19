@@ -642,7 +642,7 @@
     </GeometryShape>
   </Shapes>
   <Connectors>
-    <Connector Id="524900f2-8fcc-44ec-a20b-541ad889bc73" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia" Name="MetaforaRelacionHerencia" DisplayName="Metafora Relacion Herencia" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Herencia" TargetEndStyle="EmptyArrow">
+    <Connector Id="524900f2-8fcc-44ec-a20b-541ad889bc73" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia" Name="MetaforaRelacionHerencia" DisplayName="Metafora Relacion Herencia" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Herencia" SourceEndStyle="EmptyArrow">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="disjuntaSolapadaDec" DisplayName="Disjunta Solapada Dec" DefaultText="disjuntaSolapadaDec" />
       </ConnectorHasDecorators>

@@ -68,6 +68,9 @@
     <Content Include="Capitán.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
     </Content>
+    <Content Include="Capitán.java">
+      <DependentUpon>ClasesJava.tt</DependentUpon>
+    </Content>
     <Content Include="ClasesHTML.html">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,11 +89,20 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ClasesJava.java</LastGenOutput>
     </Content>
+    <Content Include="Crucero.java">
+      <DependentUpon>ClasesJava.tt</DependentUpon>
+    </Content>
     <Content Include="CruceroMercancías.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
     </Content>
+    <Content Include="CruceroMercancías.java">
+      <DependentUpon>ClasesJava.tt</DependentUpon>
+    </Content>
     <Content Include="CruceroPasajeros.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="CruceroPasajeros.java">
+      <DependentUpon>ClasesJava.tt</DependentUpon>
     </Content>
     <Content Include="JSRBBRProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>
@@ -105,17 +117,29 @@
     <Content Include="Mercancía.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
     </Content>
+    <Content Include="Mercancía.java">
+      <DependentUpon>ClasesJava.tt</DependentUpon>
+    </Content>
     <Content Include="Pasajero.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
     </Content>
+    <Content Include="Pasajero.java">
+      <DependentUpon>ClasesJava.tt</DependentUpon>
+    </Content>
     <Content Include="PasajeroVIP.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="PasajeroVIP.java">
+      <DependentUpon>ClasesJava.tt</DependentUpon>
     </Content>
     <Content Include="reserva.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
     </Content>
     <Content Include="Tripulante.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="Tripulante.java">
+      <DependentUpon>ClasesJava.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

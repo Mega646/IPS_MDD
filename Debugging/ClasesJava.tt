@@ -9,14 +9,17 @@ var fileManager=EntityFrameworkTemplateFileManager.Create(this);
 
 foreach (Clase clase in this.TapizClases.Clase)
 {
+	fileManager.StartNewFile(clase.nombre + ".java");
 	if(clase.ClasePadre.Count > 0)		// CABECERA CLASE
 	{
+		Clase[] clasePadre = new Clase[2];
+		clase.ClasePadre.CopyTo(clasePadre, 0);
 		if(clase is ClaseEnriquecida)
 		{
 			ClaseEnriquecida claseEnriqHija = (ClaseEnriquecida)clase;
-			if(clase.ClasePadre is ClaseAbstracta)
+			if(clase.ClasePadre[0] is ClaseAbstracta)
 			{
-				ClaseAbstracta claseAbs = (ClaseAbstracta)clase.ClasePadre;
+				ClaseAbstracta claseAbs = (ClaseAbstracta)clasePadre[0];
 				#>
 				public class <#=claseEnriqHija.nombre#> extends <#=claseAbs.nombre#> {
 				<#
@@ -24,15 +27,25 @@ foreach (Clase clase in this.TapizClases.Clase)
 			else
 			{
 				#>
-				public class <#=claseEnriqHija.nombre#> extends <#=claseEnriqHija.ClasePadre.nombre#> {
+				public class <#=claseEnriqHija.nombre#> extends <#=clasePadre[0].nombre#> {
 				<#
 			}
 		}
 		else
 		{
-			#>
-			public class <#=clase.nombre#> extends <#=clase.ClasePadre.nombre#> {
-			<#
+			if(clase.ClasePadre[0] is ClaseAbstracta)
+			{
+				ClaseAbstracta claseAbs = (ClaseAbstracta)clasePadre[0];
+				#>
+				public class <#=clase.nombre#> extends <#=claseAbs.nombre#> {
+				<#
+			}
+			else
+			{
+				#>
+				public class <#=clase.nombre#> extends <#=clasePadre[0].nombre#> {
+				<#
+			}
 		}
 	}
 	else if(clase is ClaseAbstracta)
@@ -54,6 +67,16 @@ foreach (Clase clase in this.TapizClases.Clase)
 		private String <#=atr.nombre#>;
 		<#
 	}
+	if(clase is ClaseEnriquecida)
+	{
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+		foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
+		{
+			#>
+			private String <#=atrEnriq.nombre#>;
+			<#
+		}
+	}
 	#>
 	public <#=clase.nombre#> () {
 	
@@ -72,6 +95,23 @@ foreach (Clase clase in this.TapizClases.Clase)
 		}
 		<#
 	}
+	if(clase is ClaseEnriquecida)
+	{
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+		foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
+		{
+			#>
+			public String get<#=atrEnriq.nombre#>()
+			{
+				return this.<#=atrEnriq.nombre#>;
+			}
+			public void set<#=atrEnriq.nombre#>(String <#=atrEnriq.nombre#>)
+			{
+				this.<#=atrEnriq.nombre#> = <#=atrEnriq.nombre#>;
+			}
+			<#
+		}
+	}
 
 	foreach(Operacion op in clase.Operacion)	// OPERACIONES
 	{
@@ -88,6 +128,28 @@ foreach (Clase clase in this.TapizClases.Clase)
 			}
 		}
 	}
+	if(clase is ClaseEnriquecida)
+	{
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+		foreach(OperacionEnriquecida opEnriq in claseEnriq.OperacionEnriquecida)
+		{
+			#>
+			public <#=opEnriq.valorRetorno#> <#=opEnriq.nombre#>
+			<#
+			foreach(Parametro p in opEnriq.Parametros)
+			{
+				if(p.entradaSalida == entradaSalida.entrada)
+				{
+					#>
+					(<#=p.tipoDatos#> <#=p.nombre#>) {}
+					<#
+				}
+			}
+		}
+	}
+	#>
+	}
+	<#
 }
 fileManager.Process();
 #>
