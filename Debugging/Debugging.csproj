@@ -36,11 +36,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClasesHTML.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClasesHTML.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,9 +65,32 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Capitán.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="ClasesHTML.html">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
     <Content Include="ClasesHTML.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ClasesHTML.cs</LastGenOutput>
+      <LastGenOutput>ClasesHTML.html</LastGenOutput>
+    </Content>
+    <Content Include="ClasesJava.java">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClasesJava.tt</DependentUpon>
+    </Content>
+    <Content Include="ClasesJava.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ClasesJava.java</LastGenOutput>
+    </Content>
+    <Content Include="CruceroMercancías.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="CruceroPasajeros.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
     </Content>
     <Content Include="JSRBBRProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>
@@ -83,6 +101,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>JSRBBRProyectoIPSReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="Mercancía.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="Pasajero.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="PasajeroVIP.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="reserva.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="Tripulante.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,93 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"
+language="C#" hostspecific="True" #>
+<#@ output extension=".java" #>
+<#@ JSRBBRProyectoIPS processor="JSRBBRProyectoIPSDirectiveProcessor" requires="fileName='Sample.JSRBBR_DSLProyectoIPS'" #>
+
+<#@ include file="EF.utility.CS.ttinclude" #>
+<#
+var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+
+foreach (Clase clase in this.TapizClases.Clase)
+{
+	if(clase.ClasePadre.Count > 0)		// CABECERA CLASE
+	{
+		if(clase is ClaseEnriquecida)
+		{
+			ClaseEnriquecida claseEnriqHija = (ClaseEnriquecida)clase;
+			if(clase.ClasePadre is ClaseAbstracta)
+			{
+				ClaseAbstracta claseAbs = (ClaseAbstracta)clase.ClasePadre;
+				#>
+				public class <#=claseEnriqHija.nombre#> extends <#=claseAbs.nombre#> {
+				<#
+			}
+			else
+			{
+				#>
+				public class <#=claseEnriqHija.nombre#> extends <#=claseEnriqHija.ClasePadre.nombre#> {
+				<#
+			}
+		}
+		else
+		{
+			#>
+			public class <#=clase.nombre#> extends <#=clase.ClasePadre.nombre#> {
+			<#
+		}
+	}
+	else if(clase is ClaseAbstracta)
+	{
+		#>
+		public abstract class <#=clase.nombre#> {
+		<#
+	}
+	else
+	{
+		#>
+		public class <#=clase.nombre#> {
+		<#
+	}
+
+	foreach(Atributo atr in clase.Atributo)		// ATRIBUTOS
+	{
+		#>
+		private String <#=atr.nombre#>;
+		<#
+	}
+	#>
+	public <#=clase.nombre#> () {
+	
+	}
+	<#
+	foreach(Atributo atr in clase.Atributo)		// GETTERS Y SETTERS
+	{
+		#>
+		public String get<#=atr.nombre#>()
+		{
+			return this.<#=atr.nombre#>;
+		}
+		public void set<#=atr.nombre#>(String <#=atr.nombre#>)
+		{
+			this.<#=atr.nombre#> = <#=atr.nombre#>;
+		}
+		<#
+	}
+
+	foreach(Operacion op in clase.Operacion)	// OPERACIONES
+	{
+		#>
+		public <#=op.valorRetorno#> <#=op.nombre#>
+		<#
+		foreach(Parametro p in op.Parametros)
+		{
+			if(p.entradaSalida == entradaSalida.entrada)
+			{
+				#>
+				(<#=p.tipoDatos#> <#=p.nombre#>) {}
+				<#
+			}
+		}
+	}
+}
+fileManager.Process();
+#>
