@@ -55,6 +55,7 @@ foreach (Clase clase in this.TapizClases.Clase)
 	string colorLetra = "#000000";
 	string booleano = "text";
 	string nombreAtributo = "";
+	LinkedList<string> atrList = new LinkedList<string>();
 
 	if(clase.ClasePadre != null)		// Primero, se comprueba si la clase actual hereda de alguna, para obtener los atributos de dicha clase padre
 	{
@@ -71,6 +72,7 @@ foreach (Clase clase in this.TapizClases.Clase)
 				</td>
 			</tr>
 			<#
+			atrList.AddLast(atributo.nombre);
 			}
 		}
 	}
@@ -86,6 +88,7 @@ foreach (Clase clase in this.TapizClases.Clase)
 				</td>
 			</tr>
 			<#
+			atrList.AddLast(atributo.nombre);
 		}
 	}
 	if(clase is ClaseEnriquecida)		// Por último, se comprueba si la clase actual es enriquecida y, de serlo, si tiene atributos enriquecidos
@@ -106,6 +109,7 @@ foreach (Clase clase in this.TapizClases.Clase)
 				</td>
 			</tr>
 			<#
+				atrList.AddLast(atrEnriq.nombre);
 			}
 		}
 	}
@@ -118,13 +122,35 @@ foreach (Clase clase in this.TapizClases.Clase)
 	tipoLetra = "Arial";
 	colorLetra = "#000000";
 	nombreAtributo = "";
-	if(clase is ClaseEnriquecida)
-	{
-		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+
 		#>
 		<input type='submit' name='constructor' value='constructor' style='backgroundcolor:#0088ff;color:#000000;font-family:Arial' />&nbsp;&nbsp;
 		<input type='submit' name='destructor' value='destructor' style='backgroundcolor:#0088ff;color:#000000;font-family:Arial' />&nbsp;&nbsp;
 		<#
+
+	if(clase.Atributo.Count > 0)
+	{
+		foreach(string atr in atrList)
+		{
+			#>
+			<input type='submit' name='get<#=atr#>' value='get<#=atr#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
+			<input type='submit' name='set<#=atr#>' value='set<#=atr#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
+			<#
+		}
+	}
+	if(clase.Operacion.Count > 0)
+	{
+		foreach(OperacionNormal operacion in clase.Operacion)
+		{
+			nombreAtributo = operacion.nombre;
+			#>
+			<input type='submit' name='<#=nombreAtributo#>' value='<#=nombreAtributo#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
+			<#
+		}
+	}
+	if(clase is ClaseEnriquecida)
+	{
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
 		foreach(OperacionEnriquecida opEnriq in claseEnriq.OperacionEnriquecida)
 		{
 			tipoLetra = GetTipoLetraHTML(opEnriq.tipoLetra);
@@ -133,44 +159,9 @@ foreach (Clase clase in this.TapizClases.Clase)
 			<input type='submit' name='<#=nombreAtributo#>' value='<#=nombreAtributo#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
 			<#
 		}
-		foreach(OperacionNormal operacion in clase.Operacion)
-		{
-			tipoLetra = "Arial";
-			colorLetra = "#000000";
-			nombreAtributo = operacion.nombre;
-			#>
-			<input type='submit' name='<#=nombreAtributo#>' value='<#=nombreAtributo#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
-			<#
-		}
-		foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
-		{
-			#>
-			<input type='submit' name='get<#=atrEnriq.nombre#>' value='get<#=atrEnriq.nombre#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
-			<input type='submit' name='set<#=atrEnriq.nombre#>' value='set<#=atrEnriq.nombre#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
-			<#
-		}
 	}
-	else
-	{
-		#>
-		<input type='submit' name='constructor' value='constructor' style='backgroundcolor:#0088ff;color:#000000;font-family:Arial' />&nbsp;&nbsp;
-		<input type='submit' name='destructor' value='destructor' style='backgroundcolor:#0088ff;color:#000000;font-family:Arial' />&nbsp;&nbsp;
-		<#
-		foreach(OperacionNormal operacion in clase.Operacion)
-		{
-			nombreAtributo = operacion.nombre;
-			#>
-			<input type='submit' name='<#=nombreAtributo#>' value='<#=nombreAtributo#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
-			<#
-		}
-		foreach(Atributo atr in clase.Atributo)
-		{
-			#>
-			<input type='submit' name='get<#=atr.nombre#>' value='get<#=atr.nombre#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
-			<input type='submit' name='set<#=atr.nombre#>' value='set<#=atr.nombre#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
-			<#
-		}
-	}
+
+	// AQUI EMPIEZAN LAS RELACIONES
 
 	foreach(ClaseReferencesTargetClase r in ClaseReferencesTargetClase.GetLinksToTargetClase(clase))
 	{
@@ -212,8 +203,9 @@ foreach (Clase clase in this.TapizClases.Clase)
 		<#
 	}
 	#>
-			</form>
-		</div>
+				</form>
+			</div>
+		</body>
 	</html> 
 <#
 } 
