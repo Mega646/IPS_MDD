@@ -1,11 +1,38 @@
-				public class CruceroMercancías extends Crucero {
-						private String capacidadMaxima;
-				private String capacidadActual;
-				private String capacidadRestante;
-			public CruceroMercancías () {
+public class CruceroMercancías extends Crucero {
+			private String capacidadCombustible;
+			private String origen;
+			private String destino;
+			private String capacidadMaxima;
+			private String capacidadActual;
+			private String capacidadRestante;
+			public CruceroMercancías () {				// CONSTRUCTOR
 	
 	}
-			public String getcapacidadMaxima()
+			public String getcapacidadCombustible()
+		{
+			return this.capacidadCombustible;
+		}
+		public void setcapacidadCombustible(String capacidadCombustible)
+		{
+			this.capacidadCombustible = capacidadCombustible;
+		}
+				public String getorigen()
+		{
+			return this.origen;
+		}
+		public void setorigen(String origen)
+		{
+			this.origen = origen;
+		}
+				public String getdestino()
+		{
+			return this.destino;
+		}
+		public void setdestino(String destino)
+		{
+			this.destino = destino;
+		}
+				public String getcapacidadMaxima()
 		{
 			return this.capacidadMaxima;
 		}
@@ -29,5 +56,5 @@
 		{
 			this.capacidadRestante = capacidadRestante;
 		}
-			}
+		}
 	

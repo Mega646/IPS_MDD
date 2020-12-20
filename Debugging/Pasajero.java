@@ -1,7 +1,7 @@
-		public class Pasajero {
-				private String nombre;
-				private String apellido;
-			public Pasajero () {
+public class Pasajero {
+			private String nombre;
+			private String apellido;
+			public Pasajero () {				// CONSTRUCTOR
 	
 	}
 			public String getnombre()
@@ -22,5 +22,5 @@
 		}
 				public String ReservarCamarote
 						(Int camarote) {}
-					}
+				}
 	

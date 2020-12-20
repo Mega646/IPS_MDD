@@ -1,8 +1,8 @@
-		public class Tripulante {
-				private String nombre;
-				private String apellido;
-				private String puesto;
-			public Tripulante () {
+public class Tripulante {
+			private String nombre;
+			private String apellido;
+			private String puesto;
+			public Tripulante () {				// CONSTRUCTOR
 	
 	}
 			public String getnombre()
@@ -29,5 +29,5 @@
 		{
 			this.puesto = puesto;
 		}
-			}
+		}
 	

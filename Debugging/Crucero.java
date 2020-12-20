@@ -1,8 +1,8 @@
-		public abstract class Crucero {
-				private String capacidadCombustible;
-				private String origen;
-				private String destino;
-			public Crucero () {
+public abstract class Crucero {
+			private String capacidadCombustible;
+			private String origen;
+			private String destino;
+			public Crucero () {				// CONSTRUCTOR
 	
 	}
 			public String getcapacidadCombustible()
@@ -29,5 +29,5 @@
 		{
 			this.destino = destino;
 		}
-			}
+		}
 	

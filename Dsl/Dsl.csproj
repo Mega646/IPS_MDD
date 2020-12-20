@@ -82,6 +82,7 @@
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
     <Compile Include="DesignerCustomization\AtributoPadre.cs" />
+    <Compile Include="DesignerCustomization\Clase.cs" />
     <Compile Include="DesignerCustomization\ClaseReferencesTargetClases.cs" />
     <Compile Include="DesignerCustomization\Operacion.cs" />
     <Compile Include="DesignerCustomization\Parametro.cs" />

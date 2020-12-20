@@ -1,7 +1,7 @@
-		public class Mercancía {
-				private String peso;
-				private String tipo;
-			public Mercancía () {
+public class Mercancía {
+			private String peso;
+			private String tipo;
+			public Mercancía () {				// CONSTRUCTOR
 	
 	}
 			public String getpeso()
@@ -20,5 +20,5 @@
 		{
 			this.tipo = tipo;
 		}
-			}
+		}
 	
