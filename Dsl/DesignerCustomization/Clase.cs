@@ -8,9 +8,9 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 {
     public partial class Clase
     {
-		public LinkedList<string> getNombresAtributos()
+		public LinkedList<AtributoPadre> getAtributos()
 		{
-			LinkedList<string> atrList = new LinkedList<string>();
+			LinkedList<AtributoPadre> atrList = new LinkedList<AtributoPadre>();
 			if (this.ClasePadre != null)       // Primero, se comprueba si la clase actual hereda de alguna, para obtener los atributos de dicha clase padre
 			{
 				Clase clasePadre = this.ClasePadre;
@@ -18,7 +18,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				{
 					foreach (Atributo atributo in clasePadre.Atributo)
 					{
-						atrList.AddLast(atributo.nombre);
+						atrList.AddLast(atributo);
 					}
 				}
 			}
@@ -26,7 +26,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			{
 				foreach (Atributo atributo in this.Atributo)
 				{
-					atrList.AddLast(atributo.nombre);
+					atrList.AddLast(atributo);
 				}
 			}
 			if (this is ClaseEnriquecida)      // Por último, se comprueba si la clase actual es enriquecida y, de serlo, si tiene atributos enriquecidos
@@ -36,11 +36,46 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				{
 					foreach (AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
 					{
-						atrList.AddLast(atrEnriq.nombre);
+						atrList.AddLast(atrEnriq);
 					}
 				}
 			}
 			return atrList;
+		}
+
+		public LinkedList<Operacion> getOperaciones()
+		{
+			LinkedList<Operacion> opList = new LinkedList<Operacion>();
+			if (this.ClasePadre != null)       // Primero, se comprueba si la clase actual hereda de alguna, para obtener los atributos de dicha clase padre
+			{
+				Clase clasePadre = this.ClasePadre;
+				if (clasePadre.Operacion.Count > 0)
+				{
+					foreach (OperacionNormal op in clasePadre.Operacion)
+					{
+						opList.AddLast(op);
+					}
+				}
+			}
+			if (this.Operacion.Count > 0)       // Después, se comprueba si la clase actual tiene atributos normales
+			{
+				foreach (Operacion op in this.Operacion)
+				{
+					opList.AddLast(op);
+				}
+			}
+			if (this is ClaseEnriquecida)      // Por último, se comprueba si la clase actual es enriquecida y, de serlo, si tiene atributos enriquecidos
+			{
+				ClaseEnriquecida claseEnriq = (ClaseEnriquecida)this;
+				if (claseEnriq.OperacionEnriquecida.Count > 0)
+				{
+					foreach (OperacionEnriquecida op in claseEnriq.OperacionEnriquecida)
+					{
+						opList.AddLast(op);
+					}
+				}
+			}
+			return opList;
 		}
 	}
 }

@@ -56,59 +56,30 @@ foreach (Clase clase in this.TapizClases.Clase)
 	string booleano = "text";
 	string nombreAtributo = "";
 
-	if(clase.ClasePadre != null)		// Primero, se comprueba si la clase actual hereda de alguna, para obtener los atributos de dicha clase padre
+	LinkedList<AtributoPadre> atrList = clase.getAtributos();
+	if(atrList.Count > 0)
 	{
-		Clase clasePadre = clase.ClasePadre;
-		if(clasePadre.Atributo.Count > 0)
+		foreach(AtributoPadre atr in atrList)
 		{
-			foreach(Atributo atributo in clasePadre.Atributo)
+			if(atr is AtributoEnriquecido)
 			{
-			#>
-			<tr>
-				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=atributo.nombre#>:</td>
-				<td>
-					<input type='<#=booleano#>' name='<#=atributo.nombre#>' style='color:#000000;font-family:Arial;' />
-				</td>
-			</tr>
-			<#
-			}
-		}
-	}
-	if(clase.Atributo.Count > 0)		// Después, se comprueba si la clase actual tiene atributos normales
-	{
-		foreach(Atributo atributo in clase.Atributo)
-		{
-			#>
-			<tr>
-				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=atributo.nombre#>:</td>
-				<td>
-					<input type='<#=booleano#>' name='<#=atributo.nombre#>' style='color:#000000;font-family:Arial;' />
-				</td>
-			</tr>
-			<#
-		}
-	}
-	if(clase is ClaseEnriquecida)		// Por último, se comprueba si la clase actual es enriquecida y, de serlo, si tiene atributos enriquecidos
-	{
-		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
-		if(claseEnriq.AtributoEnriquecido.Count > 0)
-		{
-			foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
-			{
+				AtributoEnriquecido atrEnriq = (AtributoEnriquecido)atr;
+
 				tipoLetra = GetTipoLetraHTML(atrEnriq.tipoLetra);
 				colorLetra = GetColorHTML(atrEnriq.colorLetra);
 				booleano = GetBoolHTML(atrEnriq.booleano);
-			#>
+			}
+		#>
 			<tr>
-				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=atrEnriq.nombre#>:</td>
+				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=atr.nombre#>:</td>
 				<td>
-					<input type='<#=booleano#>' name='<#=atrEnriq.nombre#>' style='color:#000000;font-family:Arial;' />
+					<input type='<#=booleano#>' name='<#=atr.nombre#>' style='color:#000000;font-family:Arial;' />
 				</td>
 			</tr>
-			<#
-			}
+		<#
 		}
 	}
+	
 	#>
 			</table>
 	<#
@@ -118,42 +89,39 @@ foreach (Clase clase in this.TapizClases.Clase)
 	tipoLetra = "Arial";
 	colorLetra = "#000000";
 	nombreAtributo = "";
-	LinkedList<string> atrList = clase.getNombresAtributos();
+	LinkedList<Operacion> opList = clase.getOperaciones();
+	//CONSTRUCTOR Y DESTRUCTOR
 
-		#>
+	#>
 		<input type='submit' name='constructor' value='constructor' style='backgroundcolor:#0088ff;color:#000000;font-family:Arial' />&nbsp;&nbsp;
 		<input type='submit' name='destructor' value='destructor' style='backgroundcolor:#0088ff;color:#000000;font-family:Arial' />&nbsp;&nbsp;
-		<#
+	<#
 
-	if(clase.Atributo.Count > 0)		// GETTERS Y SETTERS
+	// GETTERS Y SETTERS
+	if(atrList.Count > 0)
 	{
-		foreach(string atr in atrList)
+		foreach(AtributoPadre atr in atrList)
 		{
 			#>
-			<input type='submit' name='get<#=atr#>' value='get<#=atr#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
-			<input type='submit' name='set<#=atr#>' value='set<#=atr#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
+			<input type='submit' name='get<#=atr.nombre#>' value='get<#=atr.nombre#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
+			<input type='submit' name='set<#=atr.nombre#>' value='set<#=atr.nombre#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
 			<#
 		}
 	}
-	if(clase.Operacion.Count > 0)		// OPERACIONES NORMALES
+
+	// OPERACIONES DEFINIDAS POR EL USUARIO
+	if(clase.Operacion.Count > 0)
 	{
-		foreach(OperacionNormal operacion in clase.Operacion)
+		foreach(Operacion op in opList)
 		{
-			nombreAtributo = operacion.nombre;
+			if(op is OperacionEnriquecida)
+			{
+				OperacionEnriquecida opEnriq = (OperacionEnriquecida)op;
+				tipoLetra = GetTipoLetraHTML(opEnriq.tipoLetra);
+				colorLetra = GetColorHTML(opEnriq.colorLetra);
+			}
 			#>
-			<input type='submit' name='<#=nombreAtributo#>' value='<#=nombreAtributo#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
-			<#
-		}
-	}
-	if(clase is ClaseEnriquecida)		// OPERACIONES ENRIQUECIDAS
-	{
-		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
-		foreach(OperacionEnriquecida opEnriq in claseEnriq.OperacionEnriquecida)
-		{
-			tipoLetra = GetTipoLetraHTML(opEnriq.tipoLetra);
-			colorLetra = GetColorHTML(opEnriq.colorLetra);
-			#>
-			<input type='submit' name='<#=nombreAtributo#>' value='<#=nombreAtributo#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
+			<input type='submit' name='<#=op.nombre#>' value='<#=op.nombre#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
 			<#
 		}
 	}
@@ -205,7 +173,7 @@ foreach (Clase clase in this.TapizClases.Clase)
 		</body>
 	</html> 
 <#
-} 
+}
 fileManager.Process();
 #>
 
