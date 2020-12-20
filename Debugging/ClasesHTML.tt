@@ -55,52 +55,58 @@ foreach (Clase clase in this.TapizClases.Clase)
 	string colorLetra = "#000000";
 	string booleano = "text";
 	string nombreAtributo = "";
-	if(clase is ClaseEnriquecida)
+
+	if(clase.ClasePadre != null)		// Primero, se comprueba si la clase actual hereda de alguna, para obtener los atributos de dicha clase padre
 	{
-		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
-		foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
+		Clase clasePadre = clase.ClasePadre;
+		if(clasePadre.Atributo.Count > 0)
 		{
-			tipoLetra = GetTipoLetraHTML(atrEnriq.tipoLetra);
-			colorLetra = GetColorHTML(atrEnriq.colorLetra);
-			booleano = GetBoolHTML(atrEnriq.booleano);
+			foreach(Atributo atributo in clasePadre.Atributo)
+			{
 			#>
 			<tr>
-				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=nombreAtributo#>:</td>
+				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=atributo.nombre#>:</td>
 				<td>
-					<input type='<#=booleano#>' name='<#=nombreAtributo#>' style='color:#000000;font-family:Arial;' />
+					<input type='<#=booleano#>' name='<#=atributo.nombre#>' style='color:#000000;font-family:Arial;' />
 				</td>
 			</tr>
 			<#
+			}
 		}
+	}
+	if(clase.Atributo.Count > 0)		// Después, se comprueba si la clase actual tiene atributos normales
+	{
 		foreach(Atributo atributo in clase.Atributo)
 		{
-			tipoLetra = "Arial";
-			colorLetra = "#000000";
-			booleano = "text";
-			nombreAtributo = atributo.nombre;
 			#>
 			<tr>
-				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=nombreAtributo#>:</td>
+				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=atributo.nombre#>:</td>
 				<td>
-					<input type='<#=booleano#>' name='<#=nombreAtributo#>' style='color:#000000;font-family:Arial;' />
+					<input type='<#=booleano#>' name='<#=atributo.nombre#>' style='color:#000000;font-family:Arial;' />
 				</td>
 			</tr>
 			<#
 		}
 	}
-	else
+	if(clase is ClaseEnriquecida)		// Por último, se comprueba si la clase actual es enriquecida y, de serlo, si tiene atributos enriquecidos
 	{
-		foreach(Atributo atributo in clase.Atributo)
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+		if(claseEnriq.AtributoEnriquecido.Count > 0)
 		{
-			nombreAtributo = atributo.nombre;
+			foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
+			{
+				tipoLetra = GetTipoLetraHTML(atrEnriq.tipoLetra);
+				colorLetra = GetColorHTML(atrEnriq.colorLetra);
+				booleano = GetBoolHTML(atrEnriq.booleano);
 			#>
 			<tr>
-				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=nombreAtributo#>:</td>
+				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=atrEnriq.nombre#>:</td>
 				<td>
-					<input type='<#=booleano#>' name='<#=nombreAtributo#>' style='color:#000000;font-family:Arial;' />
+					<input type='<#=booleano#>' name='<#=atrEnriq.nombre#>' style='color:#000000;font-family:Arial;' />
 				</td>
 			</tr>
 			<#
+			}
 		}
 	}
 	#>

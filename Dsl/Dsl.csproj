@@ -272,4 +272,7 @@
     <EmbeddedResource Include="Resources\ConnectorSourceSearch.cur" />
     <EmbeddedResource Include="Resources\ConnectorTargetSearch.cur" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CodigoAdicional\" />
+  </ItemGroup>
 </Project>

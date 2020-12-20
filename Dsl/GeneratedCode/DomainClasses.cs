@@ -440,17 +440,21 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 		#endregion
 		#region ClasePadre opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of ClasePadre.
+		/// Gets or sets ClasePadre.
 		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClasePadre
+		public virtual Clase ClasePadre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClaseDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClaseDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClaseDomainRoleId, value);
 			}
 		}
 		#endregion

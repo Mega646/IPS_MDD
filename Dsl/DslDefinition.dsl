@@ -262,7 +262,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="cfd70307-d739-4fb0-a79c-95bfcc33aa6f" Description="Description for UPM_IPS.JSRBBRProyectoIPS.TapizClasesHasClase.Clase" Name="Clase" DisplayName="Clase" PropertyName="TapizClases" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Clases">
+        <DomainRole Id="cfd70307-d739-4fb0-a79c-95bfcc33aa6f" Description="Description for UPM_IPS.JSRBBRProyectoIPS.TapizClasesHasClase.Clase" Name="Clase" DisplayName="Clase" PropertyName="TapizClases" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Tapiz Clases">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -322,7 +322,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="8e72f949-11f7-41d4-829d-8f842dd3f2ae" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClasePadre" PropertyDisplayName="Clase Padre">
+        <DomainRole Id="8e72f949-11f7-41d4-829d-8f842dd3f2ae" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClasePadre" Multiplicity="ZeroOne" PropertyDisplayName="Clase Padre">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>

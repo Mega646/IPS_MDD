@@ -89,6 +89,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					{
 						global::UPM_IPS.JSRBBRProyectoIPS.Clase sourceClase = (global::UPM_IPS.JSRBBRProyectoIPS.Clase)candidateSource;
 						global::UPM_IPS.JSRBBRProyectoIPS.Clase targetClase = (global::UPM_IPS.JSRBBRProyectoIPS.Clase)candidateTarget;
+						if(targetClase == null || global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.GetLinkToClasePadre(targetClase) != null) return false;
 						if(targetClase == null || sourceClase == null || global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.GetLinks(sourceClase, targetClase).Count > 0) return false;
 						return true;
 					}
