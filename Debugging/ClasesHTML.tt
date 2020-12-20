@@ -35,54 +35,10 @@ foreach (Clase clase in this.TapizClases.Clase)
 	if(clase is ClaseEnriquecida)
 	{
 		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
-		switch(claseEnriq.colorFondo)
-		{
-			case Color.Amarillo:	
-				codigoColorFondo = "#FFFF00";
-				break;
-			case Color.Verde:
-				codigoColorFondo = "#9CCC9C";
-				break;
-			case Color.Azul:
-				codigoColorFondo = "#2A9DF4";
-				break;
-		}
-		switch(claseEnriq.colorLetraNombre)
-		{
-			case Color.Amarillo:	
-				codigoColorNombre = "#FFFF00";
-				break;
-			case Color.Verde:
-				codigoColorNombre = "#9CCC9C";
-				break;
-			case Color.Azul:
-				codigoColorNombre = "#2A9DF4";
-				break;
-		}
-		switch(claseEnriq.tipoLetraNombre)
-		{
-			case Fuente.Arial:
-				fuente = "Arial";
-				break;
-			case Fuente.ComicSans:
-				fuente = "Comic Sans";
-				break;
-			case Fuente.Helvetica:
-				fuente = "Helvetica";
-				break;
-		}
-		switch(claseEnriq.alineacion)
-		{
-			case Alineacion.Izquierda:
-				alineacion = "left";
-				break;
-			case Alineacion.Centro:
-				alineacion = "center";
-				break;
-			case Alineacion.Derecha:
-				alineacion = "right";
-				break;
-		}
+		codigoColorFondo = GetColorHTML(claseEnriq.colorFondo);
+		codigoColorNombre = GetColorHTML(claseEnriq.colorLetraNombre);
+		fuente = GetTipoLetraHTML(claseEnriq.tipoLetraNombre);
+		alineacion = GetAlineacionHTML(claseEnriq.alineacion);
 	}
 	#>
 
@@ -104,43 +60,9 @@ foreach (Clase clase in this.TapizClases.Clase)
 		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
 		foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
 		{
-			nombreAtributo = atrEnriq.nombre;
-			switch(atrEnriq.tipoLetra)
-			{
-				case Fuente.Arial:
-					tipoLetra = "Arial";
-					break;
-				case Fuente.ComicSans:
-					tipoLetra = "Comic Sans";
-					break;
-				case Fuente.Helvetica:
-					tipoLetra = "Helvetica";
-					break;
-			}
-			switch(atrEnriq.colorLetra)
-			{
-				case Color.Amarillo:
-					colorLetra = "#FFFF00";
-					break;
-				case Color.Azul:
-					colorLetra = "#2A9DF4";
-					break;
-				case Color.Verde:
-					colorLetra = "#9CCC9C";
-					break;
-			}
-			switch(atrEnriq.booleano)
-			{
-				case atributoBool.checkbox:
-					booleano = "checkbox";
-					break;
-				case atributoBool.radioButton:
-					booleano = "radiobutton";
-					break;
-				case atributoBool.text:
-					booleano = "text";
-					break;
-			}
+			tipoLetra = GetTipoLetraHTML(atrEnriq.tipoLetra);
+			colorLetra = GetColorHTML(atrEnriq.colorLetra);
+			booleano = GetBoolHTML(atrEnriq.booleano);
 			#>
 			<tr>
 				<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=nombreAtributo#>:</td>
@@ -199,31 +121,8 @@ foreach (Clase clase in this.TapizClases.Clase)
 		<#
 		foreach(OperacionEnriquecida opEnriq in claseEnriq.OperacionEnriquecida)
 		{
-			nombreAtributo = opEnriq.nombre;
-			switch(opEnriq.tipoLetra)
-			{
-				case Fuente.Arial:
-					tipoLetra = "Arial";
-					break;
-				case Fuente.ComicSans:
-					tipoLetra = "Comic Sans";
-					break;
-				case Fuente.Helvetica:
-					tipoLetra = "Helvetica";
-					break;
-			}
-			switch(opEnriq.colorLetra)
-			{
-				case Color.Amarillo:
-					colorLetra = "#FFFF00";
-					break;
-				case Color.Azul:
-					colorLetra = "#2A9DF4";
-					break;
-				case Color.Verde:
-					colorLetra = "#9CCC9C";
-					break;
-			}
+			tipoLetra = GetTipoLetraHTML(opEnriq.tipoLetra);
+			colorLetra = GetColorHTML(opEnriq.colorLetra);
 			#>
 			<input type='submit' name='<#=nombreAtributo#>' value='<#=nombreAtributo#>' style='backgroundcolor:#0088ff;color:<#=colorLetra#>;font-family:<#=tipoLetra#>;' />&nbsp;&nbsp;
 			<#
@@ -315,3 +214,82 @@ foreach (Clase clase in this.TapizClases.Clase)
 fileManager.Process();
 #>
 
+<#+
+private String GetColorHTML(Color color)
+{
+	string codigoColorHTML = "";
+	switch(color)
+	{
+		case Color.Amarillo:	
+			codigoColorHTML = "#FFFF00";
+			break;
+		case Color.Verde:
+			codigoColorHTML = "#9CCC9C";
+			break;
+		case Color.Azul:
+			codigoColorHTML = "#2A9DF4";
+			break;
+	}
+	return codigoColorHTML;
+}
+#>
+
+<#+
+private String GetTipoLetraHTML(Fuente tipoLetra)
+{
+	string fuenteHTML = "";
+	switch(tipoLetra)
+	{
+		case Fuente.Arial:
+			fuenteHTML = "Arial";
+			break;
+		case Fuente.ComicSans:
+			fuenteHTML = "Comic Sans";
+			break;
+		case Fuente.Helvetica:
+			fuenteHTML = "Helvetica";
+			break;
+	}
+	return fuenteHTML;
+}
+#>
+
+<#+
+private String GetAlineacionHTML(Alineacion alineacion)
+{
+	string alineacionHTML = "";
+	switch(alineacion)
+	{
+		case Alineacion.Izquierda:
+			alineacionHTML = "left";
+			break;
+		case Alineacion.Centro:
+			alineacionHTML = "center";
+			break;
+		case Alineacion.Derecha:
+			alineacionHTML = "right";
+			break;
+	}
+	return alineacionHTML;
+}
+#>
+
+<#+
+private String GetBoolHTML(atributoBool booleano)
+{
+	string booleanoHTML = "";
+	switch(booleano)
+	{
+		case atributoBool.checkbox:
+			booleanoHTML = "checkbox";
+			break;
+		case atributoBool.radioButton:
+			booleanoHTML = "radiobutton";
+			break;
+		case atributoBool.text:
+			booleanoHTML = "text";
+			break;
+	}
+	return booleanoHTML;
+}
+#>
