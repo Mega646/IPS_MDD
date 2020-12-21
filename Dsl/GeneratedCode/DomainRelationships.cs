@@ -2210,60 +2210,60 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 		
 		#endregion
-		#region cardinalidad1 domain property code
+		#region cardinalidadOrigen domain property code
 		
 		/// <summary>
-		/// cardinalidad1 domain property Id.
+		/// cardinalidadOrigen domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid cardinalidad1DomainPropertyId = new global::System.Guid(0xc25c10b4, 0x4d09, 0x4dc1, 0x8b, 0x57, 0x31, 0x1c, 0xed, 0x26, 0xa4, 0xca);
+		public static readonly global::System.Guid cardinalidadOrigenDomainPropertyId = new global::System.Guid(0xc25c10b4, 0x4d09, 0x4dc1, 0x8b, 0x57, 0x31, 0x1c, 0xed, 0x26, 0xa4, 0xca);
 		
 		/// <summary>
-		/// Storage for cardinalidad1
+		/// Storage for cardinalidadOrigen
 		/// </summary>
-		private cardinalidades cardinalidad1PropertyStorage;
+		private cardinalidades cardinalidadOrigenPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of cardinalidad1 domain property.
+		/// Gets or sets the value of cardinalidadOrigen domain property.
 		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Origen
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadOrigen.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadOrigen.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("c25c10b4-4d09-4dc1-8b57-311ced26a4ca")]
-		public cardinalidades cardinalidad1
+		public cardinalidades cardinalidadOrigen
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return cardinalidad1PropertyStorage;
+				return cardinalidadOrigenPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				cardinalidad1PropertyHandler.Instance.SetValue(this, value);
+				cardinalidadOrigenPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the ClaseReferencesTargetClases.cardinalidad1 domain property.
+		/// Value handler for the ClaseReferencesTargetClases.cardinalidadOrigen domain property.
 		/// </summary>
-		internal sealed partial class cardinalidad1PropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseReferencesTargetClases, cardinalidades>
+		internal sealed partial class cardinalidadOrigenPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseReferencesTargetClases, cardinalidades>
 		{
-			private cardinalidad1PropertyHandler() { }
+			private cardinalidadOrigenPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidad1 domain property value handler.
+			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidadOrigen domain property value handler.
 			/// </summary>
-			public static readonly cardinalidad1PropertyHandler Instance = new cardinalidad1PropertyHandler();
+			public static readonly cardinalidadOrigenPropertyHandler Instance = new cardinalidadOrigenPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidad1 domain property.
+			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidadOrigen domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return cardinalidad1DomainPropertyId;
+					return cardinalidadOrigenDomainPropertyId;
 				}
 			}
 			
@@ -2275,7 +2275,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			public override sealed cardinalidades GetValue(ClaseReferencesTargetClases element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalidad1PropertyStorage;
+				return element.cardinalidadOrigenPropertyStorage;
 			}
 		
 			/// <summary>
@@ -2291,67 +2291,67 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.cardinalidad1PropertyStorage = newValue;
+					element.cardinalidadOrigenPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
 		}
 		
 		#endregion
-		#region cardinalidad2 domain property code
+		#region cardinalidadDestino domain property code
 		
 		/// <summary>
-		/// cardinalidad2 domain property Id.
+		/// cardinalidadDestino domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid cardinalidad2DomainPropertyId = new global::System.Guid(0xfa967fca, 0x8a29, 0x456c, 0xa9, 0x14, 0xb4, 0x14, 0x44, 0xba, 0xdc, 0x23);
+		public static readonly global::System.Guid cardinalidadDestinoDomainPropertyId = new global::System.Guid(0xfa967fca, 0x8a29, 0x456c, 0xa9, 0x14, 0xb4, 0x14, 0x44, 0xba, 0xdc, 0x23);
 		
 		/// <summary>
-		/// Storage for cardinalidad2
+		/// Storage for cardinalidadDestino
 		/// </summary>
-		private cardinalidades cardinalidad2PropertyStorage;
+		private cardinalidades cardinalidadDestinoPropertyStorage;
 		
 		/// <summary>
-		/// Gets or sets the value of cardinalidad2 domain property.
+		/// Gets or sets the value of cardinalidadDestino domain property.
 		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Destino
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadDestino.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadDestino.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("fa967fca-8a29-456c-a914-b41444badc23")]
-		public cardinalidades cardinalidad2
+		public cardinalidades cardinalidadDestino
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return cardinalidad2PropertyStorage;
+				return cardinalidadDestinoPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				cardinalidad2PropertyHandler.Instance.SetValue(this, value);
+				cardinalidadDestinoPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the ClaseReferencesTargetClases.cardinalidad2 domain property.
+		/// Value handler for the ClaseReferencesTargetClases.cardinalidadDestino domain property.
 		/// </summary>
-		internal sealed partial class cardinalidad2PropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseReferencesTargetClases, cardinalidades>
+		internal sealed partial class cardinalidadDestinoPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseReferencesTargetClases, cardinalidades>
 		{
-			private cardinalidad2PropertyHandler() { }
+			private cardinalidadDestinoPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidad2 domain property value handler.
+			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidadDestino domain property value handler.
 			/// </summary>
-			public static readonly cardinalidad2PropertyHandler Instance = new cardinalidad2PropertyHandler();
+			public static readonly cardinalidadDestinoPropertyHandler Instance = new cardinalidadDestinoPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidad2 domain property.
+			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidadDestino domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return cardinalidad2DomainPropertyId;
+					return cardinalidadDestinoDomainPropertyId;
 				}
 			}
 			
@@ -2363,7 +2363,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			public override sealed cardinalidades GetValue(ClaseReferencesTargetClases element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.cardinalidad2PropertyStorage;
+				return element.cardinalidadDestinoPropertyStorage;
 			}
 		
 			/// <summary>
@@ -2379,60 +2379,61 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.cardinalidad2PropertyStorage = newValue;
+					element.cardinalidadDestinoPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
 		}
 		
 		#endregion
-		#region cardinalidad1Calculada domain property code
+		#region cardinalidadOrigenCalculada domain property code
 		
 		/// <summary>
-		/// cardinalidad1Calculada domain property Id.
+		/// cardinalidadOrigenCalculada domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid cardinalidad1CalculadaDomainPropertyId = new global::System.Guid(0xc786b7c3, 0x91fe, 0x441b, 0xab, 0x93, 0xe5, 0xf6, 0x9c, 0x76, 0x1b, 0x32);
+		public static readonly global::System.Guid cardinalidadOrigenCalculadaDomainPropertyId = new global::System.Guid(0xc786b7c3, 0x91fe, 0x441b, 0xab, 0x93, 0xe5, 0xf6, 0x9c, 0x76, 0x1b, 0x32);
 		
 		/// <summary>
-		/// Gets or sets the value of cardinalidad1Calculada domain property.
+		/// Gets or sets the value of cardinalidadOrigenCalculada domain property.
 		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1 Calculada
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Origen
+		/// Calculada
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1Calculada.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1Calculada.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadOrigenCalculada.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadOrigenCalculada.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
 		[DslModeling::DomainObjectId("c786b7c3-91fe-441b-ab93-e5f69c761b32")]
-		public global::System.String cardinalidad1Calculada
+		public global::System.String cardinalidadOrigenCalculada
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return cardinalidad1CalculadaPropertyHandler.Instance.GetValue(this);
+				return cardinalidadOrigenCalculadaPropertyHandler.Instance.GetValue(this);
 			}
 		}
 		/// <summary>
-		/// Value handler for the ClaseReferencesTargetClases.cardinalidad1Calculada domain property.
+		/// Value handler for the ClaseReferencesTargetClases.cardinalidadOrigenCalculada domain property.
 		/// </summary>
-		internal sealed partial class cardinalidad1CalculadaPropertyHandler : DslModeling::CalculatedPropertyValueHandler<ClaseReferencesTargetClases, global::System.String>
+		internal sealed partial class cardinalidadOrigenCalculadaPropertyHandler : DslModeling::CalculatedPropertyValueHandler<ClaseReferencesTargetClases, global::System.String>
 		{
-			private cardinalidad1CalculadaPropertyHandler() { }
+			private cardinalidadOrigenCalculadaPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidad1Calculada domain property value handler.
+			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidadOrigenCalculada domain property value handler.
 			/// </summary>
-			public static readonly cardinalidad1CalculadaPropertyHandler Instance = new cardinalidad1CalculadaPropertyHandler();
+			public static readonly cardinalidadOrigenCalculadaPropertyHandler Instance = new cardinalidadOrigenCalculadaPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidad1Calculada domain property.
+			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidadOrigenCalculada domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return cardinalidad1CalculadaDomainPropertyId;
+					return cardinalidadOrigenCalculadaDomainPropertyId;
 				}
 			}
 			
@@ -2444,62 +2445,63 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			public override sealed global::System.String GetValue(ClaseReferencesTargetClases element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				// There is no storage for cardinalidad1Calculada because its Kind is
-				// set to Calculated. Please provide the Getcardinalidad1CalculadaValue()
+				// There is no storage for cardinalidadOrigenCalculada because its Kind is
+				// set to Calculated. Please provide the GetcardinalidadOrigenCalculadaValue()
 				// method on the domain class.
-				return element.Getcardinalidad1CalculadaValue();
+				return element.GetcardinalidadOrigenCalculadaValue();
 			}
 		
 		}
 		
 		#endregion
-		#region cardinalidad2Calculada domain property code
+		#region cardinalidadDestinoCalculada domain property code
 		
 		/// <summary>
-		/// cardinalidad2Calculada domain property Id.
+		/// cardinalidadDestinoCalculada domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid cardinalidad2CalculadaDomainPropertyId = new global::System.Guid(0xd918b99d, 0x8867, 0x4bc0, 0x93, 0x5a, 0x30, 0xf4, 0x49, 0xfc, 0xcc, 0x77);
+		public static readonly global::System.Guid cardinalidadDestinoCalculadaDomainPropertyId = new global::System.Guid(0xd918b99d, 0x8867, 0x4bc0, 0x93, 0x5a, 0x30, 0xf4, 0x49, 0xfc, 0xcc, 0x77);
 		
 		/// <summary>
-		/// Gets or sets the value of cardinalidad2Calculada domain property.
+		/// Gets or sets the value of cardinalidadDestinoCalculada domain property.
 		/// Description for
-		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2 Calculada
+		/// UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Destino
+		/// Calculada
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2Calculada.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2Calculada.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadDestinoCalculada.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadDestinoCalculada.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
 		[DslModeling::DomainObjectId("d918b99d-8867-4bc0-935a-30f449fccc77")]
-		public global::System.String cardinalidad2Calculada
+		public global::System.String cardinalidadDestinoCalculada
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return cardinalidad2CalculadaPropertyHandler.Instance.GetValue(this);
+				return cardinalidadDestinoCalculadaPropertyHandler.Instance.GetValue(this);
 			}
 		}
 		/// <summary>
-		/// Value handler for the ClaseReferencesTargetClases.cardinalidad2Calculada domain property.
+		/// Value handler for the ClaseReferencesTargetClases.cardinalidadDestinoCalculada domain property.
 		/// </summary>
-		internal sealed partial class cardinalidad2CalculadaPropertyHandler : DslModeling::CalculatedPropertyValueHandler<ClaseReferencesTargetClases, global::System.String>
+		internal sealed partial class cardinalidadDestinoCalculadaPropertyHandler : DslModeling::CalculatedPropertyValueHandler<ClaseReferencesTargetClases, global::System.String>
 		{
-			private cardinalidad2CalculadaPropertyHandler() { }
+			private cardinalidadDestinoCalculadaPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidad2Calculada domain property value handler.
+			/// Gets the singleton instance of the ClaseReferencesTargetClases.cardinalidadDestinoCalculada domain property value handler.
 			/// </summary>
-			public static readonly cardinalidad2CalculadaPropertyHandler Instance = new cardinalidad2CalculadaPropertyHandler();
+			public static readonly cardinalidadDestinoCalculadaPropertyHandler Instance = new cardinalidadDestinoCalculadaPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidad2Calculada domain property.
+			/// Gets the Id of the ClaseReferencesTargetClases.cardinalidadDestinoCalculada domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return cardinalidad2CalculadaDomainPropertyId;
+					return cardinalidadDestinoCalculadaDomainPropertyId;
 				}
 			}
 			
@@ -2511,12 +2513,187 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			public override sealed global::System.String GetValue(ClaseReferencesTargetClases element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				// There is no storage for cardinalidad2Calculada because its Kind is
-				// set to Calculated. Please provide the Getcardinalidad2CalculadaValue()
+				// There is no storage for cardinalidadDestinoCalculada because its Kind is
+				// set to Calculated. Please provide the GetcardinalidadDestinoCalculadaValue()
 				// method on the domain class.
-				return element.Getcardinalidad2CalculadaValue();
+				return element.GetcardinalidadDestinoCalculadaValue();
 			}
 		
+		}
+		
+		#endregion
+		#region rolOrigen domain property code
+		
+		/// <summary>
+		/// rolOrigen domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid rolOrigenDomainPropertyId = new global::System.Guid(0x30506b6d, 0xc8f7, 0x4d65, 0x83, 0x1b, 0xd2, 0x19, 0x06, 0x45, 0x8e, 0xde);
+		
+		/// <summary>
+		/// Storage for rolOrigen
+		/// </summary>
+		private global::System.String rolOrigenPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of rolOrigen domain property.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Rol Origen
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/rolOrigen.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/rolOrigen.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("30506b6d-c8f7-4d65-831b-d21906458ede")]
+		public global::System.String rolOrigen
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return rolOrigenPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				rolOrigenPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseReferencesTargetClases.rolOrigen domain property.
+		/// </summary>
+		internal sealed partial class rolOrigenPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseReferencesTargetClases, global::System.String>
+		{
+			private rolOrigenPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseReferencesTargetClases.rolOrigen domain property value handler.
+			/// </summary>
+			public static readonly rolOrigenPropertyHandler Instance = new rolOrigenPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseReferencesTargetClases.rolOrigen domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return rolOrigenDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClaseReferencesTargetClases element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.rolOrigenPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseReferencesTargetClases element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.rolOrigenPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region rolDestino domain property code
+		
+		/// <summary>
+		/// rolDestino domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid rolDestinoDomainPropertyId = new global::System.Guid(0x0b5520c1, 0x89d5, 0x4b33, 0xae, 0x17, 0xa4, 0x40, 0x63, 0xe3, 0x13, 0xe0);
+		
+		/// <summary>
+		/// Storage for rolDestino
+		/// </summary>
+		private global::System.String rolDestinoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of rolDestino domain property.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Rol
+		/// Destino
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/rolDestino.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/rolDestino.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("0b5520c1-89d5-4b33-ae17-a44063e313e0")]
+		public global::System.String rolDestino
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return rolDestinoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				rolDestinoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseReferencesTargetClases.rolDestino domain property.
+		/// </summary>
+		internal sealed partial class rolDestinoPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseReferencesTargetClases, global::System.String>
+		{
+			private rolDestinoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseReferencesTargetClases.rolDestino domain property value handler.
+			/// </summary>
+			public static readonly rolDestinoPropertyHandler Instance = new rolDestinoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseReferencesTargetClases.rolDestino domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return rolDestinoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClaseReferencesTargetClases element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.rolDestinoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseReferencesTargetClases element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.rolDestinoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
 		}
 		
 		#endregion

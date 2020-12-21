@@ -1,7 +1,7 @@
 public class Pasajero {
 			private Int nombre;
 			private Int apellido;
-			private LinkedList<CruceroPasajeros> reserva;
+			private LinkedList<CruceroPasajeros> crucero;
 			public Pasajero () {				// CONSTRUCTOR
 	
 	}

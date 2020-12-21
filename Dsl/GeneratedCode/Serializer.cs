@@ -15738,37 +15738,71 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					}
 				}
 			}
-			// cardinalidad1
+			// cardinalidadOrigen
 			if (!serializationContext.Result.Failed)
 			{
-				string attribcardinalidad1 = JSRBBRProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidad1");
-				if (attribcardinalidad1 != null)
+				string attribcardinalidadOrigen = JSRBBRProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidadOrigen");
+				if (attribcardinalidadOrigen != null)
 				{
-					cardinalidades valueOfcardinalidad1;
-					if (DslModeling::SerializationUtilities.TryGetValue<cardinalidades>(serializationContext, attribcardinalidad1, out valueOfcardinalidad1))
+					cardinalidades valueOfcardinalidadOrigen;
+					if (DslModeling::SerializationUtilities.TryGetValue<cardinalidades>(serializationContext, attribcardinalidadOrigen, out valueOfcardinalidadOrigen))
 					{
-						instanceOfClaseReferencesTargetClases.cardinalidad1 = valueOfcardinalidad1;
+						instanceOfClaseReferencesTargetClases.cardinalidadOrigen = valueOfcardinalidadOrigen;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidad1", typeof(cardinalidades), attribcardinalidad1);
+						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadOrigen", typeof(cardinalidades), attribcardinalidadOrigen);
 					}
 				}
 			}
-			// cardinalidad2
+			// cardinalidadDestino
 			if (!serializationContext.Result.Failed)
 			{
-				string attribcardinalidad2 = JSRBBRProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidad2");
-				if (attribcardinalidad2 != null)
+				string attribcardinalidadDestino = JSRBBRProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidadDestino");
+				if (attribcardinalidadDestino != null)
 				{
-					cardinalidades valueOfcardinalidad2;
-					if (DslModeling::SerializationUtilities.TryGetValue<cardinalidades>(serializationContext, attribcardinalidad2, out valueOfcardinalidad2))
+					cardinalidades valueOfcardinalidadDestino;
+					if (DslModeling::SerializationUtilities.TryGetValue<cardinalidades>(serializationContext, attribcardinalidadDestino, out valueOfcardinalidadDestino))
 					{
-						instanceOfClaseReferencesTargetClases.cardinalidad2 = valueOfcardinalidad2;
+						instanceOfClaseReferencesTargetClases.cardinalidadDestino = valueOfcardinalidadDestino;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidad2", typeof(cardinalidades), attribcardinalidad2);
+						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadDestino", typeof(cardinalidades), attribcardinalidadDestino);
+					}
+				}
+			}
+			// rolOrigen
+			if (!serializationContext.Result.Failed)
+			{
+				string attribrolOrigen = JSRBBRProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "rolOrigen");
+				if (attribrolOrigen != null)
+				{
+					global::System.String valueOfrolOrigen;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrolOrigen, out valueOfrolOrigen))
+					{
+						instanceOfClaseReferencesTargetClases.rolOrigen = valueOfrolOrigen;
+					}
+					else
+					{	// Invalid property value, ignored.
+						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "rolOrigen", typeof(global::System.String), attribrolOrigen);
+					}
+				}
+			}
+			// rolDestino
+			if (!serializationContext.Result.Failed)
+			{
+				string attribrolDestino = JSRBBRProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "rolDestino");
+				if (attribrolDestino != null)
+				{
+					global::System.String valueOfrolDestino;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribrolDestino, out valueOfrolDestino))
+					{
+						instanceOfClaseReferencesTargetClases.rolDestino = valueOfrolDestino;
+					}
+					else
+					{	// Invalid property value, ignored.
+						JSRBBRProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "rolDestino", typeof(global::System.String), attribrolDestino);
 					}
 				}
 			}
@@ -16100,24 +16134,46 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 	
 				}
 			}
-			// cardinalidad1
+			// cardinalidadOrigen
 			if (!serializationContext.Result.Failed)
 			{
-				cardinalidades propValue = instanceOfClaseReferencesTargetClases.cardinalidad1;
+				cardinalidades propValue = instanceOfClaseReferencesTargetClases.cardinalidadOrigen;
 				string serializedPropValue = DslModeling::SerializationUtilities.GetString<cardinalidades>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidad1", serializedPropValue);
+					JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadOrigen", serializedPropValue);
 				}
 			}
-			// cardinalidad2
+			// cardinalidadDestino
 			if (!serializationContext.Result.Failed)
 			{
-				cardinalidades propValue = instanceOfClaseReferencesTargetClases.cardinalidad2;
+				cardinalidades propValue = instanceOfClaseReferencesTargetClases.cardinalidadDestino;
 				string serializedPropValue = DslModeling::SerializationUtilities.GetString<cardinalidades>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidad2", serializedPropValue);
+					JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadDestino", serializedPropValue);
+				}
+			}
+			// rolOrigen
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfClaseReferencesTargetClases.rolOrigen;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "rolOrigen", propValue);
+	
+				}
+			}
+			// rolDestino
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfClaseReferencesTargetClases.rolDestino;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						JSRBBRProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "rolDestino", propValue);
+	
 				}
 			}
 		}

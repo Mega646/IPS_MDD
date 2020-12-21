@@ -155,10 +155,12 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "disjuntaSolapada", ClaseInheritsClaseHija.disjuntaSolapadaDomainPropertyId, typeof(ClaseInheritsClaseHija.disjuntaSolapadaPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "totalParcial", ClaseInheritsClaseHija.totalParcialDomainPropertyId, typeof(ClaseInheritsClaseHija.totalParcialPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "nombre", ClaseReferencesTargetClases.nombreDomainPropertyId, typeof(ClaseReferencesTargetClases.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad1", ClaseReferencesTargetClases.cardinalidad1DomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad1PropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad2", ClaseReferencesTargetClases.cardinalidad2DomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad2PropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad1Calculada", ClaseReferencesTargetClases.cardinalidad1CalculadaDomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad1CalculadaPropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidad2Calculada", ClaseReferencesTargetClases.cardinalidad2CalculadaDomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidad2CalculadaPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidadOrigen", ClaseReferencesTargetClases.cardinalidadOrigenDomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidadOrigenPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidadDestino", ClaseReferencesTargetClases.cardinalidadDestinoDomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidadDestinoPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidadOrigenCalculada", ClaseReferencesTargetClases.cardinalidadOrigenCalculadaDomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidadOrigenCalculadaPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "cardinalidadDestinoCalculada", ClaseReferencesTargetClases.cardinalidadDestinoCalculadaDomainPropertyId, typeof(ClaseReferencesTargetClases.cardinalidadDestinoCalculadaPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "rolOrigen", ClaseReferencesTargetClases.rolOrigenDomainPropertyId, typeof(ClaseReferencesTargetClases.rolOrigenPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "rolDestino", ClaseReferencesTargetClases.rolDestinoDomainPropertyId, typeof(ClaseReferencesTargetClases.rolDestinoPropertyHandler)),
 			};
 		}
 		/// <summary>

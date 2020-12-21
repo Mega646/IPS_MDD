@@ -570,10 +570,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidad1CalculadaDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidadOrigenCalculadaDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidad1Dec").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidad2CalculadaDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidadDestinoCalculadaDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidad2Dec").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.nombreDomainPropertyId);
@@ -596,10 +596,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidad1CalculadaDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidadOrigenCalculadaDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidad1Dec").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidad2CalculadaDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidadDestinoCalculadaDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidad2Dec").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.nombreDomainPropertyId);
@@ -622,10 +622,10 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidad1CalculadaDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidadOrigenCalculadaDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidad1Dec").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidad2CalculadaDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidadDestinoCalculadaDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidad2Dec").AssociateValueWith(shape.Store, propertyInfo);
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.nombreDomainPropertyId);
@@ -1679,7 +1679,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidad1CalculadaDomainPropertyId)
+				else if (e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidadOrigenCalculadaDomainPropertyId)
 				{
 					DslDiagrams::Decorator decorator = global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionRelacional.FindMetaforaRelacionRelacionalDecorator("cardinalidad1Dec");
 					if(decorator != null)
@@ -1697,7 +1697,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JSRBBRProyectoIPS.ClaseRelatesTargetClase.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidad2CalculadaDomainPropertyId)
+				else if (e.DomainProperty.Id == global::UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.cardinalidadDestinoCalculadaDomainPropertyId)
 				{
 					DslDiagrams::Decorator decorator = global::UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionRelacional.FindMetaforaRelacionRelacionalDecorator("cardinalidad2Dec");
 					if(decorator != null)

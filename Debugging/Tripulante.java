@@ -2,7 +2,7 @@ public class Tripulante {
 			private Int nombre;
 			private Int apellido;
 			private Int puesto;
-			private Crucero navega_en;
+			private LinkedList<Crucero> crucero;
 			public Tripulante () {				// CONSTRUCTOR
 	
 	}

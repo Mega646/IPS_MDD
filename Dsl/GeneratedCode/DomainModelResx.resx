@@ -701,37 +701,53 @@
     <value>Nombre</value>
     <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1</value>
-    <comment>Description for DomainProperty &apos;cardinalidad1&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadOrigen.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Origen</value>
+    <comment>Description for DomainProperty &apos;cardinalidadOrigen&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1.DisplayName" xml:space="preserve">
-    <value>Cardinalidad1</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidad1&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadOrigen.DisplayName" xml:space="preserve">
+    <value>Cardinalidad Origen</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadOrigen&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2</value>
-    <comment>Description for DomainProperty &apos;cardinalidad2&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadDestino.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Destino</value>
+    <comment>Description for DomainProperty &apos;cardinalidadDestino&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2.DisplayName" xml:space="preserve">
-    <value>Cardinalidad2</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidad2&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadDestino.DisplayName" xml:space="preserve">
+    <value>Cardinalidad Destino</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadDestino&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1Calculada.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1 Calculada</value>
-    <comment>Description for DomainProperty &apos;cardinalidad1Calculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadOrigenCalculada.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Origen Calculada</value>
+    <comment>Description for DomainProperty &apos;cardinalidadOrigenCalculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad1Calculada.DisplayName" xml:space="preserve">
-    <value>Cardinalidad1 Calculada</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidad1Calculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadOrigenCalculada.DisplayName" xml:space="preserve">
+    <value>Cardinalidad Origen Calculada</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadOrigenCalculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2Calculada.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2 Calculada</value>
-    <comment>Description for DomainProperty &apos;cardinalidad2Calculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadDestinoCalculada.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Destino Calculada</value>
+    <comment>Description for DomainProperty &apos;cardinalidadDestinoCalculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
-  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidad2Calculada.DisplayName" xml:space="preserve">
-    <value>Cardinalidad2 Calculada</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidad2Calculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/cardinalidadDestinoCalculada.DisplayName" xml:space="preserve">
+    <value>Cardinalidad Destino Calculada</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadDestinoCalculada&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/rolOrigen.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Rol Origen</value>
+    <comment>Description for DomainProperty &apos;rolOrigen&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/rolOrigen.DisplayName" xml:space="preserve">
+    <value>Rol Origen</value>
+    <comment>DisplayName for DomainProperty &apos;rolOrigen&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/rolDestino.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Rol Destino</value>
+    <comment>Description for DomainProperty &apos;rolDestino&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/rolDestino.DisplayName" xml:space="preserve">
+    <value>Rol Destino</value>
+    <comment>DisplayName for DomainProperty &apos;rolDestino&apos; on DomainClass &apos;ClaseReferencesTargetClases&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases/SourceClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.SourceClase</value>

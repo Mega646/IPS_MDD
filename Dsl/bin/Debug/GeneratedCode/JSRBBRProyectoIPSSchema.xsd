@@ -922,10 +922,14 @@
         </xsd:attribute>
         <!-- Property: nombre -->
         <xsd:attribute name="nombre" type="xsd:string" />
-        <!-- Property: cardinalidad1 -->
-        <xsd:attribute name="cardinalidad1" type="cardinalidades" />
-        <!-- Property: cardinalidad2 -->
-        <xsd:attribute name="cardinalidad2" type="cardinalidades" />
+        <!-- Property: cardinalidadOrigen -->
+        <xsd:attribute name="cardinalidadOrigen" type="cardinalidades" />
+        <!-- Property: cardinalidadDestino -->
+        <xsd:attribute name="cardinalidadDestino" type="cardinalidades" />
+        <!-- Property: rolOrigen -->
+        <xsd:attribute name="rolOrigen" type="xsd:string" />
+        <!-- Property: rolDestino -->
+        <xsd:attribute name="rolDestino" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

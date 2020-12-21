@@ -414,22 +414,32 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="c25c10b4-4d09-4dc1-8b57-311ced26a4ca" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1" Name="cardinalidad1" DisplayName="Cardinalidad1">
+        <DomainProperty Id="c25c10b4-4d09-4dc1-8b57-311ced26a4ca" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Origen" Name="cardinalidadOrigen" DisplayName="Cardinalidad Origen">
           <Type>
             <DomainEnumerationMoniker Name="cardinalidades" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="fa967fca-8a29-456c-a914-b41444badc23" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2" Name="cardinalidad2" DisplayName="Cardinalidad2">
+        <DomainProperty Id="fa967fca-8a29-456c-a914-b41444badc23" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Destino" Name="cardinalidadDestino" DisplayName="Cardinalidad Destino">
           <Type>
             <DomainEnumerationMoniker Name="cardinalidades" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="c786b7c3-91fe-441b-ab93-e5f69c761b32" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad1 Calculada" Name="cardinalidad1Calculada" DisplayName="Cardinalidad1 Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+        <DomainProperty Id="c786b7c3-91fe-441b-ab93-e5f69c761b32" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Origen Calculada" Name="cardinalidadOrigenCalculada" DisplayName="Cardinalidad Origen Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="d918b99d-8867-4bc0-935a-30f449fccc77" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad2 Calculada" Name="cardinalidad2Calculada" DisplayName="Cardinalidad2 Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+        <DomainProperty Id="d918b99d-8867-4bc0-935a-30f449fccc77" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Cardinalidad Destino Calculada" Name="cardinalidadDestinoCalculada" DisplayName="Cardinalidad Destino Calculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="30506b6d-c8f7-4d65-831b-d21906458ede" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Rol Origen" Name="rolOrigen" DisplayName="Rol Origen">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="0b5520c1-89d5-4b33-ae17-a44063e313e0" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseReferencesTargetClases.Rol Destino" Name="rolDestino" DisplayName="Rol Destino">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -812,17 +822,23 @@
           <XmlPropertyData XmlName="nombre">
             <DomainPropertyMoniker Name="ClaseReferencesTargetClases/nombre" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidad1">
-            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1" />
+          <XmlPropertyData XmlName="cardinalidadOrigen">
+            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadOrigen" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidad2">
-            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2" />
+          <XmlPropertyData XmlName="cardinalidadDestino">
+            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadDestino" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidad1Calculada" Representation="Ignore">
-            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1Calculada" />
+          <XmlPropertyData XmlName="cardinalidadOrigenCalculada" Representation="Ignore">
+            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadOrigenCalculada" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidad2Calculada" Representation="Ignore">
-            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2Calculada" />
+          <XmlPropertyData XmlName="cardinalidadDestinoCalculada" Representation="Ignore">
+            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadDestinoCalculada" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="rolOrigen">
+            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/rolOrigen" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="rolDestino">
+            <DomainPropertyMoniker Name="ClaseReferencesTargetClases/rolDestino" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -1265,7 +1281,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad1Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1Calculada" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadOrigenCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1273,7 +1289,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad2Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2Calculada" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadDestinoCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1293,7 +1309,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad1Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1Calculada" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadOrigenCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1301,7 +1317,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad2Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2Calculada" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadDestinoCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1321,7 +1337,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad1Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad1Calculada" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadOrigenCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1329,7 +1345,7 @@
           <TextDecoratorMoniker Name="MetaforaRelaciones/cardinalidad2Dec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidad2Calculada" />
+              <DomainPropertyMoniker Name="ClaseReferencesTargetClases/cardinalidadDestinoCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>

@@ -81,12 +81,11 @@ namespace UPM_IPS.JSRBBRProyectoIPS
         public Dictionary<string, string> getRelaciones()
         {
             Dictionary<string, string> nombreyTipo = new Dictionary<string, string>();
-            string relacionNombre = "";
             string tipoDatos = "";
 			foreach(ClaseReferencesTargetClases r in ClaseReferencesTargetClases.GetLinksToSourceClases(this))
             {
-				relacionNombre = r.nombre;
-				switch (r.cardinalidad1)
+				string rolOrigen = r.nombre;
+				switch (r.cardinalidadOrigen)
 				{
 					case cardinalidades.c01:
 						tipoDatos = r.SourceClase.nombre;
@@ -101,12 +100,12 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						tipoDatos = "LinkedList<" + r.SourceClase.nombre + ">";
 						break;
 				}
-				nombreyTipo[relacionNombre] = tipoDatos;
+				nombreyTipo[rolOrigen] = tipoDatos;
 			}
 			foreach (ClaseReferencesTargetClases r in ClaseReferencesTargetClases.GetLinksToTargetClases(this))
 			{
-				relacionNombre = r.nombre;
-				switch (r.cardinalidad2)
+				string rolDestino = r.rolDestino;
+				switch (r.cardinalidadDestino)
 				{
 					case cardinalidades.c01:
 						tipoDatos = r.TargetClase.nombre;
@@ -121,7 +120,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 						tipoDatos = "LinkedList<" + r.TargetClase.nombre + ">";
 						break;
 				}
-				nombreyTipo[relacionNombre] = tipoDatos;
+				nombreyTipo[rolDestino] = tipoDatos;
 			}
 			return nombreyTipo;
         }

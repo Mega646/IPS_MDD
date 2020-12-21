@@ -1,7 +1,7 @@
 public class Capitán extends Tripulante {
 			private Int medallas;
 				private Int rango;
-				private Crucero dirige;
+				private Crucero crucero;
 			public Capitán () {				// CONSTRUCTOR
 	
 	}

@@ -79,7 +79,7 @@
           </claseHasAtributo>
         </atributo>
         <claseRelacion>
-          <claseRelatesTargetClase Id="bf2b50ea-f6e5-44ff-bc20-97051bbd7d8b" nombre="navega_en" cardinalidad1="c0N" cardinalidad2="c1">
+          <claseRelatesTargetClase Id="bf2b50ea-f6e5-44ff-bc20-97051bbd7d8b" nombre="navega_en" cardinalidadOrigen="c01" cardinalidadDestino="c0N" rolOrigen="tripulante" rolDestino="crucero">
             <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
           </claseRelatesTargetClase>
         </claseRelacion>
@@ -98,7 +98,7 @@
           </claseInheritsClaseHija>
         </clasePadre>
         <claseComponente>
-          <claseIncludesTargetClase Id="60e3eb8a-009d-4453-a509-31a9c2f9830d" nombre="dirige" cardinalidad1="c1" cardinalidad2="c1">
+          <claseIncludesTargetClase Id="60e3eb8a-009d-4453-a509-31a9c2f9830d" nombre="dirige" cardinalidadOrigen="c1" cardinalidadDestino="c1" rolOrigen="capitan" rolDestino="crucero">
             <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
           </claseIncludesTargetClase>
         </claseComponente>
@@ -137,7 +137,7 @@
           </claseHasOperacion>
         </operacion>
         <targetClase>
-          <claseReferencesTargetClase Id="08392ee2-3f04-43fa-a9f8-f441d1863302" nombre="reserva" cardinalidad1="c0N" cardinalidad2="c0N">
+          <claseReferencesTargetClase Id="08392ee2-3f04-43fa-a9f8-f441d1863302" nombre="reserva" cardinalidadOrigen="c0N" cardinalidadDestino="c0N" rolOrigen="pasajero" rolDestino="crucero">
             <claseMoniker Id="4f8f4f0d-9002-4c82-9cef-3b71c6512896" />
           </claseReferencesTargetClase>
         </targetClase>
@@ -195,7 +195,7 @@
           </claseHasAtributo>
         </atributo>
         <claseComponente>
-          <claseIncludesTargetClase Id="e2fa9041-95b2-4f55-bb06-1442ff064f7f" nombre="es_transportada_por" cardinalidad1="c0N" cardinalidad2="c1">
+          <claseIncludesTargetClase Id="e2fa9041-95b2-4f55-bb06-1442ff064f7f" nombre="es_transportada_por" cardinalidadOrigen="c0N" cardinalidadDestino="c1" rolOrigen="mercancia" rolDestino="crucero">
             <claseMoniker Id="b2a9e346-3ca8-492e-a4d6-ee158f45a88e" />
           </claseIncludesTargetClase>
         </claseComponente>

@@ -8,74 +8,74 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 {
     public partial class ClaseReferencesTargetClases
     {
-        public string Getcardinalidad1CalculadaValue()
+        public string GetcardinalidadOrigenCalculadaValue()
         {
             string card = "";
-            if(this.cardinalidad1 == cardinalidades.c0)
+            if(this.cardinalidadOrigen == cardinalidades.c0)
             {
                 card = "\"0\"";
             }
-            else if(this.cardinalidad1 == cardinalidades.c01)
+            else if(this.cardinalidadOrigen == cardinalidades.c01)
             {
                 card = "\"0..1\"";
             }
-            else if(this.cardinalidad1 == cardinalidades.c0N)
+            else if(this.cardinalidadOrigen == cardinalidades.c0N)
             {
                 card = "\"0..N\"";
             }
-            else if(this.cardinalidad1 == cardinalidades.c1)
+            else if(this.cardinalidadOrigen == cardinalidades.c1)
             {
                 card = "\"1\"";
             }
-            else if(this.cardinalidad1 == cardinalidades.c1N)
+            else if(this.cardinalidadOrigen == cardinalidades.c1N)
             {
                 card = "\"1..N\"";
             }
-            else if(this.cardinalidad1 == cardinalidades.MN)
+            else if(this.cardinalidadOrigen == cardinalidades.MN)
             {
                 card = "\"M..N\"";
             }
-            return card;
+            return card + " - " + this.rolOrigen;
         }
 
-        public void Setcardinalidad1CalculadaValue()
+        public void SetcardinalidadOrigenCalculadaValue()
         {
 
         }
 
-        public string Getcardinalidad2CalculadaValue()
+        public string GetcardinalidadDestinoCalculadaValue()
         {
             string card = "";
-            if (this.cardinalidad2 == cardinalidades.c0)
+            if (this.cardinalidadDestino == cardinalidades.c0)
             {
                 card = "\"0\"";
             }
-            else if (this.cardinalidad2 == cardinalidades.c01)
+            else if (this.cardinalidadDestino == cardinalidades.c01)
             {
                 card = "\"0..1\"";
             }
-            else if (this.cardinalidad2 == cardinalidades.c0N)
+            else if (this.cardinalidadDestino == cardinalidades.c0N)
             {
                 card = "\"0..N\"";
             }
-            else if (this.cardinalidad2 == cardinalidades.c1)
+            else if (this.cardinalidadDestino == cardinalidades.c1)
             {
                 card = "\"1\"";
             }
-            else if (this.cardinalidad2 == cardinalidades.c1N)
+            else if (this.cardinalidadDestino == cardinalidades.c1N)
             {
                 card = "\"1..N\"";
             }
-            else if (this.cardinalidad2 == cardinalidades.MN)
+            else if (this.cardinalidadDestino == cardinalidades.MN)
             {
                 card = "\"M..N\"";
             }
-            return card;
+            return card + " - " + this.rolDestino;
         }
 
         public void Setcardinalidad2CalculadaValue()
         {
-
+            
         }
     }
 }
