@@ -14,14 +14,6 @@
             <atributo Id="39e0e626-5947-4aa3-92a2-d13fa4de6aa3" nombre="destino" modificador="privado" tipoDato="Int" />
           </claseHasAtributo>
         </atributo>
-        <claseHija>
-          <claseInheritsClaseHija Id="30bf082a-36fb-4e11-8ad2-4e32c3cd5a7d" disjuntaSolapada="disjunta" totalParcial="total">
-            <claseMoniker Id="4f8f4f0d-9002-4c82-9cef-3b71c6512896" />
-          </claseInheritsClaseHija>
-          <claseInheritsClaseHija Id="1eed14eb-ca46-4cf1-bd09-45fe1e27227b" disjuntaSolapada="disjunta" totalParcial="total">
-            <claseMoniker Id="b2a9e346-3ca8-492e-a4d6-ee158f45a88e" />
-          </claseInheritsClaseHija>
-        </claseHija>
         <atributoID>
           <claseHasAtributoID Id="695b0268-4e9e-439b-9e79-041c5ff1b7a7">
             <atributoID Id="51277364-f7b6-46b6-a228-888b4bd28d6d" nombre="id" modificador="privado" tipoDato="Int" />
@@ -36,6 +28,11 @@
             <atributo Id="5c3984f1-b0f9-4b7c-9ea0-106577bd3b0d" nombre="camarotesLibres" modificador="privado" tipoDato="Int" />
           </claseHasAtributo>
         </atributo>
+        <clasePadre>
+          <claseInheritsClaseHija Id="555f52e1-fa29-4474-b341-2b0cee55b965" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
+          </claseInheritsClaseHija>
+        </clasePadre>
         <atributoID>
           <claseHasAtributoID Id="a3f70049-0f72-49bf-8da6-4c29963bb606">
             <atributoID Id="323b53ab-ae3f-4c76-b1f7-7d76bff9b056" nombre="id" modificador="privado" tipoDato="Int" />
@@ -56,6 +53,11 @@
             <atributo Id="730adb12-df2b-4368-bb35-3e92556bb31d" nombre="capacidadRestante" modificador="privado" tipoDato="Int" />
           </claseHasAtributo>
         </atributo>
+        <clasePadre>
+          <claseInheritsClaseHija Id="7fba434f-2083-4d54-b234-359f93d2b170" disjuntaSolapada="disjunta" totalParcial="total">
+            <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
+          </claseInheritsClaseHija>
+        </clasePadre>
         <atributoID>
           <claseHasAtributoID Id="ea5be540-99ad-422e-a58b-b4da7db15f27">
             <atributoID Id="9427e30a-cf8e-4545-837d-0052c2f8587e" nombre="id" modificador="privado" tipoDato="Int" />
@@ -76,11 +78,6 @@
             <atributo Id="7caf7827-deff-4640-bf26-d05eb62962c0" nombre="puesto" modificador="privado" tipoDato="Int" />
           </claseHasAtributo>
         </atributo>
-        <claseHija>
-          <claseInheritsClaseHija Id="86a6ff3c-e429-411d-b851-e324991024f1" disjuntaSolapada="disjunta" totalParcial="total">
-            <claseEnriquecidaMoniker Id="15f961e9-c2ae-4ece-9ce4-d46c76d420e3" />
-          </claseInheritsClaseHija>
-        </claseHija>
         <claseRelacion>
           <claseRelatesTargetClase Id="bf2b50ea-f6e5-44ff-bc20-97051bbd7d8b" nombre="navega_en" cardinalidad1="c0N" cardinalidad2="c1">
             <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
@@ -95,6 +92,11 @@
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="444d3bce-3a60-4851-981f-4a4d866dd50f">
       <claseEnriquecida Id="15f961e9-c2ae-4ece-9ce4-d46c76d420e3" nombre="Capitán" colorFondo="Amarillo" colorLetraNombre="Amarillo" tipoLetraNombre="Arial" alineacion="Izquierda">
+        <clasePadre>
+          <claseInheritsClaseHija Id="ccf88b3f-d47d-4d70-ac0c-3e807fb744e5" disjuntaSolapada="disjunta" totalParcial="parcial">
+            <claseMoniker Id="a01a905c-6647-47a6-9db6-1fa4903f3c1d" />
+          </claseInheritsClaseHija>
+        </clasePadre>
         <claseComponente>
           <claseIncludesTargetClase Id="60e3eb8a-009d-4453-a509-31a9c2f9830d" nombre="dirige" cardinalidad1="c1" cardinalidad2="c1">
             <claseAbstractaMoniker Id="758513e8-63d1-46e0-8d6b-e5455b34ffec" />
@@ -134,11 +136,6 @@
             </operacionNormal>
           </claseHasOperacion>
         </operacion>
-        <claseHija>
-          <claseInheritsClaseHija Id="e92c957a-957f-4827-9f58-28eb6b07891d" disjuntaSolapada="disjunta" totalParcial="total">
-            <claseEnriquecidaMoniker Id="ff250e5d-e424-48cd-b298-b530c8806f44" />
-          </claseInheritsClaseHija>
-        </claseHija>
         <targetClase>
           <claseReferencesTargetClase Id="08392ee2-3f04-43fa-a9f8-f441d1863302" nombre="reserva" cardinalidad1="c0N" cardinalidad2="c0N">
             <claseMoniker Id="4f8f4f0d-9002-4c82-9cef-3b71c6512896" />
@@ -158,6 +155,11 @@
             <atributo Id="caa179ce-e765-44c9-a3d7-0401852c6248" nombre="planVIP" modificador="privado" tipoDato="Int" />
           </claseHasAtributo>
         </atributo>
+        <clasePadre>
+          <claseInheritsClaseHija Id="0b88f7fa-e2a9-45df-9644-21df6ea8982a" disjuntaSolapada="disjunta" totalParcial="parcial">
+            <claseMoniker Id="ab50a2a6-00d7-4d05-a354-b40dcccdc80d" />
+          </claseInheritsClaseHija>
+        </clasePadre>
         <operacionEnriquecida>
           <claseEnriquecidaHasOperacionEnriquecida Id="110404d2-cae8-48e0-bb19-9abb6458efc4">
             <operacionEnriquecida Id="15e27bb3-38d9-4225-b730-f31a284a0744" nombre="ReservarCamaroteVIP" valorRetorno="String" modificador="publico" tipoLetra="Arial" colorLetra="Amarillo">

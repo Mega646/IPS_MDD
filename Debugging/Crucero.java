@@ -2,6 +2,8 @@ public abstract class Crucero {
 			private Int capacidadCombustible;
 			private Int origen;
 			private Int destino;
+			private LinkedList<Tripulante> navega_en;
+			private Capitán dirige;
 			public Crucero () {				// CONSTRUCTOR
 	
 	}

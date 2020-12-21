@@ -2,6 +2,7 @@ public class Tripulante {
 			private Int nombre;
 			private Int apellido;
 			private Int puesto;
+			private Crucero navega_en;
 			public Tripulante () {				// CONSTRUCTOR
 	
 	}

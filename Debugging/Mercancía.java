@@ -1,6 +1,7 @@
 public class Mercancía {
 			private Int peso;
 			private Int tipo;
+			private CruceroMercancías es_transportada_por;
 			public Mercancía () {				// CONSTRUCTOR
 	
 	}

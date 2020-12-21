@@ -424,37 +424,37 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 		}
 		#endregion
-		#region ClaseHija opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of ClaseHija.
-		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> ClaseHija
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClaseDomainRoleId);
-			}
-		}
-		#endregion
 		#region ClasePadre opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClasePadre.
-		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase
 		/// </summary>
 		public virtual Clase ClasePadre
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClaseDomainRoleId) as Clase;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClaseDomainRoleId) as Clase;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClaseDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClaseDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ClaseHija opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseHija.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseHija
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClaseDomainRoleId);
 			}
 		}
 		#endregion

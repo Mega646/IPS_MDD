@@ -2,6 +2,7 @@ public class CruceroMercancías extends Crucero {
 			private Int capacidadMaxima;
 			private Int capacidadActual;
 			private Int capacidadRestante;
+			private LinkedList<Mercancía> es_transportada_por;
 			public CruceroMercancías () {				// CONSTRUCTOR
 	
 	}

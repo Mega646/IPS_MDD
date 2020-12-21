@@ -83,47 +83,47 @@ namespace UPM_IPS.JSRBBRProyectoIPS
             Dictionary<string, string> nombreyTipo = new Dictionary<string, string>();
             string relacionNombre = "";
             string tipoDatos = "";
-            foreach(ClaseReferencesTargetClase r in ClaseReferencesTargetClase.GetLinksToSourceClase(this))
+			foreach(ClaseReferencesTargetClases r in ClaseReferencesTargetClases.GetLinksToSourceClases(this))
             {
-                relacionNombre = r.nombre;
-                switch (r.cardinalidad1)
-                {
-                    case cardinalidades.c01:
-                        tipoDatos = r.SourceClase.nombre;
-                        break;
-                    case cardinalidades.c1:
-                        tipoDatos = r.SourceClase.nombre;
-                        break;
-                    case cardinalidades.c0N:
-                        tipoDatos = "LinkedList<" + r.SourceClase.nombre + ">";
-                        break;
-                    case cardinalidades.c1N:
-                        tipoDatos = "LinkedList<" + r.SourceClase.nombre + ">";
-                        break;
-                }
-                nombreyTipo[relacionNombre] = tipoDatos;
-            }
-            foreach (ClaseReferencesTargetClase r in ClaseReferencesTargetClase.GetLinksToTargetClase(this))
-            {
-                relacionNombre = r.nombre;
-                switch (r.cardinalidad2)
-                {
-                    case cardinalidades.c01:
-                        tipoDatos = r.TargetClase.nombre;
-                        break;
-                    case cardinalidades.c1:
-                        tipoDatos = r.TargetClase.nombre;
-                        break;
-                    case cardinalidades.c0N:
-                        tipoDatos = "LinkedList<" + r.TargetClase.nombre + ">";
-                        break;
-                    case cardinalidades.c1N:
-                        tipoDatos = "LinkedList<" + r.TargetClase.nombre + ">";
-                        break;
-                }
-                nombreyTipo[relacionNombre] = tipoDatos;
-            }
-            return nombreyTipo;
+				relacionNombre = r.nombre;
+				switch (r.cardinalidad1)
+				{
+					case cardinalidades.c01:
+						tipoDatos = r.SourceClase.nombre;
+						break;
+					case cardinalidades.c1:
+						tipoDatos = r.SourceClase.nombre;
+						break;
+					case cardinalidades.c0N:
+						tipoDatos = "LinkedList<" + r.SourceClase.nombre + ">";
+						break;
+					case cardinalidades.c1N:
+						tipoDatos = "LinkedList<" + r.SourceClase.nombre + ">";
+						break;
+				}
+				nombreyTipo[relacionNombre] = tipoDatos;
+			}
+			foreach (ClaseReferencesTargetClases r in ClaseReferencesTargetClases.GetLinksToTargetClases(this))
+			{
+				relacionNombre = r.nombre;
+				switch (r.cardinalidad2)
+				{
+					case cardinalidades.c01:
+						tipoDatos = r.TargetClase.nombre;
+						break;
+					case cardinalidades.c1:
+						tipoDatos = r.TargetClase.nombre;
+						break;
+					case cardinalidades.c0N:
+						tipoDatos = "LinkedList<" + r.TargetClase.nombre + ">";
+						break;
+					case cardinalidades.c1N:
+						tipoDatos = "LinkedList<" + r.TargetClase.nombre + ">";
+						break;
+				}
+				nombreyTipo[relacionNombre] = tipoDatos;
+			}
+			return nombreyTipo;
         }
 	}
 }

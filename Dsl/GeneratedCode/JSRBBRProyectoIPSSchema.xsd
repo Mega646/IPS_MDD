@@ -98,13 +98,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: ClaseInheritsClaseHija -->
-          <xsd:element name="claseHija" minOccurs="0" maxOccurs="1">
+          <xsd:element name="clasePadre" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClaseInheritsClaseHija</xsd:documentation>
+              <xsd:documentation>Instance of ClaseInheritsClaseHija</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseInheritsClaseHija" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="claseInheritsClaseHija" minOccurs="0" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of ClaseInheritsClaseHija needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>

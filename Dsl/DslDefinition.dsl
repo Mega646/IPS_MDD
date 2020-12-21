@@ -320,14 +320,14 @@
         </DomainProperty>
       </Properties>
       <Source>
-        <DomainRole Id="24febf6d-a793-4ec1-8909-2f3ca859c3b7" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClaseHija" PropertyDisplayName="Clase Hija">
+        <DomainRole Id="24febf6d-a793-4ec1-8909-2f3ca859c3b7" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClasePadre" Multiplicity="ZeroOne" PropertyDisplayName="Clase Padre">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="8e72f949-11f7-41d4-829d-8f842dd3f2ae" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClasePadre" Multiplicity="ZeroOne" PropertyDisplayName="Clase Padre">
+        <DomainRole Id="8e72f949-11f7-41d4-829d-8f842dd3f2ae" Description="Description for UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClaseHija" PropertyDisplayName="Clase Hija">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -647,7 +647,7 @@
     </GeometryShape>
   </Shapes>
   <Connectors>
-    <Connector Id="524900f2-8fcc-44ec-a20b-541ad889bc73" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia" Name="MetaforaRelacionHerencia" DisplayName="Metafora Relacion Herencia" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Herencia" SourceEndStyle="EmptyArrow">
+    <Connector Id="524900f2-8fcc-44ec-a20b-541ad889bc73" Description="Description for UPM_IPS.JSRBBRProyectoIPS.MetaforaRelacionHerencia" Name="MetaforaRelacionHerencia" DisplayName="Metafora Relacion Herencia" Namespace="UPM_IPS.JSRBBRProyectoIPS" FixedTooltipText="Metafora Relacion Herencia" TargetEndStyle="EmptyArrow">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="disjuntaSolapadaDec" DisplayName="Disjunta Solapada Dec" DefaultText="disjuntaSolapadaDec" />
       </ConnectorHasDecorators>
@@ -711,7 +711,7 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="operacion">
             <DomainRelationshipMoniker Name="ClaseHasOperacion" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="claseHija">
+          <XmlRelationshipData UseFullForm="true" RoleElementName="clasePadre">
             <DomainRelationshipMoniker Name="ClaseInheritsClaseHija" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="targetClase">

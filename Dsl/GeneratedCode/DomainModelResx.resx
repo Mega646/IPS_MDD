@@ -542,7 +542,7 @@
     <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/SourceClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Hija</value>
+    <value>Clase Padre</value>
     <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/TargetClase.Description" xml:space="preserve">
@@ -554,7 +554,7 @@
     <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseInheritsClaseHija/TargetClase.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Padre</value>
+    <value>Clase Hija</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseInheritsClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.ClaseAbstractaHasOperacionAbstracta.Description" xml:space="preserve">
