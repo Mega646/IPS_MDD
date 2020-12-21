@@ -151,6 +151,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 				new DomainMemberInfo(typeof(AtributoPadre), "nombre", AtributoPadre.nombreDomainPropertyId, typeof(AtributoPadre.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoPadre), "modificador", AtributoPadre.modificadorDomainPropertyId, typeof(AtributoPadre.modificadorPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoPadre), "nombreCalculado", AtributoPadre.nombreCalculadoDomainPropertyId, typeof(AtributoPadre.nombreCalculadoPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoPadre), "tipoDato", AtributoPadre.tipoDatoDomainPropertyId, typeof(AtributoPadre.tipoDatoPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "disjuntaSolapada", ClaseInheritsClaseHija.disjuntaSolapadaDomainPropertyId, typeof(ClaseInheritsClaseHija.disjuntaSolapadaPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseInheritsClaseHija), "totalParcial", ClaseInheritsClaseHija.totalParcialDomainPropertyId, typeof(ClaseInheritsClaseHija.totalParcialPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesTargetClases), "nombre", ClaseReferencesTargetClases.nombreDomainPropertyId, typeof(ClaseReferencesTargetClases.nombrePropertyHandler)),

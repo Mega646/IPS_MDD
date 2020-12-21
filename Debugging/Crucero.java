@@ -1,33 +1,33 @@
 public abstract class Crucero {
-			private String capacidadCombustible;
-			private String origen;
-			private String destino;
+			private Int capacidadCombustible;
+			private Int origen;
+			private Int destino;
 			public Crucero () {				// CONSTRUCTOR
 	
 	}
-			public String getcapacidadCombustible()
-		{
-			return this.capacidadCombustible;
-		}
-		public void setcapacidadCombustible(String capacidadCombustible)
-		{
-			this.capacidadCombustible = capacidadCombustible;
-		}
-				public String getorigen()
-		{
-			return this.origen;
-		}
-		public void setorigen(String origen)
-		{
-			this.origen = origen;
-		}
-				public String getdestino()
-		{
-			return this.destino;
-		}
-		public void setdestino(String destino)
-		{
-			this.destino = destino;
-		}
+		public Int getcapacidadCombustible()
+	{
+		return this.capacidadCombustible;
+	}
+	public void setcapacidadCombustible(Int capacidadCombustible)
+	{
+		this.capacidadCombustible = capacidadCombustible;
+	}
+			public Int getorigen()
+	{
+		return this.origen;
+	}
+	public void setorigen(Int origen)
+	{
+		this.origen = origen;
+	}
+			public Int getdestino()
+	{
+		return this.destino;
+	}
+	public void setdestino(Int destino)
+	{
+		this.destino = destino;
+	}
 		}
 	

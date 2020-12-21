@@ -405,6 +405,14 @@
     <value>Nombre Calculado</value>
     <comment>DisplayName for DomainProperty &apos;nombreCalculado&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/tipoDato.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Tipo Dato</value>
+    <comment>Description for DomainProperty &apos;tipoDato&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/tipoDato.DisplayName" xml:space="preserve">
+    <value>Tipo Dato</value>
+    <comment>DisplayName for DomainProperty &apos;tipoDato&apos; on DomainClass &apos;AtributoPadre&apos;</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.TapizClasesHasClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.TapizClasesHasClase</value>
     <comment>Description for DomainClass &apos;TapizClasesHasClase&apos;</comment>

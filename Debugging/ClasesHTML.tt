@@ -130,13 +130,14 @@ foreach (Clase clase in this.TapizClases.Clase)
 
 	foreach(ClaseReferencesTargetClase r in ClaseReferencesTargetClase.GetLinksToTargetClase(clase))
 	{
-		fileManager.StartNewFile(r.nombre + ".html");
-		codigoColorFondo = "#FFFFFF";
-		codigoColorNombre = "#FFFFFF";
-		tipoLetra = "Arial";
-		colorLetra = "#000000";
-		nombreAtributo = "";
-		#>
+		if(isMN(r)) {
+			fileManager.StartNewFile(r.nombre + ".html");
+			codigoColorFondo = "#FFFFFF";
+			codigoColorNombre = "#FFFFFF";
+			tipoLetra = "Arial";
+			colorLetra = "#000000";
+			nombreAtributo = "";
+			#>
 		<html>
 			<head>
 				<title><#=r.nombre#></title>
@@ -146,9 +147,9 @@ foreach (Clase clase in this.TapizClases.Clase)
 				<p style='background-color:<#=codigoColorFondo#>;color:<#=codigoColorNombre#>;font-weight:bold; font-family:
 				<#=fuente#>; text-align:<#=alineacion#>'><#=clase.nombre#> <br />
 				<form name=<#=clase.nombre#> style='background-color:<#=codigoColorFondo#>;color:<#=codigoColorNombre#>;fontfamily:<#=fuente#>;text-align:<#=alineacion#>;'>
-		<#
+			<#
 
-		#>
+			#>
 				<table>
 					<tr>
 						<td style='<#=colorLetra#>';font-family:<#=tipoLetra#>;'><#=r.TargetClase.nombre#>:</td>
@@ -165,7 +166,8 @@ foreach (Clase clase in this.TapizClases.Clase)
 				</table>
 				<input type='submit' name='constructor' value='constructor' style='backgroundcolor:#0088ff;color:#000000;font-family:Arial' />&nbsp;&nbsp;
 				<input type='submit' name='destructor' value='destructor' style='backgroundcolor:#0088ff;color:#000000;font-family:Arial' />&nbsp;&nbsp;
-		<#
+			<#
+		}
 	}
 	#>
 				</form>
@@ -254,5 +256,13 @@ private String GetBoolHTML(atributoBool booleano)
 			break;
 	}
 	return booleanoHTML;
+}
+#>
+
+<#+
+private bool isMN(ClaseReferencesTargetClase r)
+{
+	return (r.cardinalidad1 == cardinalidades.c0N && r.cardinalidad2 == cardinalidades.c0N) || (r.cardinalidad1 == cardinalidades.c1N && r.cardinalidad2 == cardinalidades.c0N) ||
+			(r.cardinalidad1 == cardinalidades.c0N && r.cardinalidad2 == cardinalidades.c1N) || (r.cardinalidad1 == cardinalidades.c1N && r.cardinalidad2 == cardinalidades.c1N);
 }
 #>

@@ -1,26 +1,29 @@
 public class Pasajero {
-			private String nombre;
-			private String apellido;
+			private Int nombre;
+			private Int apellido;
+			private LinkedList<CruceroPasajeros> reserva;
 			public Pasajero () {				// CONSTRUCTOR
 	
 	}
-			public String getnombre()
-		{
-			return this.nombre;
+		public Int getnombre()
+	{
+		return this.nombre;
+	}
+	public void setnombre(Int nombre)
+	{
+		this.nombre = nombre;
+	}
+			public Int getapellido()
+	{
+		return this.apellido;
+	}
+	public void setapellido(Int apellido)
+	{
+		this.apellido = apellido;
+	}
+				public String ReservarCamarote (
+						Int camarote {}
+							Int exito {}
+					)
 		}
-		public void setnombre(String nombre)
-		{
-			this.nombre = nombre;
-		}
-				public String getapellido()
-		{
-			return this.apellido;
-		}
-		public void setapellido(String apellido)
-		{
-			this.apellido = apellido;
-		}
-				public String ReservarCamarote
-						(Int camarote) {}
-				}
 	

@@ -3383,5 +3383,92 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		}
 		
 		#endregion
+		#region tipoDato domain property code
+		
+		/// <summary>
+		/// tipoDato domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoDatoDomainPropertyId = new global::System.Guid(0x0204e315, 0xed5b, 0x49e5, 0xbc, 0xa3, 0x8f, 0xd1, 0x78, 0x17, 0xed, 0xaf);
+		
+		/// <summary>
+		/// Storage for tipoDato
+		/// </summary>
+		private tipoDatos tipoDatoPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of tipoDato domain property.
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Tipo Dato
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/tipoDato.DisplayName", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.AtributoPadre/tipoDato.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("0204e315-ed5b-49e5-bca3-8fd17817edaf")]
+		public tipoDatos tipoDato
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoDatoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				tipoDatoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoPadre.tipoDato domain property.
+		/// </summary>
+		internal sealed partial class tipoDatoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoPadre, tipoDatos>
+		{
+			private tipoDatoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoPadre.tipoDato domain property value handler.
+			/// </summary>
+			public static readonly tipoDatoPropertyHandler Instance = new tipoDatoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoPadre.tipoDato domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoDatoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed tipoDatos GetValue(AtributoPadre element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoDatoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoPadre element, tipoDatos newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				tipoDatos oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoDatoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }

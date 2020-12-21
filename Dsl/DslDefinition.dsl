@@ -249,6 +249,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="0204e315-ed5b-49e5-bca3-8fd17817edaf" Description="Description for UPM_IPS.JSRBBRProyectoIPS.AtributoPadre.Tipo Dato" Name="tipoDato" DisplayName="Tipo Dato">
+          <Type>
+            <DomainEnumerationMoniker Name="tipoDatos" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
   </Classes>
@@ -918,6 +923,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="nombreCalculado" Representation="Ignore">
             <DomainPropertyMoniker Name="AtributoPadre/nombreCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoDato">
+            <DomainPropertyMoniker Name="AtributoPadre/tipoDato" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>

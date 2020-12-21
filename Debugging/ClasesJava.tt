@@ -29,46 +29,89 @@ public class <#=clase.nombre#> {
 		<#
 	}
 
-	LinkedList<string> atrList = clase.getNombresAtributos();
-	foreach(string atr in atrList)				// ATRIBUTOS
+	// ATRIBUTOS
+
+	foreach(Atributo atr in clase.Atributo)				
 	{
 		#>
-	private String <#=atr#>;
+	private <#=atr.tipoDato#> <#=atr.nombre#>;
 		<#
 	}
+
+	// ATRIBUTOS ENRIQUECIDOS
+
+	if(clase is ClaseEnriquecida)
+	{
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+		foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
+		{
+			#>
+	private <#=atrEnriq.tipoDato#> <#=atrEnriq.nombre#>;
+			<#
+		}
+	}
+
+	// ATRIBUTOS DE RELACIONES
+	Dictionary<string, string> nombreyTipo = clase.getRelaciones();
+	foreach(KeyValuePair<string, string> entry in nombreyTipo)
+	{
+		#>
+	private <#=entry.Value#> <#=entry.Key#>;
+		<#
+	}
+
 	#>
 	public <#=clase.nombre#> () {				// CONSTRUCTOR
 	
 	}
 	<#
-	foreach(string atr in atrList)		// GETTERS Y SETTERS
+
+	foreach(Atributo atr in clase.Atributo)		// GETTERS Y SETTERS
 	{
 		#>
-		public String get<#=atr#>()
-		{
-			return this.<#=atr#>;
-		}
-		public void set<#=atr#>(String <#=atr#>)
-		{
-			this.<#=atr#> = <#=atr#>;
-		}
+	public <#=atr.tipoDato#> get<#=atr.nombre#>()
+	{
+		return this.<#=atr.nombre#>;
+	}
+	public void set<#=atr.nombre#>(<#=atr.tipoDato#> <#=atr.nombre#>)
+	{
+		this.<#=atr.nombre#> = <#=atr.nombre#>;
+	}
 		<#
+	}
+
+	if(clase is ClaseEnriquecida)
+	{
+		ClaseEnriquecida claseEnriq = (ClaseEnriquecida)clase;
+		foreach(AtributoEnriquecido atrEnriq in claseEnriq.AtributoEnriquecido)
+		{
+			#>
+	public <#=atrEnriq.tipoDato#> get<#=atrEnriq.nombre#>()
+	{
+		return this.<#=atrEnriq.nombre#>;
+	}
+	public void set<#=atrEnriq.nombre#>(<#=atrEnriq.tipoDato#> <#=atrEnriq.nombre#>)
+	{
+		this.<#=atrEnriq.nombre#> = <#=atrEnriq.nombre#>;
+	}
+			<#
+		}
 	}
 
 	foreach(Operacion op in clase.Operacion)	// OPERACIONES
 	{
 		#>
-		public <#=op.valorRetorno#> <#=op.nombre#>
+		public <#=op.valorRetorno#> <#=op.nombre#> (
 		<#
 		foreach(Parametro p in op.Parametros)
 		{
-			if(p.entradaSalida == entradaSalida.entrada)
-			{
-				#>
-				(<#=p.tipoDatos#> <#=p.nombre#>) {}
-				<#
-			}
+			#>
+				<#=p.tipoDatos#> <#=p.nombre#> {}
+			<#
 		}
+		#>
+		)
+		<#
 	}
 	if(clase is ClaseEnriquecida)
 	{
@@ -76,17 +119,19 @@ public class <#=clase.nombre#> {
 		foreach(OperacionEnriquecida opEnriq in claseEnriq.OperacionEnriquecida)
 		{
 			#>
-			public <#=opEnriq.valorRetorno#> <#=opEnriq.nombre#>
+			public <#=opEnriq.valorRetorno#> <#=opEnriq.nombre#> (
 			<#
 			foreach(Parametro p in opEnriq.Parametros)
 			{
-				if(p.entradaSalida == entradaSalida.entrada)
-				{
-					#>
-					(<#=p.tipoDatos#> <#=p.nombre#>) {}
-					<#
-				}
+				
+				#>
+					<#=p.tipoDatos#> <#=p.nombre#>
+				<#
+				
 			}
+			#>
+			) {}
+			<#
 		}
 	}
 	#>

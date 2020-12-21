@@ -593,6 +593,8 @@
         <xsd:attribute name="nombre" type="xsd:string" />
         <!-- Property: modificador -->
         <xsd:attribute name="modificador" type="modificadorAtr" />
+        <!-- Property: tipoDato -->
+        <xsd:attribute name="tipoDato" type="tipoDatos" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
