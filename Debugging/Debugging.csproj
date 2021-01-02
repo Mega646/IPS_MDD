@@ -114,6 +114,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JSRBBRProyectoIPSReportVB.tt</DependentUpon>
     </Content>
+    <Content Include="MenuPrincipal.html">
+      <DependentUpon>ClasesHTML.tt</DependentUpon>
+    </Content>
     <Content Include="Mercancía.html">
       <DependentUpon>ClasesHTML.tt</DependentUpon>
     </Content>

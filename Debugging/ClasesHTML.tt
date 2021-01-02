@@ -54,7 +54,6 @@ foreach (Clase clase in this.TapizClases.Clase)
 	string tipoLetra = "Arial";
 	string colorLetra = "#000000";
 	string booleano = "text";
-	string nombreAtributo = "";
 
 	LinkedList<AtributoPadre> atrList = clase.getAtributos();
 	if(atrList.Count > 0)
@@ -88,7 +87,6 @@ foreach (Clase clase in this.TapizClases.Clase)
 
 	tipoLetra = "Arial";
 	colorLetra = "#000000";
-	nombreAtributo = "";
 	LinkedList<Operacion> opList = clase.getOperaciones();
 	//CONSTRUCTOR Y DESTRUCTOR
 
@@ -136,7 +134,6 @@ foreach (Clase clase in this.TapizClases.Clase)
 			codigoColorNombre = "#FFFFFF";
 			tipoLetra = "Arial";
 			colorLetra = "#000000";
-			nombreAtributo = "";
 			#>
 		<html>
 			<head>
@@ -176,6 +173,43 @@ foreach (Clase clase in this.TapizClases.Clase)
 	</html> 
 <#
 }
+
+fileManager.StartNewFile("MenuPrincipal.html");
+#>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>Menú principal</title>
+	</head>
+	<body>
+		<h1>Bienvenido al menú principal. Elige un formulario.</h1>
+<#
+foreach(Clase clase in this.TapizClases.Clase)
+{
+	if(clase is not ClaseAbstracta)
+	{
+		#>
+		<a href="<#=clase.nombre#>.html"><#=clase.nombre#></a>
+		<#
+	}
+	foreach(ClaseReferencesTargetClase r in ClaseReferencesTargetClase.GetLinksToTargetClase(clase))
+	{
+		if(isMN(r))
+		{
+			#>
+		<a href="<#=r.nombre#>.html"><#=r.nombre#></a>
+			<#
+		}
+	}
+}
+#>
+	</body>
+</html>
+
+<#
 fileManager.Process();
 #>
 
@@ -262,7 +296,7 @@ private String GetBoolHTML(atributoBool booleano)
 <#+
 private bool isMN(ClaseReferencesTargetClase r)
 {
-	return (r.cardinalidad1 == cardinalidades.c0N && r.cardinalidad2 == cardinalidades.c0N) || (r.cardinalidad1 == cardinalidades.c1N && r.cardinalidad2 == cardinalidades.c0N) ||
-			(r.cardinalidad1 == cardinalidades.c0N && r.cardinalidad2 == cardinalidades.c1N) || (r.cardinalidad1 == cardinalidades.c1N && r.cardinalidad2 == cardinalidades.c1N);
+	return (r.cardinalidadOrigen == cardinalidades.c0N && r.cardinalidadDestino == cardinalidades.c0N) || (r.cardinalidadOrigen == cardinalidades.c1N && r.cardinalidadDestino == cardinalidades.c0N) ||
+			(r.cardinalidadOrigen == cardinalidades.c0N && r.cardinalidadDestino == cardinalidades.c1N) || (r.cardinalidadOrigen == cardinalidades.c1N && r.cardinalidadDestino == cardinalidades.c1N);
 }
 #>
