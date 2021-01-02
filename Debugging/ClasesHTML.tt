@@ -108,7 +108,7 @@ foreach (Clase clase in this.TapizClases.Clase)
 	}
 
 	// OPERACIONES DEFINIDAS POR EL USUARIO
-	if(clase.Operacion.Count > 0)
+	if(opList.Count > 0)
 	{
 		foreach(Operacion op in opList)
 		{

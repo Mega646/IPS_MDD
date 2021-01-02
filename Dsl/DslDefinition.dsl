@@ -552,6 +552,9 @@
       <Literals>
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Int" Name="Int" Value="" />
         <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.String" Name="String" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Bool" Name="Bool" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Float" Name="Float" Value="" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Double" Name="Double" Value="" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="cardinalidades" Namespace="UPM_IPS.JSRBBRProyectoIPS" Description="Description for UPM_IPS.JSRBBRProyectoIPS.cardinalidades">

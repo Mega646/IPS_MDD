@@ -46,7 +46,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		public LinkedList<Operacion> getOperaciones()
 		{
 			LinkedList<Operacion> opList = new LinkedList<Operacion>();
-			if (this.ClasePadre != null)       // Primero, se comprueba si la clase actual hereda de alguna, para obtener los atributos de dicha clase padre
+			if (this.ClasePadre != null)       // Primero, se comprueba si la clase actual hereda de alguna, para obtener las operaciones de dicha clase padre
 			{
 				Clase clasePadre = this.ClasePadre;
 				if (clasePadre.Operacion.Count > 0)
@@ -57,14 +57,14 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 					}
 				}
 			}
-			if (this.Operacion.Count > 0)       // Después, se comprueba si la clase actual tiene atributos normales
+			if (this.Operacion.Count > 0)       // Después, se comprueba si la clase actual tiene operaciones normales
 			{
-				foreach (Operacion op in this.Operacion)
+				foreach (OperacionNormal op in this.Operacion)
 				{
 					opList.AddLast(op);
 				}
 			}
-			if (this is ClaseEnriquecida)      // Por último, se comprueba si la clase actual es enriquecida y, de serlo, si tiene atributos enriquecidos
+			if (this is ClaseEnriquecida)      // Por último, se comprueba si la clase actual es enriquecida y, de serlo, si tiene operaciones enriquecidos
 			{
 				ClaseEnriquecida claseEnriq = (ClaseEnriquecida)this;
 				if (claseEnriq.OperacionEnriquecida.Count > 0)

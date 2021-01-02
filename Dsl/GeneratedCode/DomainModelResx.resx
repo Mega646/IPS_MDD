@@ -941,6 +941,30 @@
     <value>Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.String</value>
     <comment>Description for EnumerationLiteral &apos;String&apos; on DomainEnumeration &apos;tipoDatos&apos;</comment>
   </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Bool.DisplayName" xml:space="preserve">
+    <value>Bool</value>
+    <comment>Display name for EnumerationLiteral &apos;Bool&apos; on DomainEnumeration &apos;tipoDatos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Bool.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Bool</value>
+    <comment>Description for EnumerationLiteral &apos;Bool&apos; on DomainEnumeration &apos;tipoDatos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Float.DisplayName" xml:space="preserve">
+    <value>Float</value>
+    <comment>Display name for EnumerationLiteral &apos;Float&apos; on DomainEnumeration &apos;tipoDatos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Float.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Float</value>
+    <comment>Description for EnumerationLiteral &apos;Float&apos; on DomainEnumeration &apos;tipoDatos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Double.DisplayName" xml:space="preserve">
+    <value>Double</value>
+    <comment>Display name for EnumerationLiteral &apos;Double&apos; on DomainEnumeration &apos;tipoDatos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Double.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Double</value>
+    <comment>Description for EnumerationLiteral &apos;Double&apos; on DomainEnumeration &apos;tipoDatos&apos;</comment>
+  </data>
   <data name="UPM_IPS.JSRBBRProyectoIPS.cardinalidades/c0.DisplayName" xml:space="preserve">
     <value>c0</value>
     <comment>Display name for EnumerationLiteral &apos;c0&apos; on DomainEnumeration &apos;cardinalidades&apos;</comment>

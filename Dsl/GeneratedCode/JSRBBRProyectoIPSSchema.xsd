@@ -1125,6 +1125,9 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="Int"/>
       <xsd:enumeration value="String"/>
+      <xsd:enumeration value="Bool"/>
+      <xsd:enumeration value="Float"/>
+      <xsd:enumeration value="Double"/>
     </xsd:restriction>
   </xsd:simpleType>
   

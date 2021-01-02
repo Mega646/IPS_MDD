@@ -659,6 +659,24 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.tipoDatos/String.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
 		String,
+		/// <summary>
+		/// Bool
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Bool
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Bool.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Bool,
+		/// <summary>
+		/// Float
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Float
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Float.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Float,
+		/// <summary>
+		/// Double
+		/// Description for UPM_IPS.JSRBBRProyectoIPS.tipoDatos.Double
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JSRBBRProyectoIPS.tipoDatos/Double.Description", typeof(global::UPM_IPS.JSRBBRProyectoIPS.JSRBBRProyectoIPSDomainModel), "UPM_IPS.JSRBBRProyectoIPS.GeneratedCode.DomainModelResx")]
+		Double,
 	}
 }
 namespace UPM_IPS.JSRBBRProyectoIPS
