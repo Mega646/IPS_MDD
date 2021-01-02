@@ -29,7 +29,7 @@ foreach (Clase clase in this.TapizClases.Clase)
 	//AQUI EMPIEZAN LAS CLASES
 
 	string codigoColorFondo = "#FFFFFF";
-	string codigoColorNombre = "#FFFFFF";
+	string codigoColorNombre = "#000000";
 	string fuente = "Arial";
 	string alineacion = "center";
 	if(clase is ClaseEnriquecida)
