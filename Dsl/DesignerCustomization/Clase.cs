@@ -77,7 +77,7 @@ namespace UPM_IPS.JSRBBRProyectoIPS
 			}
 			return opList;
 		}
-
+		
         public Dictionary<string, string> getRelaciones()
         {
             Dictionary<string, string> nombreyTipo = new Dictionary<string, string>();

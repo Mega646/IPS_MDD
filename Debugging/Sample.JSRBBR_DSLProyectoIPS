@@ -91,7 +91,7 @@
       </clase>
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="444d3bce-3a60-4851-981f-4a4d866dd50f">
-      <claseEnriquecida Id="15f961e9-c2ae-4ece-9ce4-d46c76d420e3" nombre="Capitán" colorFondo="Amarillo" colorLetraNombre="Amarillo" tipoLetraNombre="Arial" alineacion="Izquierda">
+      <claseEnriquecida Id="15f961e9-c2ae-4ece-9ce4-d46c76d420e3" nombre="Capitán" colorFondo="Amarillo" colorLetraNombre="Azul" tipoLetraNombre="Arial" alineacion="Centro">
         <clasePadre>
           <claseInheritsClaseHija Id="ccf88b3f-d47d-4d70-ac0c-3e807fb744e5" disjuntaSolapada="disjunta" totalParcial="parcial">
             <claseMoniker Id="a01a905c-6647-47a6-9db6-1fa4903f3c1d" />
@@ -149,7 +149,7 @@
       </clase>
     </tapizClasesHasClase>
     <tapizClasesHasClase Id="4987dcac-46c4-4017-a7c3-c5e5b20a6449">
-      <claseEnriquecida Id="ff250e5d-e424-48cd-b298-b530c8806f44" nombre="PasajeroVIP" colorFondo="Amarillo" colorLetraNombre="Amarillo" tipoLetraNombre="Arial" alineacion="Izquierda">
+      <claseEnriquecida Id="ff250e5d-e424-48cd-b298-b530c8806f44" nombre="PasajeroVIP" colorFondo="Verde" colorLetraNombre="Azul" tipoLetraNombre="ComicSans" alineacion="Derecha">
         <atributo>
           <claseHasAtributo Id="92b3a3cc-5245-4790-855c-3bcfae14929d">
             <atributo Id="caa179ce-e765-44c9-a3d7-0401852c6248" nombre="planVIP" modificador="privado" tipoDato="Int" />
@@ -162,7 +162,7 @@
         </clasePadre>
         <operacionEnriquecida>
           <claseEnriquecidaHasOperacionEnriquecida Id="110404d2-cae8-48e0-bb19-9abb6458efc4">
-            <operacionEnriquecida Id="15e27bb3-38d9-4225-b730-f31a284a0744" nombre="ReservarCamaroteVIP" valorRetorno="String" modificador="publico" tipoLetra="Arial" colorLetra="Amarillo">
+            <operacionEnriquecida Id="15e27bb3-38d9-4225-b730-f31a284a0744" nombre="ReservarCamaroteVIP" valorRetorno="String" modificador="publico" tipoLetra="Arial" colorLetra="Verde">
               <parametros>
                 <operacionHasParametros Id="409778fd-4c29-45c1-9dca-030029d50888">
                   <parametro Id="cc65871b-670c-4b71-aaa1-c9e3c0ad20f3" nombre="camarote" tipoDatos="Int" entradaSalida="entrada" />
